@@ -1,0 +1,1289 @@
+{
+  "meta": {
+    "country": "Kenya",
+    "slug": "kenya",
+    "last_updated": "2025",
+    "data_version": "1.0",
+    "description": "Complete cultural data for Kenya — powering all Frica country page sections."
+  },
+
+  "overview": {
+    "name": "Kenya",
+    "native_name": "Kenya",
+    "official_name": "Republic of Kenya",
+    "flag_emoji": "🇰🇪",
+    "iso_alpha2": "KE",
+    "iso_alpha3": "KEN",
+    "capital": "Nairobi",
+    "largest_city": "Nairobi",
+    "region": "East Africa",
+    "subregion": "Eastern Africa",
+    "population": 55000000,
+    "population_note": "Kenya is East Africa's most populous country and its largest economy. Nairobi is the region's dominant financial, technological, and diplomatic hub.",
+    "area_km2": 580367,
+    "area_rank_africa": 22,
+    "official_languages": ["Swahili (Kiswahili)", "English"],
+    "major_indigenous_languages": ["Gikuyu (Kikuyu)", "Dholuo (Luo)", "Kamba (Kikamba)", "Kalenjin dialects", "Luhya dialects", "Somali", "Meru", "Kisii (Ekegusii)", "Mijikenda dialects"],
+    "total_languages": 68,
+    "currency": "Kenyan Shilling (KES)",
+    "currency_symbol": "KSh",
+    "calling_code": "+254",
+    "internet_tld": ".ke",
+    "independence_date": "December 12, 1963",
+    "independence_from": "United Kingdom",
+    "national_day": "December 12 (Jamhuri Day — Republic Day)",
+    "government_type": "Presidential Republic",
+    "total_counties": 47,
+    "gdp_rank_africa": 6,
+    "gdp_note": "Largest economy in East and Central Africa",
+    "religion": {
+      "christianity": "~85%",
+      "islam": "~11%",
+      "traditional_indigenous": "~1.7%",
+      "other": "~2.3%",
+      "note": "Christianity is dominant, with large Catholic and Protestant communities. Islam is concentrated along the coast (Mombasa, Lamu) and in northeastern Kenya (ethnic Somali population). Traditional beliefs often co-exist with Christianity and Islam."
+    },
+    "short_description": "Kenya is the beating heart of East Africa — home to the Great Migration of the Serengeti-Masai Mara, the Maasai warriors, the world's greatest long-distance runners, Nairobi's Silicon Savannah tech scene, ancient Swahili coastal civilization, and a landscape that stretches from snow-capped Mount Kenya to the shores of the Indian Ocean.",
+    "tagline": "Hakuna Matata — The Cradle of Champions",
+    "known_for": [
+      "Masai Mara & the Great Wildebeest Migration — one of the world's greatest wildlife spectacles",
+      "Maasai warriors — one of Africa's most iconic and recognizable peoples",
+      "World's greatest long-distance runners — Eliud Kipchoge, Kipchoge Keino, David Rudisha",
+      "Nairobi — 'Silicon Savannah' (Africa's leading tech & startup hub)",
+      "Mount Kenya — Africa's second-highest peak and UNESCO World Heritage Site",
+      "Swahili coast civilization — Lamu, Mombasa, ancient Indian Ocean trade routes",
+      "Safari — Kenya is the birthplace of the modern safari experience",
+      "Nyama Choma (roasted meat) — Kenya's unofficial national dish",
+      "Ugali — the staple food of over 40 Kenyan communities",
+      "Obama connection — President Barack Obama's father was Kenyan (Luo from Kogelo)"
+    ],
+    "borders": ["Ethiopia (North)", "Somalia (Northeast)", "Tanzania (South)", "Uganda (West)", "South Sudan (Northwest)"],
+    "coastline": "Indian Ocean, 536 km",
+    "major_water_bodies": ["Lake Victoria (shared with Uganda and Tanzania — world's largest tropical lake)", "Lake Turkana (world's largest permanent desert lake)", "Lake Naivasha", "Lake Nakuru", "Lake Bogoria", "Tana River", "Athi-Galana River"],
+    "major_geographic_features": [
+      "Mount Kenya (5,199m — Africa's second highest peak)",
+      "Great Rift Valley (runs through the heart of Kenya)",
+      "Masai Mara National Reserve",
+      "Amboseli (views of Mount Kilimanjaro in Tanzania)",
+      "Tsavo National Park (one of Africa's largest)",
+      "Indian Ocean coastline with coral reefs"
+    ]
+  },
+
+  "history": {
+    "summary": "Kenya's story stretches back to humanity's very origins — the fossils of our earliest ancestors have been found along the shores of Lake Turkana. Ancient Cushitic and Nilotic peoples settled the region thousands of years ago. The Swahili coast flourished as a major Indian Ocean trade civilization from the 8th century, connecting East Africa to Arabia, Persia, and India. Arab, Persian, and later Portuguese traders shaped the coast's unique culture. British colonization from the 1880s brought the infamous settler system that dispossessed the Kikuyu and other communities of their land — sparking the fierce Mau Mau Uprising (1952–1960) that forced the hand of independence. Kenya gained independence on December 12, 1963, under Jomo Kenyatta, becoming a republic a year later. Post-independence Kenya has been defined by ethnic political tensions, economic ambition, and its emergence as East Africa's undisputed capital of commerce, technology, and wildlife tourism.",
+    "timeline": [
+      {
+        "period": "3.3 million – 1.5 million years ago",
+        "event": "Cradle of Humankind",
+        "description": "Lake Turkana's shores in northern Kenya have yielded some of the most significant early hominid fossils ever found. The Turkana Boy (Homo ergaster, ~1.6 million years old) — discovered by Richard Leakey's team in 1984 — is the most complete early human skeleton ever found. The Koobi Fora region of Lake Turkana is considered one of the world's most important paleoanthropological sites."
+      },
+      {
+        "period": "c. 2000 BCE – 500 CE",
+        "event": "Cushitic and Nilotic Migrations",
+        "description": "The first agricultural peoples — Southern Cushitic groups from Ethiopia — settled the Kenya highlands. Over centuries, Nilotic peoples (ancestors of the Luo, Maasai, Turkana, Samburu, and Kalenjin) migrated southward from the Nile region. Bantu-speaking peoples (ancestors of the Kikuyu, Kamba, Meru, Kisii, and Luhya) migrated into Kenya from the west and south. These three great migration streams — Cushitic, Nilotic, and Bantu — formed the foundation of Kenya's extraordinary ethnic diversity."
+      },
+      {
+        "period": "8th – 15th century",
+        "event": "Swahili Coast Civilization",
+        "description": "The East African coastline became one of the Indian Ocean world's most significant trading zones. Arab, Persian, and Indian merchants established trade relations with coastal Bantu-speaking peoples, producing the unique Swahili civilization — a sophisticated Afro-Arab-Persian culture with its own language (Kiswahili), architecture (coral stone towns), and religion (Islam). City-states like Mombasa, Malindi, and Pate were wealthy hubs of the gold, ivory, and spice trade."
+      },
+      {
+        "period": "1498 – 1700s",
+        "event": "Portuguese Arrival and Fort Jesus",
+        "description": "Vasco da Gama arrived at Malindi in 1498, marking the beginning of Portuguese control of the East African coast. The Portuguese built Fort Jesus in Mombasa in 1593 — one of the finest examples of Portuguese military architecture in Africa. Portuguese rule was brutal and disruptive to the Indian Ocean trade networks. Arab Omani forces eventually expelled the Portuguese from Mombasa in 1698, beginning a new era of Omani Arab influence over the coast."
+      },
+      {
+        "period": "1700s – 1880s",
+        "event": "Omani Arab Rule & Swahili Sultanate",
+        "description": "The Sultans of Oman, based in Zanzibar, extended their influence over the East African coast, including Mombasa. The coast became a major hub of the Arab slave trade — enslaved Africans were traded through Mombasa and Zanzibar to Arabia, Persia, and India. Swahili culture, Islam, and Indian merchant communities flourished during this period. The slave trade from East Africa remains a deeply painful chapter of the region's history."
+      },
+      {
+        "period": "1885 – 1895",
+        "event": "British East Africa Company and Colonial Beginnings",
+        "description": "The Berlin Conference (1884–1885) assigned East Africa to British influence. The Imperial British East Africa Company began administering the territory in 1888. Britain declared the region the East Africa Protectorate in 1895 and began construction of the Uganda Railway — the 'Lunatic Express' — from Mombasa to Lake Victoria, completed in 1901. The railway required 32,000 Indian laborers and fundamentally transformed the region's geography."
+      },
+      {
+        "period": "1903 – 1940s",
+        "event": "Settler Colonialism and Land Dispossession",
+        "description": "British settlers were given fertile Kikuyu and Maasai highlands, displacing African communities from their ancestral lands — a region settlers called the 'White Highlands.' African land was legally barred from ownership by non-Europeans in the Crown Lands Ordinance of 1915. This devastating dispossession became the root grievance of Kenya's nationalist movement. The colonial economy relied on forced African labor through hut taxes and kipande (identity pass) systems."
+      },
+      {
+        "period": "1944 – 1952",
+        "event": "Rise of Nationalism — KAU and Kenyatta",
+        "description": "The Kenya African Union (KAU) was formed in 1944 to peacefully agitate for African rights. Jomo Kenyatta, returning from 15 years in Britain (where he studied anthropology under Bronisław Malinowski and wrote 'Facing Mount Kenya'), became KAU president in 1947. He called for land return and political rights but was dismissed by the colonial government. Underground Kikuyu resistance was growing."
+      },
+      {
+        "period": "1952 – 1960",
+        "event": "Mau Mau Uprising",
+        "description": "The Mau Mau — a predominantly Kikuyu armed resistance movement — launched an uprising against British colonial rule. Britain declared a State of Emergency in October 1952. Kenyatta was arrested and imprisoned for 7 years in a controversial trial (later shown to be based on false testimony). The British response was brutal — detention camps, systematic torture, and mass killings. Over 1.5 million Kikuyu were held in 'villagization' camps. An estimated 20,000 Africans were killed in the conflict. The Mau Mau war broke the will of the colonial government and accelerated independence."
+      },
+      {
+        "period": "December 12, 1963",
+        "event": "Independence — Uhuru",
+        "description": "Kenya gained independence from Britain on December 12, 1963, with Jomo Kenyatta as Prime Minister. On December 12, 1964, Kenya became a republic — Jamhuri Day — with Kenyatta as its first President. The nation's founding cry of 'Uhuru!' (Swahili for 'Freedom') echoed across the country. Kenyatta ruled until his death in 1978, shaping a nation with a mixed legacy of stability, ethnic favoritism, and authoritarian tendencies."
+      },
+      {
+        "period": "1978 – 2002",
+        "event": "Daniel arap Moi Era",
+        "description": "Daniel arap Moi (Kalenjin) succeeded Kenyatta and ruled for 24 years. He declared Kenya a one-party state in 1982. His rule was marked by political repression, torture of dissidents, ethnic manipulation, and significant economic decline. International pressure eventually forced multiparty elections in 1992. Moi's final election loss to Mwai Kibaki in 2002 was Kenya's first peaceful democratic transition of power."
+      },
+      {
+        "period": "2007 – 2008",
+        "event": "Post-Election Violence",
+        "description": "Following a disputed presidential election between incumbent Mwai Kibaki (Kikuyu) and Raila Odinga (Luo), Kenya erupted in the worst political violence since independence. Over 1,300 people were killed and 600,000 displaced in ethnically-charged clashes. A power-sharing deal brokered by Kofi Annan ended the crisis. The violence exposed deep ethnic fault lines beneath Kenya's surface stability."
+      },
+      {
+        "period": "2010",
+        "event": "New Constitution",
+        "description": "A landmark new constitution was approved by referendum with 67% support. It devolved power to 47 newly created counties, introduced a bill of rights, created independent commissions, and limited presidential power — widely hailed as one of Africa's most progressive constitutions. County devolution transformed governance, bringing government closer to rural communities."
+      },
+      {
+        "period": "2010s – present",
+        "event": "Silicon Savannah & Economic Rise",
+        "description": "Kenya emerged as Africa's leading technology and innovation hub. M-Pesa — the world's most successful mobile money platform (launched 2007 by Safaricom) — became a global model for financial inclusion. Nairobi's iHub and Silicon Savannah attracted billions in tech investment. Kenya consistently ranked among Africa's fastest-growing economies and most connected digital markets."
+      }
+    ]
+  },
+
+  "ethnic_groups": {
+    "total": "44+",
+    "note": "Kenya officially recognizes 44 ethnic groups (plus the Arab community). These span three major linguistic and cultural traditions: Bantu (largest group), Nilotic, and Cushitic. No single group holds a majority, though the Kikuyu (~17%) are the largest.",
+    "major": [
+      {
+        "name": "Kikuyu (Gikuyu)",
+        "population_percentage": "~17%",
+        "language": "Gikuyu (Kikuyu)",
+        "language_family": "Bantu",
+        "region": "Central Kenya — Mount Kenya region",
+        "counties": ["Kiambu", "Nyeri", "Murang'a", "Kirinyaga", "Nyandarua"],
+        "religion": "Predominantly Christian",
+        "historical_significance": "Kenya's largest ethnic group. They bore the greatest brunt of British land dispossession in the colonial era, and led the Mau Mau Uprising. Jomo Kenyatta (Kenya's founding father) was Kikuyu. The Kikuyu are historically skilled farmers and traders, and have been disproportionately represented in politics, business, and education since independence.",
+        "cultural_notes": {
+          "traditional_governance": "Traditionally governed by councils of elders (kiama). Society organized by age-sets (riika). No centralized kingship.",
+          "traditional_religion": "Ngai — the supreme creator deity believed to reside on Mount Kenya (Kirinyaga — 'Mountain of Brightness'). Sacred fig trees (mugumo) were sites of prayer and sacrifice.",
+          "naming_tradition": "Children named after grandparents — the first son after the paternal grandfather, the first daughter after the paternal grandmother, the second son after the maternal grandfather, etc.",
+          "circumcision": "Male circumcision is a central rite of passage into adulthood, marking transition from boyhood to warrior status. Female circumcision (FGM) was traditional but has been widely abandoned following legal prohibition and education campaigns.",
+          "notable_personalities": ["Jomo Kenyatta (founding father)", "Uhuru Kenyatta (4th president)", "Ngũgĩ wa Thiong'o (Nobel Prize-nominated author)", "Wangari Maathai (Nobel Peace Prize, 2004)"]
+        }
+      },
+      {
+        "name": "Luhya (Abaluhya)",
+        "population_percentage": "~14%",
+        "language": "Luhya (a cluster of 18 dialects including Bukusu, Maragoli, Kabras, Tachoni, Idakho, etc.)",
+        "language_family": "Bantu",
+        "region": "Western Kenya",
+        "counties": ["Kakamega", "Bungoma", "Vihiga", "Trans-Nzoia"],
+        "religion": "Predominantly Christian",
+        "historical_significance": "Kenya's second-largest ethnic group. The Luhya are not a single group but a confederation of 18 sub-groups who share cultural and linguistic similarities. They are known for their traditional sport of Indeje (bull-fighting, especially among the Bukusu), the Isukuti dance, and warm hospitality.",
+        "cultural_notes": {
+          "traditional_governance": "Each sub-group had its own clan governance system under councils of elders.",
+          "traditional_religion": "Believed in Were (the supreme being) and venerated ancestral spirits.",
+          "notable_custom": "Bukusu male circumcision (Imbalu) — performed every even year. A major public celebration where initiates sing, dance, and walk through the community before the ceremony. One of Kenya's most vibrant cultural events.",
+          "food_staple": "Ugali (from maize flour) — the cultural cornerstone of every Luhya meal, always served with vegetables (sukuma wiki/managu) and meat.",
+          "notable_personalities": ["Musalia Mudavadi (politician)", "Moses Wetangula (politician)", "Mike Sonko (former Nairobi Governor)"]
+        }
+      },
+      {
+        "name": "Kalenjin",
+        "population_percentage": "~13%",
+        "language": "Kalenjin (a cluster of related dialects: Nandi, Kipsigis, Tugen, Marakwet, Elgeyo, Pokot, Sabaot, Terik)",
+        "language_family": "Nilotic (Southern Nilotic)",
+        "region": "Rift Valley — the highlands",
+        "counties": ["Uasin Gishu", "Nandi", "Kericho", "Bomet", "Elgeyo-Marakwet", "Baringo", "West Pokot", "Trans-Nzoia"],
+        "religion": "Predominantly Christian",
+        "historical_significance": "The Kalenjin are world-famous for producing the greatest long-distance runners in history. The Rift Valley highlands — particularly Eldoret and the Nandi Hills — are considered the global capital of middle and long-distance running. Kalenjin runners have dominated Olympic and World Championship events since the 1960s.",
+        "cultural_notes": {
+          "traditional_governance": "Age-set system (ibinda) — social life organized by generation-sets that go through initiation, warrior, and elder phases together.",
+          "circumcision": "Male circumcision is a crucial rite of passage. Initiates are expected to show absolute bravery and stoicism during the procedure.",
+          "traditional_sport": "Kipketer (traditional wrestling), and cattle herding were central to traditional Kalenjin life.",
+          "running_culture": "Genetic, geographical (high-altitude training), dietary (ugali, mursik — fermented milk), and cultural factors combine to produce extraordinary runners. Eliud Kipchoge (first to run a marathon under 2 hours) is Kalenjin-Nandi.",
+          "mursik": "Fermented milk stored in a gourd treated with charcoal — a central dietary and cultural item among the Kalenjin.",
+          "notable_personalities": ["Eliud Kipchoge (marathon world record holder)", "Kipchoge Keino (Olympic legend, 1968)", "David Rudisha (800m world record holder)", "Daniel arap Moi (2nd president of Kenya)"]
+        }
+      },
+      {
+        "name": "Luo",
+        "population_percentage": "~11%",
+        "language": "Dholuo",
+        "language_family": "Nilotic (Western Nilotic)",
+        "region": "Western Kenya — Lake Victoria basin",
+        "counties": ["Siaya", "Kisumu", "Homa Bay", "Migori"],
+        "religion": "Predominantly Christian (strong Catholic presence)",
+        "historical_significance": "The Luo are Kenya's third-largest ethnic group and among the most politically influential. The late Tom Mboya (assassinated 1969) and Oginga Odinga were founding nationalist figures. Raila Odinga has run for the presidency five times. Barack Obama Sr., father of U.S. President Barack Obama, was Luo from Kogelo village in Siaya County.",
+        "cultural_notes": {
+          "traditional_governance": "Governed by the Ruoth (chief/leader) and councils of elders. Society organized by patrilineal clans.",
+          "traditional_religion": "Believed in Nyasaye (the supreme God) and venerated ancestors (jochiende). Sacred places and ancestral spirits played central roles.",
+          "notable_custom": "The Luo traditionally did not practice circumcision — one of the few Kenyan groups without this rite of passage. Tooth extraction (removal of six lower front teeth) was historically practiced as a rite of passage but is now rare.",
+          "music_and_dance": "Ohangla — a powerful, percussive traditional music style featuring the nyatiti (8-string lyre), orutu (one-string fiddle), and energetic drumming. Ohangla artists like Oduor Genro and Suzanna Owiyo carry this tradition forward.",
+          "fishing_culture": "Lake Victoria fishing is central to Luo identity — tilapia and Nile perch are cultural staples.",
+          "notable_personalities": ["Barack Obama Sr. (father of U.S. President Barack Obama)", "Raila Odinga (veteran politician)", "Tom Mboya (nationalist martyr)", "Oginga Odinga (founding Vice President)", "Otieno Kajwang'", "Lupita Nyong'o (Oscar-winning actress — Luo heritage)"]
+        }
+      },
+      {
+        "name": "Kamba (Akamba)",
+        "population_percentage": "~11%",
+        "language": "Kamba (Kikamba)",
+        "language_family": "Bantu",
+        "region": "Eastern Kenya",
+        "counties": ["Machakos", "Makueni", "Kitui", "Mwingi"],
+        "religion": "Predominantly Christian",
+        "historical_significance": "The Kamba were historically Kenya's most prominent long-distance traders — their trading networks stretched from the coast to the Great Lakes long before European colonization. They were also renowned hunters and carvers, and they supplied ivory to Arab coastal traders for centuries.",
+        "cultural_notes": {
+          "traditional_governance": "Governed by councils of elders (nzama) — no centralized chiefs. Society is organized by age-sets.",
+          "traditional_religion": "Believed in Mulungu (or Ngai) — the supreme deity. Ancestor veneration (aimu) was central to spiritual life.",
+          "wood_carving": "The Kamba are Kenya's master wood-carvers. The Wamutua area in Machakos is famous for producing Kenya's most intricate wood carvings — elephants, giraffes, Maasai figures — sold across the world.",
+          "music_and_dance": "Kilumi — a traditional trance dance performed during healing ceremonies. The Mwali dance is performed at female initiation ceremonies.",
+          "notable_personalities": ["Paul Nthenge Makonda", "Charity Kaluki Ngilu (politician)", "Julius Mwangi Mutula Kilonzo"]
+        }
+      },
+      {
+        "name": "Kisii (Abagusii)",
+        "population_percentage": "~6%",
+        "language": "Ekegusii (Kisii)",
+        "language_family": "Bantu",
+        "region": "Nyanza Region — southwestern Kenya",
+        "counties": ["Kisii", "Nyamira"],
+        "religion": "Predominantly Christian (Seventh-Day Adventist has a strong presence)",
+        "cultural_notes": {
+          "traditional_governance": "Clan-based governance. Elders (abagaka) held authority.",
+          "soapstone_carving": "The Kisii are world-famous for their Kisii soapstone (Kisii stone / verdite) carvings — unique soft stone found only in Tabaka, Kisii County. Intricate animals, bowls, and art pieces are exported globally.",
+          "music_and_dance": "Enchanting dance — the Orutu dance — performed at community celebrations. Nyatiti music also influences the region.",
+          "tea_farming": "The Kisii highlands are among Kenya's most productive tea-growing regions."
+        }
+      },
+      {
+        "name": "Meru",
+        "population_percentage": "~4%",
+        "language": "Kimeru (several dialects: Imenti, Tigania, Igembe, Tharaka, Chuka, Miutini)",
+        "language_family": "Bantu",
+        "region": "Mount Kenya region — northeastern slopes",
+        "counties": ["Meru", "Tharaka-Nithi"],
+        "religion": "Predominantly Christian",
+        "cultural_notes": {
+          "traditional_governance": "The Njuri Ncheke — the council of elders — is one of Kenya's most respected and still-active traditional governance institutions. It holds authority over cultural, social, and customary law matters.",
+          "traditional_religion": "Believed in Murungu (God) and Ngai. Sacred sites on Mount Kenya's slopes were used for prayer.",
+          "miraa_culture": "The Meru region — particularly Meru and Nyambene Hills — is the heartland of miraa (khat) cultivation in Kenya. Miraa is a plant whose leaves and shoots are chewed as a mild stimulant, and is a significant cultural and economic crop, especially exported to Somalia and diaspora communities worldwide.",
+          "notable_produce": "Meru is known for high-quality tea, coffee, and miraa."
+        }
+      },
+      {
+        "name": "Maasai",
+        "population_percentage": "~2%",
+        "language": "Maa (Maa language — shared with Tanzania's Maasai)",
+        "language_family": "Nilotic (Eastern Nilotic)",
+        "region": "Southern Rift Valley, Kajiado, and Narok — straddling Kenya and Tanzania",
+        "counties": ["Narok", "Kajiado"],
+        "religion": "Traditional beliefs (Maasai monotheism — Enkai) remain very strong alongside Christianity",
+        "historical_significance": "The Maasai are arguably Africa's most internationally recognized people — their distinctive warrior culture, red shuka (blanket), beaded jewelry, and jumping dance (adamu) are icons of African identity worldwide. Despite representing a small percentage of Kenya's population, the Maasai have maintained their cultural traditions with extraordinary resilience against modernization.",
+        "cultural_notes": {
+          "traditional_governance": "Society divided into age-sets. The Moran (ilmurran) — young warriors — are the most celebrated age group. The Laibon (spiritual leader) and elders (ilchamus) hold authority.",
+          "traditional_religion": "Enkai (or Engai) — a single deity associated with both good and ill, identified with the sky and rain. Cattle are central to spiritual and economic life — the Maasai believe God gave all the world's cattle to the Maasai.",
+          "diet": "Traditionally, the Maasai diet was based almost exclusively on cattle products — milk (fresh and fermented), meat, and blood. Drinking fresh blood mixed with milk was practiced during ceremonies and for recovery from illness.",
+          "dressing": "Red shuka (a blanket or wrap). Intricate multi-strand beaded necklaces (ilkarash), bracelets, and earrings — created by women. Ochre (red clay) used on skin and hair by warriors. Headdresses of ostrich feathers for senior warriors.",
+          "adamu_jumping": "The Adamu — the iconic jumping dance performed by Maasai warriors. Warriors compete to jump the highest while singing. A display of strength and endurance.",
+          "housing": "Traditional Maasai homes (inkajijik) are built by women — oval structures made of sticks, grass, cow dung, and urine. The enkang (homestead) is encircled by a thorn fence (enkiama) to protect livestock at night.",
+          "circumcision": "Male circumcision marks the transition from boyhood to warrior status. Female circumcision (FGM) has been traditional but is increasingly challenged through legal and educational interventions.",
+          "notable_personalities": ["Ole Ntimama (politician and Maasai cultural champion)", "Joseph Ole Lenku (politician)"]
+        }
+      },
+      {
+        "name": "Turkana",
+        "population_percentage": "~2.5%",
+        "language": "Turkana (Ng'aturkana)",
+        "language_family": "Nilotic (Eastern Nilotic)",
+        "region": "Northwestern Kenya — Lake Turkana basin",
+        "counties": ["Turkana"],
+        "religion": "Traditional beliefs remain strong; Christianity is growing",
+        "cultural_notes": {
+          "lifestyle": "Semi-nomadic pastoralists — herders of cattle, camels, donkeys, and goats in one of Kenya's most arid regions.",
+          "traditional_religion": "Believed in Akuj — the supreme creator deity. Sacrifices, divination, and ancestral veneration are central practices.",
+          "dressing": "Women wear layers of colorful bead necklaces covering the neck and chest, along with skirts of goat or calf skin decorated with beads and metal. Men wear cloaks and carry wooden stools (ekicholong) — which serve as both seat and headrest — as personal possessions.",
+          "oil_discovery": "Oil was discovered in Turkana County in 2012 by Tullow Oil — one of Kenya's most significant recent economic developments.",
+          "lake_turkana": "The Turkana people live beside Lake Turkana — the world's largest permanent desert lake and a UNESCO World Heritage Site. The lake is sacred and central to Turkana identity."
+        }
+      },
+      {
+        "name": "Somali (Kenya Somali)",
+        "population_percentage": "~2.4%",
+        "language": "Somali (af Soomaali)",
+        "language_family": "Cushitic",
+        "region": "Northeastern Kenya",
+        "counties": ["Mandera", "Wajir", "Garissa"],
+        "religion": "Islam (Muslim)",
+        "cultural_notes": {
+          "lifestyle": "Historically nomadic pastoralists. The northeastern region (formerly called NFD — Northern Frontier District) was disputed between Kenya and Somalia at independence. The region has historically been marginalized by the Kenyan state.",
+          "culture": "Deeply Islamic culture with clan-based social structure. Famous for storytelling, poetry (gabay), and trade.",
+          "notable_note": "Eastleigh estate in Nairobi — nicknamed 'Little Mogadishu' — is a bustling Somali business hub and one of East Africa's largest informal commercial centers."
+        }
+      },
+      {
+        "name": "Mijikenda",
+        "population_percentage": "~5%",
+        "language": "Nine related Bantu languages (Giriama, Digo, Duruma, Rabai, Ribe, Kambe, Kauma, Jibana, Chonyi)",
+        "language_family": "Bantu",
+        "region": "Coastal Kenya — hinterland of the Indian Ocean coast",
+        "counties": ["Kilifi", "Kwale", "Mombasa"],
+        "religion": "Mix of traditional beliefs (Kaya shrines), Islam, and Christianity",
+        "cultural_notes": {
+          "kaya_forests": "The sacred Kaya forests — ancestral fortified villages — are UNESCO World Heritage Sites. Each Mijikenda sub-group has its own Kaya, which serves as a spiritual center and ancestral homeland. Elders (Vaya) are custodians of Kaya traditions.",
+          "traditional_religion": "The Kaya forests are the spiritual center of Mijikenda life. Traditional healers and ritual specialists mediate between the living and the ancestors.",
+          "dressing": "Women traditionally wear colorful khanga (wraparound cloth) and kanga. Beaded jewelry and head wraps are common. Men traditionally wear kanzu (long white robe).",
+          "music_and_dance": "Chakacha — a sensual coastal dance performed by women, especially at weddings. Taarab music (Swahili poetic music with Arab, Indian, and African influences) is hugely popular along the coast."
+        }
+      },
+      {
+        "name": "Embu",
+        "population_percentage": "~1.5%",
+        "language": "Kiembu",
+        "language_family": "Bantu",
+        "region": "Eastern slopes of Mount Kenya",
+        "counties": ["Embu"],
+        "religion": "Predominantly Christian",
+        "cultural_notes": {
+          "relation_to_kikuyu": "The Embu are culturally and linguistically close to the Kikuyu and Meru — sometimes referred to together as the 'Mount Kenya peoples.'",
+          "traditional_religion": "Believed in Ngai dwelling on Mount Kenya — 'Kirinyaga.'"
+        }
+      }
+    ]
+  },
+
+  "languages": {
+    "official": ["Swahili (Kiswahili)", "English"],
+    "swahili_note": "Swahili (Kiswahili) is Kenya's national language and the lingua franca of East Africa. It is the mother tongue of the Swahili people (Waswahili) of the coast and is widely spoken as a second language across all 47 counties. It is one of the most widely spoken languages in Africa.",
+    "english_note": "English is used in government, education, law, and business. Kenya has one of Africa's highest English proficiency rates.",
+    "major_indigenous": [
+      {
+        "name": "Gikuyu (Kikuyu)",
+        "speakers": "~8 million",
+        "family": "Bantu",
+        "spoken_by": "Kikuyu people"
+      },
+      {
+        "name": "Dholuo",
+        "speakers": "~6 million",
+        "family": "Nilotic (Western Nilotic)",
+        "spoken_by": "Luo people"
+      },
+      {
+        "name": "Luhya dialects (Lubukusu, Lulogooli, etc.)",
+        "speakers": "~7 million",
+        "family": "Bantu",
+        "spoken_by": "Luhya peoples"
+      },
+      {
+        "name": "Kalenjin dialects (Nandi, Kipsigis, Tugen, etc.)",
+        "speakers": "~6 million",
+        "family": "Nilotic (Southern Nilotic)",
+        "spoken_by": "Kalenjin peoples"
+      },
+      {
+        "name": "Kamba (Kikamba)",
+        "speakers": "~4.5 million",
+        "family": "Bantu",
+        "spoken_by": "Kamba people"
+      },
+      {
+        "name": "Somali",
+        "speakers": "~2 million (Kenya only)",
+        "family": "Cushitic",
+        "spoken_by": "Somali community of northeastern Kenya"
+      },
+      {
+        "name": "Ekegusii",
+        "speakers": "~2.5 million",
+        "family": "Bantu",
+        "spoken_by": "Kisii (Abagusii) people"
+      },
+      {
+        "name": "Maa (Maasai language)",
+        "speakers": "~1 million (Kenya)",
+        "family": "Nilotic (Eastern Nilotic)",
+        "spoken_by": "Maasai and Samburu people"
+      },
+      {
+        "name": "Kimeru",
+        "speakers": "~2 million",
+        "family": "Bantu",
+        "spoken_by": "Meru people"
+      }
+    ],
+    "sheng": {
+      "name": "Sheng",
+      "description": "A vibrant urban creole slang born in Nairobi's Eastlands neighborhoods in the 1970s–80s. Sheng blends Swahili, English, Kikuyu, Luo, Luhya, and other languages in constantly evolving slang. It started as a youth street language and is now deeply embedded in Kenyan pop culture, music (Genge, Gengetone), advertising, and media. Different areas of Nairobi have different Sheng dialects.",
+      "sample_words": [
+        {"sheng": "Maze", "meaning": "Friend / Man (general address)"},
+        {"sheng": "Poa", "meaning": "Cool / Good / Fine"},
+        {"sheng": "Sawa", "meaning": "Okay / Alright (from Swahili)"},
+        {"sheng": "Buda", "meaning": "Old man / Father / Elder"},
+        {"sheng": "Kadogo", "meaning": "Small / Little (from Swahili kidogo)"},
+        {"sheng": "Vibe", "meaning": "Atmosphere / feeling / situation"},
+        {"sheng": "Noma", "meaning": "Intense / serious / very good"},
+        {"sheng": "Msee", "meaning": "Guy / Man"},
+        {"sheng": "Chapo", "meaning": "Chapati (East African flatbread)"},
+        {"sheng": "Mtaa", "meaning": "Neighborhood / hood (from Swahili)"}
+      ]
+    },
+    "swahili_greetings": [
+      {"phrase": "Habari yako?", "meaning": "How are you? (literally: what is your news?)"},
+      {"phrase": "Nzuri / Poa", "meaning": "Good / Fine (responses)"},
+      {"phrase": "Mambo vipi?", "meaning": "What's up? (informal)"},
+      {"phrase": "Poa kichizi kama ndizi!", "meaning": "Cool as a banana! (slang response)"},
+      {"phrase": "Karibu", "meaning": "Welcome / You are welcome"},
+      {"phrase": "Asante sana", "meaning": "Thank you very much"},
+      {"phrase": "Pole", "meaning": "Sorry / Excuse me"},
+      {"phrase": "Twende!", "meaning": "Let's go!"},
+      {"phrase": "Hakuna matata", "meaning": "No worries / No problem"},
+      {"phrase": "Usiku wa amani", "meaning": "Good night (literally: night of peace)"},
+      {"phrase": "Shikamoo", "meaning": "A respectful greeting to elders (response: Marahaba)"}
+    ]
+  },
+
+  "food": {
+    "overview": "Kenyan cuisine is hearty, communal, and deeply tied to agricultural and pastoralist traditions. Ugali — a firm maize flour porridge — is the undisputed national staple, eaten by virtually every ethnic group. The coast features a distinct Swahili-Arab cuisine heavily influenced by Indian Ocean spice trade. Nyama Choma (roasted meat) is Kenya's unofficial national dish and the cornerstone of every celebration.",
+    "staple_foods": [
+      {
+        "name": "Ugali",
+        "description": "Kenya's most important and universal food. A thick, firm porridge made from white maize flour (or millet/sorghum in some regions) cooked in boiling water until it forms a dense, dough-like consistency. Eaten with both hands — a ball of ugali is pinched off, formed into a cup shape, and used to scoop accompanying sauces, vegetables, or stew. In Kenya, a meal is not considered complete without ugali.",
+        "eaten_with": ["Sukuma wiki (collard greens)", "Githeri (boiled maize and beans)", "Nyama (meat stew)", "Fish (tilapia or Nile perch)", "Eggs", "Mgizo wa nyama (meat gravy)"],
+        "regional_variations": "Uji (thin, fermented ugali porridge) is a common breakfast. Millet ugali is common in western Kenya (Luo, Luhya). Sorghum ugali is common in the north."
+      },
+      {
+        "name": "Nyama Choma",
+        "description": "Literally 'roasted meat' in Swahili — Kenya's unofficial national dish and social institution. Goat is the most traditional and beloved nyama choma. Meat is slow-roasted over charcoal until tender, then served with kachumbari (raw tomato, onion, and coriander salad) and ugali. Eating nyama choma is a full social experience — done with friends, often at open-air restaurants (nyama choma joints). It marks every celebration, political deal, and family reunion.",
+        "popular_at": "Roadside butcheries, nyama choma joints, celebrations, and political gatherings"
+      },
+      {
+        "name": "Sukuma Wiki",
+        "description": "Collard greens (kale) sautéed with onions, tomatoes, and sometimes crayfish or meat. The name means 'stretch the week' in Swahili — because it was the affordable vegetable that families relied on to stretch their weekly food budget. It is the most widely consumed vegetable dish in Kenya, eaten daily in most households alongside ugali.",
+        "eaten_by": "Every community across Kenya"
+      },
+      {
+        "name": "Githeri",
+        "description": "A simple but nutritious one-pot dish of boiled maize (corn) and beans, originally a Kikuyu staple. Often cooked with potatoes, meat, or vegetables added. Githeri became a national symbol in 2017 when a photo of a man eating githeri at a polling station went viral and he became a national hero — later honored by the President.",
+        "fun_fact": "The 'Githeri Man' became one of Kenya's most beloved internet memes and viral moments of the 2017 elections."
+      },
+      {
+        "name": "Irio",
+        "description": "A traditional Kikuyu dish — a mash of green peas (or beans), corn, and potatoes, sometimes mixed with spinach or pumpkin leaves, giving it a green color. Rich, filling, and deeply comforting. Often eaten with nyama choma or stewed meat.",
+        "also_known_as": "Mashed potatoes with peas and corn"
+      },
+      {
+        "name": "Mukimo",
+        "description": "A Kikuyu dish of mashed potatoes mixed with green peas, corn, and sometimes pumpkin leaves. Similar to Irio but slightly firmer. A beloved home-cooked meal and a staple at Kikuyu cultural celebrations and family gatherings."
+      },
+      {
+        "name": "Pilau",
+        "description": "A fragrant spiced rice dish, cooked with whole spices — cardamom, cumin, cinnamon, cloves, and black pepper — browned onions, tomatoes, and meat (goat, beef, or chicken). A cornerstone of Swahili coastal and Muslim community cuisine. Eaten at every celebration: weddings, Eid, and family feasts. One of East Africa's most beloved festive dishes.",
+        "origins": "Influenced by Arab, Persian, and Indian traders along the Swahili coast"
+      },
+      {
+        "name": "Biryani",
+        "description": "The coastal Kenyan and Swahili version of biryani — richly spiced, layered rice cooked with marinated meat, saffron, and whole spices. A celebratory dish at weddings and Islamic holidays, especially in Mombasa and Lamu. The Swahili version has its own distinct character shaped by centuries of Indian Ocean spice trade.",
+        "origins": "South Asian and Arab influence via the Swahili coast"
+      },
+      {
+        "name": "Tilapia (Samaki wa Kukaanga)",
+        "description": "Fried or stewed Nile tilapia — the most iconic dish of western Kenya (Luo, Luhya, Kisii communities) around Lake Victoria. Freshly caught tilapia is cleaned, marinated, and deep-fried until crispy, then served with ugali and kachumbari. Visiting Kisumu or Homa Bay for tilapia by the lake is a rite of passage for any Kenyan food lover.",
+        "best_place": "Kisumu lakeside restaurants, Homa Bay, and Kendu Bay"
+      },
+      {
+        "name": "Mandazi",
+        "description": "East African fried dough — slightly sweet, lightly spiced with cardamom and coconut milk, fried until puffy and golden. A staple breakfast and snack across Kenya, especially along the coast. Eaten with tea (chai) in the morning. Similar to a doughnut but less sweet and more spiced.",
+        "eaten_with": "Chai (spiced milk tea) for breakfast"
+      },
+      {
+        "name": "Chapati",
+        "description": "Soft, layered flatbread — a beloved staple in Kenya, introduced by Indian laborers who came to build the Uganda Railway in the 1890s. Kenyan chapati is thicker and softer than Indian roti. A special-occasion food — made on Sundays, for guests, or celebrations. Eaten with beans (maharagwe), meat stew, or vegetables.",
+        "eaten_with": ["Maharagwe (bean stew)", "Meat stew", "Tea"]
+      },
+      {
+        "name": "Mutura",
+        "description": "Kenyan blood sausage — animal intestines stuffed with a mixture of minced meat, blood, onions, and spices, then roasted over charcoal. A popular street food, especially in Kikuyu, Meru, and central Kenya communities. A midnight snack staple in Nairobi's estates.",
+        "type": "Street food"
+      },
+      {
+        "name": "Maharagwe",
+        "description": "Kenyan kidney beans cooked slowly with coconut milk, tomatoes, onions, and spices until rich and creamy. A coastal staple but loved across the country. The coconut milk version (maharagwe ya nazi) is a Swahili specialty.",
+        "eaten_with": "Rice, chapati, or ugali"
+      },
+      {
+        "name": "Kachumbari",
+        "description": "Kenya's essential raw salad — finely chopped tomatoes, red onions, coriander (dhania), and sometimes green chili or lime juice. Served alongside virtually every Kenyan dish, especially nyama choma. Fresh, bright, and essential.",
+        "accompanies": "Nyama choma, grilled fish, pilau"
+      },
+      {
+        "name": "Mursik",
+        "description": "Fermented cow or goat milk, traditionally stored in a calabash gourd coated with charcoal. The charcoal imparts a distinctive smoky, tangy flavor. Central to Kalenjin culture — believed to have contributed to the extraordinary physical endurance of Kalenjin runners. Shared at community events and offered to guests as a sign of respect.",
+        "cultural_significance": "Among the Kalenjin, offering mursik is an act of deep hospitality and cultural identity"
+      },
+      {
+        "name": "Uji",
+        "description": "A thin fermented porridge made from millet, sorghum, or maize flour. A common breakfast — especially for children and nursing mothers. Also consumed as a light meal or after illness. Each ethnic group has its own version.",
+        "type": "Breakfast / Beverage"
+      },
+      {
+        "name": "Rolex",
+        "description": "Not Kenyan in origin (a Ugandan street food) but hugely popular in Nairobi and western Kenya. An egg omelette rolled inside a chapati — the name is a portmanteau of 'rolled eggs.' Quick, affordable, and delicious. A beloved street food snack.",
+        "type": "Street food"
+      }
+    ],
+    "coastal_swahili_foods": [
+      {
+        "name": "Coconut rice (Wali wa Nazi)",
+        "description": "Rice cooked in rich, creamy coconut milk — a Swahili coast staple. Fluffy, aromatic, and slightly sweet. Served with fish curry, mchuzi wa kuku (chicken stew), or grilled prawns."
+      },
+      {
+        "name": "Urojo (Mombasa Mix)",
+        "description": "Mombasa's iconic street food — a tangy, spiced mango-based soup poured over bhajias (Indian spiced potato fritters), boiled eggs, cassava chips, and other fillings. A complete street food experience in a bowl. Unique to Mombasa and the Swahili coast.",
+        "also_known_as": "Mombasa Mix"
+      },
+      {
+        "name": "Pweza wa Nazi (Octopus in Coconut Milk)",
+        "description": "A Swahili coast delicacy — octopus marinated and slow-cooked in creamy coconut milk with spices and tomatoes. A dish that captures the Indian Ocean flavor of Kenyan coastal cuisine."
+      },
+      {
+        "name": "Kaimati",
+        "description": "Sweet, deep-fried dough balls — smaller and stickier than mandazi, dipped in sugar syrup and cardamom. A Swahili coast sweet often eaten during Ramadan and Eid celebrations."
+      },
+      {
+        "name": "Halua (Halwa)",
+        "description": "A dense, sweet confection made from cornstarch, sugar, ghee, and cardamom or rosewater. Deeply colored and intensely flavored. An Omani-origin sweet that is central to coastal Kenyan celebrations, especially weddings and Eid."
+      }
+    ],
+    "drinks": [
+      {
+        "name": "Chai (Kenyan Tea)",
+        "description": "Kenyan chai is not the Indian masala chai — it is made by boiling tea leaves directly in a large pot of milk and water, heavily sweetened with sugar. The result is a rich, creamy, intensely flavored tea. Kenya is one of the world's top tea producers (particularly the Rift Valley highlands — Kericho and Nandi). Kenyan tea is served throughout the day and is the center of social life."
+      },
+      {
+        "name": "Tusker Beer",
+        "description": "Kenya's most iconic beer — a pale lager brewed by East African Breweries Limited (EABL) since 1922. Named after an elephant that killed the founder George Hurst. The elephant on the label is iconic. Tusker is Kenya's national beer and one of Africa's most recognized beer brands.",
+        "tagline": "'My Country's Beer'"
+      },
+      {
+        "name": "Dawa Cocktail",
+        "description": "Kenya's signature cocktail — a mix of vodka, lime juice, honey, and crushed ice, stirred with a honey-dipped stick (the 'dawa stick'). Invented at the Carnivore restaurant in Nairobi. 'Dawa' means 'medicine' or 'magic' in Swahili.",
+        "invented_at": "Carnivore Restaurant, Nairobi"
+      },
+      {
+        "name": "Muratina",
+        "description": "A traditional Kikuyu fermented beer made from sugarcane juice and the fruit of the muratina tree (sausage tree fruit / Kigelia africana). Mildly alcoholic. Used in Kikuyu traditional ceremonies, especially marriage rituals and rites of passage."
+      },
+      {
+        "name": "Chang'aa",
+        "description": "A potent traditional spirit distilled from fermented grain (millet, sorghum, or maize). Once illegal to brew, it was decriminalized in Kenya in 2010. Extremely strong — sometimes up to 40–60% alcohol. A deeply embedded part of working-class and rural social life. Also spelled 'chang'a.'",
+        "note": "Adulterated chang'aa has historically caused deaths — quality control remains a serious public health concern"
+      },
+      {
+        "name": "Mnazi (Palm Wine)",
+        "description": "Fermented sap tapped from coconut palm trees — a refreshing, mildly alcoholic drink consumed fresh along the coast. Sweet when freshly tapped, becoming more alcoholic and sour as it ferments. A staple social drink among coastal Mijikenda and Swahili communities."
+      }
+    ]
+  },
+
+  "dressing": {
+    "overview": "Kenyan traditional dress varies significantly by ethnic group but shares several characteristics — bright colors, beadwork, and wrapping cloths. The Maasai shuka and beaded jewelry are internationally recognized. The coastal Swahili tradition centers on the kanzu for men and buibui / khanga for women. Kikuyu and other central Kenya groups wore tanned animal hides historically. Today, modern Kenyan fashion blends traditional textiles with contemporary African fashion trends.",
+    "traditional_by_group": [
+      {
+        "group": "Maasai",
+        "men": "Red shuka (large rectangle of red cloth, often with blue or black check patterns) wrapped around the body and sometimes over one shoulder. Warriors (moran) paint their bodies and long ochre-coated hair with red clay. Sandals made from tyre rubber. The spear (enkiama) is carried as a symbol of warrior status.",
+        "women": "Blue or multi-colored shukas. Extensive beaded jewelry — the most elaborate beaded collar necklaces (ilkarash) in Africa. Women craft all the beadwork. Wide, flat beaded necklaces distinguish married from unmarried women and indicate social status. Stretched earlobes adorned with beaded discs.",
+        "colors": "Red (dominant — symbolizes bravery and blood), Blue (symbolizing the sky and God — Enkai), and White/Green/Orange in beadwork",
+        "signature_item": "Maasai beaded jewelry and the red shuka — among the most recognizable traditional dress in Africa"
+      },
+      {
+        "group": "Kikuyu",
+        "historical": "Traditionally wore tanned animal hides (goatskin and sheepskin). Warriors wore cloaks of animal skins. Women wore leather skirts and cloaks adorned with beads and metal coils.",
+        "modern": "Today the Kikuyu largely wear Western clothing. Traditional dress is reserved for ceremonies and cultural events.",
+        "ceremonial": "Muumba — traditional dance regalia including fur cloaks, beaded headbands, and bells around ankles"
+      },
+      {
+        "group": "Luo",
+        "historical": "Traditionally wore animal skin garments. Fishermen on Lake Victoria wore minimal clothing suited to their work.",
+        "ceremonial": "Luo ceremonial dress includes headbands of animal fur, colorful beaded necklaces, and wrist bracelets. The Ohangla dancer wears colorful wraps and ankle rattles.",
+        "modern": "Western dress in daily life"
+      },
+      {
+        "group": "Swahili Coast / Coastal Communities",
+        "men": "Kanzu — a long white robe derived from Arab influence, worn by Muslim men, especially for prayers and formal occasions. Worn with a kofia (embroidered Muslim skullcap).",
+        "women": "Buibui — a black full-body covering (cloak) worn over regular clothes by Muslim Swahili women when going out, particularly in Mombasa and Lamu. Khanga — a brightly colored wraparound cloth with Swahili proverbs printed on the border. Worn daily by coastal women.",
+        "khanga": "The khanga is a brightly colored rectangular cloth (always sold in pairs) printed with bold patterns and a Swahili proverb along the border. Used as a wrap skirt, headscarf, baby carrier, or gift. The proverbs make khanga a form of communication — a woman can send a message through the proverb on her khanga.",
+        "signature_items": ["Kanzu", "Kofia (embroidered cap)", "Khanga (Swahili wraparound cloth)", "Buibui"]
+      },
+      {
+        "group": "Turkana",
+        "women": "Famous for extraordinary layered bead necklaces covering the entire neck — dozens of strands of multi-colored beads creating a permanent collar-like structure. Leather skirts decorated with beads and metal. Head partially shaved with a distinctive crest of hair.",
+        "men": "Cloaks of animal skin or woven fabric. The wooden stool (ekicholong) is a personal possession of every Turkana man — used as a seat and pillow.",
+        "signature_item": "Turkana women's multi-layered bead necklaces — among Africa's most striking traditional adornments"
+      },
+      {
+        "group": "Samburu",
+        "description": "Closely related to the Maasai. Men wear colorful shukas (preferring orange and red). Women wear elaborate multi-strand bead necklaces and colorful bead bracelets and anklets. Warriors have long ochre-coated hair. Their style is considered even more colorful than the Maasai.",
+        "signature_item": "Elaborate multi-strand bead necklaces in bright oranges, reds, and blues"
+      }
+    ],
+    "national_and_modern_dress": {
+      "khanga": "The khanga (also kanga) is Kenya's most widely worn traditional textile — a brightly printed cotton cloth used as a wraparound by women across all ethnicities and regions. Each khanga has a Swahili proverb printed along its border. They are given as gifts at weddings, funerals, and celebrations.",
+      "kitenge": "Brightly colored wax-print cotton fabric (like Ankara in West Africa) — used for formal dresses, suits, and accessories. Popular across Kenya for celebrations and official events.",
+      "modern_fashion": "Nairobi has a thriving contemporary African fashion scene. Designers blend Ankara/kitenge prints with modern silhouettes. Nairobi Fashion Week is a growing event. Kenyan designers are increasingly recognized internationally.",
+      "safari_fashion": "The khaki safari look — derived from colonial-era hunting attire — has become a globally recognized aesthetic associated with Kenya."
+    }
+  },
+
+  "marriage_traditions": {
+    "overview": "Kenyan marriage traditions vary significantly between the 44+ ethnic groups, but common themes include: bride price (dowry), family and clan involvement, elaborate ceremonies, and a progression through multiple stages before the marriage is considered complete. Polygamy is legally recognized for those practicing customary law and is practiced across several communities.",
+    "common_elements": [
+      "Bride price (lobola/ruracio/roho) — payment by the groom's family to the bride's family in cattle, livestock, or money",
+      "Family and clan negotiations — marriage is rarely a personal decision alone; it involves extended families",
+      "Multi-stage ceremonies — separate stages for courtship, negotiation, traditional ceremony, and church/civil wedding",
+      "Age-set and clan compatibility — in some communities, marrying within the same clan or age-set is prohibited"
+    ],
+    "by_group": [
+      {
+        "group": "Kikuyu",
+        "name": "Ruracio",
+        "description": "The Kikuyu bride price ceremony is called Ruracio. The groom's family negotiates and pays ruracio (bride price) in a formal meeting with the bride's family. Traditionally paid in livestock, modern ruracio involves a negotiated list of items — money, blankets, household goods, and token animals. The ceremony involves elaborate feasting, traditional songs, and formal speeches between the two families. The ruracio must be fully agreed upon before the couple can marry. Wedding celebrations follow after the ruracio.",
+        "bride_price_items": ["Goats", "Sheep", "Cash/money", "Blankets", "Household goods", "Traditional items specified by the bride's family"]
+      },
+      {
+        "group": "Luo",
+        "name": "Ayie (Bride Price)",
+        "description": "The Luo bride price tradition involves extended negotiations between the groom's representatives (jodong'o) and the bride's family. The bride price is known as 'ayie' (meaning 'yes/acceptance'). Cattle, goats, and money are the primary forms of payment. The ceremony includes traditional dances (ohangla music), feasting, and the formal transfer of the bride to the groom's homestead. Luo tradition involves the groom's family formally introducing themselves to the bride's family in a series of visits before the actual ceremony.",
+        "unique_custom": "The Luo traditionally practiced 'levirate marriage' (chokolo) — a widow could be inherited by her late husband's brother to ensure she and her children remained within the family structure, though this is declining."
+      },
+      {
+        "group": "Maasai",
+        "name": "Enkiama (Maasai Marriage)",
+        "description": "Maasai marriage is deeply tied to the age-set system. A moran (warrior) typically cannot marry until he transitions to the elder age-set (after the eunoto ceremony — where the warrior's long ochre-coated hair is shaved by his mother). Marriages are arranged by families and typically involve payment in cattle. Polygamy is common and respected among the Maasai. The bride, adorned in elaborate beaded jewelry, moves to the groom's enkang (homestead). The wedding ceremony involves singing, blessings, and a feast.",
+        "polygamy": "Widely practiced — the number of wives reflects wealth and social status"
+      },
+      {
+        "group": "Kalenjin",
+        "name": "Koito (Bride Price Negotiation)",
+        "description": "Kalenjin marriage involves careful negotiation over bride price (koito), primarily paid in cattle. The negotiations are conducted by clan elders. Both families must ensure the couple are not from the same clan — clan exogamy is strictly observed. The circumcision ceremony (for boys) must be completed before a man is considered ready to marry — circumcised men have higher marriage eligibility.",
+        "unique_aspect": "Kalenjin age-sets — men initiated in the same ceremony become age-mates (ipinda) and maintain lifelong bonds. Marriage discussions often involve age-set networks."
+      },
+      {
+        "group": "Kamba",
+        "name": "Mwiki (Bride Price)",
+        "description": "The Kamba bride price (mwiki) was traditionally paid in livestock — goats and cattle. Kamba marriage involves a ceremonial presentation of the bride to the groom's family (nguo wa nzeveni). The bride's aunt plays a special role in preparing and advising her. Kamba celebrations feature traditional dances (kilumi, mwali) and feasting."
+      },
+      {
+        "group": "Luhya",
+        "name": "Bride Price (Omwami)",
+        "description": "Each of the 18 Luhya sub-groups has variations, but bride price (paid in cattle and money) is central. Bukusu marriages, for example, involve elaborate clan negotiations. The bride's family prepares her by conducting female initiation ceremonies before the wedding. Luhya weddings are known for their energetic celebrations with isukuti drums and dancing."
+      },
+      {
+        "group": "Swahili",
+        "name": "Arusi (Wedding)",
+        "description": "Swahili weddings are grand, multi-day celebrations deeply influenced by Islam and Arab tradition. The nikah (Islamic marriage contract) is central. Women celebrate separately from men in many traditional ceremonies. The bride is elaborately dressed in heavy beaded and embroidered garments and adorned with gold jewelry. Henna (kupiga hina) is applied to the bride's hands and feet in intricate patterns. Taarab music and chakacha dance are performed at celebrations. Swahili weddings can last 3–7 days.",
+        "unique_custom": "Taarab — Swahili poetic music performed live by an orchestra — is central to Swahili weddings. Songs are often indirect messages to rival wives, in-laws, or to praise the bride.",
+        "henna": "Elaborate henna patterns on the bride's hands and feet — a tradition linking Swahili culture to Arab, Persian, and South Asian influences"
+      }
+    ]
+  },
+
+  "beliefs": {
+    "overview": "Kenya's spiritual landscape is among Africa's most diverse. Approximately 85% of Kenyans identify as Christian (the highest Christian percentage in East Africa), but traditional African spirituality remains deeply embedded within and alongside Christianity and Islam. The Kenyan coast has a centuries-old Islamic tradition. Indigenous belief systems — centered on a supreme creator deity, ancestor veneration, sacred landscapes, and ritual specialists — remain influential across many communities.",
+    "traditional_beliefs": [
+      {
+        "group": "Kikuyu",
+        "supreme_deity": "Ngai (also Mwene-Nyaga — 'Owner of the Ostrich Feathers')",
+        "description": "Ngai is the supreme creator, believed to reside on Mount Kenya (Kirinyaga — 'Mountain of Brightness/White' — meaning the snow-capped peak). The Kikuyu pray facing Mount Kenya. Sacred fig trees (mugumo or mukuyu) were sites of sacrifice and prayer to Ngai. Ancestors (ngoma) mediated between the living and Ngai. Traditional healers (mundu mugo) diagnosed spiritual illness and performed cleansing rituals.",
+        "sacred_site": "Mount Kenya (Kirinyaga) — the earthly home of Ngai"
+      },
+      {
+        "group": "Luo",
+        "supreme_deity": "Nyasaye (God — also called Were)",
+        "description": "The Luo believe in Nyasaye, a supreme God associated with the sun and the sky. Ancestor veneration (jochiende — ancestor spirits) is central. The spirits of the dead remain present in family life, requiring regular propitiation through ceremony and offerings. Jabilo (diviners/healers) communicate with ancestral spirits to address illness, misfortune, or conflict.",
+        "sacred_site": "The shores of Lake Victoria — the lake is spiritually significant to the Luo"
+      },
+      {
+        "group": "Maasai",
+        "supreme_deity": "Enkai (also Engai — literally 'rain' or 'sky')",
+        "description": "The Maasai believe in a single deity, Enkai, who has two aspects: Enkai Narok (Black God — benevolent, associated with rain and abundance) and Enkai Nanyokie (Red God — wrathful, associated with lightning and drought). The Laibon (spiritual leader and healer) is the intermediary between humans and Enkai. Cattle are considered a gift from Enkai to the Maasai — which explains the belief that all the world's cattle rightfully belong to them. The sacred tree (oreteti — African wild fig) is a site of prayer and sacrifice.",
+        "sacred_item": "Cattle — gifted by God to the Maasai"
+      },
+      {
+        "group": "Kamba",
+        "supreme_deity": "Mulungu (also Ngai in some dialects)",
+        "description": "The Kamba believe in Mulungu — a supreme being not directly worshipped but approached through ancestor spirits (aimu). Ancestor veneration is central. Athiani (diviners and medicine people) identify causes of illness and misfortune through divination. Sacred hills (muthiani) and fig trees were sites of communal prayer and sacrifice.",
+        "sacred_site": "Sacred hills throughout Ukambani (Kamba lands)"
+      },
+      {
+        "group": "Mijikenda",
+        "supreme_deity": "Mulungu (supreme creator)",
+        "description": "The Mijikenda's most sacred tradition centers on the Kaya forests — ancestral fortified settlements now recognized as UNESCO World Heritage Sites. Each Mijikenda sub-group's Kaya is guarded by elders (Vaya) and serves as the spiritual heart of their community. Ancestral spirits (mizimu) are venerated. The Kaya forests are believed to be inhabited by ancestral spirits and are sites of healing, conflict resolution, and community decision-making.",
+        "sacred_site": "Kaya forests — UNESCO World Heritage Sites, sacred ancestral groves along the Kenyan coast"
+      },
+      {
+        "group": "Turkana",
+        "supreme_deity": "Akuj",
+        "description": "Akuj is the supreme creator deity of the Turkana — associated with the sky and rain. The Turkana also venerate the spirits of ancestors (ng'ikelunga) and believe that the cattle and livestock they herd are entrusted to them by God. The emuron (diviner/prophet) mediates with spiritual forces, predicting rains, finding lost cattle, and healing illness."
+      }
+    ],
+    "religion_today": {
+      "christianity": {
+        "percentage": "~85%",
+        "denominations": "Roman Catholic, Anglican (ACK — Anglican Church of Kenya), Presbyterian (PCEA), Pentecostal/Charismatic (largest and fastest-growing), Seventh-Day Adventist (particularly among the Kisii and western Kenya), Africa Inland Church (AIC)",
+        "notable": "Pentecostal and Charismatic Christianity have undergone explosive growth since the 1990s. Kenya has some of the largest megachurches in Africa. The prosperity gospel is very influential.",
+        "syncretism": "Christian practice is frequently blended with traditional beliefs — traditional healers, ancestral veneration, and protective charms coexist with church attendance across many communities."
+      },
+      "islam": {
+        "percentage": "~11%",
+        "community": "Concentrated on the coast (Mombasa, Lamu, Malindi) and the northeast (ethnic Somali). The Swahili Muslim community has practiced Islam for over 1,000 years.",
+        "notable": "Lamu is one of Africa's best-preserved Swahili-Islamic towns. The Lamu Cultural Festival celebrates Maulid (the Prophet's birthday) as a major annual event. Kenya's oldest mosques are along the coast."
+      }
+    }
+  },
+
+  "festivals": [
+    {
+      "name": "Lamu Cultural Festival",
+      "also_known_as": "Maulid Festival / Lamu Old Town Festival",
+      "timing": "Annual — Maulid (Prophet Muhammad's birthday, Islamic calendar) + October/November Lamu Cultural Festival",
+      "location": "Lamu Island, Coast County",
+      "description": "Kenya's most magical festival — held in the UNESCO World Heritage-listed Lamu Old Town, the oldest and best-preserved Swahili settlement in East Africa. The Lamu Cultural Festival celebrates Swahili heritage with donkey races (no cars allowed on Lamu), dhow sailing races on the ancient wooden sailing vessels, Swahili poetry competitions, taarab music, traditional dances, henna art, traditional Swahili food, and crafts. During Maulid, Sufi devotional music (dhikr) and processions fill the narrow streets of the old town.",
+      "unique_feature": "No motorized vehicles allowed on Lamu Island — donkeys are the main form of transport, making it the only car-free town in Kenya",
+      "type": "Cultural / Religious"
+    },
+    {
+      "name": "Maralal International Camel Derby",
+      "timing": "Annual — August (typically the third weekend)",
+      "location": "Maralal, Samburu County",
+      "description": "One of Africa's most unusual and thrilling sporting events — a camel racing competition held in the remote Samburu town of Maralal. Both experienced and amateur riders (including tourists) participate. The derby attracts participants from across the world. Set against the backdrop of the spectacular Samburu highlands, it also features cultural performances by Samburu and Turkana communities.",
+      "type": "Sports / Cultural"
+    },
+    {
+      "name": "Koroga Festival",
+      "timing": "Quarterly (roughly every 3 months)",
+      "location": "Nairobi (various venues — has been held at Arboretum, Jamhuri Park)",
+      "description": "One of Kenya's premier music and cultural festivals. 'Koroga' means 'to stir/mix' in Swahili — the festival mixes different music genres: Afrobeats, Bongo Flava, gengetone, benga, afro-soul, and jazz. A lifestyle event featuring top East African and international artists, food, fashion, and art. Beloved by Nairobi's creative class.",
+      "type": "Music / Lifestyle"
+    },
+    {
+      "name": "Ukweli Festival (Lake Turkana Festival)",
+      "also_known_as": "Lake Turkana Cultural Festival",
+      "timing": "Annual — June",
+      "location": "Loiyangalani, Marsabit County (Lake Turkana shore)",
+      "description": "One of Africa's greatest cultural gatherings — bringing together over 14 ethnic groups (Turkana, El Molo, Rendille, Samburu, Gabra, Borana, Dassanech, Pokot, and more) from around Lake Turkana and northern Kenya. Celebrates the cultures of one of Africa's most remote and least-visited regions. Features traditional dances, music, camel racing, traditional sports, beadwork, and cultural exchanges. The journey to Loiyangalani — through stunning landscapes — is itself an adventure.",
+      "type": "Cultural / Ethnic Heritage"
+    },
+    {
+      "name": "Isiolo International Cultural Festival",
+      "timing": "Annual",
+      "location": "Isiolo County",
+      "description": "A celebration of the diverse cultures that meet at Isiolo — the gateway between the Kenyan highlands and the arid north. Brings together Borana, Somali, Meru, Samburu, and Turkana communities for traditional dances, camel and cattle shows, traditional foods, and competitive sports.",
+      "type": "Cultural"
+    },
+    {
+      "name": "Blankets and Wine",
+      "timing": "Monthly",
+      "location": "Nairobi (Ngong Racecourse and other venues)",
+      "description": "Nairobi's most beloved monthly outdoor music event — a relaxed, Sunday afternoon outdoor concert where attendees bring blankets, picnics, and wine to enjoy live music under the open sky. Features a curated lineup of East African artists — Bongo Flava, Afro-soul, afrobeats, and jazz. One of the most socially significant events of Nairobi's cultural calendar.",
+      "type": "Music / Social"
+    },
+    {
+      "name": "Safaricom International Jazz Festival",
+      "timing": "Annual — February/March",
+      "location": "Nairobi (Uhuru Gardens)",
+      "description": "East Africa's premier jazz festival — attracting world-class jazz, blues, and afro-jazz artists from Africa and internationally. Held in the scenic Uhuru Gardens where Kenya's independence was proclaimed. Combines international-class performances with African musical traditions. A marquee event on Nairobi's cultural calendar.",
+      "type": "Music / Arts"
+    },
+    {
+      "name": "Jamhuri Day",
+      "timing": "December 12 (National Holiday)",
+      "location": "Nationwide — main celebrations at Kasarani Stadium, Nairobi",
+      "description": "Kenya's Republic Day — marking both independence (December 12, 1963) and the declaration of republic status (December 12, 1964). Celebrated with military parades, presidential address, cultural performances from all counties, traditional dances, and patriotic celebrations. Families gather for nyama choma and celebration.",
+      "type": "National Holiday"
+    },
+    {
+      "name": "Maasai Mara Wildebeest Migration Season",
+      "timing": "July – October (peak)",
+      "location": "Masai Mara National Reserve, Narok County",
+      "description": "Not a man-made festival but one of the world's greatest natural spectacles — the annual migration of over 1.5 million wildebeest, 200,000 zebras, and 500,000 gazelles from Tanzania's Serengeti into Kenya's Masai Mara. The dramatic river crossings — where thousands of wildebeest plunge into the crocodile-filled Mara River — are among the most breathtaking wildlife experiences on earth. The Masai Mara swells with visitors from around the world during this period.",
+      "type": "Natural / Wildlife"
+    },
+    {
+      "name": "Mombasa Carnival",
+      "timing": "Annual — November",
+      "location": "Mombasa City",
+      "description": "A vibrant street carnival celebrating the cultural diversity of the Kenyan coast. Colorful processions, float parades, traditional music (taarab, chakacha), cultural dances, food festivals, and arts exhibitions fill Mombasa's streets for several days. Celebrates the unique blend of African, Arab, Indian, and Portuguese influences that define coastal Kenyan identity.",
+      "type": "Cultural / Street Festival"
+    },
+    {
+      "name": "Bukusu Circumcision Ceremony (Imbalu)",
+      "timing": "Every even year (2020, 2022, 2024...) — August through December",
+      "location": "Bungoma County and Western Kenya (Bukusu community)",
+      "description": "The Bukusu (Luhya sub-group) circumcision ceremony (Imbalu) is one of Kenya's most publicly celebrated rites of passage. Young men who are to be circumcised spend weeks singing, dancing, and walking through their communities, collecting blessings and gifts. The ceremony is communal and joyful — entire villages participate. Initiates must display absolute bravery during the procedure without flinching. Followed by a period of seclusion and healing, after which the initiates emerge as men.",
+      "type": "Cultural / Rite of Passage"
+    }
+  ],
+
+  "music_and_pop_culture": {
+    "overview": "Kenya is East Africa's undisputed music powerhouse. From the classic rhythms of Benga (guitar-driven Luo music), through the urban youth explosion of Genge and Gengetone, to the global dominance of East African artists on streaming platforms, Kenyan music has always reflected the country's diversity and creativity. Nairobi is the music, fashion, tech, and media capital of the East African region.",
+    "traditional_music": [
+      {
+        "name": "Benga",
+        "description": "Kenya's foundational popular music style, born in the 1940s–60s from the fusion of Luo nyatiti (traditional lyre) music with electric guitar. Benga is characterized by fast, interlocking guitar melodies, deep bass, and call-and-response vocals — all at a high tempo. It spread from western Kenya to become Kenya's first nationally popular indigenous music style.",
+        "origin": "Luo community — Lake Victoria region",
+        "pioneers": ["D.O. Misiani (Dan Owino Misiani — 'the grandfather of Benga')", "Victoria Jazz Band", "George Ramogi"],
+        "instruments": ["Electric guitar (lead and rhythm)", "Bass guitar", "Drums", "Vocals"]
+      },
+      {
+        "name": "Ohangla",
+        "description": "A raw, powerful, percussive traditional Luo music style centered on the nyatiti (8-string lyre), orutu (one-string fiddle), drums, and energetic call-and-response vocals. Ohangla is both a music style and a dance — it is performed at celebrations, funerals, and traditional ceremonies. In recent years, Ohangla has undergone a massive revival, with young artists like Oduor Genro blending it with hip-hop and contemporary sounds.",
+        "origin": "Luo community — western Kenya",
+        "key_instruments": ["Nyatiti (8-string lyre)", "Orutu (one-string fiddle)", "Bul (drum)", "Siembe (bell)"]
+      },
+      {
+        "name": "Taarab",
+        "description": "A poetic Swahili music form born on the East African coast — blending African rhythms with Arab maqam scales, Indian melodic influences, and Persian instruments. Taarab is performed by an orchestra featuring oud (lute), violin, accordion, tabla, and a lead vocalist who sings elaborate poetic lyrics (shairi). Taarab's lyrics are often indirect — sending messages to rivals or celebrating love — and audiences respond emotionally by placing money on the singer's forehead.",
+        "origin": "Swahili coast — Zanzibar, Mombasa, Lamu",
+        "key_artists": ["Farida Karimi", "Malika", "Mzee Yusuph"]
+      },
+      {
+        "name": "Chakacha",
+        "description": "A sensual, rhythmic coastal dance music performed primarily by women — characterized by undulating hip movements and expressive body dancing. Performed at weddings and celebrations along the Swahili coast. The chakacha drum (chaka) drives the hypnotic rhythm.",
+        "origin": "Swahili coast — Mombasa and coastal communities"
+      },
+      {
+        "name": "Isukuti",
+        "description": "Traditional Luhya drum music — performed by a group of drummers playing different-sized drums (isukuti) in complex, interlocking rhythms. Performed at circumcision ceremonies (especially Bukusu Imbalu), weddings, and celebrations. Energetic, communal, and deeply rooted in western Kenya cultural identity.",
+        "origin": "Luhya community — western Kenya"
+      },
+      {
+        "name": "Nyatiti Music",
+        "description": "Music played on the nyatiti — an 8-string bowl-lyre that is one of Kenya's most ancient instruments. Traditional nyatiti players accompanied their playing with bells tied to their legs and sang praise songs, social commentary, and laments. The instrument is considered sacred in Luo culture.",
+        "origin": "Luo community — Lake Victoria region"
+      }
+    ],
+    "modern_music": [
+      {
+        "name": "Genge",
+        "description": "A Nairobi street music style that emerged in the late 1990s–2000s, mixing dancehall rhythms with Sheng lyrics and Kenyan urban sensibility. Genge was the first Kenyan popular music style to break away from international influences and establish a distinctly Nairobi sound. Heavy bass, infectious rhythms, and fast Sheng rap characterize the style.",
+        "pioneers": ["Nonini (Hubert Mbuku Nakitare — 'the godfather of Genge')", "Jua Cali", "Nazizi"],
+        "era": "Late 1990s – 2010s"
+      },
+      {
+        "name": "Gengetone",
+        "description": "The defining Kenyan music genre of the late 2010s–2020s. Gengetone emerged from Nairobi's estates — a gritty, irreverent, sexually explicit, bass-heavy music style rapped entirely in Sheng. Gengetone artists challenged the polished, gospel-influenced mainstream by speaking directly about life in Nairobi's estates (neighborhoods). It divided Kenyan society — loved by youth, criticized by parents and the government.",
+        "pioneering_groups": ["Ethic Entertainment (Swat, Seska, Rekles, Zilla Oaks)", "Sailors Gang", "Boondocks Gang", "Mbogi Genje"],
+        "breakthrough_song": "'Lamba Lolo' by Ethic Entertainment (2018) — the song that launched Gengetone and became a cultural moment",
+        "controversy": "Several Gengetone songs were banned by the Kenya Film Classification Board (KFCB) for explicit content — generating massive debate about censorship and artistic freedom",
+        "era": "2018 – present"
+      },
+      {
+        "name": "Afro-pop / Afro-soul",
+        "description": "A smooth, melodic, polished sound blending Afrobeats influences with Swahili, English, and Sheng lyrics. Kenya's most commercially successful genre on streaming platforms. Artists blend West African Afrobeats with East African rhythms and Swahili poetry.",
+        "key_artists": ["Sauti Sol (Kenya's most successful music group internationally)", "Nviiri the Storyteller", "Bien (solo from Sauti Sol)", "Nairobi City Benga Records artists", "Jovial", "Nikita Kering"]
+      },
+      {
+        "name": "Kenyan Hip-Hop",
+        "description": "A vibrant hip-hop scene rooted in Nairobi's estates — blending American hip-hop with Sheng, Swahili, and local storytelling. Kenyan hip-hop has produced critically acclaimed artists who address social inequality, police brutality, and political corruption.",
+        "key_artists": ["Rabbit (Kaka Sungura)", "Khaligraph Jones (Kenya's biggest hip-hop export)", "Octopizzo", "Nyashinski", "Juliani"],
+        "khaligraph_jones": "Nicknamed 'OG' (Original Gangster) — Khaligraph Jones is arguably the most lyrically gifted Kenyan rapper and has collaborated with international artists including Sarkodie, Patoranking, and others"
+      },
+      {
+        "name": "Gospel Music",
+        "description": "Gospel music is arguably Kenya's most commercially dominant genre by reach and airplay. Kenyan gospel artists blend contemporary worship styles, Afrobeats, and traditional hymns. Gospel music is deeply embedded in Kenyan cultural life — played in matatus (minibuses), homes, and radio.",
+        "key_artists": ["Mercy Masika", "Gloria Muliro", "Willy Paul (controversial figure)", "Size 8 Reborn", "Guardian Angel", "Bahati"]
+      },
+      {
+        "name": "Afro-fusion / Bongo Flava influence",
+        "description": "The influence of Tanzanian Bongo Flava on Kenyan music is significant — Swahili-language Afropop from Tanzania is hugely popular in Kenya, and many collaborations cross the Tanzania-Kenya border.",
+        "key_tanzanian_artists_popular_in_kenya": ["Diamond Platnumz", "Harmonize", "Marioo", "Mbosso"]
+      }
+    ],
+    "trending_artists": [
+      {
+        "name": "Sauti Sol",
+        "genre": "Afro-pop / Afro-soul",
+        "description": "Kenya's most successful and critically acclaimed music group — a four-member Afro-pop band formed in Nairobi in 2005. Known for stunning vocal harmonies, blending English, Swahili, and Luo in their lyrics, and a sophisticated musical style that spans Afrobeats, benga, and afro-soul. They are the first Kenyan group to achieve pan-African superstar status and have collaborated with Yemi Alade, Burna Boy, and Sho Madjozi."
+      },
+      {
+        "name": "Khaligraph Jones",
+        "genre": "Hip-hop / Rap",
+        "description": "Kenya's most celebrated rapper — nicknamed 'OG' (the Original Gangster). Known for aggressive delivery, sharp lyricism, and battles with international counterparts. Has been nominated for multiple BET Hip Hop Awards and is increasingly recognized as one of Africa's greatest MCs."
+      },
+      {
+        "name": "Nyashinski",
+        "genre": "Afro-pop / Hip-hop",
+        "description": "One of Kenya's most beloved musicians — started in the pioneering group Kleptomaniax in the early 2000s, went to the US for years, and returned to become one of Kenya's biggest solo stars. Known for heartfelt, introspective music. His album 'Now You Know' (2016) is considered a landmark in Kenyan music."
+      },
+      {
+        "name": "Bien (Bien-Aimé Baraza)",
+        "genre": "Afro-soul / R&B",
+        "description": "The lead vocalist of Sauti Sol who launched a highly successful solo career. Known for incredibly expressive vocals, artistic depth, and music that blends afro-soul with jazz. His solo work has confirmed him as one of Africa's most gifted vocalists."
+      },
+      {
+        "name": "Nviiri the Storyteller",
+        "genre": "Afro-soul",
+        "description": "A soulful, deeply poetic singer from Nairobi whose music tells vivid stories of love, heartbreak, and urban life. Known for his rich voice and mature musical sensibility beyond his years."
+      },
+      {
+        "name": "Ethic Entertainment",
+        "genre": "Gengetone",
+        "description": "The group that started the Gengetone revolution — Swat, Seska, Rekles, and Zilla Oaks. Their 2018 song 'Lamba Lolo' launched a cultural movement in Kenyan music."
+      },
+      {
+        "name": "Jovial",
+        "genre": "Afro-pop",
+        "description": "One of Kenya's most exciting young female artists — known for smooth, danceable Afro-pop with Swahili lyrics and vibrant energy."
+      }
+    ],
+    "legendary_artists": [
+      {
+        "name": "D.O. Misiani",
+        "genre": "Benga",
+        "description": "Daniel Owino Misiani — the undisputed 'grandfather of Benga.' His guitar-driven Luo music defined a generation and created the blueprint for Kenyan popular music. Hugely influential across East Africa from the 1960s through the 1990s."
+      },
+      {
+        "name": "Joseph Kamaru",
+        "genre": "Kikuyu folk / Gospel",
+        "description": "One of Kenya's most beloved and prolific recording artists — a Kikuyu folk and gospel musician who recorded hundreds of songs over 50 years, addressing social issues, love, Christianity, and Kikuyu cultural life. Considered the voice of the Kikuyu people."
+      },
+      {
+        "name": "Ayub Ogada",
+        "genre": "World music / Nyatiti",
+        "description": "A master of the nyatiti (Luo 8-string lyre) whose music brought Kenyan traditional sounds to international stages and film scores (including 'The Constant Gardener' film). Passed away in 2019 — one of Kenya's greatest musical ambassadors."
+      },
+      {
+        "name": "Them Mushrooms",
+        "genre": "Coastal pop / Beach music",
+        "description": "A legendary Kenyan coastal band whose music defined the laid-back, beach-influenced sound of Kenya's coast from the 1970s onward. Known for 'Jambo Bwana' — arguably the most recognizable Kenyan song internationally (played at every tourism venue)."
+      },
+      {
+        "name": "Suzanna Owiyo",
+        "genre": "Afro-folk / Nyatiti",
+        "description": "A pioneering female artist who blended Luo traditional nyatiti music with contemporary African sounds. Known as 'The Queen of Nyatiti.' Her music bridges traditional Luo oral tradition with modern audiences."
+      }
+    ],
+    "nollywood_equivalent": {
+      "name": "Kenyan Film / TV Industry",
+      "description": "Kenya does not have a film industry as large as Nollywood, but Nairobi-based productions have grown significantly. Kenyan TV dramas (especially on local channels like Citizen TV, NTV, and KTN) are popular across East Africa. The most significant Kenyan drama franchise is 'Maria' and 'Zora' (NTV). 'Crime and Justice' (co-produced with Canal+ France) brought Kenyan crime drama to international streaming platforms.",
+      "notable_films": [
+        "Nairobi Half Life (2012) — first Kenyan film submitted for Academy Award consideration",
+        "Supa Modo (2018) — international award-winner about a terminally ill girl",
+        "Crime and Justice (Canal+ series) — Nairobi-set crime drama",
+        "Disconnect (2018) — critically acclaimed Kenyan drama about urban relationships"
+      ],
+      "international_stars": [
+        {
+          "name": "Lupita Nyong'o",
+          "description": "Oscar-winning actress (12 Years a Slave, 2013) — born in Mexico City to Kenyan parents, raised in Nairobi. The first Kenyan to win an Academy Award. She is a global icon and the most internationally recognized Kenyan in entertainment. She also starred in Black Panther as Nakia and Us."
+        }
+      ]
+    },
+    "sports_culture": {
+      "running": {
+        "description": "Kenya's most defining cultural export — long-distance running. Kenyan athletes, particularly from the Kalenjin community of the Rift Valley, have dominated Olympic and World Championship middle and long-distance events since the 1960s. Kenya's running culture is a global phenomenon studied by scientists, coaches, and sports journalists worldwide.",
+        "greatest_athletes": [
+          {
+            "name": "Eliud Kipchoge",
+            "achievement": "Greatest marathon runner of all time. World marathon record holder (2:00:35, Berlin 2023). First human to run a marathon in under 2 hours (1:59:40, Vienna 2019 — Breaking2 project). Double Olympic marathon gold medalist (Rio 2016, Tokyo 2021).",
+            "quote": "\"No human is limited.\""
+          },
+          {
+            "name": "Kipchoge Keino",
+            "achievement": "Pioneer of Kenyan running. Won gold in the 1,500m at the 1968 Mexico City Olympics — defeating Jim Ryun — while suffering from a gallbladder infection. Won gold in the 3,000m steeplechase at the 1972 Munich Olympics. Inspired generations of Kenyan runners."
+          },
+          {
+            "name": "David Rudisha",
+            "achievement": "Greatest 800m runner in history. Set the world record (1:40.91) at the 2012 London Olympics in what many consider the greatest middle-distance race ever run. Double Olympic gold medalist."
+          },
+          {
+            "name": "Pauline Konga, Catherine Ndereba, Mary Keitany",
+            "achievement": "A lineage of elite Kenyan female marathon runners. Catherine Ndereba was four-time Boston Marathon winner and world champion. Mary Keitany set multiple marathon world records."
+          }
+        ]
+      },
+      "football": {
+        "national_team": "Harambee Stars",
+        "description": "Football is Kenya's most popular sport by participation and viewership, though the national team has historically underperformed relative to the country's passion for the game. The English Premier League has an enormous following in Kenya — Arsenal, Manchester United, and Liverpool have huge Kenyan fan bases.",
+        "popular_clubs": ["Gor Mahia (the most supported club in Kenya — Luo community associated)", "AFC Leopards (Abaluhya FC — Luhya community associated)", "Tusker FC", "Ulinzi Stars"]
+      },
+      "rugby": {
+        "description": "Kenya's Sevens rugby team — the Shujaa (Swahili for 'Warriors') — has been one of the most celebrated teams in the World Rugby Sevens Series. Kenya has won the Hong Kong Sevens (2016) — one of rugby's most prestigious tournaments — causing a national celebration."
+      }
+    }
+  },
+
+  "administrative_divisions": {
+    "system": "Since the 2010 Constitution, Kenya is divided into 47 Counties — replacing the previous 8 provinces. Each county is headed by an elected Governor and has its own county assembly. This devolution transferred significant power and resources from the national government to local counties.",
+    "total_counties": 47,
+    "former_system": "8 Provinces (abolished by the 2010 Constitution): Nairobi, Central, Coast, Eastern, Northeastern, Nyanza, Rift Valley, Western",
+    "counties_by_region": [
+      {
+        "region": "Nairobi Area",
+        "counties": ["Nairobi"]
+      },
+      {
+        "region": "Central (former Central Province)",
+        "counties": ["Kiambu", "Murang'a", "Kirinyaga", "Nyeri", "Nyandarua"]
+      },
+      {
+        "region": "Coast (former Coast Province)",
+        "counties": ["Mombasa", "Kwale", "Kilifi", "Tana River", "Lamu", "Taita-Taveta"]
+      },
+      {
+        "region": "Eastern (former Eastern Province)",
+        "counties": ["Machakos", "Makueni", "Kitui", "Embu", "Tharaka-Nithi", "Meru", "Isiolo", "Marsabit"]
+      },
+      {
+        "region": "Northeastern (former Northeastern Province)",
+        "counties": ["Mandera", "Wajir", "Garissa"]
+      },
+      {
+        "region": "Nyanza (former Nyanza Province)",
+        "counties": ["Kisumu", "Homa Bay", "Migori", "Siaya", "Kisii", "Nyamira"]
+      },
+      {
+        "region": "Rift Valley (former Rift Valley Province — Kenya's largest)",
+        "counties": ["Turkana", "West Pokot", "Samburu", "Trans-Nzoia", "Uasin Gishu", "Elgeyo-Marakwet", "Nandi", "Baringo", "Laikipia", "Nakuru", "Narok", "Kajiado", "Kericho", "Bomet"]
+      },
+      {
+        "region": "Western (former Western Province)",
+        "counties": ["Kakamega", "Vihiga", "Bungoma", "Busia"]
+      }
+    ],
+    "key_counties": [
+      {
+        "name": "Nairobi",
+        "capital": "Nairobi City",
+        "significance": "Kenya's capital city and East Africa's economic, political, and cultural hub. Home to over 4.5 million people (official count — unofficial estimates exceed 6 million). Nairobi is the seat of all national government institutions, the UN Environment Programme (UNEP) headquarters, the UN Human Settlements Programme (UN-Habitat), and hundreds of international NGOs and embassies. Known as the 'Silicon Savannah' for its tech ecosystem.",
+        "known_for": ["Nairobi National Park (the only national park within a capital city)", "Westlands entertainment district", "Kibera (one of Africa's largest informal settlements)", "Karen (upscale suburb named after Karen Blixen)", "Eastleigh ('Little Mogadishu')", "iHub (Africa's first tech innovation hub)", "Carnivore Restaurant", "Ngong Racecourse"]
+      },
+      {
+        "name": "Mombasa",
+        "capital": "Mombasa City",
+        "significance": "Kenya's second-largest city and its primary port — the busiest port in East Africa. Mombasa is the heartland of Swahili civilization and has been a major Indian Ocean trading hub for over 1,000 years. Fort Jesus, built by the Portuguese in 1593, is a UNESCO World Heritage Site.",
+        "known_for": ["Fort Jesus (UNESCO World Heritage Site)", "Old Town (ancient Swahili architecture)", "Diani Beach (one of Africa's most beautiful beaches)", "Nyali Bridge", "Tusks monument (crossing Moi Avenue)", "Port of Mombasa (East Africa's largest port)"]
+      },
+      {
+        "name": "Kisumu",
+        "capital": "Kisumu City",
+        "significance": "Kenya's third-largest city — situated on the shores of Lake Victoria, East Africa's largest lake. The political and cultural capital of the Luo community. A major port and regional hub for western Kenya.",
+        "known_for": ["Lake Victoria shores", "Kisumu Impala Sanctuary", "Dunga Beach (tilapia fishing boats)", "Kit Mikayi (sacred rock formation)", "Hippo Point"]
+      },
+      {
+        "name": "Nakuru",
+        "capital": "Nakuru City",
+        "significance": "Kenya's fourth-largest city, located in the Rift Valley. Famous for Lake Nakuru National Park — one of the world's great bird spectacles (formerly home to over 1 million flamingos). Also home to Menengai Crater and significant rhino conservation.",
+        "known_for": ["Lake Nakuru National Park (flamingos and rhinos)", "Menengai Crater", "Hyrax Hill archaeological site"]
+      },
+      {
+        "name": "Narok",
+        "capital": "Narok Town",
+        "significance": "Gateway to the Masai Mara National Reserve. The heartland of the Maasai people.",
+        "known_for": ["Masai Mara National Reserve", "Maasai culture and communities", "Great Wildebeest Migration (July–October)"]
+      },
+      {
+        "name": "Lamu",
+        "capital": "Lamu Town",
+        "significance": "Kenya's oldest living town and a UNESCO World Heritage Site. Lamu Old Town is the finest surviving example of Swahili architecture in East Africa. No cars — only donkeys and boats.",
+        "known_for": ["Lamu Old Town (UNESCO World Heritage Site)", "Donkeys (no motor vehicles)", "Swahili architecture (carved wooden doors, coral stone buildings)", "Lamu Cultural Festival", "Dhow sailing"]
+      },
+      {
+        "name": "Turkana",
+        "capital": "Lodwar",
+        "significance": "Kenya's largest county by area — occupying the remote, arid northwest. Home to Lake Turkana (the world's largest permanent desert lake), the Turkana people, and major oil deposits discovered in 2012. Also one of the world's most significant paleoanthropological sites (Koobi Fora).",
+        "known_for": ["Lake Turkana (UNESCO World Heritage Site)", "Koobi Fora (Turkana Boy fossil site)", "Loiyangalani Cultural Festival", "Oil deposits", "Ferguson's Gulf", "Sibiloi National Park"]
+      },
+      {
+        "name": "Uasin Gishu",
+        "capital": "Eldoret",
+        "significance": "The global capital of long-distance running. Eldoret and the surrounding Nandi Hills are home to the world's greatest concentration of elite marathon and middle-distance runners, particularly from the Kalenjin community.",
+        "known_for": ["Eldoret ('running capital of the world')", "Eliud Kipchoge's home region", "IAAF High Performance Training Centre", "Moiben (Kipchoge's training base)"]
+      }
+    ]
+  },
+
+  "proverbs_and_wisdom": [
+    {
+      "proverb": "Haraka haraka haina baraka.",
+      "language": "Swahili",
+      "meaning": "Hurry, hurry has no blessing.",
+      "lesson": "Rushing leads to poor results. Take time to do things properly."
+    },
+    {
+      "proverb": "Umoja ni nguvu, utengano ni udhaifu.",
+      "language": "Swahili",
+      "meaning": "Unity is strength, division is weakness.",
+      "lesson": "Communities that stand together are powerful; division destroys them."
+    },
+    {
+      "proverb": "Asiyejua si mjinga, mjinga ni asiyeuliza.",
+      "language": "Swahili",
+      "meaning": "The one who does not know is not a fool; the fool is the one who does not ask.",
+      "lesson": "Ignorance is not shameful — refusing to seek knowledge is."
+    },
+    {
+      "proverb": "Mti mkubwa, ndio msimamo wa upepo.",
+      "language": "Swahili",
+      "meaning": "A large tree is the one that faces the wind.",
+      "lesson": "With greatness and stature come challenges. Leaders and strong people bear the heaviest burdens."
+    },
+    {
+      "proverb": "Mtoto umleavyo, ndivyo akuavyo.",
+      "language": "Swahili",
+      "meaning": "As you raise a child, so they will grow.",
+      "lesson": "Children become who we shape them to be — parenting and community are everything."
+    },
+    {
+      "proverb": "Damu nzito kuliko maji.",
+      "language": "Swahili",
+      "meaning": "Blood is thicker than water.",
+      "lesson": "Family bonds are the strongest of all bonds."
+    },
+    {
+      "proverb": "Mgeni siku ya kwanza, siku ya pili mpe jembe.",
+      "language": "Swahili",
+      "meaning": "A guest on the first day — give them a hoe on the second.",
+      "lesson": "Hospitality is warm, but extended guests must contribute. Everyone must carry their own weight."
+    },
+    {
+      "proverb": "Taabu ya mwenzio, haikusababishwa na wewe peke yako.",
+      "language": "Swahili",
+      "meaning": "Your neighbor's trouble was not caused by you alone.",
+      "lesson": "Community is interconnected — we all share responsibility for those around us."
+    },
+    {
+      "proverb": "Akili ni nywele, kila mtu ana zake.",
+      "language": "Swahili",
+      "meaning": "Intelligence is like hair — everyone has their own.",
+      "lesson": "Everyone has their own way of thinking and problem-solving. Respect different approaches."
+    },
+    {
+      "proverb": "Kidole kimoja hakiuwi chawa.",
+      "language": "Swahili",
+      "meaning": "One finger cannot kill a louse.",
+      "lesson": "You cannot accomplish great things alone — cooperation is necessary."
+    },
+    {
+      "proverb": "Si ngoni yako, si yako — Si ya rafiki yako, si yake.",
+      "language": "Kikuyu (Gikuyu)",
+      "meaning": "What is not yours is not yours — what is not your friend's is not theirs.",
+      "lesson": "Respect others' property and boundaries. Honesty and fairness are paramount."
+    },
+    {
+      "proverb": "Nyundo kali haiponyi chuma kigumu.",
+      "language": "Swahili",
+      "meaning": "A sharp hammer does not tame hard iron.",
+      "lesson": "Force alone does not solve every problem. Wisdom and the right approach matter more than brute strength."
+    },
+    {
+      "proverb": "Mafunzo ya nyumbani ndiyo bora zaidi.",
+      "language": "Swahili",
+      "meaning": "Home teaching is the best teaching.",
+      "lesson": "Character and values built at home form the strongest foundation for life."
+    },
+    {
+      "proverb": "Lile la samaki linamfurahisha mtu, lakini lile la mtu linamliza.",
+      "language": "Luo (Dholuo concept rendered in Swahili)",
+      "meaning": "What feeds the fish delights a person, but what feeds on a person destroys them.",
+      "lesson": "Be mindful of what nourishes you versus what consumes you — choose your habits wisely."
+    }
+  ],
+
+  "travel_and_places": {
+    "note": "Kenya is consistently ranked among the world's top safari and nature destinations, and Nairobi has emerged as one of Africa's most exciting urban travel destinations. From the wildlife-rich savanna to the Indian Ocean coast to the alpine zones of Mount Kenya — Kenya's geographic diversity is extraordinary.",
+    "must_visit": [
+      {
+        "name": "Masai Mara National Reserve",
+        "county": "Narok County",
+        "type": "Wildlife Reserve / Natural Wonder",
+        "description": "Kenya's most famous wildlife destination and one of the world's top safari experiences. The Masai Mara is a vast savanna ecosystem of rolling grass plains, acacia woodland, and the winding Mara River. Home to Kenya's highest concentrations of lion, leopard, cheetah, elephant, buffalo, and hippo. The Great Wildebeest Migration (July–October) — when over 1.5 million wildebeest and 200,000 zebras cross from Tanzania's Serengeti into the Mara — is one of the world's greatest wildlife spectacles. The dramatic river crossings, where massive herds plunge into crocodile-filled waters, are among the most breathtaking natural events on earth.",
+        "best_time": "July – October (Great Migration), but wildlife is excellent year-round",
+        "insider_tip": "The northern conservancies (Ol Pejeta, Mara North, Lemek) offer exclusive wildlife experiences with fewer crowds than the main reserve"
+      },
+      {
+        "name": "Amboseli National Park",
+        "county": "Kajiado County",
+        "type": "National Park / Wildlife",
+        "description": "The most iconic safari landscape in Africa — a vast dusty plain framed by the magnificent snow-capped peak of Mount Kilimanjaro rising on the horizon (across the Tanzania border). Amboseli is famous for its large elephant herds and offers some of the best elephant photography in Africa. The swamps fed by underground water from Kilimanjaro create lush green patches amid the dry savanna, creating remarkable contrast. Maasai communities live alongside the park.",
+        "highlight": "The view of Kilimanjaro at sunrise above the elephants — one of the most photographed scenes in Africa",
+        "best_time": "June – October (dry season) for best Kilimanjaro views"
+      },
+      {
+        "name": "Mount Kenya National Park & Biosphere Reserve",
+        "county": "Nyeri / Kirinyaga / Meru Counties",
+        "type": "UNESCO World Heritage Site / Mountain / Nature",
+        "description": "Africa's second-highest mountain (5,199m / 17,057ft) and one of the continent's most dramatic landscapes. Mount Kenya is an ancient extinct volcano whose dramatic peaks — Batian, Nelion, and Lenana — rise through equatorial rainforest, bamboo zones, and moorland into a stark alpine landscape of glaciers, tarns (mountain lakes), and giant lobelia plants. The mountain is sacred to the Kikuyu (Kirinyaga — home of Ngai, the creator). Technical climbing routes and the trekking route to Point Lenana (4,985m) attract climbers from around the world. The surrounding national park protects Kenya's most important water catchment area.",
+        "type": "UNESCO World Heritage Site since 1997",
+        "insider_tip": "The Sirimon-Chogoria traverse route is the most scenic trekking route — combining the lush forests of the northern approach with the dramatic Gorges Valley descent"
+      },
+      {
+        "name": "Lamu Old Town & Lamu Archipelago",
+        "county": "Lamu County",
+        "type": "UNESCO World Heritage Site / Cultural / Historical",
+        "description": "Lamu Old Town is the oldest and best-preserved Swahili settlement in East Africa — founded in the 14th century, it has been continuously inhabited for over 700 years. The town is built of coral stone and mangrove timber, with narrow winding lanes, elaborately carved wooden doors, inner courtyards, and mosques. No cars are allowed — only donkeys and boats. The surrounding Lamu Archipelago includes the islands of Manda, Pate, and Siyu — each with their own ancient Swahili ruins and history. The Lamu Cultural Festival and Maulid celebrations are among Kenya's most magical events.",
+        "insider_tip": "Take a dhow sailing trip around the archipelago at sunset — the wooden sailing vessels are identical to those that sailed these waters 500 years ago"
+      },
+      {
+        "name": "Nairobi",
+        "county": "Nairobi County",
+        "type": "Capital City / Urban Culture",
+        "description": "One of Africa's most dynamic and compelling cities — a place where game parks border skyscrapers, where world-class restaurants sit alongside vibrant street food markets, and where tech startups compete with ancient traditions. Key experiences: David Sheldrick Wildlife Trust (baby elephant orphanage — the most popular tourist attraction in Kenya), Nairobi National Park (the only national park within a major capital city — where lions and rhinos graze with city skyscrapers in the background), the Giraffe Centre (feed Rothschild giraffes), Karen Blixen Museum (the farm made famous by 'Out of Africa'), Kibera (one of Africa's largest informal settlements — powerful and complex), and the National Museum of Kenya.",
+        "hidden_gems": ["Kazuri Beads (fair-trade ceramic jewelry factory in Karen)", "Uhuru Gardens (site of Kenya's independence declaration)", "Muthaiga Club (colonial-era member's club — Kenya's most exclusive)", "Karura Forest (urban forest for jogging and cycling)"],
+        "food_and_nightlife": "Westlands and Kilimani have some of East Africa's best restaurants and nightlife. The Alchemist Bar, 1824, and Brew Bistro are iconic venues."
+      },
+      {
+        "name": "Diani Beach",
+        "county": "Kwale County (South Coast)",
+        "type": "Beach / Nature / Marine",
+        "description": "Consistently rated among Africa's best beaches — a pristine 17km stretch of powder-white coral sand backed by swaying palm trees and turquoise Indian Ocean water. The Indian Ocean reef creates calm, crystal-clear water ideal for swimming, snorkeling, and diving. Diani's marine ecosystem is extraordinary — whale sharks, manta rays, sea turtles, and dolphins are common sights. The Colobus Conservation project protects the rare Angolan colobus monkeys that live in the coastal forest behind the beach.",
+        "insider_tip": "The best diving is at Two Fishes, Kinondo Kwa Tinga, and the Chale Island Marine Reserve — accessible by short boat trip",
+        "kitesurf": "Diani is considered one of the world's top kitesurfing destinations — the trade winds create ideal conditions from July–September"
+      },
+      {
+        "name": "Lake Turkana (Jade Sea)",
+        "county": "Turkana County",
+        "type": "UNESCO World Heritage Site / Natural Wonder / Archaeological",
+        "description": "The world's largest permanent desert lake — a vast, startlingly beautiful jade-green lake in the remote deserts of northern Kenya. Known as the 'Jade Sea' for its distinctive blue-green color caused by algae. Lake Turkana is a UNESCO World Heritage Site (Turkana region's broader World Heritage area — 'Lake Turkana National Parks') for its extraordinary geological and paleoanthropological significance. Koobi Fora on the eastern shore is one of the world's most important fossil sites — where hominid fossils dating back 3 million years have been found. The lake is also home to the world's largest breeding population of Nile crocodiles. The journey to Lake Turkana — through spectacular remote desert landscapes — is an adventure in itself.",
+        "type": "UNESCO World Heritage Site",
+        "communities": "Home to the Turkana, El Molo, Dassanech, Samburu, Rendille, and other communities along its shores"
+      },
+      {
+        "name": "Hell's Gate National Park",
+        "county": "Nakuru County",
+        "type": "Nature / Adventure / Geological",
+        "description": "One of Africa's most unique national parks — where you can walk, cycle, and rock-climb among wildlife without a vehicle. Dramatic volcanic gorges, towering columns of basalt, geothermal steam vents, and soaring vultures define the landscape. Cyclists encounter zebra, giraffe, buffalo, and gazelle on the cycling track. The Ol Karia geothermal power station within the park generates significant amounts of Kenya's electricity — one of the world's largest geothermal energy projects. The park is said to have inspired the landscape of Disney's 'The Lion King.'",
+        "insider_tip": "Hire a bicycle at the gate and cycle the gorge trail — walking into the narrow Fischer's Tower gorge among the steaming rock walls is unforgettable"
+      },
+      {
+        "name": "Ol Pejeta Conservancy",
+        "county": "Laikipia County",
+        "type": "Wildlife Conservancy / Conservation",
+        "description": "East Africa's largest black rhino sanctuary and home to Sudan — the world's last northern white rhinoceros male (now deceased — 2018). Ol Pejeta is at the frontier of African wildlife conservation, combining high-end tourism with cutting-edge conservation science. Home to the Big Five (lion, elephant, buffalo, leopard, rhino), chimpanzee sanctuary (rescued orphans from Central Africa), and vast open savanna. The conservancy borders Mount Kenya and is run as a self-sustaining conservation business.",
+        "conservation_significance": "Home to the last two northern white rhinos (Najin and Fatu — both female). Scientists are using reproductive technology in an effort to save the subspecies from extinction."
+      },
+      {
+        "name": "Fort Jesus, Mombasa",
+        "county": "Mombasa County",
+        "type": "UNESCO World Heritage Site / Historical",
+        "description": "Built by the Portuguese between 1593 and 1596 to protect the port of Mombasa, Fort Jesus is one of the best-preserved examples of 16th-century Portuguese military architecture in Africa. The fort changed hands nine times between the Portuguese, Arabs, and British over three centuries — its walls bear the marks of artillery fire, carvings of soldiers, and graffiti from sailors of many nations. Today it houses a museum with extraordinary collections of Chinese porcelain, Arab artifacts, and Indian Ocean trade history. The fort overlooks the Old Harbour of Mombasa.",
+        "type": "UNESCO World Heritage Site since 2011"
+      }
+    ],
+    "budget_tips": [
+      "Matatus (shared minibuses) are the backbone of Kenya's public transport — cheap, fast, and colorfully decorated. They run between all major towns.",
+      "Local restaurants (called 'joints' or 'mama ntilie') serve the most authentic and affordable food — a full plate of ugali, sukuma wiki, and beef stew can cost as little as KSh 100–200",
+      "Airbnbs and guesthouses in Nairobi's Westlands and Kilimani are far cheaper than hotels for the same location convenience",
+      "The best nyama choma is at local butcheries (mbuzi choma, kuku choma), not tourist restaurants",
+      "Shared safari vans to the Masai Mara cost a fraction of private vehicles — book through reputable Nairobi operators",
+      "Free attractions in Nairobi: Uhuru Park, Karura Forest (small entry fee), University of Nairobi grounds, and the Bomas of Kenya (modest entry)"
+    ],
+    "safety_tips": [
+      "Nairobi is a major African city — exercise normal urban precautions. Avoid displaying expensive electronics and jewelry in public",
+      "Use licensed taxis or Uber/Bolt/InDrive in major cities — negotiate fares in advance with regular taxis",
+      "Nairobi's matatus are safe during the day but exercise caution at night, especially on crowded routes",
+      "The northeastern counties (Mandera, Wajir, some parts of Garissa) and the Somalia border region have security concerns — check current travel advisories before visiting",
+      "Coastal rip currents at some Indian Ocean beaches can be dangerous — swim in marked safe areas and heed local advice",
+      "When visiting Maasai communities, go with a registered guide and respect cultural protocols — always ask before photographing people",
+      "Wildlife encounters: always stay in your vehicle in game parks (except Hell's Gate and a few others designed for walking safaris)",
+      "Malaria is present in the coast and western Kenya — take appropriate prophylaxis and use mosquito nets"
+    ]
+  }
+}

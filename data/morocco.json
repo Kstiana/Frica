@@ -1,0 +1,1008 @@
+{
+  "meta": {
+    "country": "Morocco",
+    "slug": "morocco",
+    "last_updated": "2025",
+    "data_version": "1.0",
+    "description": "Complete cultural data for Morocco — powering all Frica country page sections."
+  },
+
+  "overview": {
+    "name": "Morocco",
+    "native_name": "المغرب (Al-Maġrib) / ⵍⵎⵖⵔⵉⴱ (Lmeɣrib)",
+    "official_name": "Kingdom of Morocco",
+    "flag_emoji": "🇲🇦",
+    "iso_alpha2": "MA",
+    "iso_alpha3": "MAR",
+    "capital": "Rabat",
+    "largest_city": "Casablanca (Dar el-Beida)",
+    "region": "North Africa",
+    "subregion": "Northern Africa",
+    "population": 37000000,
+    "population_note": "Morocco is the fifth most populous country in Africa and the second most populous in the Arab world (after Egypt). It is the only African country with coastlines on both the Atlantic Ocean and the Mediterranean Sea.",
+    "area_km2": 446550,
+    "area_rank_africa": 25,
+    "area_note": "Morocco's area figures are complicated by the disputed Western Sahara territory — which Morocco controls and administers (446,550 km² without Western Sahara; approximately 710,850 km² including Western Sahara).",
+    "official_languages": ["Arabic (العربية)", "Amazigh / Tamazight (ⵜⴰⵎⴰⵣⵉⵖⵜ)"],
+    "official_languages_note": "Both Arabic and Amazigh (Berber) are official languages under Morocco's 2011 Constitution — a historic recognition of the Amazigh identity that predates Arab conquest by millennia. Moroccan Arabic dialect (Darija) is the daily spoken language of most Moroccans. French is a co-official language in all practical senses — used in business, government, higher education, and media — though not constitutionally official. Spanish is widely spoken in northern Morocco (Tangier, Tetouan, Al Hoceima).",
+    "languages_spoken": ["Moroccan Arabic (Darija — الدارجة)", "Amazigh/Tamazight (three main varieties: Tachelhit/Shilha, Tarifit/Riffian, Tamazight of the Middle Atlas)", "French", "Spanish (northern Morocco)", "Hassaniya Arabic (southern Morocco / Western Sahara)"],
+    "currency": "Moroccan Dirham (MAD)",
+    "currency_symbol": "MAD (also written DH or درهم)",
+    "calling_code": "+212",
+    "internet_tld": ".ma",
+    "independence_date": "March 2, 1956 (from France) / April 7, 1956 (from Spain — northern zone)",
+    "national_day": "July 30 — Throne Day (Fête du Trône — commemorating King Mohammed VI's accession to the throne, 1999)",
+    "government_type": "Constitutional Monarchy",
+    "monarch": "King Mohammed VI (محمد السادس) — reigning since July 23, 1999",
+    "total_regions": 12,
+    "gdp_rank_africa": 5,
+    "gdp_note": "One of Africa's largest and most diversified economies — driven by tourism, phosphates (Morocco holds over 70% of the world's proven phosphate reserves), agriculture, automotive manufacturing, and remittances from a large diaspora.",
+    "religion": {
+      "islam": "~99%",
+      "christianity": "~0.1% (mostly expatriates and a small number of converts)",
+      "judaism": "~0.2% (Moroccan Jewish community — one of the oldest in the world, though many have emigrated to Israel and France)",
+      "note": "Morocco is constitutionally an Islamic monarchy — the King of Morocco holds the title 'Commander of the Faithful' (Amir al-Mu'minin — أمير المؤمنين), the highest religious authority in the country. Morocco is 99% Sunni Muslim (predominantly Maliki school of jurisprudence). The Moroccan Jewish community — though small today — has one of the deepest histories of any Jewish diaspora community in the world, with roots going back over 2,000 years."
+    },
+    "short_description": "Morocco is where the Sahara meets the sea — a kingdom of extraordinary contrasts and sensory richness. Ancient Amazigh civilizations, Arab-Islamic imperial grandeur, Andalusian exile culture, Atlantic surf, Mediterranean fishing towns, snow-capped Atlas mountains, blue-painted Chefchaouen, the world's oldest university, the labyrinthine medinas of Fez and Marrakech, gnawa music, tagine slow-cooked over coals, and mint tea poured from great heights — Morocco is North Africa's most compelling cultural destination.",
+    "tagline": "Kingdom of Light — Gateway Between Worlds",
+    "known_for": [
+      "Medina of Fez (Fes el-Bali) — the world's largest car-free urban area and UNESCO World Heritage Site",
+      "Marrakech — the Red City, the Djemaa el-Fna square, the souks",
+      "Sahara Desert — the Erg Chebbi and Erg Chigaga dune fields",
+      "Tagine and couscous — Morocco's greatest culinary gifts to the world",
+      "Mint tea (atay) — poured from great height, a ceremony of hospitality",
+      "Chefchaouen — the Blue City of the Rif Mountains",
+      "Gnawa music — ancient African spiritual music tradition",
+      "Amazigh (Berber) civilization — the indigenous people of North Africa",
+      "Al-Qarawiyyin University, Fez (859 CE) — the world's oldest continuously operating university",
+      "King Mohammed VI — Morocco's modernizing constitutional monarch",
+      "Phosphates — Morocco controls over 70% of the world's proven phosphate reserves",
+      "2022 FIFA World Cup — Morocco became the first African and Arab team to reach the semi-finals"
+    ],
+    "geographic_position": "Morocco occupies a uniquely strategic geographic position — at the northwestern tip of Africa, separated from Europe (Spain) by only 14km of water at the Strait of Gibraltar. Morocco is simultaneously a Mediterranean country, an Atlantic country, a Saharan country, and a mountainous country. This geographic diversity — in a nation smaller than France — produces extraordinary landscape variety.",
+    "borders": ["Algeria (East and Southeast)", "Mauritania (South — via Western Sahara border)", "Spain (Ceuta and Melilla — two Spanish enclaves on Moroccan territory)", "Western Sahara (South — administered by Morocco, status disputed)"],
+    "coastlines": ["Atlantic Ocean (Western coast — approximately 1,800 km)", "Mediterranean Sea (Northern coast — approximately 500 km)"],
+    "strait_of_gibraltar": "Morocco faces Spain across the Strait of Gibraltar — only 14.3 km at the narrowest point. This has made Morocco historically the gateway between Africa and Europe, the Arab world and the West.",
+    "major_geographic_features": [
+      "Atlas Mountain Range — three ranges running southwest to northeast: High Atlas (Haut Atlas — highest point Jbel Toubkal 4,167m, the highest peak in North Africa and the Arab world), Middle Atlas (Moyen Atlas), and Anti-Atlas",
+      "Rif Mountains — running along the northern coast above Tetouan and Al Hoceima",
+      "Sahara Desert — southeastern Morocco, including the iconic Erg Chebbi dunes (Merzouga) and Erg Chigaga (M'Hamid)",
+      "Draa Valley — the longest river valley in Morocco, flowing southeast toward the Sahara",
+      "Ziz Valley — dramatic palm grove-filled gorge in the High Atlas",
+      "Atlantic coast — Agadir beaches, Essaouira, Casablanca, Rabat, Asilah",
+      "Mediterranean coast — Tangier, Tetouan, Al Hoceima, Nador",
+      "Sous Plain — fertile agricultural plain between the High Atlas and Anti-Atlas",
+      "Tafilalt — the largest oasis in Morocco, gateway to the Sahara",
+      "Todgha Gorge and Dadès Gorge — dramatic limestone canyons in the High Atlas foothills"
+    ]
+  },
+
+  "history": {
+    "summary": "Morocco's history is one of the longest and most layered in Africa — stretching from the prehistoric Amazigh (Berber) peoples who inhabited North Africa since at least 10,000 BCE, through Phoenician and Carthaginian coastal settlements, Roman Mauretania, the transformative Arab conquest of the 7th century, the founding of a succession of great Moroccan dynasties (Idrisids, Almoravids, Almohads, Marinids, Saadians, Alaouites), the golden age of the Andalusian exile culture, European colonial partition, and the independent constitutional monarchy of today. Morocco's current royal family — the Alaoui dynasty — has reigned continuously since 1666, making them one of the world's oldest ruling houses.",
+    "timeline": [
+      {
+        "period": "c. 300,000 BCE – 10,000 BCE",
+        "event": "Prehistoric Morocco",
+        "description": "Morocco has been inhabited since the Paleolithic era — fossil evidence of Homo sapiens idaltu (a subspecies of modern humans) found at Jebel Irhoud in western Morocco dates to approximately 300,000 years ago, making it among the oldest Homo sapiens fossil sites in the world. By the Neolithic period (c. 10,000–4,000 BCE), the indigenous Amazigh (Berber) peoples were established across North Africa — herding, farming, and developing the rock art tradition visible today at sites across Morocco and the Sahara."
+      },
+      {
+        "period": "c. 1100 – 146 BCE",
+        "event": "Phoenician and Carthaginian Settlements",
+        "description": "Phoenician traders from present-day Lebanon established coastal trading posts along Morocco's Mediterranean and Atlantic coasts — including settlements at Tingis (Tangier), Rusadir (Nador/Melilla), and Lixus (near Larache). These were among the first urban centers on Moroccan soil. After the rise of Carthage (Tunisia), Morocco's coast became part of the broader Carthaginian commercial network. The indigenous Amazigh kingdoms (the Mauretanian kingdom of the Mauri) maintained political control of the interior."
+      },
+      {
+        "period": "33 BCE – 285 CE",
+        "event": "Roman Mauretania Tingitana",
+        "description": "Following the death of the last Mauretanian king Ptolemy (a grandson of Cleopatra and Mark Antony, murdered by Emperor Caligula), Rome annexed the kingdom and created the province of Mauretania Tingitana (capital: Tingis/Tangier). Roman presence in Morocco was focused on the northern coastal strip and the fertile Gharb plain — the Roman city of Volubilis (near Meknes) is the best-preserved Roman archaeological site in Africa and a UNESCO World Heritage Site. Rome never penetrated the Atlas mountains or the Saharan south — the Amazigh peoples of the interior maintained their way of life largely unaffected by Roman rule."
+      },
+      {
+        "period": "429 – 534 CE",
+        "event": "Vandal Incursion and Byzantine Period",
+        "description": "The Germanic Vandals crossed from Spain into North Africa (429 CE), briefly controlling Morocco's northern coast. Byzantine forces later reasserted control of the coastal areas. Throughout this period, the indigenous Amazigh tribes — increasingly Christianized in the north — maintained effective control of the interior. The Amazigh queen Dihya (Kahina — 'the prophetess') later became a symbol of Berber resistance to Arab conquest."
+      },
+      {
+        "period": "647 – 710 CE",
+        "event": "Arab Conquest and Islamization",
+        "description": "Arab Muslim armies from the Umayyad Caliphate began pushing westward into North Africa in 647 CE. The conquest of Morocco was slow and fiercely contested — the Amazigh peoples mounted sustained military resistance under leaders including Kusayla and the legendary warrior queen Dihya (Kahina), who defeated Arab forces multiple times before her eventual death in battle (c. 700 CE). By 710 CE, Arab forces under Musa ibn Nusayr had brought Morocco under Umayyad control. The Islamization of the Amazigh people followed — though it was a gradual process that blended Islam with existing Amazigh cultural practices. The Arab general Tariq ibn Ziyad, with a predominantly Amazigh army, crossed the Strait of Gibraltar in 711 CE and began the conquest of Visigoth Spain (Al-Andalus) — one of the most consequential military campaigns in world history."
+      },
+      {
+        "period": "788 – 974 CE",
+        "event": "Idrisid Dynasty — Morocco's First Kingdom",
+        "description": "Idris ibn Abdallah — a descendant of the Prophet Muhammad through Ali and Fatima, who fled the Abbasid massacre of the Alids — arrived in Morocco in 788 CE and established the first Moroccan dynasty. He was accepted by the Amazigh tribes of the Zerhoun region, married into local Amazigh leadership, and founded the city of Fez (789 CE) as his capital. His son, Idris II, expanded Fez into a major Islamic city — bringing in Arab settlers from Andalusia (fleeing the suppression of the 818 CE Cordoba revolt) and Jewish and Amazigh communities. Fez became the cultural and religious heart of Morocco — a position it has maintained for 1,200 years. The Idrisids established Morocco as an independent Islamic kingdom — separate from both the Abbasid Caliphate in Baghdad and the Umayyad Caliphate in Cordoba."
+      },
+      {
+        "period": "1040 – 1147 CE",
+        "event": "Almoravid Dynasty — Morocco's First Empire",
+        "description": "The Almoravids (Al-Murabitun — 'the people of the ribat/fortress') were an Amazigh Sanhaja confederation from the Western Sahara who built a vast empire under Abdallah ibn Yasin and Yusuf ibn Tashfin. The Almoravids conquered Morocco, Algeria, and Mauritania, founded Marrakech (1070 CE) as their capital, and then crossed into Al-Andalus at the invitation of Muslim rulers threatened by Christian Reconquista forces. Under Yusuf ibn Tashfin, the Almoravids defeated Alfonso VI of Castile at the Battle of Sagrajas (1086 CE) — halting the Christian Reconquista for decades. The Almoravid empire stretched from the Senegal River in the south to Zaragoza in the north — one of the largest empires in the medieval world."
+      },
+      {
+        "period": "1121 – 1269 CE",
+        "event": "Almohad Dynasty — Morocco's Second Empire",
+        "description": "The Almohads (Al-Muwahhidun — 'the unitarians/those who affirm divine unity') were an Amazigh Masmuda movement from the High Atlas mountains, founded by the theologian Ibn Tumart. Under Abd al-Mu'min and subsequent caliphs, they overthrew the Almoravids, conquered all of North Africa from Morocco to Tripolitania (Libya), and ruled Al-Andalus. The Almohad Caliphate was the largest empire in Moroccan history — and one of the most significant states in the medieval Islamic world. Almohad-era Morocco produced extraordinary architecture (the Koutoubia Mosque in Marrakech, the Hassan Tower in Rabat, the Giralda in Seville — originally an Almohad minaret) and an intellectual golden age: the philosophers Ibn Rushd (Averroes) and Ibn Tufayl, and the physician Maimonides (a Jewish philosopher born in Cordoba under Almohad rule) all flourished in this era."
+      },
+      {
+        "period": "1244 – 1465 CE",
+        "event": "Marinid Dynasty — Golden Age of the Medinas",
+        "description": "The Marinids — an Amazigh Zenata tribe from eastern Morocco — succeeded the Almohads and established their capital at Fez. The Marinid era was Morocco's golden age of urban architecture and Islamic scholarship — the Marinids built the most exquisite madrasas (Islamic schools) in the world, including the Bou Inania Madrasa and Al-Attarine Madrasa in Fez. They also built the new royal city of Fes el-Jdid adjacent to the old medina. The Marinid era also saw mass immigration of Muslims and Jews expelled from Al-Andalus — particularly after the fall of Seville (1248) and during the progressive collapse of the Nasrid Kingdom of Granada. These Andalusian refugees — the moriscos and their descendants — fundamentally shaped Moroccan culture, architecture, cuisine, and music."
+      },
+      {
+        "period": "1492 CE",
+        "event": "Fall of Granada — Mass Andalusian Immigration",
+        "description": "The fall of Granada (January 2, 1492) — the last Muslim kingdom in Spain — was one of the most consequential events in Moroccan history. King Boabdil surrendered Granada to Ferdinand and Isabella, and within days, Columbus set sail for the Americas. Tens of thousands of Muslims (Moriscos) and Jews (Sephardic Jews — expelled by the Alhambra Decree of 1492) fled to Morocco. They settled in Fez, Tetouan, Sale, and other cities — bringing with them Andalusian architectural styles, music (the Andalusian classical music tradition preserved in Morocco), cuisine, language (Haketia — a Judeo-Spanish language still spoken by some Moroccan Jews), and a deep, mournful nostalgia for the paradise they had lost (Al-Andalus). This Andalusian cultural infusion permanently shaped Moroccan identity."
+      },
+      {
+        "period": "1549 – 1659 CE",
+        "event": "Saadian Dynasty — The Battle of Three Kings",
+        "description": "The Saadians — a sharifian dynasty (descended from the Prophet Muhammad) from the Draa Valley — rose to power from the south, conquering Marrakech (1524) and eventually all of Morocco. Their greatest achievement: the Battle of the Three Kings (Al-Wadi Al-Makhazin, 1578 CE) — in which the Saadian Sultan Abd al-Malik defeated a massive Portuguese invasion led by King Sebastian I. All three principal leaders (the Portuguese king, the Saadian pretender Abu Abdallah Mohammed II, and the Saadian sultan Abd al-Malik) died during the battle — hence 'Three Kings.' The Portuguese military power was broken, and Morocco remained independent. The Saadians also launched a remarkable trans-Saharan expedition (1591) under Judar Pasha — crossing the Sahara with a Moroccan army to conquer the Songhai Empire of the Niger bend, seizing Timbuktu and its legendary gold trade. The Saadian Tombs in Marrakech — sealed for centuries and rediscovered in 1917 — are among Morocco's most exquisite monuments."
+      },
+      {
+        "period": "1666 CE – present",
+        "event": "Alaoui Dynasty — Morocco's Current Royal Family",
+        "description": "The Alaoui (Alawite) dynasty — a sharifian family from the Tafilalt oasis of southeastern Morocco, claiming descent from the Prophet Muhammad through Ali and Fatima — came to power in 1666 under Sultan Moulay Rashid. His successor Moulay Ismail (1672–1727) was the most powerful Alaoui sultan — he reunified and consolidated Morocco, expelled the English from Tangier (1684) and the Spanish from Larache, built the imperial city of Meknes (his capital) as one of the great Baroque-Islamic architectural achievements, maintained an army of Black African enslaved soldiers (the Abid al-Bukhari — a force of over 150,000), and sent diplomatic missions to France and the Ottoman Empire. The Alaoui dynasty has ruled Morocco continuously for over 350 years — one of the world's longest-reigning dynasties."
+      },
+      {
+        "period": "1904 – 1912 CE",
+        "event": "The Scramble for Morocco — European Competition",
+        "description": "As the European scramble for Africa intensified, Morocco became a flashpoint for Franco-German rivalry. The Entente Cordiale (1904) gave France a free hand in Morocco, provoking two Moroccan Crises (1905–06, 1911) as Germany challenged French dominance. The Agadir Crisis (1911 — Germany sent the gunboat Panther to Agadir) nearly triggered a European war. The Treaty of Fes (1912) established the French Protectorate over most of Morocco, while Spain received a northern zone (Spanish Protectorate). The city of Tangier was internationalized. Morocco was thus partitioned between France and Spain — though nominally maintaining the sultan and his government."
+      },
+      {
+        "period": "1912 – 1956 CE",
+        "event": "French and Spanish Protectorates",
+        "description": "The French Protectorate fundamentally transformed Morocco — building roads, railways, and modern cities (the Villes Nouvelles built adjacent to old medinas), introducing the colonial administrative system, and extracting Morocco's mineral wealth. The great French Resident-Generals — particularly Marshal Lyautey — established the policy of preserving Morocco's traditional cities (the medinas) intact while building new European cities alongside them. This policy — controversial as a form of orientalist preservation — paradoxically saved Morocco's medinas from the modernization destruction that devastated other Arab cities. Moroccan resistance to colonial rule was significant — the Rif War (1921–1926), in which Amazigh leader Abdelkrim al-Khattabi's Republic of the Rif inflicted a catastrophic defeat on the Spanish army at Annual (1921) before being suppressed by a combined Franco-Spanish force, was one of the most significant anticolonial military campaigns in African history."
+      },
+      {
+        "period": "1944 – 1956 CE",
+        "event": "Independence Movement — Istiqlal and King Mohammed V",
+        "description": "The Istiqlal (Independence) Party presented its independence manifesto in January 1944. Sultan Mohammed V — who had refused to sign the Vichy France anti-Jewish decrees during World War II and used his influence to protect Moroccan Jews — emerged as the symbol of Moroccan nationalism. The French exiled Sultan Mohammed V to Madagascar in 1953, replacing him with a puppet monarch — this backfired catastrophically, turning Mohammed V into a martyr and national hero. Mass popular protests and growing violence forced France to allow his return in November 1955. Morocco achieved independence on March 2, 1956. Mohammed V — who took the title 'King' — ruled until his death in 1961, succeeded by his son Hassan II."
+      },
+      {
+        "period": "1961 – 1999 CE",
+        "event": "Hassan II's Reign — Consolidation and Controversy",
+        "description": "King Hassan II ruled for 38 years — a reign marked by authoritarian control (the 'Years of Lead' — Sanawat al-Rasas — when political dissidents were imprisoned, tortured, and disappeared), skillful diplomacy (Morocco's relationship with both the West and the Arab world), and the controversial annexation of the Western Sahara (1975 — the 'Green March,' when Hassan II organized 350,000 Moroccan civilians to march into Spanish-controlled Western Sahara, triggering a conflict with the Polisario Front and Algeria that remains unresolved). Despite his authoritarianism, Hassan II also oversaw Morocco's modernization, his religious authority as Commander of the Faithful gave the state stability, and his late-reign reforms began opening Morocco's political system."
+      },
+      {
+        "period": "July 23, 1999 CE – present",
+        "event": "King Mohammed VI — The New Era",
+        "description": "King Mohammed VI ascended to the throne on July 23, 1999, following Hassan II's death. He launched a dramatically different style of monarchy — releasing political prisoners, establishing the Equity and Reconciliation Commission (IER — the first truth commission in the Arab world), acknowledging and compensating victims of Hassan II-era abuses, advancing women's rights (the Moudawwana — Morocco's reformed family law, 2004 — one of the most progressive in the Arab world), investing massively in infrastructure, and launching major economic development programs. The 2011 Arab Spring protests in Morocco led to a new constitution giving Parliament greater power. Morocco under Mohammed VI has been Africa's most diplomatically active state — rejoining the African Union (2017), co-hosting the 2030 FIFA World Cup bid, and positioning itself as Africa's gateway to the world.",
+        "2022_world_cup": "Morocco's 2022 FIFA World Cup campaign — reaching the semi-finals in Qatar, defeating Spain and Portugal — was the single greatest achievement in African football history. The entire Arab world celebrated. Moroccan players like Achraf Hakimi, Yassine Bounou, and Hakim Ziyech became continental heroes."
+      }
+    ]
+  },
+
+  "ethnic_groups": {
+    "overview": "Morocco's population is overwhelmingly composed of two intertwined groups — Amazigh (Berber) and Arab — whose centuries of co-existence, intermarriage, and cultural exchange have produced a Moroccan identity that is simultaneously both. Many Moroccans identify as Arab-Amazigh, and the boundaries are cultural and linguistic more than biological. The Moroccan Jewish community, though now small, has played an outsize role in Moroccan history and culture. Sub-Saharan African communities — descendants of enslaved people from trans-Saharan trade, as well as more recent migrants — are present particularly in southern Morocco.",
+    "major": [
+      {
+        "name": "Amazigh (Imazighen / Berbers)",
+        "population_percentage": "~35–45% identify primarily as Amazigh; Amazigh ancestry is present in virtually all Moroccans",
+        "language": "Three main Amazigh varieties: Tachelhit (Shilha — spoken in the Souss, High Atlas, and Anti-Atlas by approximately 8 million), Tarifit (Riffian — spoken in the Rif Mountains by approximately 4 million), Tamazight of the Middle Atlas (spoken in the Middle Atlas and eastern Morocco by approximately 3 million)",
+        "language_family": "Afroasiatic (Berber/Amazigh — one of Africa's most ancient language families)",
+        "regions": {
+          "tachelhit_shilha": "Souss Valley (Agadir, Tiznit, Taroudant), High Atlas Mountains, Anti-Atlas Mountains",
+          "tarifit_riffian": "Rif Mountains — northern Morocco (Al Hoceima, Nador, Berkane, Driouch)",
+          "tamazight_middle_atlas": "Middle Atlas Mountains, Beni Mellal region, Khénifra, Azilal, parts of eastern Morocco"
+        },
+        "religion": "Predominantly Sunni Muslim (with a deep Sufi tradition). A small number of Amazigh practice traditional animist-influenced beliefs in very remote communities.",
+        "historical_significance": "The Amazigh are the indigenous people of North Africa — their presence in Morocco predates Arab, Roman, Carthaginian, and Phoenician arrivals by thousands of years. The Amazigh gave the world the Almoravid and Almohad empires — two of the most powerful states in medieval history. Amazigh warriors formed the majority of the army that conquered Spain in 711 CE. The Amazigh queen Dihya (Kahina) remains one of Africa's most celebrated historical figures of resistance. Despite their fundamental role in Moroccan history, Amazigh identity was suppressed under both colonial rule and the early post-independence Arabization policies — a suppression that sparked the Amazigh cultural and political revival movement (Mouvement Culturel Amazigh) from the 1960s onward. The 2011 Constitution's recognition of Amazigh as an official language was a landmark achievement.",
+        "tifinagh_script": "The Amazigh language has its own ancient script — Tifinagh (ⵜⵉⴼⵉⵏⴰⵖ) — which dates back to at least the 3rd century BCE and is closely related to the ancient Libyco-Berber script found on rock carvings across the Sahara. Modern Tifinagh (Neo-Tifinagh) was standardized by Morocco's Royal Institute of Amazigh Culture (IRCAM) and is now used in official signage, education, and media. It is one of Africa's most ancient surviving writing systems.",
+        "cultural_identity": {
+          "tachelhit_shilha": "The Shilha (Ishelhin) of the Souss and High Atlas are known as Morocco's most industrious traders — Shilha merchants have shops across Morocco and Moroccan cities worldwide. They are also the great artisans of Morocco — Shilha women produce some of the finest traditional carpets (berber rugs), jewelry, and pottery. The Tachelhit tradition of ahwach (large communal musical performance — men and women singing and drumming in elaborate alternating patterns) is one of Africa's great performance traditions.",
+          "tarifit_riffian": "The Riffians (Irifiyen) of the Rif Mountains are known for fierce independence — the Rif War (1921–26) under Abdelkrim al-Khattabi humiliated the Spanish army. Riffian society is organized by tribe and lineage (qabila). The Rif region was also the epicenter of the 2016–2017 Hirak Rif protest movement demanding economic development and justice.",
+          "middle_atlas": "The Tamazight-speaking people of the Middle Atlas maintain strong semi-nomadic pastoral traditions, among the last semi-nomadic Amazigh communities in Morocco. Their hand-woven carpets (featuring geometric patterns in red, black, and white) are among Morocco's most distinctive artisanal products."
+        }
+      },
+      {
+        "name": "Arab Moroccans",
+        "population_percentage": "~40–55% identify primarily as Arab",
+        "language": "Moroccan Arabic (Darija) and Modern Standard Arabic",
+        "historical_significance": "Arab settlement of Morocco occurred in multiple waves — the initial Arab conquest (7th–8th century), subsequent immigration of Arab tribes, and the massive influx of Andalusian Arab refugees from the 12th–17th centuries. Most 'Arab' Moroccans are of mixed Arab-Amazigh ancestry — the boundary between Arab and Amazigh is cultural and linguistic rather than strictly biological. Urban Moroccans who speak primarily Darija (Moroccan Arabic) tend to identify as Arab, while those who maintain Amazigh languages identify as Amazigh.",
+        "darija": "Moroccan Arabic (Darija) is the daily spoken language of the majority of Moroccans — a unique Arabic dialect that incorporates extensive Amazigh vocabulary and grammatical structures, as well as significant French, Spanish, and Portuguese loanwords. Darija is so different from Modern Standard Arabic and Egyptian Arabic that speakers of Gulf Arabic often cannot understand it. It is one of the most linguistically interesting Arabic dialects in the world.",
+        "andalusian_heritage": "A significant portion of Morocco's urban Arab population descends from Andalusian refugees (Moriscos — expelled Muslims from Spain). Their cultural influence is most visible in the cities of Fez, Tetouan, Sale, Rabat, and Chefchaouen — in architecture (Andalusian courtyard houses with central fountains, geometric tilework, carved plaster and cedarwood), music (Moroccan Andalusian classical music — Gharnati, Ala, Malhun), and cuisine."
+      },
+      {
+        "name": "Moroccan Jews (Yehud al-Maghrib)",
+        "population_percentage": "~0.2% currently in Morocco (approximately 2,000–3,000); large diaspora in Israel (~500,000), France (~250,000), Canada, USA",
+        "language": "Moroccan Arabic (Darija), French, Hebrew, Haketia (Judeo-Spanish)",
+        "historical_significance": "The Moroccan Jewish community is one of the oldest in the world — Jewish presence in Morocco predates the Arab conquest by at least a thousand years, with some historians tracing it to Phoenician and Carthaginian times (c. 600 BCE). The community was dramatically augmented by the arrival of Sephardic Jews expelled from Spain in 1492. Morocco's Jews — called Yahud al-Maghrib — developed a unique culture blending North African, Andalusian, and Jewish traditions. They lived in designated quarters (mellah — the first mellahs were established in Fez in 1438) but were integral to Moroccan economic and intellectual life — as merchants, physicians, goldsmiths, jewelers, and intermediaries in the trans-Saharan and European trades. King Mohammed V's refusal to enforce Vichy anti-Jewish laws is a point of deep pride in Moroccan history. Mass emigration followed Moroccan independence and the establishment of Israel — but the Moroccan Jewish community maintains extraordinarily warm relations with Morocco, and King Mohammed VI has made the preservation of Moroccan Jewish heritage a national priority. Morocco is the only Arab country where Jewish heritage sites are formally protected and maintained by the state.",
+        "mellah": "The mellah (ملاح) — the Jewish quarter in Moroccan cities — is a distinctive urban institution. The largest and most historically significant are the Fez mellah (Fes el-Jdid), the Marrakech mellah, and the Essaouira mellah. Mellah architecture is recognizable by its multi-story buildings with characteristic wooden balconies overhanging the narrow streets.",
+        "mimouna": "The Mimouna — a Moroccan Jewish celebration held the evening after Passover ends — is a uniquely Moroccan Jewish tradition in which Jewish families open their homes to Muslim neighbors for a festive spread of sweet foods. The Mimouna has become a cultural institution of interfaith coexistence and is celebrated even in Israel among Moroccan Jewish diaspora communities."
+      },
+      {
+        "name": "Haratin (Gnawa / Sub-Saharan African descent)",
+        "population_percentage": "~1–3%",
+        "language": "Moroccan Arabic (Darija), some maintain vestiges of West African languages in ritual music",
+        "region": "Southern Morocco (Marrakech, Essaouira, Draa Valley, oasis towns), also Gnawa communities in Fez and other cities",
+        "historical_significance": "The Haratin (sing. Hartani) are a dark-skinned North African population of sub-Saharan African origin — descendants of enslaved people brought across the Sahara through trans-Saharan trade routes (primarily from present-day Mali, Niger, Senegal, and Guinea) over many centuries. They have been fully Islamized and Arabized over generations. The Gnawa — the most culturally distinctive Haratin community — maintained African spiritual and musical traditions across the centuries, developing a unique ceremony (Lila — also called Derdeba) and musical style that is today recognized as one of Africa's most significant living intangible cultural heritages.",
+        "gnawa": {
+          "description": "The Gnawa are Morocco's most culturally significant community of African descent — spiritual healers and musicians whose Lila ceremony combines Islamic and pre-Islamic African spiritual elements in a trance-healing ritual. The Gnawa maintain a direct cultural connection to West African spiritual traditions (particularly Bambara, Hausa, and Songhay spiritual practices) through their sacred music, costuming, and ritual protocols.",
+          "instruments": "Gimbri/sintir (a three-string bass lute — the central Gnawa instrument, producing a hypnotic, percussive bass sound), krakeb (large iron castanets played in pairs — the metallic clacking sound is the signature of Gnawa music), tbel (large drum used in outdoor processions)",
+          "lila_ceremony": "The Lila (literally 'night' — the ceremony runs through the night) is a spiritual healing ceremony in which the Gnawa master musician (maalem) and his troupe invoke a sequence of spiritual entities (mluk — saints or spirits), each associated with a specific color, musical theme, and healing property. Participants enter trance states as the music intensifies. The ceremony is believed to heal psychological and physical ailments by appeasing the spirit that afflicts the sufferer.",
+          "colors": "Each spiritual entity (malik — singular) has an associated color: black (Sidi Moussa — water spirits), blue (Sidi Hamou — sky spirits), red (spirits of anger), white (Lalla Mira — joyful spirits), green (saintly spirits), yellow (spirits of sweetness). Ritual participants wear the color of the spirit being invoked.",
+          "global_influence": "Gnawa music has profoundly influenced global music — through collaborations with jazz musicians (Randy Weston, Ornette Coleman), rock artists (Jimi Hendrix spent time in Essaouira — the 'city of Gnawa'), and world music producers. The Gnawa & World Music Festival in Essaouira (annual, June) is one of Africa's most celebrated music events.",
+          "notable_maalems": ["Maalem Mahmoud Guinia (the greatest Gnawa master of the 20th century)", "Maalem Mustapha Baqbou", "Maalem Hamid El Kasri", "Maalem Hassan Boussou"]
+        }
+      },
+      {
+        "name": "Sahrawi",
+        "population_percentage": "~1% of Morocco's population (the majority of Sahrawis live in Western Sahara or in the Tindouf refugee camps in Algeria)",
+        "language": "Hassaniya Arabic (a conservative Arabic dialect closely related to classical Arabic, with Amazigh influences)",
+        "region": "Western Sahara (administered by Morocco) and southern Moroccan cities",
+        "historical_significance": "The Sahrawi are the indigenous people of the Western Sahara — a predominantly nomadic people who speak Hassaniya Arabic and are organized into tribal confederations (Reguibat, Oulad Delim, Tekna, and others). The status of Western Sahara — a former Spanish colony that Morocco annexed in 1975 following the 'Green March' — remains one of Africa's most complex and unresolved territorial disputes. The Polisario Front, backed by Algeria, claims independence for the Sahrawi Arab Democratic Republic (SADR). Morocco considers Western Sahara its Southern Provinces. Thousands of Sahrawis live in refugee camps in Tindouf, Algeria."
+      }
+    ]
+  },
+
+  "languages": {
+    "official": ["Arabic (Modern Standard Arabic — الفصحى)", "Amazigh / Tamazight (ⵜⴰⵎⴰⵣⵉⵖⵜ)"],
+    "de_facto_official": "French — used in government administration, business, higher education, and alongside Arabic in official media. Morocco's relationship with the French language is one of the most complex in Africa — a linguistic legacy of colonialism that has been retained for economic and diplomatic reasons.",
+    "daily_spoken": {
+      "name": "Moroccan Arabic (Darija — الدارجة)",
+      "description": "The daily language of the vast majority of Moroccans — a unique Arabic dialect that is the product of centuries of Arab-Amazigh contact, Andalusian Arabic influence, and French and Spanish loanwords. Darija is so distinct from other Arabic varieties that it is often considered a language in its own right rather than a dialect. Egyptian Arabic speakers — whose dialect is the pan-Arab lingua franca — can understand perhaps 40–50% of Darija without practice. Darija is spoken by all Moroccans regardless of ethnic background.",
+      "unique_features": "Darija uses Amazigh consonant clusters (groups of consonants without intervening vowels — unusual in other Arabic varieties). It has dropped short vowels almost entirely from speech (making it very rapid and consonant-heavy). It uses French words naturally in everyday speech (e.g., 'machine' for car, 'bureau' for desk, 'stylo' for pen)."
+    },
+    "amazigh_varieties": [
+      {
+        "name": "Tachelhit (Shilha / Tashlhiyt)",
+        "speakers": "~8–10 million",
+        "region": "Souss Plain (Agadir area), High Atlas, Anti-Atlas",
+        "note": "The most widely spoken Amazigh variety in Morocco"
+      },
+      {
+        "name": "Tarifit (Riffian / Tamazight of the Rif)",
+        "speakers": "~4–5 million",
+        "region": "Rif Mountains (north — Al Hoceima, Nador, Driouch, Berkane)"
+      },
+      {
+        "name": "Tamazight (Central / Middle Atlas Tamazight)",
+        "speakers": "~3–4 million",
+        "region": "Middle Atlas, Beni Mellal, Khénifra, Azilal, eastern Morocco"
+      }
+    ],
+    "french_in_morocco": "French is used by virtually all educated Moroccans and in all formal business, technical, and academic contexts. Morocco has the largest French-speaking population in Africa after the Democratic Republic of Congo — and one of the largest in the world. The relationship with French is complex — the language of the former colonizer has also become Morocco's window to the global economy and a marker of social status.",
+    "spanish_in_morocco": "Spanish is widely spoken in northern Morocco — particularly in Tangier, Tetouan, Larache, Nador, and Al Hoceima — a legacy of the Spanish Protectorate (1912–1956). The Spanish enclaves of Ceuta (Sebta) and Melilla on Moroccan soil also maintain a Spanish-speaking population.",
+    "hassaniya": "Hassaniya Arabic is spoken in southern Morocco and Western Sahara — by the Sahrawi people and related communities. It is a very conservative Arabic dialect, remarkably close to Classical Arabic.",
+    "unique_darija_phrases": [
+      {"phrase": "Labas / La bás", "meaning": "Are you okay? / I'm fine (the most common Moroccan greeting exchange)"},
+      {"phrase": "Bikhir", "meaning": "Fine / Good (response to 'labas?')"},
+      {"phrase": "Mrhba bik / Mrhba bikoum", "meaning": "Welcome (singular / plural) — from 'marhaba'"},
+      {"phrase": "Shukran bzaf", "meaning": "Thank you very much"},
+      {"phrase": "Wakha", "meaning": "Okay / Alright — one of Morocco's most used words"},
+      {"phrase": "Bezzaf", "meaning": "A lot / Very much"},
+      {"phrase": "Mashi mushkil", "meaning": "No problem / No worries"},
+      {"phrase": "Yallah", "meaning": "Let's go / Come on / Hurry"},
+      {"phrase": "Safi", "meaning": "Enough / Done / That's it / Okay"},
+      {"phrase": "Zwina / Zwin", "meaning": "Beautiful (feminine / masculine)"},
+      {"phrase": "Makaynsh", "meaning": "There is none / It doesn't exist"},
+      {"phrase": "Bladi", "meaning": "My country / My town (from 'bled' — village/homeland)"},
+      {"phrase": "Bessaha", "meaning": "To your health — said when someone eats, drinks, bathes, or receives a gift"},
+      {"phrase": "Tqebbal Llah", "meaning": "May God accept it — said to someone returning from Ramadan prayers or pilgrimage"}
+    ]
+  },
+
+  "food": {
+    "overview": "Moroccan cuisine is one of the world's great culinary traditions — a sophisticated synthesis of Amazigh, Arab, Andalusian, Ottoman, Jewish, and sub-Saharan African influences, developed over many centuries in the imperial courts of Fez, Marrakech, Meknes, and Rabat. Characterized by the masterful use of spice blends (ras el-hanout, chermoula), slow cooking in clay tagines, the integration of sweet and savory, the use of preserved lemons and olives, and fresh aromatics — Moroccan food is considered one of the top culinary destinations in the world. The ritual of Moroccan hospitality — mint tea, dates and dried fruits, bread broken together — is as important as the food itself.",
+    "fundamental_elements": {
+      "spices": "Morocco is the world capital of complex spice blending. The central spice markets (Rahba Kedima in Marrakech, the Spice Quarter in Fez) are filled with dozens of spices. The most important: cumin (kamoun), coriander (karwiya), saffron (zaafran — Morocco is a major saffron producer), turmeric (kharkoum), ginger (skinjbir), cinnamon (karfa), paprika (filfil ahmar), cayenne, white pepper, and the almighty ras el-hanout.",
+      "ras_el_hanout": "Ras el-hanout (رأس الحانوت — literally 'head of the shop' — implying the spice seller's finest blend) is Morocco's most complex and celebrated spice mixture. A master spice seller's ras el-hanout can contain 20–80 different spices — the exact composition is a closely guarded secret and varies by vendor, region, and use. Common ingredients: cardamom, rose petals, cinnamon, nutmeg, allspice, black pepper, turmeric, ginger, lavender, cloves, cubeb, grains of paradise, dried galangal, and more. Used to season tagines, couscous, and braises.",
+      "preserved_lemons": "Preserved lemons (hamad m'rakad — lemons preserved in salt for weeks or months) are one of Moroccan cuisine's most distinctive ingredients — essential to countless tagines, salads, and sauces. The fermentation transforms the lemon — softening the rind and concentrating the flavor into an intensely aromatic, salty-tart condiment unlike any fresh lemon.",
+      "argan_oil": "Argan oil — pressed from the nuts of the argan tree (Argania spinosa), which grows only in southwestern Morocco's Sous region — is one of the world's rarest and most precious culinary oils. Cold-pressed argan oil (toasted nut) is used in Moroccan cooking and as a dip with amlou (almond-argan paste). Cosmetic argan oil (non-toasted) has become a global luxury beauty product. The argan tree ecosystem is a UNESCO Biosphere Reserve."
+    },
+    "staple_dishes": [
+      {
+        "name": "Couscous (Seksu — ⵙⴻⴽⵙⵓ)",
+        "description": "Morocco's most important dish and the most significant contribution of Amazigh cuisine to world food. Couscous — tiny grains of durum wheat semolina, steamed in a special couscousière until light and fluffy, never soggy — is the Friday dish of Morocco. Every Friday, across Morocco, families gather after the midday prayer for a communal couscous meal. The couscous is piled high and topped with a slow-cooked stew of seven vegetables (onion, carrots, turnips, zucchini, pumpkin, cabbage, tomatoes — the seven vegetables are traditional and symbolic), chickpeas, and meat (lamb, chicken, or beef). The broth (mraq) is ladled over. Morocco eats couscous from a communal dish — everyone gathers around and eats with the right hand or a spoon. Couscous from Fez and the imperial tradition is considered the gold standard in Morocco.",
+        "cultural_significance": "Couscous is so central to Moroccan and North African identity that it was inscribed on UNESCO's Intangible Cultural Heritage of Humanity list in 2020 — submitted jointly by Morocco, Algeria, Tunisia, and Mauritania",
+        "friday_ritual": "Couscous on Friday (after Jumu'ah prayer) is one of Morocco's most sacred social rituals — families who may not eat together any other day of the week share the Friday couscous. It is the gastronomic expression of family and community."
+      },
+      {
+        "name": "Tagine (الطاجين)",
+        "description": "Morocco's most internationally recognized dish — a slow-cooked stew named after the distinctive conical clay pot (the tagine) in which it is cooked. The conical lid of the tagine creates a unique self-basting effect — condensation from the steam drips back down the sides, keeping the food moist while concentrating flavors. Tagines are cooked over charcoal or low heat for hours. The result is incomparably tender, fragrant, and complex. Moroccan tagine varieties are virtually infinite — each region, family, and occasion has its own. Key types: Tagine mrozia (lamb with honey, raisins, almonds, and ras el-hanout — the great celebratory tagine), Chicken tagine with preserved lemons and olives (djaj bel-hamad w-zeitoun — perhaps Morocco's most famous tagine internationally), Kefta and egg tagine (spiced minced meat meatballs in spiced tomato sauce, finished with eggs), Lamb tagine with prunes (barkouk) and toasted almonds, Vegetable tagine with chickpeas, Fish tagine (along the coast — particularly in Essaouira and Agadir).",
+        "clay_pot": "The tagine vessel is a cultural icon — the conical clay lid painted in geometric patterns and terra-cotta colors is one of Morocco's most recognizable visual symbols. Traditional Moroccan pottery centers (Safi, Fez) produce both functional tagines and decorative versions.",
+        "sweet_savory": "The hallmark of Moroccan tagine cooking is the balance of sweet and savory — honey with lamb, prunes with chicken, almonds and raisins with meat — a sophistication derived from Andalusian court cuisine and the ancient Silk Road spice trade."
+      },
+      {
+        "name": "Pastilla (بسطيلة — Bastilla / B'stilla)",
+        "description": "Morocco's greatest festive dish and one of the world's most extraordinary culinary creations — a complex, multi-layered pie of the finest phyllo-like pastry (warqa — gossamer-thin handmade pastry sheets) filled with layers of slow-cooked pigeon (or chicken) with eggs and saffron-spiced sauce, and a separate layer of toasted almond-sugar-cinnamon paste, all wrapped and baked until golden, then dusted with powdered sugar and cinnamon. The combination of savory pigeon, sweet almonds, and delicate pastry is breathtaking. Pastilla is one of the great recipes of Andalusian-Moroccan court cuisine — believed to have evolved from Andalusian pigeon pie recipes brought by the Moriscos. Served at weddings and important celebrations.",
+        "warqa": "Warqa (ورقة — 'leaf/paper') is the ultra-thin Moroccan pastry — made by dabbing wet dough onto a hot dome-shaped pan and peeling off paper-thin sheets. Making warqa is an art mastered by specialist women (maalmat al-warqa). It is used in pastilla, briwat, and other pastries.",
+        "modern_variations": "Contemporary Moroccan restaurants also serve seafood pastilla (with shrimp, squid, and vermicelli in chermoula sauce) and sweet-only pastilla (with milk cream and orange blossom water)."
+      },
+      {
+        "name": "Harira (حريرة)",
+        "description": "Morocco's national soup and one of the great soups of the world. A rich, thick soup of tomatoes, lentils, chickpeas, vermicelli (or broken spaghetti), lamb or beef, fresh coriander (karwiya), parsley, celery, saffron, and lemon juice — thickened with a flour-and-water mixture (tedouira) and beaten egg stirred in at the end. Harira is primarily associated with Ramadan — it is the traditional first food taken at iftar (breaking the fast at sunset) across Morocco, eaten with chebakia (sesame honey cookies) and dates. But harira is eaten year-round — sold from street carts in the morning and evening, served in restaurants and homes as a starter or a meal.",
+        "ramadan_significance": "At sunset during Ramadan, all of Morocco sits down to a bowl of harira — it is the most universal, beloved, and culturally loaded food in the Moroccan calendar",
+        "eaten_with": "Chebakia (sesame cookies dipped in honey — specific to Ramadan), dates, hard-boiled eggs, lemon wedge, and good bread"
+      },
+      {
+        "name": "Mechoui (المشوي)",
+        "description": "Whole roasted lamb — one of Morocco's most spectacular celebratory dishes. A whole lamb is either slowly roasted in a clay oven (tanour) buried in the ground, or on a spit over open charcoal fire for several hours. Rubbed with a mixture of butter (smen — aged clarified butter), cumin, coriander, and salt. The result is fall-off-the-bone tender meat with crackling skin. Mechoui is the centerpiece of major celebrations — Eid al-Adha, weddings, moussems (religious festivals), and state banquets. Traditionally eaten by tearing with the hands.",
+        "smen": "Smen (سمن — aged clarified butter with a funky, strong flavor — aged for months or years in clay pots) is used in mechoui and many Moroccan dishes for a distinctive depth of flavor"
+      },
+      {
+        "name": "Tanjia (الطانجية — Marrakech Meat Pot)",
+        "description": "The bachelor's dish of Marrakech — and one of Morocco's most unique regional specialties. Tanjia is a simple braised meat dish (lamb or beef) with preserved lemons, saffron, garlic, and cumin, cooked in a large handled clay urn (also called a tanjia) that is sealed with parchment paper and string and carried to the communal hammam (bathhouse). The urn is placed in the ashes of the hammam furnace and slow-cooked for several hours in the residual heat. Traditionally the food of working men and bachelors — it requires no pot-watching, no attention, just time and the hammam's heat.",
+        "origin": "Marrakech — unique to the Red City",
+        "cultural_note": "Tanjia-carrying men are a Marrakech institution — you can still find the communal oven (ferran) where urns are left to cook all morning"
+      },
+      {
+        "name": "Msemen / Rghaif / Harcha — Moroccan Breads",
+        "description": "Morocco has a magnificent tradition of flatbreads. Msemen (مسمن) is a square, layered, flaky flatbread — made from semolina dough stretched and folded repeatedly with butter to create layers, then griddle-cooked. Rghaif is a similar layered bread but rounder. Harcha is a thick, golden semolina bread with a crumbly, slightly gritty texture. All three are eaten for breakfast with argan oil and honey, fresh cheese (jben), jam, or amlou (Amazigh almond-argan-honey paste). These breads are as central to Moroccan breakfast as ful is to Egyptian breakfast.",
+        "khobz": "Khobz (خبز) — the everyday round leavened bread baked in the communal oven (ferran) — is the bread of every meal. Moroccans take their unbaked dough to the neighborhood ferran (wood-fired communal oven) to be baked in the morning — a tradition maintained in medinas across Morocco."
+      },
+      {
+        "name": "Chermoula (الشرمولة)",
+        "description": "Morocco's most important marinade and sauce — a blend of fresh coriander, flat-leaf parsley, garlic, cumin, paprika, olive oil, and lemon juice. Used primarily for fish — whole fish marinated in chermoula and grilled or baked is one of Morocco's finest simple dishes — but also for chicken, vegetables, and as a sauce. Every Moroccan household has its own chermoula ratio.",
+        "fish_culture": "Morocco's Atlantic and Mediterranean coasts produce some of the world's finest seafood — particularly sardines. Essaouira's sardine fleet, the grilled fish of Agadir, and the seafood restaurants of Casablanca's La Sqala and Chez Driss are legendary."
+      },
+      {
+        "name": "Zaalouk (الزعلوك)",
+        "description": "A Moroccan eggplant and tomato salad — roasted or steamed eggplant mashed with tomatoes, garlic, olive oil, cumin, paprika, and fresh coriander. Eaten warm or at room temperature with bread. One of Morocco's many vegetable salads (salade cuite — cooked salads) that are served as starters in traditional meals.",
+        "salad_tradition": "A traditional Moroccan meal begins with an array of small salads (cooked and raw) — zaalouk, taktouka (roasted pepper and tomato), Moroccan carrot salad, beet salad, green olive tapenade, and more. This mezze-style beginning is one of the great pleasures of Moroccan dining."
+      },
+      {
+        "name": "Bissara (البيصارة)",
+        "description": "A thick soup of dried fava beans (or split peas) blended smooth with garlic, cumin, and olive oil, finished with a drizzle of extra-virgin olive oil, paprika, and cumin. The staple winter breakfast of northern Morocco — particularly in Fez, Tetouan, and Chefchaouen. Eaten with bread for dipping. Simple, extraordinarily nourishing, and cheap — the food of working people at dawn.",
+        "served": "Morning street food — sold from carts and small shops"
+      },
+      {
+        "name": "Briwat (بريوات)",
+        "description": "Moroccan pastry parcels — triangular or cigar-shaped parcels of warqa (thin pastry) filled with various fillings: spiced minced meat with vermicelli and eggs (savory), almond paste with orange blossom water and cinnamon (sweet), shrimp and chermoula (seafood). Deep-fried and either dusted with powdered sugar (sweet versions) or served as is. A staple of the Moroccan diffa (formal banquet spread) and a beloved street snack.",
+        "ramadan": "Briwat are a staple of Moroccan Ramadan iftars"
+      },
+      {
+        "name": "Amlou (أملو)",
+        "description": "A thick, rich paste made from toasted almonds, argan oil, and honey — whipped together until creamy. One of the great products of the Souss region (Amazigh country) — eaten at breakfast by spreading on msemen or bread, or drizzled on pancakes. A nutritionally dense, deeply satisfying traditional food. Also used as an accompaniment to tea.",
+        "origin": "Souss region — Tachelhit/Shilha Amazigh tradition"
+      }
+    ],
+    "sweets_and_pastries": [
+      {
+        "name": "Chebakia (شباكية)",
+        "description": "Sesame cookies dipped in honey — the definitive Ramadan sweet of Morocco. Flower-shaped pastries made from a dough of sesame seeds, cinnamon, saffron, anise, and orange blossom water, deep-fried, then immediately dipped in honey. Sticky, fragrant, and intensely satisfying. Eaten with harira at iftar throughout Ramadan. Making chebakia is a communal activity — families and neighbors gather to make huge batches in the weeks before Ramadan.",
+        "ramadan": "Inseparable from Ramadan harira — the chebakia-harira combination is Morocco's most iconic food pairing"
+      },
+      {
+        "name": "Cornes de Gazelle (كعب الغزال — Gazelle Horns)",
+        "description": "Morocco's most elegant and internationally recognized pastry — crescent-shaped cookies of an extraordinarily thin, slightly orange-blossom-scented pastry shell filled with a mixture of ground almonds, sugar, orange blossom water, and cinnamon. Delicate, refined, and dusted with the lightest powder sugar. A product of Moroccan Andalusian-influenced pastry tradition at its most sophisticated.",
+        "also_known_as": "Kaab el-Ghazal — from Arabic 'heel of the gazelle'"
+      },
+      {
+        "name": "Sellou / Sfouf (السلو)",
+        "description": "A dense, nutrient-packed Moroccan sweet — toasted sesame seeds, roasted flour, ground almonds, honey, clarified butter, anise, cinnamon, and powdered sugar combined into a crumbly, energy-dense paste. Traditionally given to women after childbirth to restore strength, and eaten during Ramadan for the sustained energy it provides through fasting hours.",
+        "cultural_role": "A deeply traditional Moroccan food with medicinal and celebratory significance"
+      },
+      {
+        "name": "M'hanncha (المحنشة — The Snake)",
+        "description": "A coiled almond pastry — warqa sheets filled with ground almond paste (marzipan-like, flavored with orange blossom water and cinnamon) and rolled into a long cylinder, then coiled into a spiral shape and baked. Dusted with powdered sugar and cinnamon or glazed with honey and almonds. The name means 'the snake' — from its coiled shape. One of Morocco's most celebratory pastries.",
+        "served_at": "Weddings, celebrations, afternoon tea"
+      },
+      {
+        "name": "Moroccan Mint Tea (أتاي — Atay)",
+        "description": "Moroccan mint tea — called atay (from Darija) — is simultaneously a beverage, a ceremony, a gesture of hospitality, and a social institution. Gunpowder green tea is brewed with a large quantity of fresh spearmint (nana) and copious sugar in a silver-colored teapot (barrad), then poured from a height of 30–60cm to create a characteristic foam. The pouring from height both aerates the tea and demonstrates skill. Served in small decorated glasses, three rounds are traditional: 'The first glass is as gentle as life, the second is as strong as love, the third is as bitter as death' (a Moroccan proverb). Refusing mint tea in Morocco is a significant breach of social etiquette — accepting tea is accepting hospitality.",
+        "ritual": "Moroccan mint tea is always prepared and poured by the host — usually the most senior man or a designated tea-maker. The preparation and pouring are performative acts of hospitality. In Amazigh tradition, the tea ceremony is particularly elaborate — with the host tasting before serving to ensure quality.",
+        "without_mint": "Nus-nus (half milk, half coffee — café au lait style) and café cassé (coffee with a dash of milk) are popular alternatives in urban Morocco."
+      }
+    ],
+    "drinks": [
+      {
+        "name": "Mint Tea (Atay)",
+        "description": "As described above — Morocco's national drink and most important social institution. Green gunpowder tea with fresh spearmint and sugar, poured from height."
+      },
+      {
+        "name": "Jus d'Orange (Orange Juice)",
+        "description": "Morocco is one of the world's great orange producers — the Souss Valley around Agadir and the Tadla region produce extraordinarily sweet, intensely flavored oranges. Freshly squeezed orange juice sold from street carts (for just a few dirhams per glass) is one of Morocco's great daily pleasures. Moroccan orange juice is among the finest in the world."
+      },
+      {
+        "name": "Argan Oil and Amlou",
+        "description": "Toasted argan oil used as a dip with bread at breakfast — one of the world's rarest culinary oils, produced only in Morocco's Souss region."
+      },
+      {
+        "name": "Mahia (ماحيا)",
+        "description": "A Moroccan Jewish fig or date brandy — a potent, anise-flavored distilled spirit traditionally produced and consumed by Morocco's Jewish community (Muslims do not drink alcohol). Mahia has been produced in Morocco for centuries. Though the Jewish community has largely emigrated, mahia production continues in Morocco and is now exported. It is a cultural artifact of Jewish-Muslim Morocco.",
+        "cultural_note": "The Mimouna celebration (after Passover) traditionally features mahia alongside sweet foods"
+      }
+    ]
+  },
+
+  "dressing": {
+    "overview": "Moroccan traditional dress is among the most elegant and varied in Africa — reflecting the country's Arab-Andalusian, Amazigh, and courtly imperial traditions. The djellaba and kaftan are the cornerstone national garments. Moroccan craft guilds (the fassi couturiers — tailors of Fez) have maintained traditions of extraordinary embroidery and weaving for centuries. Both men and women have distinct traditional dress, and Morocco's contemporary fashion scene blends traditional craft with global design.",
+    "traditional_garments": [
+      {
+        "name": "Djellaba (الجلابة)",
+        "description": "The djellaba is Morocco's most universal garment — a long, loose-fitting hooded robe with full sleeves, worn by both men and women. The djellaba's most distinctive feature is the qob (pointed hood) — which comes in different shapes for men (more pointed) and women (rounder). Men's djellabas are typically in solid earth tones (beige, cream, white, grey, brown) for daily wear, white for prayer and formal occasions. Women's djellabas are more colorful and may be embroidered. The djellaba is worn over regular clothing and can be dressed up or down — suitable for the mosque, the souk, and the office. Djellabas are made in cotton (summer), wool (winter), and luxurious materials for special occasions.",
+        "hood": "The pointed hood (qob) of the Moroccan djellaba is the garment's defining feature — the hood protects from sun and dust in arid regions and keeps warm in the Atlas mountain cold.",
+        "worn_by": "All Moroccans — men and women, all classes, all ages"
+      },
+      {
+        "name": "Kaftan (القفطان / Caftan)",
+        "description": "The kaftan is Morocco's most formal and glamorous traditional garment — worn by women for weddings and celebrations. A long, fitted or semi-fitted robe of the finest materials (silk, brocade, velvet, satin, chiffon) in rich colors, with elaborate embroidery (mainly silk-thread embroidery — serma — in gold or silver) around the collar, hem, and cuffs. The Moroccan kaftan is a masterpiece of craft — couture-level garments requiring weeks of skilled embroidery work. At Moroccan weddings, the bride changes into multiple kaftans throughout the evening, each more elaborate than the last.",
+        "takchita": "The takchita (تكشيطة) — a two-piece version of the kaftan, with an underdress (fouqia) and an overdress (keswa) fastened with a decorative clasp (sfifa and akaad) — is the bridal favorite for contemporary Moroccan weddings.",
+        "global_reach": "The Moroccan kaftan has influenced global fashion — major houses including Yves Saint Laurent (who lived in Marrakech for decades and was inspired by Moroccan color and craft), Christian Dior, and Valentino have drawn from Moroccan kaftan traditions."
+      },
+      {
+        "name": "Burnous (البرنوس)",
+        "description": "A heavy, hooded woolen cloak — traditionally worn by men in rural areas and the mountains. The burnous is a full-length cape with a hood, woven from sheep or camel wool in cream or earth tones. In the High Atlas and Middle Atlas, the burnous is essential winter wear — protection against the bitter cold and snow. The Amazigh burnous, often with tribal decorative weaving at the edges, is one of the most ancient garments in North Africa.",
+        "origin": "Ancient Amazigh garment — worn for thousands of years in the Maghreb"
+      },
+      {
+        "name": "Haik (الحايك)",
+        "description": "A large white or cream-colored rectangular cloth wrapped around the body and face — the traditional covering garment of Moroccan women in conservative communities. The haik predates the djellaba as Morocco's standard women's public dress — older women in Tetouan, Rabat, and Sale still wear the haik. It is worn wrapped over clothing to cover completely, with one hand holding it closed and only the eyes visible (or the face uncovered in less conservative contexts).",
+        "region": "More common in northern Morocco (Tetouan, Chefchaouen) and Rabat"
+      },
+      {
+        "name": "Amazigh Traditional Dress",
+        "description": "Amazigh women's traditional dress varies significantly by region — creating one of Morocco's most visually diverse textile landscapes. Tachelhit (Souss) women: Bright-colored wool or cotton wrap dress (tiziri) over a linen or cotton shift; elaborate silver jewelry is the most important element — heavy bracelets, necklaces, earrings, head ornaments, and fibulae (silver cloak pins) in geometric and symbolic patterns. The Souss region's silver jewelry is among the finest in Africa. Middle Atlas Amazigh women: Distinctive woven wool cloth (ahansal — heavy geometric-patterned textile in red, black, and white) worn wrapped around the body; silver fibulae pins hold the garment. Elaborate colored tassels and pom-poms decorate clothing. Riffian (Tarifit) women: Brilliantly colored wool haiks (red, yellow, or striped) worn in distinctive wrapped styles unique to the Rif region.",
+        "silver_jewelry": "Silver (not gold — silver is the Amazigh metal, associated with the moon and femininity, while gold is considered the Arab metal) is the central ornament of Amazigh women. Moroccan Amazigh silver jewelry — featuring geometric patterns, hand of Fatima motifs, and protective symbols — is one of Africa's great jewelry traditions.",
+        "fibulae": "The fibula (tasrart in Tachelhit) — a large silver pin or clasp used to hold the shoulder garment — is the Amazigh jewelry item with the longest historical continuity. Similar fibulae have been found in North African archaeological sites dating back 2,000+ years."
+      },
+      {
+        "name": "Babouche / Balgha (البلغة)",
+        "description": "The classic Moroccan slipper — a backless, soft leather shoe in yellow (the most traditional, made from vegetable-tanned goatskin — exclusive to Fez tanneries), white (for formal occasions and mosque), or other colors. The babouche is the traditional footwear worn with djellaba and kaftan. Morocco's leather tanneries — particularly the Chouara Tannery in Fez (one of the oldest leather tanneries in the world, continuously operating since the 11th century) — produce the famous Fassi babouche in the traditional method: soaking in pigeon dung (to soften the leather), dyeing in vats of natural dyes, and hand-finishing.",
+        "chouara_tannery": "The Chouara Tannery of Fez is one of Morocco's most iconic sights — viewed from surrounding leather shop terraces, the circular dyeing vats filled with vivid colors (saffron yellow, poppy red, cactus green, indigo blue) create one of the most photographed images in Africa."
+      }
+    ],
+    "contemporary_fashion": {
+      "description": "Morocco has a sophisticated and growing contemporary fashion industry — centered in Casablanca and Marrakech. Moroccan designers draw deeply from the country's craft traditions (embroidery, weaving, leather, metal) while creating globally wearable contemporary fashion.",
+      "notable_designers": ["Rabéa Benthami", "Zineb Britel", "Karim Tassi", "Noureddine Amir (one of Morocco's most internationally recognized couture designers)"],
+      "ysl_marrakech": "Yves Saint Laurent's deep love for Marrakech — where he bought the Jardin Majorelle in 1980 and spent decades — fundamentally shaped his work. His Moroccan-inspired color palette (Majorelle Blue, earthy terracotta, vivid orange) and kaftan-influenced silhouettes became iconic. The Musée Yves Saint Laurent Marrakech (opened 2017) is one of Morocco's finest cultural institutions."
+    }
+  },
+
+  "marriage_traditions": {
+    "overview": "Moroccan marriage is one of the most elaborate and ritualized social institutions in Africa — a multi-day celebration involving both families entirely, with specific ceremonies, dress changes, music, and food for each stage. The Moroccan wedding (al-urs) is considered the most important celebration in a person's life and can last 3–7 days in traditional settings. The bride undergoes a remarkable transformation through the wedding week.",
+    "legal_framework": "Marriage in Morocco is governed by the Moudawwana (مدونة الأسرة — Family Code). The 2004 reform of the Moudawwana under King Mohammed VI was a landmark — raising the minimum marriage age to 18 for both men and women (previously 15 for women), giving women equal rights to divorce, restricting polygamy (requiring the first wife's consent and court permission), and giving women many more legal protections. It is considered one of the most progressive family laws in the Arab world.",
+    "stages": [
+      {
+        "stage": "1. Khitba (الخطبة — Proposal and Engagement)",
+        "description": "The formal marriage proposal is made by the groom's family visiting the bride's family. If accepted, the couple is officially engaged. In traditional practice, the two families' male representatives negotiate the mahr (wedding gift to the bride) and wedding arrangements. The engagement is often announced with a small celebration. The Moroccan mahr tends to be symbolic (a certain amount of gold or money) rather than as economically substantial as Sub-Saharan bride price traditions — though significant jewelry (the shabka) is expected."
+      },
+      {
+        "stage": "2. Hammam Day (Yum al-Hammam — يوم الحمام)",
+        "description": "A few days before the wedding, the bride and her female relatives and friends visit the public bathhouse (hammam) together for a ritual purification bath. This is a celebratory women-only occasion — the bride is steamed, scrubbed with kessa (exfoliating mitt) and black soap (beldi soap — made from fermented olive oil), massaged with ghassoul (volcanic clay), and prepared for her transformation. The hammam day is accompanied by music, singing, and celebration among the women."
+      },
+      {
+        "stage": "3. Henna Night (Lailat al-Henna — ليلة الحناء)",
+        "description": "One of the most beautiful and important pre-wedding ceremonies — a women-only celebration the night before (or a few nights before) the wedding in which the bride's hands and feet are decorated with intricate henna patterns by a professional henna artist (neqqasha). The ceremony involves singing traditional wedding songs (ahidous, a'lwah), dancing, and celebration. Guests also receive small henna dots on their hands for blessing. The bride sits in a raised chair (amariya) in her wedding dress and jewelry while the henna is applied — the ceremony can take several hours. The henna must stay on the skin for many hours to achieve the darkest color — the darker the henna, the deeper the love of the husband, according to tradition.",
+        "neqqasha": "The professional henna artist (neqqasha) is a skilled artisan — patterns range from fine geometric designs to elaborate floral compositions. Fez and Marrakech have distinct regional henna styles."
+      },
+      {
+        "stage": "4. The Wedding (Al-Urs — العرس)",
+        "description": "The wedding celebration itself is typically an evening event (beginning after Maghrib prayer — sunset — and continuing until dawn or beyond). Guests are separated by gender in more conservative settings or mixed in urban celebrations. The celebration features live Moroccan music (Andalusian orchestra, chaabi band, or a DJ), dancing, and an elaborate food spread. The bride's most important moment is the series of outfit changes (from 5 to 12+ changes in a traditional Fassi wedding) — in each change, she appears in a different kaftan or regional dress, presented in a candlelit procession (zaffa) while guests shower her with rose petals and ululating women produce zaghareet (trill of joy).",
+        "dress_changes": "The Moroccan bride's multiple outfit changes are the centerpiece of the wedding — each region has its traditional dress: Fez's embroidered brocade kaftan, Marrakech's richly colored takchita, the Amazigh bride of the High Atlas in silver-laden traditional dress, Tetouan's Andalusian white dress. In elaborate weddings, the bride may change 7–12 times across the night.",
+        "amariya": "The bride's processional throne (amariya) — a decorated litter or palanquin carried on the shoulders of male relatives or attendants — is one of the most dramatic moments of the Moroccan wedding. The bride is carried in the amariya through the crowd while music plays and guests celebrate."
+      },
+      {
+        "stage": "5. Sbaa (السبوع — The Seventh Day)",
+        "description": "Many traditional Moroccan weddings include a celebration on the seventh day after the wedding — the sbaa. The new bride is formally presented to the community for the first time as a married woman. A final celebration with food and music marks the official end of the wedding period."
+      }
+    ],
+    "wedding_food": {
+      "diffa": "The traditional Moroccan wedding banquet (diffa — ضيافة) is one of the most elaborate in the world — featuring multiple courses of communal dishes served to guests. A formal diffa begins with a selection of salads and briouate, followed by bastilla, then a tagine or two, then a whole mechoui (roasted lamb) brought on a platter, then couscous, then sweets (shebakia, kaab el-ghazal, msemmen with honey), and finally fruit and mint tea. Each course is removed and replaced by the next — the total meal can last 3–5 hours.",
+      "wedding_sweets": ["Chebakia", "Kaab el-Ghazal (gazelle horns)", "M'hanncha", "Briwat filled with almonds", "Sellou", "Moroccan pastries in enormous variety"]
+    }
+  },
+
+  "beliefs": {
+    "overview": "Morocco is a Sunni Muslim kingdom with a distinctive spiritual identity shaped by centuries of Sufi traditions, saint veneration, Amazigh pre-Islamic practices, the royal institution of the Commander of the Faithful, and a deep historical relationship with Andalusian Islamic civilization. Folk religious practice — particularly the veneration of local saints (marabouts / awliya) and their shrines (zawiya), the Gnawa trance healing tradition, and the living Sufi brotherhoods — creates a rich spiritual landscape beneath the official Maliki Sunni framework.",
+    "official_religion": {
+      "denomination": "Sunni Islam (Maliki school of jurisprudence — الفقه المالكي)",
+      "commander_of_faithful": "The King of Morocco holds the title 'Amir al-Mu'minin' (أمير المؤمنين — Commander of the Faithful) — the highest religious authority in Morocco. This title, bestowed by religious scholars (ulema), means the king is not only the political head of state but the guardian and highest representative of Islam in Morocco. This gives the Moroccan monarchy a religious legitimacy that has been a source of stability for centuries.",
+      "maliki_school": "The Maliki school (named after Imam Malik ibn Anas of Medina, 711–795 CE) is the dominant legal school across West Africa and North Africa. Moroccan Islam follows the Maliki madhhab in jurisprudence, combined with the Ashari school in theology and the Junaydi (moderate Sufi) path in spirituality — a combination the Moroccan state calls the 'Moroccan Islamic referential' (المرجعية الدينية المغربية)."
+    },
+    "sufism": {
+      "description": "Sufi brotherhoods (turuq — plural of tariqa, meaning 'path') are among the most important religious institutions in Morocco. Unlike in countries where Wahhabist influence has suppressed Sufism, Morocco's state actively protects and supports Sufi orders as part of its 'moderate Islam' policy. Major Sufi orders active in Morocco include: the Tijaniyya (enormously influential across West Africa — millions of West Africans make pilgrimage to the zawiya of Sidi Ahmed al-Tijani in Fez), the Qadiriyya, the Darqawiyya, the Boutchichiyya (one of Morocco's most active contemporary Sufi orders), and the Hamadcha and Aissawa (known for their intense trance ceremonies at moussems).",
+      "zawiya": "A zawiya (زاوية) is the center of a Sufi brotherhood — combining a shrine (mausoleum of the founding saint), a mosque, a Quran school, and sometimes a guesthouse. Morocco's most important zawiyas are major pilgrimage destinations for Moroccan and African Muslims alike.",
+      "tijaniyya_fez": "The Zawiya of Sidi Ahmed al-Tijani in Fez is one of the most visited Islamic sites in Africa — millions of West African Muslims (from Senegal, Guinea, Mali, Nigeria, and across the Sahel) come to Fez specifically to visit the Tijaniyya zawiya. The Tijaniyya brotherhood, founded by Sidi Ahmed al-Tijani (born in Algeria, died in Fez, 1815), has an estimated 100 million followers across West Africa — making it possibly the largest Sufi brotherhood in the world."
+    },
+    "saint_veneration": {
+      "description": "The veneration of local saints (awliya Allah — Friends of God, also called marabouts from the Arabic murabit) is the most distinctive feature of Moroccan popular religious practice. Saints are believed to have baraka (بركة — divine blessing power) that continues after their death. Pilgrimage to saint shrines (zawiyas and maqams), seeking the saint's intercession for healing, blessing, marriage, fertility, and protection, is widespread across Morocco. Each city, town, and village has its patron saint or saints.",
+      "major_saints": [
+        {"name": "Moulay Idriss I (مولاي إدريس الأول)", "city": "Zerhoun mountain, near Meknes", "significance": "Founder of Morocco's first dynasty and founder of Fez — the holiest person in Moroccan Islam. The town of Moulay Idriss Zerhoun surrounding his shrine is a major pilgrimage destination."},
+        {"name": "Sidi Mohammed ben Youssef (Mohammed V)", "note": "Venerated but more as a nationalist/royal figure than a Sufi saint"},
+        {"name": "The Seven Saints of Marrakech (Sab'at Rijal)", "city": "Marrakech", "significance": "Seven saints whose shrines are visited in a traditional circuit (ziyara) — a three-day pilgrimage around Marrakech's saint shrines. The seven saints include Sidi Youssef ben Ali (patron saint of lepers), Sidi Bel Abbes (patron saint of the blind), and others."},
+        {"name": "Sidi Ahmed al-Tijani", "city": "Fez (zawiya)", "significance": "Founder of the Tijaniyya brotherhood — his Fez zawiya is one of Africa's most visited Islamic sites"},
+        {"name": "Moulay Abdeslam ben Mchich", "city": "Jebel Alam, northern Morocco", "significance": "One of Morocco's most venerated saints — his mountain shrine is a major pilgrimage site for Moroccan Muslims"}
+      ],
+      "moussem": "A moussem (موسم — from 'season') is an annual festival-pilgrimage honoring a local saint — combining religious devotion with market, entertainment, and community gathering. Morocco has hundreds of moussems. The largest and most famous include the Moussem of Moulay Idriss II in Fez, the Moussem of Sidi Ahmed ou Moussa (a massive Amazigh gathering near Tiznit), and the Moussem of the Brides in Imilchil (in the High Atlas — where young Amazigh men and women from surrounding tribes gather to find marriage partners in an annual 'bride market')."
+    },
+    "gnawa_beliefs": {
+      "description": "The Gnawa spiritual system is a unique syncretic tradition blending Islam (the Gnawa are Muslim) with pre-Islamic African spiritual practices from sub-Saharan West Africa. The Gnawa believe in a pantheon of spiritual entities (mluk — also called jnun in the broader Moroccan tradition) — saints and spirits associated with colors, music, and healing properties. The Lila ceremony invokes these entities through specific musical sequences and ritual protocols to heal psychological and physical ailments.",
+      "lila": "The Lila (ليلة — night) healing ceremony runs from evening to dawn. The maalem (master musician) and his troupe play specific musical sequences for each spiritual entity. Participants (particularly those who are 'possessed' or afflicted by a particular spirit) enter trance states and are healed through the ceremony. The Lila is a living tradition — not a museum piece — actively practiced for healing across Morocco."
+    },
+    "jewish_heritage": {
+      "description": "Though now a tiny community, Moroccan Judaism has left an indelible spiritual and cultural mark on Morocco. The concept of a 'shared saints' — where the shrines of Jewish saints (tzaddikim) attracted both Jewish and Muslim pilgrims — is unique to Morocco and represents one of the most extraordinary examples of interfaith spiritual coexistence in the world. The most famous example: Rabbi Amram ben Diwan's shrine in Ouazzane, visited by both Jews and Muslims for healing and blessing. This tradition of Jewish-Muslim saint veneration is one of Morocco's greatest contributions to world interfaith understanding."
+    }
+  },
+
+  "festivals": [
+    {
+      "name": "Gnawa & World Music Festival (Festival Gnaoua et Musiques du Monde)",
+      "timing": "Annual — June",
+      "location": "Essaouira",
+      "description": "One of Africa's greatest music festivals and the world's leading celebration of Gnawa music. Founded in 1998 in the beautiful Atlantic city of Essaouira, the festival brings together Gnawa maalems (master musicians) from across Morocco with global jazz, blues, reggae, electronic, and world music artists for four days of extraordinary free concerts on the seafront stages. Attendance exceeds 500,000 people. The festival has been credited with saving and revitalizing the Gnawa tradition for a global audience — collaborations between Gnawa maalems and international artists (from Carlos Santana to Pharoah Sanders) have produced some of world music's most memorable moments. Essaouira itself — a white-and-blue UNESCO-listed coastal medina with Atlantic winds, a working fishing port, and a unique Gnawa and Jewish heritage — is one of Morocco's most magical cities.",
+      "jimi_hendrix_connection": "Jimi Hendrix visited Essaouira in 1969 and, according to local legend, was inspired by its music and mystical atmosphere. A cafe near the main square bears his name. The wind and music of Essaouira apparently influenced his later work.",
+      "type": "Music / Cultural"
+    },
+    {
+      "name": "Fes Festival of World Sacred Music (Festival de Fès des Musiques Sacrées du Monde)",
+      "timing": "Annual — June",
+      "location": "Fez",
+      "description": "One of the world's most prestigious sacred music festivals — held in the ancient imperial city of Fez against the backdrop of the world's greatest collection of medieval Islamic architecture. The festival brings together sacred music traditions from across the world: Sufi dhikr, Gregorian chant, Hindu devotional music, Buddhist chanting, Celtic traditions, Andalusian music, and more — united by the theme of the spiritual dimension of music. Evening concerts in the spectacular Bab Makina square or the El-Hedim square in Meknes create an unforgettable atmospheric experience. The festival is also a major forum for interfaith dialogue and global spiritual conversation.",
+      "type": "Music / Spiritual / Cultural"
+    },
+    {
+      "name": "Marrakech International Film Festival (FIFM)",
+      "timing": "Annual — November/December",
+      "location": "Marrakech",
+      "description": "One of Africa's most glamorous and prestigious film festivals — held in the magnificent Jemaa el-Fna square and in the Palais des Congrès. International film stars, directors, and industry figures from Hollywood, Bollywood, and European cinema gather in Marrakech for screenings, masterclasses, and the most stylish parties on the African continent. Founded in 2001 under the patronage of King Mohammed VI. The juxtaposition of Hollywood glitter and Marrakech's ancient medina creates one of film culture's most seductive settings.",
+      "type": "Film / Cultural"
+    },
+    {
+      "name": "Mawazine Festival (Rhythms of the World)",
+      "timing": "Annual — May/June",
+      "location": "Rabat",
+      "description": "One of the world's largest music festivals by attendance — drawing over 2.5 million people across its 9-day run in Morocco's capital. Multiple stages across Rabat host an extraordinary lineup of international superstars (Beyoncé, Rihanna, Bruno Mars, Shakira, and virtually every major global artist has performed here), alongside North African and Moroccan artists. The festival is free for most stages — making it one of the most democratically accessible large music festivals in the world. It is organized under the patronage of King Mohammed VI.",
+      "type": "Music"
+    },
+    {
+      "name": "Ramadan in Morocco",
+      "timing": "9th month of the Islamic lunar calendar",
+      "location": "Nationwide",
+      "description": "Ramadan in Morocco is a month of extraordinary cultural richness. At iftar (sunset, breaking of the fast), every Moroccan family gathers for the ritual meal: harira soup, chebakia cookies, dates, shebakia, eggs, msemen (Moroccan flatbread), and various sweets. After iftar, the streets come alive — especially in medinas. Sufi brotherhoods hold hadra (spiritual music sessions). Traditional Ramadan storytelling and entertainers (halqa performers) hold court in Jemaa el-Fna. Special Ramadan programming floods Moroccan television. The night prayer (Tarawih) fills every mosque.",
+      "ftour": "Ftour (فطور — Moroccan iftar) is more elaborate and ritualized than in many Arab countries — the specific foods are fixed by tradition: harira first, then dates and chebakia, then eggs, then bread and pastries. The ftour spread is prepared for hours before sunset.",
+      "type": "Religious / Cultural"
+    },
+    {
+      "name": "Imilchil Marriage Festival (Moussem des Fiancées)",
+      "timing": "Annual — September",
+      "location": "Imilchil, High Atlas Mountains",
+      "description": "One of Africa's most extraordinary and romantically celebrated festivals — the annual marriage fair of the Ait Hadiddou Amazigh tribe in the remote High Atlas village of Imilchil. According to legend, two young lovers from rival tribes were forbidden to marry and died of broken hearts, their tears forming two nearby lakes (Isli and Tislit — 'the groom' and 'the bride'). Their families subsequently agreed that their descendants could choose their own spouses at an annual gathering. The Moussem des Fiancées draws Amazigh men and women from the surrounding mountain tribes — dressed in their finest traditional clothes and silver jewelry — to meet, court, and agree to marry. Multiple weddings are contracted during the festival. The event has become a major tourist attraction, though its authentic character is increasingly commercialized. The landscape of the High Atlas around Imilchil — remote, dramatic, with mirror-still lakes reflecting autumn sky — is among the most beautiful in Africa.",
+      "type": "Cultural / Traditional"
+    },
+    {
+      "name": "Throne Day (Fête du Trône)",
+      "timing": "July 30 (National Holiday)",
+      "location": "Nationwide — main ceremony rotates between major cities",
+      "description": "Morocco's most important national holiday — commemorating King Mohammed VI's accession to the throne on July 30, 1999. Celebrated with official royal speech, military parades, fireworks, and public celebrations. The king delivers a significant televised speech addressing Morocco's political, social, and economic direction. Cities are decorated with flags and royal portraits.",
+      "type": "National Holiday"
+    },
+    {
+      "name": "Aïd al-Adha (Eid el-Kebir — العيد الكبير)",
+      "timing": "10th Dhul Hijja (Islamic lunar calendar — 70 days after Eid al-Fitr)",
+      "location": "Nationwide",
+      "description": "The most important religious and social holiday in Morocco — called 'Eid el-Kebir' (the Great Eid). Every family that can afford to slaughters a sheep (al-kbush) in commemoration of Ibrahim's sacrifice. The meat is divided: a third for the family, a third for friends, a third for the poor. For days before the Eid, every street in Morocco fills with live sheep — bought and kept in homes and on terraces until the day of sacrifice. The nationwide scale of the sheep purchase and slaughter is one of Morocco's most remarkable social phenomena. Traditional Eid el-Kebir foods: mrouzia tagine (lamb with raisins, almonds, and honey — a Eid specialty), kebda (liver — slaughtered immediately and grilled fresh — the first meat eaten), various offal preparations, and lamb cooked in every way imaginable.",
+      "type": "Religious / National"
+    },
+    {
+      "name": "Asilah Arts Festival (Moussem Culturel International d'Asilah)",
+      "timing": "Annual — August",
+      "location": "Asilah (Atlantic coast — near Tangier)",
+      "description": "One of Africa's finest arts festivals — held in the whitewashed Atlantic coastal town of Asilah, one of Morocco's most beautiful medinas. The festival transforms Asilah's medina walls into a canvas — international and Moroccan muralists paint large-scale murals on the historic whitewashed walls, creating an open-air gallery that changes every year. Alongside the murals, the festival features poetry readings, music performances, cultural forums and political-intellectual symposia attracting Arab and African thinkers, and art exhibitions. Founded in 1978 by Asilah's mayor Mohammed Benaissa.",
+      "type": "Arts / Cultural"
+    },
+    {
+      "name": "Rose Festival (Festival des Roses)",
+      "timing": "Annual — May",
+      "location": "El-Kelaa M'Gouna and Kalaat M'Gouna, Dadès Valley",
+      "description": "The Dadès Valley between Ouarzazate and Boumalne is Morocco's rose-growing heartland — the Rosa damascena (Damask rose) is cultivated here at high altitude (1,500m) and harvested in May. The rose festival celebrates the harvest with a procession of a Rose Queen elected from local girls, folk music performances, rose-distilling demonstrations, and the sale of rose water, rose oil, and rose-scented products. The valley during rose blooming season is one of Morocco's most beautiful sights — thousands of pink roses covering terraced fields against the backdrop of the High Atlas.",
+      "type": "Cultural / Agricultural"
+    }
+  ],
+
+  "music_and_pop_culture": {
+    "overview": "Morocco's musical heritage is one of the richest and most diverse in Africa — a confluence of Amazigh oral musical traditions stretching back millennia, Andalusian classical music brought by refugees from Spain, Arab-Islamic court music, Sufi spiritual music, and the African-rooted Gnawa trance tradition. Modern Moroccan music blends all these with global influences — producing distinctive genres from chaabi street pop to the globally celebrated Gnawa fusion. Morocco gave the world Gnawa music, preserved Andalusian classical music when it was lost in Spain, and today produces internationally recognized artists from multiple genres.",
+    "traditional_music": [
+      {
+        "name": "Andalusian Classical Music (الموسيقى الأندلسية)",
+        "description": "One of the world's great classical music traditions — and Morocco's most prestigious cultural inheritance. Andalusian music (also called Moorish music or Gharnati / Ala / Malhun depending on style) was developed in the Muslim courts of Al-Andalus (medieval Islamic Spain — particularly Cordoba, Seville, and Granada) from the 9th century onward by the legendary musician Ziryab (Abu al-Hasan Ali ibn Nafi) and subsequent composers. When the Muslims and Jews were expelled from Spain in 1492, they brought this music to Morocco — preserving it in the cities of Fez (Ala style), Tetouan and Chefchaouen (Gharnati style), and Rabat and Sale. Morocco is now the primary custodian of Andalusian classical music — the music of Al-Andalus survives in Morocco far better than anywhere else. The nouba (نوبة) is the basic compositional form — a suite of movements in a specific mode (tab') proceeding through distinct rhythmic sections from slow to fast.",
+        "instruments": ["Oud (لعود — Arab lute)", "Kamanche (violin-like bowed instrument)", "Rabab (رباب — spiked fiddle)", "Qanun (قانون — trapezoid zither)", "Darbuka (دربوكة — goblet drum)", "Duff (دف — frame drum)"],
+        "cities": "Each imperial city maintains its own Andalusian music school (madrasa): Fez (Ala style — considered the most refined), Rabat (Ala), Tetouan (Gharnati — named for Granada/Gharnata), Chefchaouen (Gharnati)"
+      },
+      {
+        "name": "Gnawa Music (الموسيقى الكناوية)",
+        "description": "As described extensively in the ethnic groups section — Gnawa music is Morocco's most globally celebrated traditional music form. The gimbri/sintir bass lute and krakeb iron castanets create a hypnotic, deeply African soundscape. Gnawa music operates on multiple levels simultaneously — as community music, healing ceremony, spiritual practice, and artistic form. The collaboration between Gnawa maalems and international jazz and rock musicians has produced some of the most remarkable world music recordings of the late 20th and early 21st centuries.",
+        "key_artists": ["Maalem Mahmoud Guinia (the master)", "Maalem Mustapha Baqbou", "Maalem Hamid El Kasri", "Maalem Hassan Boussou", "Maalem Said Boulhimas"]
+      },
+      {
+        "name": "Ahidous and Ahwach (الأحيدوس / الأحواش)",
+        "description": "Two of the great Amazigh collective musical performance traditions of the High and Middle Atlas. Ahidous (of the Middle Atlas and eastern Morocco) features large groups of men and women arranged in a circle or line, alternating call-and-response vocal lines in complex interlocking patterns, accompanied only by bendir (large frame drums) and hand-clapping. The vocal harmonies of ahidous are among the most complex in African traditional music. Ahwach (of the Souss and High Atlas) involves larger groups — sometimes hundreds of participants — in dramatic musical performances with bendir, flute (nira), and collective singing, featuring spectacular synchronized movements and competitive group dynamics.",
+        "inscription": "Ahidous was inscribed on UNESCO's Intangible Cultural Heritage of Humanity list in 2008"
+      },
+      {
+        "name": "Malhun (الملحون)",
+        "description": "Classical Moroccan sung poetry — a tradition of performing classical Arabic and Darija poems to musical accompaniment. The poems (qasida) address love, spiritual longing, praise of the Prophet, and social commentary. Malhun is performed by a lead singer (sheikh or cheikha) accompanied by a small ensemble of traditional instruments. The malhun tradition has its own canon of classic poems and was the music of artisan guilds in the imperial cities — particularly in Fez, Meknes, Sale, and Marrakech.",
+        "cheikha": "Cheikhate — female malhun and chaabi singers — are among Morocco's most important musical figures. Often from marginalized backgrounds, these women performers (cheikha) sang at celebrations and were simultaneously celebrated for their artistry and stigmatized for their unconventional social position."
+      },
+      {
+        "name": "Tagnawit / Tissintes (Amazigh Song)",
+        "description": "The Amazigh oral musical tradition includes an enormous variety of song forms across the three language regions. Tachelhit musical forms include timawayin (love songs), izlan (poetic songs exchanged between men and women), and the collective ahwach. Tarifit music of the Rif has its own distinctive melodies and instruments. The ney flute (nira — Amazigh bamboo flute) and bendir (large frame drum) are the central instruments of the Amazigh musical tradition."
+      },
+      {
+        "name": "Reggada (الرقادة)",
+        "description": "A trance music tradition from the Rif mountains — performed by the Aissawa and related brotherhoods and also as folk entertainment at celebrations. Characterized by the tbel (large double-headed drum), ghaita (a high-pitched double-reed oboe), and increasingly fast music that induces trance states. Reggada performances are physically intense — musicians and dancers sometimes enter possessed states.",
+        "region": "Rif Mountains — northern Morocco (eastern Rif — Nador, Berkane)"
+      }
+    ],
+    "modern_music": [
+      {
+        "name": "Chaabi (الشعبي — Moroccan Pop/Folk)",
+        "description": "Morocco's most popular everyday music — a broad genre rooted in malhun and Amazigh musical traditions, adapted to modern urban tastes. Chaabi (literally 'popular/of the people') features electric guitar (notably the sintir-influenced bass lines), banjo, darbuka, and vocals in Darija and Amazigh languages. Played at weddings, celebrations, and cafés across Morocco. Considered the music of working-class Morocco — sometimes dismissed by the elite but embraced by millions.",
+        "jilala": "A specific chaabi subgenre connected to Sufi trance practice"
+      },
+      {
+        "name": "Moroccan Hip-Hop and Rap",
+        "description": "A vibrant and growing hip-hop scene — predominantly in Darija, with Amazigh (Tamazight) and French elements. Moroccan hip-hop addresses social inequality, political criticism, youth frustration, and urban identity. The scene has produced artists of genuine quality who have gained international recognition.",
+        "key_artists": [
+          "Don Bigg (محمد مرجان — the godfather of Moroccan rap — pioneered Darija-language rap from 2001)",
+          "Lbenj (لبنج — Abdelali Ababou — one of Morocco's most respected lyricists)",
+          "7liwa (حليوة — Amine Amrani)",
+          "Hash Tag (هاش تاق)",
+          "Dizzy DROS",
+          "Latino"
+        ],
+        "don_bigg": "Don Bigg — real name Mohammed Marjane — is the undisputed founding figure of Moroccan hip-hop. His 2008 album 'Casanegra' (which also became a hit Moroccan film) defined a generation. He writes exclusively in Darija — a political choice that asserts the legitimacy of Moroccan vernacular as an artistic language."
+      },
+      {
+        "name": "Moroccan Pop and R&B",
+        "description": "Contemporary Moroccan pop blends Arabic, Amazigh, French, and Western influences in commercially polished productions.",
+        "key_artists": ["Saad Lamjarred (سعد لمجرد — the most commercially successful Moroccan pop artist — enormous audience across the Arab world)", "Maher Zain (Lebanese-Swedish but massive in Morocco — Islamic pop)", "Hindi Zahra (born in Khouribga — internationally acclaimed for her jazz-folk-Amazigh fusion)", "Douzi (دوزي — Douzi Bilal — chaabi and pop fusion)"]
+      },
+      {
+        "name": "Moroccan Metal and Rock",
+        "description": "A surprisingly active metal and rock underground exists in Morocco — particularly in Casablanca and Rabat. In 2003, the 'Satan's trial' saw 14 Moroccan metal fans arrested for allegedly promoting Satanism — a case that shocked the international music community and became a cause célèbre for freedom of expression. The case was eventually largely resolved, and Morocco's metal scene has continued, albeit cautiously.",
+        "notable_band": "Blaze Out — one of Morocco's best-known metal bands"
+      }
+    ],
+    "legendary_artists": [
+      {
+        "name": "Jil Jilala (جيل جيلالة)",
+        "description": "One of Morocco's most revered musical groups — formed in 1972, they brought malhun, ahidous, and chaabi traditions together into an artistically serious body of work. Their music addressed spiritual, social, and cultural themes. Considered the greatest Moroccan musical group of the 20th century by many music scholars."
+      },
+      {
+        "name": "Nass El Ghiwane (ناس الغيوان — People of the Ghiwane)",
+        "description": "Morocco's most politically significant musical group — often called 'the Moroccan Rolling Stones' (though this comparison doesn't capture their uniqueness). Formed in Casablanca's Hay Mohammadi working-class neighborhood in 1970, Nass El Ghiwane transformed Moroccan traditional music (gnawa, Sufi dhikr, malhun, chaabi) into politically charged, poetic rock music. Their instruments — sintir, hand drums, banjo — were unconventional. Their lyrics, in metaphor-rich Darija poetry, addressed poverty, injustice, exile, and freedom. They were beloved by the working class and feared by the authorities. Their influence on Moroccan music is incalculable.",
+        "members": ["Boujemaa Hagour", "Larbi Batma (died 1997 — the artistic soul of the group)", "Omar Sayed", "Allal Yaala", "Abderrahim Kikar"]
+      },
+      {
+        "name": "Oum (Oum El Ghait Benali — أم الغيث بنعلي)",
+        "description": "Morocco's most internationally acclaimed living female artist — a jazz and soul singer who incorporates Gnawa, hassaniya, and Amazigh musical influences into a deeply personal artistic language. Her 2014 album 'Soul of Morocco' was critically acclaimed worldwide. She represents the synthesis of Morocco's musical heritage with global contemporary sensibility.",
+        "international": "Oum has performed at major international festivals and her music has introduced Moroccan musical culture to audiences in Europe, the Americas, and beyond"
+      },
+      {
+        "name": "Hindi Zahra",
+        "description": "Born in Khouribga (Morocco's phosphate capital) to an Amazigh family, Hindi Zahra moved to France and developed a unique musical world blending Moroccan Amazigh folk songs, jazz, blues, and English-language soul. Her debut album 'Handmade' (2010) was a major international success — recorded with one of the most minimal, organic production styles in contemporary world music. Her voice — raw, aching, and completely individual — is one of the most distinctive in African music."
+      }
+    ],
+    "cinema": {
+      "description": "Morocco has a significant and growing national film industry. Moroccan films address the country's social complexities — migration, gender, class, religious identity, and modernity — with increasing sophistication. Morocco is also one of the world's most used film locations — its diverse landscapes (desert, medina, mountains, coast) have hosted major international productions for decades.",
+      "moroccan_films": [
+        {
+          "title": "Casanegra (2008)",
+          "description": "The defining film of the 2000s Moroccan generation — a gritty coming-of-age story of two friends from Casablanca's working-class Hay Mohammadi neighborhood navigating drugs, crime, and dreams. The film's realistic Darija dialogue, its soundtrack (featuring Don Bigg), and its unflinching portrayal of urban poverty made it a cultural landmark."
+        },
+        {
+          "title": "Miral (2010)",
+          "description": "International co-production directed by Julian Schnabel, set partly in Morocco, addressing Palestinian identity."
+        },
+        {
+          "title": "Much Loved / Zin li fik (2015)",
+          "description": "Nabil Ayouch's controversial film about sex workers in Marrakech — banned in Morocco for its explicit portrayal of prostitution, it was selected as Morocco's entry for the Academy Award for Best Foreign Language Film. The controversy it generated opened a national conversation about censorship, social reality, and artistic freedom."
+        },
+        {
+          "title": "Adam (2019)",
+          "description": "Maryam Touzani's first feature film — an intimate portrait of two women (a widowed baker and a young unmarried pregnant woman) in the Casablanca medina. Won critical acclaim across international film festivals."
+        }
+      ],
+      "international_productions": "Morocco has hosted major international film productions for decades. Ouarzazate — in the pre-Saharan southeast — is the 'Hollywood of Africa': the Atlas Studios there are among the largest in the world and have hosted 'Lawrence of Arabia,' 'Gladiator,' 'The Mummy,' 'Babel,' 'Game of Thrones,' 'Kingdom of Heaven,' 'Ridley Scott's' multiple films, and many more. The city itself is a major film tourism destination.",
+      "atlas_studios": "Atlas Studios in Ouarzazate is one of the world's largest film studios by outdoor set area — its permanent sets include ancient Egyptian streets, Roman armies, Tibetan monasteries, and medieval Arabic cities."
+    },
+    "sports": {
+      "football": {
+        "national_team": "Atlas Lions (الأسود الأطلس — Lions of the Atlas Mountains)",
+        "2022_world_cup": "Morocco's 2022 FIFA World Cup performance was one of the greatest stories in football history. The Atlas Lions became the first African and first Arab team to reach the semi-finals of a FIFA World Cup — defeating Spain (on penalties), Portugal (2–1, with an extraordinary team performance), and Belgium (2–0) before losing to France. The celebrations across Morocco, across Africa, and across the Arab world were extraordinary — millions took to the streets. The team's victories were seen as a victory for African football, for the Arab world, and for all those who had been told their time had not yet come.",
+        "key_players": ["Achraf Hakimi (Paris Saint-Germain defender)", "Yassine Bounou (Bono — goalkeeper, one of the best in the world)", "Hakim Ziyech", "Sofiane Boufal", "Youssef En-Nesyri", "Romain Saïss (captain)"],
+        "walid_regragui": "Walid Regragui — the coach who led Morocco to the 2022 semi-finals. A former Moroccan international, he was appointed just three months before the World Cup and produced the greatest performance in African football history."
+      },
+      "athletics": "Morocco has a proud tradition in long-distance running — Hicham El Guerrouj is the world record holder in the 1,500m and one mile, and multiple Olympic gold medalist. Said Aouita was a 5,000m world record holder in the 1980s. Morocco consistently produces world-class middle-distance runners.",
+      "hicham_el_guerrouj": "Hicham El Guerrouj — born in Berkane (northeastern Morocco) — is the greatest middle-distance runner in history. He holds world records in the 1,500m (3:26.00, set 1998) and the mile (3:43.13, set 1999) that have stood for over 25 years. He won Olympic gold at both the 1,500m and 5,000m at the 2004 Athens Olympics — the first athlete to win both events at the same Olympics since Paavo Nurmi in 1924."
+    }
+  },
+
+  "administrative_divisions": {
+    "system": "Morocco is divided into 12 regions (جهات — jihat), each headed by a Wali (governor) appointed by the king. Each region is further divided into provinces and prefectures, then communes. The 2011 Constitution and subsequent regionalization reforms gave regions greater autonomy and elected regional councils.",
+    "total_regions": 12,
+    "regions": [
+      {
+        "name": "Tanger-Tetouan-Al Hoceima (طنجة-تطوان-الحسيمة)",
+        "main_cities": ["Tangier (Tanger)", "Tetouan (Tétouan)", "Al Hoceima", "Larache", "Chefchaouen"],
+        "significance": "Morocco's gateway to Europe — Tangier faces Spain across the Strait of Gibraltar (14km). The region includes the Rif Mountains (Tarifit Amazigh heartland), the Spanish enclaves of Ceuta and Melilla, and Chefchaouen (the Blue City).",
+        "known_for": ["Tangier (historic international zone, literary haunt of Matisse, Bowles, Burroughs, Ginsberg)", "Chefchaouen (Blue City of the Rif)", "Tetouan medina (UNESCO — finest Andalusian medina in Morocco)", "Al Hoceima national park (Mediterranean coast)", "Rif mountains and Amazigh culture"]
+      },
+      {
+        "name": "L'Oriental (الشرق)",
+        "main_cities": ["Oujda", "Nador", "Berkane", "Taourirt"],
+        "significance": "Morocco's eastern region — bordering Algeria. Home to the eastern Rif communities, the Moulouya River plain, and significant Tarifit and Tamazight speaking populations.",
+        "known_for": ["Beni Snassen Mountains (largest argan forest in eastern Morocco)", "Figuig Oasis (Morocco's easternmost major oasis)", "Nador lagoon (Mar Chica)"]
+      },
+      {
+        "name": "Fès-Meknès (فاس-مكناس)",
+        "main_cities": ["Fez (Fès)", "Meknes (Meknès)", "Ifrane", "Sefrou", "Taza", "Moulay Idriss Zerhoun"],
+        "significance": "The historical and spiritual heart of Morocco — the twin imperial cities of Fez and Meknes. The most culturally significant region for Islamic scholarship, traditional craft, Andalusian heritage, and Moroccan identity.",
+        "known_for": [
+          "Fes el-Bali (UNESCO — world's largest car-free urban area and most complete medieval Islamic city in existence)",
+          "Al-Qarawiyyin University (859 CE — the world's oldest continuously operating university)",
+          "Chouara Tannery (11th-century leather tannery still operating by traditional methods)",
+          "Meknes — Alaoui imperial city, Moulay Ismail's grandiose capital",
+          "Volubilis (UNESCO — best-preserved Roman city in Africa)",
+          "Moulay Idriss Zerhoun (Morocco's holiest city)",
+          "Ifrane (Morocco's 'Switzerland' — a mountain town with remarkable European-style architecture)",
+          "Middle Atlas cedar forests (Azrou — home to Barbary macaques)"
+        ]
+      },
+      {
+        "name": "Rabat-Salé-Kénitra (الرباط-سلا-القنيطرة)",
+        "main_cities": ["Rabat", "Salé", "Kénitra", "Skhirat", "Temara"],
+        "significance": "Morocco's capital region — administrative center, royal palaces, diplomatic quarter. Rabat is a UNESCO World Heritage city (the Hassan Tower, the Oudayas Kasbah, the Chellah). Salé, across the Bouregreg River, has its own historic medina and is Morocco's second-oldest city.",
+        "known_for": ["Rabat medina and royal palaces (UNESCO)", "Hassan Tower (unfinished Almohad minaret — 12th century)", "Oudayas Kasbah and garden (Almohad period)", "Chellah necropolis (Merinid-era ruins on Roman Sala Colonia site)", "Mohammed VI Museum of Modern and Contemporary Art"]
+      },
+      {
+        "name": "Béni Mellal-Khénifra (بني ملال-خنيفرة)",
+        "main_cities": ["Béni Mellal", "Khénifra", "Azilal", "Fquih Ben Salah"],
+        "significance": "The heart of the Middle Atlas — Tamazight Amazigh country. Home to Khénifra (capital of the Amazigh Zayan confederation, which mounted fierce resistance to French colonization under Mouha ou Hammou Zayani) and the spectacular Ouzoud Falls.",
+        "known_for": ["Ouzoud Falls (the highest waterfalls in the Maghreb — 110m)", "Aït Benhaddou visits from the north", "Tamazight Amazigh culture and carpet weaving", "Bin el-Ouidane reservoir and lake"]
+      },
+      {
+        "name": "Casablanca-Settat (الدار البيضاء-سطات)",
+        "main_cities": ["Casablanca (Dar el-Beida)", "Settat", "El Jadida", "Mohammedia", "Berrechid"],
+        "significance": "Morocco's economic capital and most populous region. Casablanca (Casa / Dar el-Beida) is Morocco's financial, commercial, and industrial engine — the largest city in the Maghreb and one of Africa's most important financial centers.",
+        "known_for": [
+          "Hassan II Mosque (the world's largest mosque in Africa and one of the largest in the world — built on the Atlantic Ocean, completed 1993, minaret 210m)",
+          "Casablanca's Art Deco architecture (1920s–1940s — one of the world's finest Art Deco urban environments)",
+          "Morocco Mall (one of Africa's largest shopping malls)",
+          "Quartier des Habous (a 1930s French-built 'new medina')",
+          "El Jadida (Portuguese Cistern — a stunning underground vaulted chamber, UNESCO World Heritage Site)",
+          "Mazagan (El Jadida's Portuguese fortified city — UNESCO)"
+        ]
+      },
+      {
+        "name": "Marrakech-Safi (مراكش-آسفي)",
+        "main_cities": ["Marrakech", "Safi", "Essaouira", "El-Kelaa M'Gouna"],
+        "significance": "The cultural and tourism heart of Morocco — Marrakech is the Red City and Morocco's most visited destination. Essaouira is the Atlantic jewel and Gnawa capital. Safi is Morocco's sardine capital and ceramics center.",
+        "known_for": [
+          "Marrakech (Jemaa el-Fna — UNESCO Oral Heritage, Koutoubia Mosque, the souks, Bahia Palace, Saadian Tombs, Jardin Majorelle, Palais Badia)",
+          "Jemaa el-Fna square (the world's greatest outdoor theater — storytellers, musicians, acrobats, food vendors, henna artists, snake charmers, from dawn to midnight)",
+          "Essaouira (UNESCO blue and white Atlantic medina — Gnawa, wind, surfing, Jewish heritage)",
+          "El-Kelaa M'Gouna (Dadès Valley roses — Rose Festival)",
+          "Safi (ceramics — the great potters of Morocco)"
+        ]
+      },
+      {
+        "name": "Drâa-Tafilalet (درعة-تافيلالت)",
+        "main_cities": ["Errachidia", "Ouarzazate", "Zagora", "Tinghir", "Midelt"],
+        "significance": "Morocco's pre-Saharan and Saharan region — gateway to the Sahara Desert, home to the Draa and Ziz river valleys, the Atlas Studios of Ouarzazate, the Erg Chebbi dunes (Merzouga), and the Tafilalt oasis (birthplace of the Alaoui dynasty).",
+        "known_for": [
+          "Erg Chebbi (Merzouga) — Morocco's iconic golden sand dunes of the Sahara",
+          "Aït Benhaddou (UNESCO — the most spectacular mud-brick ksar in Morocco, set of Game of Thrones, Gladiator, Lawrence of Arabia)",
+          "Ouarzazate — 'Hollywood of Africa' and Atlas Studios",
+          "Todgha Gorge (dramatic limestone canyon — world-class rock climbing)",
+          "Dadès Gorge (Road of a Thousand Kasbahs)",
+          "Draa Valley (Morocco's longest valley — 200km of palms, kasbahs, and ancient ksour)"
+        ]
+      },
+      {
+        "name": "Souss-Massa (سوس-ماسة)",
+        "main_cities": ["Agadir", "Tiznit", "Taroudant", "Inezgane", "Tafraoute"],
+        "significance": "The Amazigh heartland of the south — Tachelhit (Shilha) country. Agadir is Morocco's premier beach resort. The region produces Morocco's finest argan oil, almonds, and saffron. Taroudant is the 'grandmother of Marrakech.'",
+        "known_for": [
+          "Agadir (Morocco's premier beach resort, rebuilt after 1960 earthquake)",
+          "Argan oil (the Souss Valley and Anti-Atlas are the world's only source of culinary argan oil)",
+          "Tafraoute (Anti-Atlas pink granite town surrounded by almond trees and painted rocks)",
+          "Taroudant (intact walled Amazigh city — the 'mini-Marrakech')",
+          "Tiznit (silver jewelry capital — Amazigh silver craftsmanship)",
+          "Souss-Massa National Park (flamingos, bald ibis, Atlantic coast wildlife)",
+          "Aït Baha and the Ammeln Valley (spectacular Anti-Atlas scenery)"
+        ]
+      },
+      {
+        "name": "Guelmim-Oued Noun (كلميم-واد نون)",
+        "main_cities": ["Guelmim", "Tan-Tan", "Sidi Ifni", "Assa"],
+        "significance": "The gateway to the Sahara — Guelmim ('the blue city of the South') hosts the famous blue men camel market. The region is the transition between Morocco proper and the Western Sahara.",
+        "known_for": ["Guelmim camel market (Saturday — one of Morocco's most authentic markets)", "Sidi Ifni (Art Deco Spanish colonial town on the Atlantic)", "Plage Blanche (pristine, remote Atlantic beach)", "Blue men tradition (Tuareg-influenced men wearing indigo-dyed cloth)"]
+      },
+      {
+        "name": "Laâyoune-Sakia El Hamra (العيون-الساقية الحمراء)",
+        "capital": "Laâyoune (العيون)",
+        "significance": "The administrative capital of the disputed Western Sahara territory — administered by Morocco. Rich in phosphate deposits.",
+        "status": "Disputed territory — Morocco administers this as its Southern Provinces; the Polisario Front claims it as part of the Sahrawi Arab Democratic Republic; status unresolved at international level."
+      },
+      {
+        "name": "Dakhla-Oued Ed Dahab (الداخلة-وادي الذهب)",
+        "capital": "Dakhla",
+        "significance": "The southernmost Moroccan-administered region — the Dakhla Peninsula on the Atlantic coast has become one of the world's premier kitesurfing destinations. Rich fishing grounds and phosphate reserves.",
+        "known_for": ["Dakhla (world-class kitesurfing — consistent Atlantic trade winds)", "Rich Atlantic fishing grounds", "Flamingo lagoon"]
+      }
+    ]
+  },
+
+  "proverbs_and_wisdom": [
+    {
+      "proverb": "الصبر مفتاح الفرج.",
+      "transliteration": "As-sabr miftah al-faraj.",
+      "language": "Arabic / Darija (used across Morocco)",
+      "meaning": "Patience is the key to relief.",
+      "lesson": "Endurance through difficulty unlocks better days. One of the most used proverbs in Morocco — a people shaped by centuries of resilience against invasions, colonialism, and hardship."
+    },
+    {
+      "proverb": "البعيد عن العين، بعيد عن القلب.",
+      "transliteration": "Al-ba'id 'an al-'ayn, ba'id 'an al-qalb.",
+      "language": "Arabic / Darija",
+      "meaning": "Far from the eye, far from the heart.",
+      "lesson": "Out of sight, out of mind — presence and proximity are the foundation of relationships. Deeply felt in Morocco, where diaspora emigration (to France, Spain, Belgium, Netherlands) separates millions of families."
+    },
+    {
+      "proverb": "العقل زينة.",
+      "transliteration": "Al-'aql zina.",
+      "language": "Darija",
+      "meaning": "Intelligence is an adornment.",
+      "lesson": "Wisdom and intelligence are the finest jewelry a person can wear. More beautiful than gold or fine cloth — a mind well-used is the greatest beauty."
+    },
+    {
+      "proverb": "الدار دار أبوك، ما تقول لها دوك.",
+      "transliteration": "Ad-dar dar bouk, ma tgul liha duk.",
+      "language": "Darija",
+      "meaning": "The house is your father's house — don't say 'move over' to it.",
+      "lesson": "Respect the home and heritage you were given. Do not disrespect what your parents built for you — your foundation is precious."
+    },
+    {
+      "proverb": "مع الذيب رح تعوي، ومع النحلة رح تجني العسل.",
+      "transliteration": "M'a ddhib roh t'awwi, m'a n-nhla roh tjni l-'assl.",
+      "language": "Darija",
+      "meaning": "With the wolf, you will howl; with the bee, you will harvest honey.",
+      "lesson": "You become your companions. Choose your friends wisely — their nature shapes yours. The company you keep determines the life you lead."
+    },
+    {
+      "proverb": "آش قلت للناس يجي لك من عند الناس.",
+      "transliteration": "Ash qult li-nnas yji lik m'and n-nnas.",
+      "language": "Darija",
+      "meaning": "What you say about people comes back to you from people.",
+      "lesson": "Your words return to you — speak of others with care and respect. Gossip and slander circle back to wound the speaker."
+    },
+    {
+      "proverb": "إذا كان صاحبك عسل، ما تلحسوش كلو.",
+      "transliteration": "Ila kan sahbak 'assl, ma tlhsush kullu.",
+      "language": "Darija",
+      "meaning": "Even if your friend is honey, don't lick him all up.",
+      "lesson": "Even the best relationships need boundaries. Do not exhaust or exploit your dearest friendships — moderation in all things, even love."
+    },
+    {
+      "proverb": "اللي فات مات.",
+      "transliteration": "Lli fat mat.",
+      "language": "Darija",
+      "meaning": "What has passed is dead.",
+      "lesson": "Let go of the past. Grieving over what cannot be changed wastes the present. Forgive, release, and move forward — one of Morocco's most concise and practical wisdoms."
+    },
+    {
+      "proverb": "الحيط الحيط، والله يستر.",
+      "transliteration": "El-hit el-hit, w'Allah ystr.",
+      "language": "Darija",
+      "meaning": "Hug the wall, and may God protect you.",
+      "lesson": "Be cautious and humble — walk close to the wall (away from the center of danger). Humility and discretion are protection. Don't make yourself a target."
+    },
+    {
+      "proverb": "راسك ما يوجعك إلا إذا حملت راس غيرك.",
+      "transliteration": "Rassek ma iwja'k illa ila hmlt ras ghirak.",
+      "language": "Darija",
+      "meaning": "Your head won't ache unless you carry another person's head.",
+      "lesson": "Don't take on other people's problems as your own — unnecessary involvement in others' affairs creates your own suffering. Mind your own concerns first."
+    },
+    {
+      "proverb": "ثلاثة أشياء لا يصلح بدونها البيت: الماء، النار، والمرأة الصالحة.",
+      "transliteration": "Thlatha ashya' la yasluh biduniha l-bayt: al-ma', an-nar, wal-mar'a as-saliha.",
+      "language": "Classical Arabic (used in Morocco)",
+      "meaning": "Three things without which no home is right: water, fire, and a righteous woman.",
+      "lesson": "The home is built on essentials — nourishment, warmth, and good character. A household is defined by the quality of those within it."
+    },
+    {
+      "proverb": "الكلمة الطيبة صدقة.",
+      "transliteration": "Al-kalima at-tayyiba sadaqa.",
+      "language": "Arabic (Hadith — widely used in Morocco)",
+      "meaning": "A kind word is charity.",
+      "lesson": "You do not need wealth to give — a kind, warm, or encouraging word is itself an act of generosity. Speech is power; use it to lift others."
+    }
+  ],
+
+  "travel_and_places": {
+    "note": "Morocco is Africa's most visited country and one of the world's great travel destinations — combining 5,000 years of civilization, some of the planet's finest medieval cities, Sahara Desert grandeur, Atlantic and Mediterranean coastlines, snow-capped Atlas mountains, extraordinary food and hospitality, and the overwhelming sensory richness of its medinas.",
+    "must_visit": [
+      {
+        "name": "Fez (Fès) — Fes el-Bali",
+        "region": "Fès-Meknès",
+        "type": "UNESCO World Heritage Site / Historical / Cultural",
+        "description": "The world's largest car-free urban area and Morocco's (and possibly the world's) most completely preserved medieval city — Fes el-Bali is a living, breathing 9th-century city of over 300,000 people navigating 9,000 streets, lanes, and culs-de-sac that have changed little in a thousand years. Founded in 789 CE by Moulay Idriss I and expanded by his son Idris II, Fez became Morocco's spiritual and intellectual capital — home to Al-Qarawiyyin University (the world's oldest continuously operating university, founded 859 CE by Fatima al-Fihri — a woman), hundreds of mosques and madrasas, the finest craftsmen in the Maghreb, and a maze of souks organized by craft (tanneries, leather, copper, weaving, spice, pottery). Getting lost in Fes el-Bali is not a problem — it is the experience.",
+        "highlights": ["Al-Qarawiyyin Mosque and University (859 CE)", "Bou Inania Madrasa (finest Marinid architecture)", "Al-Attarine Madrasa (near the Qarawiyyin)", "Chouara Tannery (leather dyeing — 11th century, still operating)", "Moulay Idriss II Zaouia (shrine of Fez's founding saint)", "Mellah (Jewish quarter — fascinating synagogues and architecture)", "Jnan Sbil Gardens"],
+        "insider_tip": "Hire a certified guide for your first day in Fes el-Bali — the medina's labyrinthine complexity is genuinely disorienting and a good guide unlocks hidden masterpieces. Come back alone the second day when you have your bearings"
+      },
+      {
+        "name": "Marrakech — The Red City",
+        "region": "Marrakech-Safi",
+        "type": "UNESCO / Historical / Cultural / Tourism",
+        "description": "Morocco's most visited city and one of the world's great urban experiences. Marrakech — built in warm pink-red sandstone (giving it the 'Red City' name) — is simultaneously an ancient imperial city and a modern luxury destination. The heart of everything is Jemaa el-Fna (جامع الفناء) — the most extraordinary public square in Africa, declared UNESCO Oral Heritage of Humanity. By day: orange juice vendors, henna artists, snake charmers, and acrobats. By night: a city of 200+ food stalls billowing smoke, storytellers (hlayqiya) holding crowds in the oral tradition, musicians, healers, and tooth-pullers. The adjacent souks (markets organized by craft — leather, silver, spice, lamp, weaving, carpet) are the most atmospheric in Morocco.",
+        "highlights": ["Jemaa el-Fna square (all day and all night)", "Koutoubia Mosque (12th-century Almohad minaret — the most perfect in the Maghreb)", "Bahia Palace (19th century — most elaborately decorated Moroccan palace)", "Saadian Tombs (16th century — sealed for 400 years, rediscovered 1917)", "Jardin Majorelle (Yves Saint Laurent's magical blue garden)", "Musée Yves Saint Laurent Marrakech", "Medersa Ben Youssef (largest historic Quranic school in Morocco)", "Mellah and Lazama Synagogue", "The souks (copper, leather, spice, lamp, textile)"],
+        "insider_tip": "Stay in a riad (traditional Moroccan courtyard house converted to accommodation) — the experience of a central fountain courtyard, rooftop terrace, and the sound of the medina at night is incomparable. Avoid tourist restaurants in Jemaa el-Fna — eat at the food stalls for an authentic experience at a fraction of the price"
+      },
+      {
+        "name": "Chefchaouen (الشاون) — The Blue City",
+        "region": "Tanger-Tetouan-Al Hoceima",
+        "type": "Historical / Visual / Cultural",
+        "description": "Morocco's most photographed city — and for good reason. Nestled in a valley of the Rif Mountains at 600m altitude, Chefchaouen's medina is painted in an extraordinary array of blues — from pale sky blue to deep midnight indigo — creating the most uniquely beautiful townscape in North Africa. Founded in 1471 CE as a small fortress (the name means 'look at the horns' — referring to the two mountain peaks above the town), Chefchaouen became a refuge for Andalusian Muslim and Jewish refugees fleeing the Reconquista. The blue tradition is said to have been introduced by Jewish refugees in the 1930s (blue symbolizing the sky and heaven in Jewish tradition) — though others attribute it to a later development. Whatever its origin, the blue medina of Chefchaouen is one of the world's most visually distinctive human settlements.",
+        "what_to_do": ["Simply wander the blue alleys at different times of day (light quality changes the blues dramatically)", "Plaza Uta el-Hammam (main square — cafés, the Grand Mosque and kasbah)", "Ras el-Maa waterfall and laundry wash (where local women wash clothes in the mountain stream)", "Kasbah museum", "Hike to the Spanish mosque (30 minutes above town — panoramic view of the blue city)"],
+        "insider_tip": "Go in the early morning (7–9 AM) or late afternoon (4–6 PM) for the best light and fewest crowds. The blue streets are nearly photographic at these golden hours"
+      },
+      {
+        "name": "Sahara Desert — Erg Chebbi (Merzouga)",
+        "region": "Drâa-Tafilalet",
+        "type": "Natural Wonder / Adventure",
+        "description": "Morocco's most iconic natural landscape — the great golden sand dunes of the Sahara. Erg Chebbi, near the village of Merzouga in southeastern Morocco, is the most spectacular dune field in Morocco — rising up to 150 meters, shifting in color from gold to deep orange to red as the sun moves. Camel trekking into the dunes at sunset, camping beneath a sky of extraordinary density of stars, and experiencing the Saharan silence — broken only by wind and the distant call to prayer — is one of the great travel experiences in Africa.",
+        "experience": ["Sunset camel trek into the dunes (2–3 hours)", "Sahara overnight camp (traditional Berber tent or luxury camp)", "Sandboarding on the dunes", "Sunrise from a dune crest (worth the 5 AM wake-up)", "4WD excursions to deeper desert"],
+        "insider_tip": "Merzouga village has a range of accommodation from basic guesthouses to luxury desert camps. The best camps are a 45-minute camel ride or 4WD drive into the dunes — away from the road-visible camps. Book in advance for December–February and March–April (peak season)"
+      },
+      {
+        "name": "Essaouira (الصويرة)",
+        "region": "Marrakech-Safi",
+        "type": "UNESCO / Coastal / Cultural / Music",
+        "description": "One of Morocco's most beautiful and atmospheric cities — a white-and-blue UNESCO-listed Atlantic port medina where the wind always blows (Essaouira means 'the beautifully designed' in Amazigh). Built by the Sultan Mohammed ben Abdallah in the 18th century on the design of French architect Theodore Cornut, the city has a uniquely regular grid plan and colonnaded main streets unlike any other Moroccan medina. The ramparts overlook the thrashing Atlantic where seagulls and blue fishing boats compete for space. Essaouira has a uniquely multicultural heritage — Jewish, Gnawa, and Swahili trader communities have left their mark. The Gnawa & World Music Festival (June) transforms the city. Jimi Hendrix connection. World-class windsurfing and kitesurfing.",
+        "highlights": ["Sea ramparts (skala) overlooking the Atlantic", "Fishing port at dawn", "Gnawa music in the medina", "Argan oil cooperatives nearby", "Jewish mellah and synagogues", "Crafts — thuya wood (unique to Essaouira, inlaid with lemon wood and mother of pearl)", "Beach windsurfing/kitesurfing"],
+        "insider_tip": "The fish grills by the port are one of Morocco's greatest budget food experiences — fresh fish chosen from the stall and grilled in front of you for very few dirhams"
+      },
+      {
+        "name": "Aït Benhaddou (آيت بنحدو)",
+        "region": "Drâa-Tafilalet",
+        "type": "UNESCO World Heritage Site / Archaeological",
+        "description": "The most spectacular ksar (fortified village of mud-brick buildings) in Morocco and one of the most beautiful earthen architecture sites in the world. Aït Benhaddou has been continuously inhabited since the 11th century — its tiered mud towers, communal granaries (agadirs), and labyrinthine streets rise above the Ounila River with the snow-capped High Atlas behind. UNESCO World Heritage-listed since 1987. Film location: Lawrence of Arabia, Gladiator, Game of Thrones (Yunkai, Pentos), Kingdom of Heaven, The Mummy, The Jewel of the Nile, and many more.",
+        "type": "UNESCO World Heritage Site",
+        "insider_tip": "Cross the river on foot (summer) or by stepping stones (spring) to reach the ksar on the other side — the view from the top terrace at sunset, with the mountains turning pink, is extraordinary"
+      },
+      {
+        "name": "Volubilis (وليلي)",
+        "region": "Fès-Meknès",
+        "type": "UNESCO World Heritage Site / Archaeological",
+        "description": "The finest and best-preserved Roman archaeological site in Africa — Volubilis was the westernmost major city of the Roman Empire, capital of the province of Mauretania Tingitana. Founded as a Berber city and later Romanized, Volubilis reached its peak in the 2nd–3rd centuries CE with a population of 20,000. The site's extraordinary floor mosaics — some of the finest in the Roman world — are still in place. The Triumphal Arch of Caracalla, the Capitol, and the rows of tumbled columns and standing arches create one of Africa's most evocative ancient landscapes. Located between Meknes and Moulay Idriss Zerhoun.",
+        "type": "UNESCO World Heritage Site"
+      },
+      {
+        "name": "Toubkal National Park and Jbel Toubkal",
+        "region": "Marrakech-Safi",
+        "type": "Nature / Adventure / Trekking",
+        "description": "Jbel Toubkal (4,167m) is the highest peak in the Atlas Mountains, in North Africa, and in the Arab world — a demanding but accessible mountain trekking destination, typically completed in 2 days from the Amazigh village of Imlil (1,740m). The Toubkal National Park surrounding the peak offers extraordinary High Atlas trekking through Amazigh villages, walnut orchards, terraced fields, and dramatic rocky ridgelines. The park is also one of Morocco's most important Barbary macaque habitats.",
+        "trekking": "The standard Toubkal summit is approached via the Nelter refuge (3,207m — overnight stay) and summit push. Crampons required November–May. Guides available in Imlil.",
+        "insider_tip": "The valley of Ait Souka above Imlil, and the Tizi n'Ouanoums pass, offer spectacular High Atlas scenery without the summit crowds — consider a multi-day traverse rather than an out-and-back summit"
+      },
+      {
+        "name": "Tangier (طنجة)",
+        "region": "Tanger-Tetouan-Al Hoceima",
+        "type": "City / Historical / Cultural / Strategic",
+        "description": "One of Africa's most fascinating cities — at the meeting point of the Atlantic and Mediterranean, Africa and Europe, East and West. Tangier has been an international city for most of its modern history — the Tangier International Zone (1923–1956) attracted artists, writers, spies, and adventurers from around the world: Paul Bowles (who lived in Tangier for 52 years and wrote 'The Sheltering Sky'), William S. Burroughs (who wrote 'Naked Lunch' in Tangier), Allen Ginsberg, Jack Kerouac, Matisse, Delacroix, and the Rolling Stones all had Tangier chapters. The Grand Socco, the medina, and the Kasbah quarter retain their international mystique. Under Mohammed VI's investment, Tangier has transformed into Morocco's fastest-developing city — with a new port (Tanger-Med, the largest in Africa), major industry, and a modern waterfront.",
+        "highlights": ["Kasbah museum (spectacular location with views of Spain)", "Grand Socco and Petit Socco (main squares)", "Paul Bowles's tomb (in the Christian cemetery)", "Café de Paris and Café Hafa (legendary literary cafés)", "Cap Malabata (view of Spain across the Strait)"],
+        "literary_note": "Tangier's literary legacy — as a city of transgression, freedom, and the exotic — is one of the most distinctive in Africa"
+      }
+    ],
+    "budget_tips": [
+      "Morocco is very good value for international visitors — a full meal at a local restaurant (tajine, bread, water) costs 30–60 MAD (~$3–6)",
+      "Use public buses (CTM and Supratours are comfortable intercity options) rather than private taxis for long journeys — far cheaper and nearly as fast",
+      "The train network (ONCF) connects the major cities efficiently and comfortably — Casablanca to Marrakech in 3 hours, Casablanca to Fez in 4.5 hours, Casablanca to Tangier in 2.5 hours on the high-speed Al Boraq line",
+      "Staying in riads (traditional courtyard guesthouses) in medinas is often no more expensive than generic hotels — and the experience is incomparably better",
+      "The freshly squeezed orange juice sold from street carts across Morocco costs 4–8 MAD (~$0.40–0.80) — one of the world's great food bargains",
+      "Avoid tourist restaurants on Jemaa el-Fna's terrace level — descend to the food stalls in the square itself for a fraction of the price and a far more authentic experience",
+      "Many of Morocco's finest experiences are free or very cheap: wandering the medinas, watching Jemaa el-Fna, swimming at Atlantic beaches, hiking in the mountains"
+    ],
+    "safety_tips": [
+      "Morocco is one of Africa's safest countries for tourists — millions visit annually without incident. The main concerns are petty harassment and touts, particularly near tourist sites in Fez and Marrakech",
+      "In Fes el-Bali and Marrakech's medina: unofficial 'guides' who approach saying 'I am not a guide, I just want to help' are unofficial guides. Politely but firmly decline if you don't want guidance — say 'La shukran' (No, thank you)",
+      "Women traveling alone: Morocco is safe for solo female travelers but requires awareness. Modest dress (shoulders and knees covered in medinas and rural areas) significantly reduces unwanted attention. Sunglasses and confident walking body language help",
+      "Photographing people: always ask permission before photographing individuals — particularly in traditional contexts. Some will request payment",
+      "The Rif region (particularly around Ketama) is the heartland of Morocco's kif (cannabis) growing area — there is active pressure on visitors in this area to buy. Be firm and clear in declining",
+      "Road safety: Moroccan roads, particularly in the mountains and rural areas, can be challenging — aggressive drivers, narrow roads, and animals on road. If renting a car, drive defensively and do not drive at night in rural areas",
+      "Ramadan: during the holy month, be respectful of fasting — avoid eating, drinking, or smoking in public in traditional areas during daylight hours. Many tourist-oriented establishments remain open",
+      "Healthcare: major cities (Casablanca, Rabat, Marrakech) have good private hospitals. Travel insurance with medical evacuation coverage is essential for trekking and remote areas"
+    ]
+  }
+}

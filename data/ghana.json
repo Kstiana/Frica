@@ -1,0 +1,998 @@
+{
+  "meta": {
+    "country": "Ghana",
+    "slug": "ghana",
+    "last_updated": "2025",
+    "data_version": "1.0",
+    "description": "Complete cultural data for Ghana — powering all Frica country page sections."
+  },
+
+  "overview": {
+    "name": "Ghana",
+    "native_name": "Ghana",
+    "official_name": "Republic of Ghana",
+    "flag_emoji": "🇬🇭",
+    "iso_alpha2": "GH",
+    "iso_alpha3": "GHA",
+    "capital": "Accra",
+    "largest_city": "Accra",
+    "region": "West Africa",
+    "subregion": "Western Africa",
+    "population": 33000000,
+    "population_note": "Africa's pioneering nation — first sub-Saharan country to gain independence from colonial rule",
+    "area_km2": 238533,
+    "area_rank_africa": 31,
+    "official_languages": ["English"],
+    "major_indigenous_languages": ["Twi (Akan)", "Ewe", "Ga", "Dagbani", "Fante"],
+    "total_languages": 80,
+    "currency": "Ghanaian Cedi (GHS)",
+    "currency_symbol": "₵",
+    "calling_code": "+233",
+    "internet_tld": ".gh",
+    "independence_date": "March 6, 1957",
+    "independence_from": "United Kingdom",
+    "national_day": "March 6 (Independence Day)",
+    "government_type": "Presidential Republic",
+    "total_regions": 16,
+    "gdp_rank_africa": 10,
+    "religion": {
+      "christianity": "~71%",
+      "islam": "~18%",
+      "traditional": "~5%",
+      "other": "~6%"
+    },
+    "short_description": "The first sub-Saharan African country to gain independence in 1957, Ghana is the proud home of Kente cloth, the Golden Stool, Highlife music, the Ashanti Empire, Cape Coast Castle, and Kwame Nkrumah's pan-African vision — a beacon of African pride and democracy.",
+    "tagline": "Gateway to Africa",
+    "known_for": [
+      "First sub-Saharan country to gain independence (March 6, 1957)",
+      "Kente cloth — the world's most recognized African textile",
+      "Adinkra symbols — a profound visual language",
+      "Ashanti Kingdom and the Golden Stool",
+      "Highlife music — Ghana's greatest sonic export",
+      "Kwame Nkrumah — Africa's greatest pan-Africanist leader",
+      "Cape Coast Castle — UNESCO World Heritage Site (slave trade history)",
+      "World's 2nd largest cocoa producer",
+      "Detty December — Africa's biggest annual party season",
+      "Ghana Must Go bag (iconic globally)"
+    ],
+    "borders": ["Côte d'Ivoire (West)", "Burkina Faso (North)", "Togo (East)"],
+    "coastline": "Gulf of Guinea (Atlantic Ocean), 539 km",
+    "major_rivers": ["Volta River (and Lake Volta — one of world's largest man-made lakes)", "Pra River", "Ofin River", "Ankobra River"],
+    "former_name": "Gold Coast (under British colonial rule)"
+  },
+
+  "history": {
+    "summary": "Ghana's history is one of Africa's most remarkable stories — from the ancient empires of Bono-Manso and the Ashanti Confederacy, through the brutal Gold Coast slave trade, to Kwame Nkrumah's triumphant independence declaration on March 6, 1957, making Ghana the first sub-Saharan African country to break free from colonial rule. The country has since established itself as one of Africa's most stable democracies, a beacon for the continent.",
+    "timeline": [
+      {
+        "period": "c. 400 – 1200 CE",
+        "event": "Ancient Ghana Empire",
+        "description": "The ancient Ghana Empire (not located in modern-day Ghana) was a powerful trading state in the western Sahel whose gold and salt wealth influenced the naming of modern Ghana at independence. The people of modern Ghana have connections to states that traded with and were influenced by this empire's legacy."
+      },
+      {
+        "period": "13th – 14th century",
+        "event": "Bono-Manso Kingdom",
+        "description": "One of the earliest Akan states, founded around the 13th century in present-day Brong-Ahafo region. Bono-Manso was a significant gold-trading center and is considered one of the ancestral homelands of the Akan peoples."
+      },
+      {
+        "period": "c. 1000 CE onward",
+        "event": "Guan Migration",
+        "description": "The Guan, believed to be the earliest inhabitants of modern Ghana, migrated southward from the Mossi region of Burkina Faso from around 1000 CE, settling throughout the Volta valley, Afram Plains, and coastal plains."
+      },
+      {
+        "period": "15th century",
+        "event": "European Contact & the Gold Coast",
+        "description": "Portuguese sailors arrived on the coast in 1471, establishing the first European fort at Elmina in 1482 — the oldest European building in sub-Saharan Africa. The coastline became known as the 'Gold Coast' for its abundant gold. Other European powers (Dutch, British, Danes, Swedes) followed, building over 30 forts and castles along the coast."
+      },
+      {
+        "period": "15th – 19th century",
+        "event": "Transatlantic Slave Trade",
+        "description": "The Gold Coast became one of the most significant departure points for enslaved Africans sold to the Americas. Cape Coast Castle and Elmina Castle served as the primary holding forts. An estimated 12 million Africans passed through the 'Door of No Return' at these castles. The trade devastated local populations and caused centuries of trauma — still being reckoned with today."
+      },
+      {
+        "period": "1670 – 1701",
+        "event": "Founding of the Ashanti Empire",
+        "description": "Osei Tutu I and his spiritual advisor Okomfo Anokye founded the Ashanti Confederacy in 1670, with Kumasi as its capital (established 1680). The legendary Golden Stool (Sika Dwa Kofi) descended from heaven into Osei Tutu's lap, conferring the divine right to rule and unifying all Ashanti clans under one authority. By 1701, Osei Tutu defeated the powerful Denkyira kingdom, establishing Ashanti supremacy."
+      },
+      {
+        "period": "18th – 19th century",
+        "event": "Ashanti Empire at its Peak",
+        "description": "The Ashanti Empire became one of the most powerful and sophisticated states in West Africa, controlling vast gold and kola trade routes. The Asantehene (Ashanti King) commanded formidable armies and sophisticated diplomatic structures. The empire fought a series of Anglo-Ashanti Wars against British colonial forces (1823–1900), winning several battles but ultimately succumbing to superior firepower."
+      },
+      {
+        "period": "1874 – 1957",
+        "event": "British Gold Coast Colony",
+        "description": "Britain declared the Gold Coast a Crown Colony in 1874, and by 1902, following the final Anglo-Ashanti War, incorporated the Ashanti Kingdom and Northern Territories into the colony. The colonial era introduced modern education, railways, and infrastructure but also extracted enormous wealth and resources."
+      },
+      {
+        "period": "1947 – 1957",
+        "event": "Kwame Nkrumah & the Independence Movement",
+        "description": "Kwame Nkrumah returned from education in the USA and UK in 1947 and galvanized the independence movement. He founded the Convention People's Party (CPP) in 1949, launched the 'Positive Action' campaign, and was imprisoned by the British in 1950. He was released and led his party to electoral victory. On March 6, 1957, Ghana became independent, with Nkrumah declaring: 'Ghana, your beloved country is free forever.'"
+      },
+      {
+        "period": "March 6, 1957",
+        "event": "Independence",
+        "description": "Ghana became the first sub-Saharan African country to gain independence from colonial rule. Kwame Nkrumah became Prime Minister and later President (1960). His independence speech inspired independence movements across the African continent. He pursued a pan-African vision of a United States of Africa."
+      },
+      {
+        "period": "1966",
+        "event": "Nkrumah Overthrown",
+        "description": "While Nkrumah was abroad in Hanoi, a military coup (the National Liberation Council) overthrew his government. Nkrumah went into exile in Guinea, where Sekou Touré made him co-president. He died in 1972 and was eventually repatriated and buried in Ghana. Nkrumah remains Ghana's greatest hero and a pan-African icon."
+      },
+      {
+        "period": "1966 – 1992",
+        "event": "Political Instability & Military Rule",
+        "description": "Ghana experienced several military coups and civilian governments. Jerry John Rawlings (a young Flight Lieutenant) seized power in 1979, handed over to civilians, then seized power again on December 31, 1981, ruling as a military leader until 1992 when he transitioned to democratic rule."
+      },
+      {
+        "period": "1992 – present",
+        "event": "Return to Democracy",
+        "description": "Ghana adopted a new constitution in 1992 and held multi-party elections. Jerry Rawlings won the 1992 and 1996 elections. Since then, Ghana has peacefully transferred power between the National Democratic Congress (NDC) and the New Patriotic Party (NPP) multiple times — a model of democratic stability admired across Africa. In 2020, Ghana was ranked the most democratic country in West Africa."
+      },
+      {
+        "period": "2019",
+        "event": "Year of Return",
+        "description": "President Nana Akufo-Addo launched the 'Year of Return' in 2019, marking 400 years since the first enslaved Africans arrived in America (1619). The initiative invited the African diaspora to return to Ghana, attracting hundreds of thousands of visitors and becoming one of Africa's most powerful cultural and tourism moments of the decade. Stars including Cardi B, Idris Elba, and others visited Ghana."
+      }
+    ]
+  },
+
+  "ethnic_groups": {
+    "total": "Over 90",
+    "major_families": 6,
+    "note": "Ghana has six major ethnic families: Akan, Mole-Dagbani, Ewe, Ga-Dangme, Guan, and Gurma. The Akan are the largest, comprising nearly half the population.",
+    "major": [
+      {
+        "name": "Akan",
+        "population_percentage": "~47.5%",
+        "region": "Southern and Central Ghana",
+        "language": "Akan (Twi dialects — Asante Twi, Akuapem Twi; Fante)",
+        "subgroups": ["Asante (Ashanti)", "Fante", "Akwapim", "Akyem", "Akwamu", "Ahanta", "Bono (Brong)", "Nzema", "Kwahu", "Wassa"],
+        "social_structure": "Matrilineal — descent, inheritance, and succession are traced through the mother's line. This makes the Akan one of Africa's most prominent matrilineal societies. Each lineage has a sacred stool (the throne of the ancestors) that holds the spiritual power of the clan.",
+        "origin": "Oral traditions trace Akan origins to the Bono state (13th century) in present-day Brong-Ahafo. The Akan gradually migrated south and east, establishing numerous powerful states.",
+        "notable_facts": [
+          "One of Africa's most prominent matrilineal societies — you inherit from your mother's family",
+          "The Golden Stool (Sika Dwa Kofi) — the most sacred Ashanti symbol, believed to house the soul of the entire Ashanti nation",
+          "Kente cloth and Adinkra symbols originate from the Akan people",
+          "The Ashanti Empire (1670–1900s) was one of West Africa's most powerful states",
+          "Twi is the most widely spoken indigenous language in Ghana, understood by over 80% of the population"
+        ],
+        "subgroup_details": {
+          "asante": {
+            "name": "Asante (Ashanti)",
+            "population": "~15 million",
+            "capital": "Kumasi",
+            "ruler": "Asantehene (current: Otumfuo Osei Tutu II, since 1999)",
+            "description": "The largest and most powerful Akan subgroup. Founded the Ashanti Confederacy (Asanteman) in 1670. Known for their military prowess, gold wealth, Kente weaving, and resistance to British colonialism. Their most sacred symbol is the Golden Stool (Sika Dwa Kofi) — said to have descended from heaven by divine intervention of priest Okomfo Anokye.",
+            "key_cultural_elements": ["The Golden Stool (Sika Dwa Kofi)", "Kente cloth weaving", "Adinkra symbol printing", "Fontomfrom royal drums", "Adowa dance (funeral and celebratory)", "Elaborate funerals — the most socially significant event in Asante life"]
+          },
+          "fante": {
+            "name": "Fante",
+            "population": "~2.5 million",
+            "region": "Coastal central Ghana (Cape Coast, Elmina, Anomabo)",
+            "description": "Coastal Akan people who were among the first to encounter Europeans. Their long association with British colonialism made them early adopters of Western education and institutions. Known for fishing, trade, and the Asafo warrior companies. The Fante Confederacy (1868) was Africa's first attempt at creating an indigenous constitutional state.",
+            "key_cultural_elements": ["Asafo warrior companies and flags", "Aboakyer festival (deer hunt)", "Fetu Afahye harvest festival", "Bakatue festival (Elmina — first catch of the season)", "Rich masquerade tradition"]
+          }
+        },
+        "food": ["Fufu with Light Soup", "Fufu with Peanut Butter (Groundnut) Soup", "Fufu with Palm Nut Soup", "Mpotompoto (cocoyam pottage)", "Abom (cocoyam leaves stew)", "Nkate Nkwan (peanut soup)"],
+        "dressing": {
+          "men": ["Kente cloth (woven in strips, assembled into a toga worn draped over one shoulder)", "Ntoma (plain cloth wrapper)", "Batakari (smock from northern-influenced exchange)"],
+          "women": ["Kente cloth (wrapped as a skirt with a matching blouse and headwrap)", "Kaba and slit (fitted blouse with a wrap skirt)", "Duku (headwrap)"],
+          "royalty": ["Elaborate Kente with golden regalia", "Palanquin (carried chair for chiefs)", "Umbrella (state umbrella with finial symbolizing rank)", "Sandals (for Asantehene only — commoners bare feet before king)"]
+        },
+        "marriage_traditions": [
+          "Knocking ceremony (Abusua) — groom's family formally presents themselves at bride's home with drinks, cash, and gifts to ask for permission",
+          "Bride price (Aseda) — payment of money and gifts to bride's family as a sign of appreciation, not purchase",
+          "Matrilineal family meetings — both the nuclear and extended (matrilineal) families must agree",
+          "Hot drinks (schnapps, gin) are essential at all formal meetings — an elder must pour libation to ancestors",
+          "Kente cloth — both families typically wear matching or complementary Kente at the traditional ceremony"
+        ],
+        "beliefs": [
+          "Nyame — the Supreme God, omnipotent creator",
+          "Nyaame Dua (God's tree) — a forked branch placed outside homes as a spiritual symbol",
+          "Ancestor veneration — the departed family members are believed to remain active forces in the living world",
+          "Adae festivals — held every 42 days to honor ancestors through pouring libations on sacred stools",
+          "Okyeame — the royal spokesperson/linguist who interprets the chief's speech, a sacred role",
+          "Sunsum — the individual's personal spirit/soul",
+          "Kra — the divine spark given by God at birth"
+        ]
+      },
+      {
+        "name": "Mole-Dagbani (Dagomba / Mamprusi / Nanumba)",
+        "population_percentage": "~16.6%",
+        "region": "Northern Ghana",
+        "states": ["Northern Region", "North East Region", "Upper East Region (partly)"],
+        "language": "Dagbani (Dagomba), Mampruli (Mamprusi), Nanuni (Nanumba)",
+        "religion": "Predominantly Islam, with traditional beliefs",
+        "social_structure": "Patrilineal and hierarchical — organized under paramount chiefs. The Ya-Naa (King of Absolute Power) is the paramount ruler of the Dagomba, based at Yendi. Drummers play a crucial role as both musicians and court historians, maintaining oral history through drum language.",
+        "origin": "Descended from migrants who arrived from the Lake Chad basin area around the 15th century, led by the legendary Na Gbewa who founded the first Dagbon state.",
+        "notable_facts": [
+          "Ya-Naa — the title of the paramount ruler of the Dagomba, meaning 'King of Absolute Power'",
+          "Drummers (Lunsi) are hereditary court historians — their talking drums encode and transmit the full oral history of the state",
+          "The Damba festival honors the Prophet Muhammad's birth and is their most important celebration",
+          "Known for the Bamaya dance — originally a women's rain dance, now performed by men dressed as women",
+          "Smock (Batakari) is the traditional dress of northern Ghana"
+        ],
+        "food": ["Tuo Zaafi (TZ — thick millet/corn porridge)", "Waakye (rice and beans — originated here)", "Wasawasa (dried yam peel dish)", "Ayoyo soup (jute leaf soup)", "Groundnut soup", "Sorghum and millet porridge", "Sagmunu (millet flour dessert)"],
+        "dressing": {
+          "men": ["Batakari (smock) — a loose, hand-woven cotton smock with embroidery around the neck and armholes; THE signature garment of northern Ghana", "Fugu (fugu smock)", "Kamsale (wrapper for chiefs)"],
+          "women": ["Two-piece wrapper set", "Head tie", "Beads and waist beads"]
+        },
+        "beliefs": [
+          "Islam (Sunni) — deeply integrated into daily life and governance",
+          "Ancestral shrines (Tiŋ) — earth shrines that predate Islam and coexist with it",
+          "Belief in tindana — earth priests who mediate between people and the land spirits",
+          "Bugun (fire festival) — ancestors honored with torchlight gatherings"
+        ]
+      },
+      {
+        "name": "Ewe",
+        "population_percentage": "~13.9%",
+        "region": "Volta Region (southeastern Ghana), also Togo and Benin",
+        "language": "Ewe",
+        "religion": "Predominantly Christianity, with traditional beliefs",
+        "social_structure": "Patrilineal — the founder of a community became the chief, succeeded by paternal relatives. Organized into village-level communities with elders. Chiefs are not absolute rulers; community councils and elders hold significant influence.",
+        "origin": "The Ewe trace their origin to Notsie (in present-day Togo), from which they fled the tyranny of the ruler Agorkoli by walking backwards to confuse their pursuers — commemorated in the Hogbetsotso festival.",
+        "notable_facts": [
+          "The Ewe claim to be original weavers of Kente cloth, saying their weavers were captured by the Ashanti who then adopted the craft",
+          "Hogbetsotso festival commemorates their dramatic escape from Notsie walking backwards",
+          "Renowned for their complex, polyrhythmic drumming — Ewe percussion is among the most sophisticated in Africa",
+          "Mawu is their supreme deity, surrounded by over 600 lesser spirits (vodu)",
+          "The Anlo Ewe of the coast are famous for fishing, salt-making, and the Brekete spirit possession tradition"
+        ],
+        "food": ["Akple (fermented corn dough — Ewe version of banku)", "Fetri Detsi (okra soup)", "Aboboi (palm nut soup with snails)", "Ademe soup (jute leaf soup)", "Fried fish with agbeli kaklo (cassava fritters)", "Corn and cassava fermented porridge"],
+        "dressing": {
+          "men": ["Kente cloth (Ewe Kente features more geometric patterns and symbolic designs than Asante Kente)", "Toga-style wrapping", "Modern suits for formal occasions"],
+          "women": ["Kente wrapper and blouse", "Headwrap (duku)", "Beaded jewelry"]
+        },
+        "marriage_traditions": [
+          "Todonu — the formal introduction ceremony where the groom's family visits the bride's family",
+          "Bride price (Avhe) — payment in cash, schnapps, and goods to the bride's family",
+          "Agblenu — a special pouring of water ceremony symbolizing purity and new beginnings",
+          "Kpodadzi — the bride is ritually bathed and dressed by female relatives",
+          "Vibrant drumming and dancing are central to all Ewe celebrations"
+        ],
+        "beliefs": [
+          "Mawu — the supreme creator deity (often paired with Lisa as Mawu-Lisa)",
+          "Vodu (Vodun) — a rich pantheon of over 600 deities and spirits. This is the origin of Haitian Voodoo and Brazilian Candomblé",
+          "Trɔwo — lesser spirits associated with natural forces (rivers, forests, thunder)",
+          "Ancestor veneration — deceased family members are honored and consulted",
+          "Brekete — a spirit possession tradition widespread among the Anlo Ewe"
+        ]
+      },
+      {
+        "name": "Ga-Dangme (Ga and Dangme)",
+        "population_percentage": "~7.8%",
+        "region": "Greater Accra Region (coastal)",
+        "language": "Ga (Greater Accra), Dangme / Adangbe (eastern Accra coastland)",
+        "religion": "Predominantly Christianity, with traditional beliefs",
+        "social_structure": "Both Ga and Dangme are patrilineal. The Ga are organized around quarters of Accra — each quarter has its own Mantse (chief). The Ga are historically the indigenous inhabitants of Accra, the capital.",
+        "origin": "The Ga migrated from the east (possibly from the Yoruba/Bini area of present-day Nigeria) around the 16th century. The Dangme settled to the east of Accra. Both groups have lived by the coast for centuries, becoming skilled fishermen and traders.",
+        "notable_facts": [
+          "The Ga are the indigenous people of Accra — the capital city of Ghana is built on their ancestral land",
+          "Homowo ('hooting at hunger') is the most important Ga festival — a harvest celebration commemorating surviving a great famine",
+          "Famous for Fantasy Coffins (Abebuu Adekai) — custom coffins shaped like airplanes, fish, cars, cameras, Bibles, etc., reflecting the deceased's life or aspirations. A globally celebrated art form",
+          "Kpokpoi — the sacred ceremonial food eaten during Homowo",
+          "The Ga are known for their vibrant urban culture and music (Kpanlogo drum and dance)"
+        ],
+        "food": ["Kpokpoi (palm nut soup with fermented corn — eaten at Homowo)", "Dzewi (fish stew)", "Ga Kenkey (Fante kenkey variant)", "Akla (fried bean cake)", "Shito (black pepper sauce — Ga origin)", "Ga palmnut soup", "Fried tilapia with fresh pepper"],
+        "dressing": {
+          "men": ["Kente cloth", "Traditional wrappers", "Modern attire for daily life"],
+          "women": ["Kente wrapper and blouse", "Headwrap", "Elaborate beadwork for ceremonies"]
+        },
+        "marriage_traditions": [
+          "Ayefro (knocking ceremony) — groom's family knocks on the bride's door and presents gifts",
+          "Schnapps, gin, and beer are essential at all traditional meetings",
+          "Bride price in cash and kind presented to the bride's family",
+          "The bride is dressed and adorned by female relatives with beads and traditional attire",
+          "Drumming and dancing are essential — particularly Kpanlogo for the Ga"
+        ],
+        "beliefs": [
+          "Nyomo — lesser deities/spirits honored by the Ga",
+          "Wulomo — Ga priests and priestesses who communicate with the gods",
+          "77 Ga towns each has a patron deity",
+          "Ancestral veneration — ancestors are believed to actively protect families",
+          "Homowo is a deeply spiritual event — ancestors are invited to join the feast through libation"
+        ]
+      },
+      {
+        "name": "Guan",
+        "population_percentage": "~3.7%",
+        "region": "Scattered across Ghana — Afram Plains, Volta Gorge, Akwapim Hills, coastal plains",
+        "language": "Various Guan dialects",
+        "religion": "Predominantly Christianity, with traditional beliefs",
+        "notable_facts": [
+          "Believed to be the earliest inhabitants of modern-day Ghana — the Neolithic population",
+          "Migrated from the Mossi region of Burkina Faso around 1000 CE",
+          "The Guang encompass about 26 ethnic subgroups scattered throughout Ghana",
+          "Heavily influenced by neighboring groups — many coastal Guan have adopted Akan and Fante customs"
+        ]
+      },
+      {
+        "name": "Gurma",
+        "population_percentage": "~5.7%",
+        "region": "Northeastern Ghana",
+        "language": "Bimoba, Konkomba, Gurma",
+        "religion": "Mix of Islam, Christianity, and traditional beliefs",
+        "notable_facts": [
+          "The Bimoba (Upper East) and Konkomba are the most prominent Gurma subgroups",
+          "Known for their masked dances and harvest shrine rituals",
+          "The Konkomba have had historic land tenure disputes with neighboring Dagomba and Nanumba groups"
+        ]
+      }
+    ]
+  },
+
+  "languages": {
+    "official": ["English"],
+    "government_sponsored": ["Akan (Twi and Fante)", "Dagbani", "Dangme", "Ewe", "Ga", "Gonja", "Kasem", "Nzema"],
+    "major_indigenous": [
+      {
+        "name": "Twi (Asante Twi & Akuapem Twi)",
+        "speakers": "~17 million native + understood by 80%+ of Ghanaians",
+        "region": "Central, Ashanti, Eastern, Western Regions",
+        "note": "The de facto national lingua franca of Ghana alongside English"
+      },
+      {
+        "name": "Fante",
+        "speakers": "~2.5 million",
+        "region": "Central Region (coastal)"
+      },
+      {
+        "name": "Ewe",
+        "speakers": "~5 million in Ghana",
+        "region": "Volta Region; also in Togo and Benin"
+      },
+      {
+        "name": "Ga",
+        "speakers": "~1 million",
+        "region": "Greater Accra Region"
+      },
+      {
+        "name": "Dagbani",
+        "speakers": "~2 million",
+        "region": "Northern Region"
+      },
+      {
+        "name": "Hausa",
+        "speakers": "~1 million (non-native, used as trade language)",
+        "region": "Northern Ghana"
+      }
+    ],
+    "interesting_facts": [
+      "Twi is so dominant that even non-Akan Ghanaians often learn it as a second indigenous language",
+      "Ghanaian Pidgin English is increasingly used by urban youth",
+      "Adinkra symbols can be considered a visual language of the Akan people",
+      "Ghana's linguistic diversity — about 80 languages — is remarkable for a country of its size"
+    ]
+  },
+
+  "food": {
+    "summary": "Ghanaian cuisine is deeply soulful, built on fermented starches, rich soups, palm oil, and fresh seafood. The most defining feature is the 'swallow' culture — dough-like starches (fufu, banku, kenkey, TZ) paired with boldly flavored soups and stews. Chop bars (informal local restaurants) are where the best food is always found.",
+    "staple_ingredients": ["Cassava", "Plantain", "Maize (corn)", "Cocoyam (taro)", "Yam", "Millet", "Sorghum", "Palm oil", "Groundnuts (peanuts)", "Fresh tilapia and herrings", "Kontomire (cocoyam leaves)", "Peppers (scotch bonnet)", "Tomatoes", "Onion", "Shito (black pepper sauce)"],
+    "chop_bar_culture": "The 'chop bar' is Ghana's essential food institution — an informal roadside canteen where Ghanaian mothers serve home-cooked traditional food at affordable prices. Every major road in Ghana has a chop bar. To eat real Ghanaian food, you go to a chop bar.",
+    "dishes": [
+      {
+        "name": "Fufu with Light Soup",
+        "origin": "Akan (Ashanti and Fante) — considered Ghana's most iconic dish",
+        "description": "Fufu is made by pounding boiled cassava and unripe plantain together in a wooden mortar until smooth, stretchy, and dough-like. It is served in a bowl of light soup — a clear, aromatic, slightly spicy broth made with tomatoes, peppers, onion, and your choice of protein (chicken, goat, fish, or snails). You roll a piece of fufu in your fingers, dip it in the soup, and swallow without chewing. Do NOT chew the fufu.",
+        "note": "The weekend fufu ritual is sacred in Ghana — families gather on Sundays to pound and eat fufu together. The sound of fufu being pounded is a quintessential Ghanaian sound.",
+        "served_with": "Light soup, groundnut soup, palm nut soup"
+      },
+      {
+        "name": "Banku with Grilled Tilapia",
+        "origin": "Ga-Adangbe (Accra coastlands) — now beloved nationwide",
+        "description": "Banku is a smooth, slightly sour dough made by fermenting and cooking a mix of corn dough and cassava dough together. It is formed into round balls and served with grilled tilapia (fresh whole tilapia marinated in pepper and spices, grilled over charcoal) and a peppery fresh tomato and onion salsa (shito or pepper sauce). One of Ghana's most satisfying coastal dishes.",
+        "note": "Ghana is so proud of banku that it's informally called 'Banku Nation'",
+        "served_with": "Grilled tilapia, okra soup, fresh pepper sauce, shito"
+      },
+      {
+        "name": "Jollof Rice",
+        "origin": "National (though Ghana and Nigeria famously dispute jollof supremacy)",
+        "description": "Long-grain rice cooked in a rich tomato-based sauce with onions, peppers, garlic, spices, and stock until perfectly seasoned. Ghanaian jollof is typically cooked over fire, giving it a slightly smoky 'party rice' flavor. One of West Africa's most celebrated dishes.",
+        "note": "The Ghana vs Nigeria Jollof War is one of Africa's most entertaining cultural debates",
+        "served_with": "Fried chicken, grilled fish, fried plantain (kelewele), coleslaw"
+      },
+      {
+        "name": "Waakye",
+        "origin": "Northern Ghana (Hausa influence — from 'shinkafa da wake', meaning rice and beans)",
+        "description": "Rice and black-eyed peas (or cowpeas) cooked together with dried sorghum or millet stalk leaves, which release a reddish pigment giving the dish its distinctive earthy color. Served as a full meal with an elaborate array of accompaniments. Pronounced 'Waa-cheh'.",
+        "note": "Waakye is Ghana's ultimate breakfast bowl. The best waakye spots have long queues by 7am. 'Auntie Muni's' in Accra is legendary.",
+        "accompaniments": ["Shito (black pepper sauce — mandatory)", "Fried or stewed fish", "Meat stew", "Spaghetti", "Fried plantain", "Boiled egg", "Garri (grated cassava)", "Avocado", "Wele (cow skin)"],
+        "served_in": "Banana leaves (traditional) or takeaway boxes"
+      },
+      {
+        "name": "Kenkey",
+        "origin": "Ga (Ga Kenkey) and Fante (Fante Kenkey) — two regional versions",
+        "description": "A fermented cornmeal dumpling. Corn dough is fermented for 1–2 days, then partially cooked, divided, and either wrapped in dried corn husks (Ga Kenkey) or banana/plantain leaves (Fante Kenkey), then steamed. Dense, slightly sour, and filling — always eaten with fried fish and shito.",
+        "note": "Kenkey is Ghana's street food king — found everywhere from Accra's Jamestown fishing harbor to university campuses. Best eaten at the harbor with freshly fried fish.",
+        "served_with": "Fried fish, fresh pepper and tomato sauce, shito"
+      },
+      {
+        "name": "Kelewele",
+        "origin": "National",
+        "description": "Ghana's most beloved street snack. Ripe plantain cut into cubes, soaked in a marinade of ginger, garlic, chili powder, cloves, and nutmeg, then deep-fried until golden, caramelized outside, and soft inside. Sweet, spicy, and utterly addictive.",
+        "note": "Kelewele vendors come out at night — the smell alone draws crowds. Often sold from roadside stalls after dark.",
+        "served_with": "Roasted peanuts (groundnuts), as a side with Waakye or grilled meat"
+      },
+      {
+        "name": "Tuo Zaafi (TZ)",
+        "origin": "Northern Ghana (Dagomba and other northern groups)",
+        "description": "A thick, smooth porridge made by cooking millet or corn flour in water and stirring vigorously until it forms a soft, dough-like consistency. Softer than banku, with a more neutral flavor. The ultimate northern Ghanaian comfort food, eaten with ayoyo (jute leaf) soup, groundnut soup, or okra soup.",
+        "note": "Beloved across northern Ghana and increasingly in Accra. The informal abbreviation 'TZ' is universally understood.",
+        "served_with": "Ayoyo soup (jute leaves), Groundnut soup, Okra soup, Bito soup"
+      },
+      {
+        "name": "Red Red",
+        "origin": "National / Coastal",
+        "description": "A comforting stew of black-eyed peas (cowpeas) cooked in red palm oil with onions, tomatoes, scotch bonnets, and smoked or tinned fish. The double red comes from the palm oil and tomatoes. Naturally vegan-friendly (without the fish) and deeply satisfying.",
+        "note": "Perfect for vegetarians and one of Ghana's most affordable, nutritious meals.",
+        "served_with": "Fried plantain, Garri, rice"
+      },
+      {
+        "name": "Kontomire Stew (Palava Sauce)",
+        "origin": "Akan",
+        "description": "A highly nutritious stew made from boiled, mashed cocoyam leaves (kontomire / taro leaves), palm oil, salted fish, smoked herrings, boiled eggs, onion, and peppers. Deep green, rich, and hearty.",
+        "note": "One of Ghana's most nutritious dishes — packed with iron and vitamins from the cocoyam leaves.",
+        "served_with": "Boiled yam, plantain, cocoyam, rice, or eba"
+      },
+      {
+        "name": "Nkate Nkwan (Peanut / Groundnut Soup)",
+        "origin": "Akan (Ashanti)",
+        "description": "A rich, thick soup made from freshly ground roasted peanuts (groundnuts), tomatoes, onions, and peppers, slow-cooked with chicken, goat, or fish. Creamy, nutty, and deeply satisfying.",
+        "note": "The Ashanti version with chicken is considered the gold standard. Served on special occasions and Sundays.",
+        "served_with": "Fufu, rice balls (Omo Tuo)"
+      },
+      {
+        "name": "Palm Nut Soup (Abenkwan)",
+        "origin": "Akan / National",
+        "description": "Rich, vibrant soup made by boiling and extracting the juice from fresh palm nuts. The resulting liquid is thick, red-orange, and intensely flavored. Cooked with meat, fish, and various spices. One of Ghana's most celebratory soups.",
+        "note": "The process of extracting palm nut juice (beating the nuts in hot water and straining) is a labor of love. Always worth it.",
+        "served_with": "Fufu, banku"
+      },
+      {
+        "name": "Omo Tuo (Rice Balls)",
+        "origin": "Akan / Northern influenced",
+        "description": "Very soft, overcooked rice molded into sticky balls. Served in soup as an alternative to fufu — lighter in texture. A popular Sunday food, particularly in the Ashanti and Brong-Ahafo regions.",
+        "served_with": "Peanut soup, light soup, palm nut soup"
+      },
+      {
+        "name": "Shito",
+        "origin": "Ga (Accra) — but now a national condiment",
+        "description": "Ghana's famous black pepper sauce. Made by frying dried herrings, dried prawns, vegetable oil, ginger, garlic, tomatoes, and an array of spices over very low heat for hours until everything caramelizes into a deep, dark, intensely flavored paste. The name 'shito' means 'black pepper' in Ga.",
+        "note": "Shito is Ghana's answer to hot sauce — no Ghanaian meal is complete without it. It can last for weeks in the fridge and is taken as a condiment everywhere.",
+        "served_with": "Everything — waakye, kenkey, fried yam, bread, rice, banku"
+      },
+      {
+        "name": "Chinchinga (Suya)",
+        "origin": "Northern Ghana (Hausa influence)",
+        "description": "Ghana's version of suya — beef, chicken, or liver threaded on skewers, coated in a spiced groundnut powder rub, and grilled over charcoal. Sold at night markets and roadside grills across the country.",
+        "note": "Called 'chinchinga' in Ghana (versus Nigeria's 'suya'). The night market chinchinga experience — with Ghanaian pepper, onions, and tomatoes — is unmissable.",
+        "served_with": "Fresh tomatoes and onions, shito, fried yam"
+      },
+      {
+        "name": "Ampesi",
+        "origin": "Akan / National",
+        "description": "A simple, comforting dish of boiled starchy foods — yam, plantain, cocoyam, cassava, or a combination — served with kontomire stew, garden egg stew, or any soup. The everyday home meal across Ghana.",
+        "served_with": "Kontomire stew, garden egg stew, groundnut soup"
+      },
+      {
+        "name": "Kpokpoi (Kpekple)",
+        "origin": "Ga (sacred ceremonial food)",
+        "description": "A traditional Ga ceremonial dish made from palm nut soup and fermented corn dough (kenkey-like). It is the sacred food of the Homowo festival — chiefs and priests sprinkle kpokpoi in the streets and at ancestral shrines to feed the ancestors and share abundance with the community.",
+        "note": "Kpokpoi is not everyday food — it is exclusively associated with the Homowo festival and ancestral rituals."
+      }
+    ],
+    "drinks": [
+      {"name": "Akpeteshie", "description": "Ghana's most popular traditional spirit — a potent liquor distilled from fermented palm wine or sugar cane. The Ghanaian equivalent of gin/vodka. Used in rituals and celebrations."},
+      {"name": "Palm Wine (Nsafufuo)", "description": "Naturally fermented sap from palm trees. Sweet when fresh, increasingly alcoholic as it ferments. Sold from gourds along roadsides in the Ashanti and Western Regions."},
+      {"name": "Sobolo", "description": "A deep red hibiscus (roselle) drink made with ginger, cloves, and spices. Ghana's most popular non-alcoholic cold drink. Sold in sachets and bottles everywhere."},
+      {"name": "Asaana", "description": "A fermented drink made from black-eyed peas and corn. A traditional Ga drink, sweet and slightly fermented."},
+      {"name": "Pito", "description": "Traditional beer brewed from fermented millet or sorghum. Very popular in northern Ghana and the Volta Region."},
+      {"name": "Koko", "description": "A warm millet or corn porridge drink, spiced with ginger. Ghana's traditional breakfast drink — sold at early morning markets."}
+    ]
+  },
+
+  "dressing": {
+    "summary": "Ghanaian fashion is anchored by two of Africa's most globally celebrated textiles: Kente cloth and Adinkra fabric. These are not just clothes — they are coded communication systems, each pattern carrying specific meaning. Ghana's fashion identity is among the most distinctive on the continent.",
+    "national_fabrics": [
+      {
+        "name": "Kente Cloth",
+        "origin": "Akan (Ashanti and Ewe)",
+        "description": "Ghana's most iconic textile and one of the world's most recognized African fabrics. Woven in narrow strips (about 4 inches wide) on horizontal looms and then sewn together into larger cloths. Characterized by bright, interlocking geometric patterns in gold, green, red, blue, and black. Every color and pattern carries specific meaning.",
+        "colors_meaning": {
+          "gold": "Royalty, wealth, high status",
+          "green": "Growth, renewal, prosperity",
+          "red": "Political and spiritual moods, bloodshed",
+          "blue": "Peace, harmony, love",
+          "black": "Maturation, intensified spiritual energy",
+          "white": "Purification, festive occasions",
+          "yellow": "Preciousness, royalty, wealth"
+        },
+        "origin_story": "Asante tradition says Kente weaving was learned from a spider (Ananse) who was observed weaving its web. The first weavers, Ota Kraban and Kwaku Ameyaw, from Bonwire village (Ashanti Region) brought the art to the Asantehene. Bonwire remains the most famous Kente-weaving village.",
+        "note": "Originally only Asante royalty could wear Kente. Today it is worn by all Ghanaians and the African diaspora globally. Graduation ceremonies, important speeches, and diaspora cultural events worldwide feature Kente.",
+        "woven_exclusively_by": "Men (traditionally — Kente weaving is a male craft)",
+        "centers": ["Bonwire, Ashanti Region (most famous)", "Adanwomase, Ashanti Region", "Agotime, Volta Region (Ewe Kente)"]
+      },
+      {
+        "name": "Adinkra Cloth",
+        "origin": "Akan (Ashanti)",
+        "description": "Fabric printed with Adinkra symbols — a rich system of over 60 visual symbols, each representing a philosophical concept, proverb, or value. Originally printed using stamps carved from calabash gourd, dipped in black dye made from the bark of the Badie tree. Traditionally worn at funerals (dark colors) and celebratory occasions (bright colors).",
+        "notable_symbols": [
+          {"symbol": "Gye Nyame", "meaning": "Except God — supreme power of God; the most popular Adinkra symbol"},
+          {"symbol": "Sankofa", "meaning": "Go back and fetch it — the importance of learning from the past; depicted as a bird with its head turned back"},
+          {"symbol": "Adinkrahene", "meaning": "King of Adinkra — greatness, charisma, leadership"},
+          {"symbol": "Odo Nnyew Fie Kwan", "meaning": "Love never loses its way home — endurance of love"},
+          {"symbol": "Nyame Biribi Wo Soro", "meaning": "God is in the heavens — hope, inspiration"},
+          {"symbol": "Akoma", "meaning": "The heart — patience, tolerance, faithfulness"},
+          {"symbol": "Dwennimmen", "meaning": "Ram's horns — strength with humility"},
+          {"symbol": "Fawohodie", "meaning": "Independence / freedom — symbol of Ghana's independence movement"}
+        ],
+        "note": "Adinkra symbols have spread globally and are now used in jewelry, tattoos, logos, and fashion worldwide. The Sankofa bird is perhaps Africa's most globally recognized cultural symbol.",
+        "made_in": "Ntonso, Ashanti Region — the center of Adinkra production"
+      },
+      {
+        "name": "Batakari (Fugu Smock)",
+        "origin": "Northern Ghana",
+        "description": "A loose, hand-woven cotton smock with embroidery around the collar and armholes. The quintessential garment of northern Ghana, worn by all ethnic groups in the north regardless of religion. Made from cotton hand-spun and woven on narrow strip looms. Colors are typically earthy — white, brown, black, and natural.",
+        "note": "Jerry Rawlings made the batakari a symbol of national unity — he wore it for his first public appearance as head of state. It is now worn by politicians and ordinary Ghanaians nationwide as a statement of Ghanaian identity."
+      },
+      {
+        "name": "Ankara",
+        "description": "Bold, brightly patterned wax-print fabric used by all Ghanaians for everyday and formal wear. Though originally Dutch/Indonesian, it has become thoroughly Ghanaian and African in identity.",
+        "note": "The most widely used fabric in everyday Ghanaian fashion"
+      }
+    ],
+    "traditional_attire": {
+      "akan": {
+        "men": {
+          "royal_formal": "Kente cloth draped toga-style over the left shoulder, leaving the right shoulder bare. Worn with sandals (only royalty may wear sandals in the presence of a chief), gold jewelry (rings, necklace, anklets), and a carved wooden walking stick (okyeame's staff for linguists).",
+          "everyday_formal": "Ntoma (plain cloth wrapper) draped toga-style, or Kaba and trousers with Adinkra print fabric"
+        },
+        "women": {
+          "royal_formal": "Kente cloth as a two-piece set — a long skirt and a blouse made from matching or complementary Kente strips, with a duku (headwrap) in matching fabric",
+          "everyday_formal": "Kaba and slit — a fitted blouse (kaba) and a wrap skirt (slit), made from Ankara or Kente. The classic Ghanaian women's outfit."
+        }
+      },
+      "northern_ghana": {
+        "men": "Batakari (fugu smock) with trousers underneath",
+        "women": "Two-piece wrapper set with matching headwrap; beadwork is significant"
+      },
+      "ewe": {
+        "description": "Ewe Kente (from the Volta Region) is distinct from Asante Kente — it features more geometric, rectilinear patterns with symbolic designs encoded in each motif, made on upright looms rather than the horizontal strip looms of the Ashanti."
+      }
+    },
+    "funeral_culture": {
+      "note": "Ghanaian funerals — particularly among the Akan — are the most elaborate and socially significant events in community life. They last several days, involve hundreds or thousands of people, and require significant financial investment.",
+      "key_elements": [
+        "Fantasy coffins (Abebuu Adekai) — custom-built coffins in the shape of objects representing the deceased's life (fish for a fisherman, airplane for a pilot, Bible for a pastor, car, cocoa pod, etc.). A globally celebrated Ghanaian art form.",
+        "Mourning cloth — specific colors worn depending on the type of funeral: red and black (deceased was young), all black, or white and black",
+        "Brass bands play at funerals, both Western hymns and highlife music",
+        "Several nights of waking, drumming, and celebration precede the burial",
+        "A second burial ('final funeral') is often held weeks or months later for full celebration",
+        "Professional praise singers (okyerema) perform at royal funerals"
+      ]
+    },
+    "modern_fashion": {
+      "summary": "Accra has emerged as one of Africa's most exciting fashion cities. Ghanaian designers are blending Kente, Adinkra, and Ankara with contemporary global fashion, creating a uniquely Ghanaian aesthetic that is gaining global recognition.",
+      "notable_designers": ["Christie Brown", "Pistis", "Maxhosa Africa (South African but hugely popular in Ghana)", "WearGhana"],
+      "trends": [
+        "Kente in contemporary silhouettes — suits, dresses, jumpsuits",
+        "Adinkra symbol jewelry — gold and silver Adinkra pendants, earrings, bracelets",
+        "Afrocentric streetwear",
+        "Detty December fashion — Ghana's biggest fashion season, December"
+      ],
+      "detty_december": "Ghana's December festival season (Detty December) has become a global fashion spectacle, with the diaspora returning home and influencers/celebrities showcasing Ghanaian fashion to millions online."
+    }
+  },
+
+  "marriage_traditions": {
+    "overview": "Marriage in Ghana is a community affair — both families must meet, agree, and celebrate together. Traditional (customary) marriage, religious ceremony, and court registration are the three typical components. The traditional ceremony is the most culturally significant.",
+    "common_elements": [
+      "Knocking ceremony (Abusua) — the universal first step across almost all Ghanaian cultures. The groom's family 'knocks' on the bride's family's door with drinks, cash, and gifts to formally ask permission to proceed",
+      "Libation — an elder must pour libation (akpeteshie or schnapps on the ground) to invite the ancestors to bless the union before any important discussion",
+      "Schnapps is the universally required drink at all Ghanaian traditional ceremonies — presenting it signals seriousness",
+      "Bride price — a token of appreciation paid to the bride's family. Not a purchase; refusal to accept would shame the family",
+      "Kente cloth — both families typically coordinate their Kente colors/patterns",
+      "Community feasting and music — no Ghanaian marriage is complete without drumming, dancing, and abundant food"
+    ],
+    "by_ethnicity": {
+      "akan_ashanti": {
+        "knocking_ceremony": "Two rounds — a 'first knock' (informal) and a 'second knock' (formal, with all items from the bride's list). The formal knock involves the entire extended matrilineal family of both sides.",
+        "list": "The bride's family presents a list of items the groom must provide — typically including schnapps, rum, cloth, a Bible/Quran, cash, jewelry, a Bible, shoes",
+        "special": "Because the Akan are matrilineal, the groom must present gifts not just to the bride's father but significantly to her mother's family (especially her maternal uncle, who is her lineage head)"
+      },
+      "ga": {
+        "ayefro": "The formal 'door-knocking' ceremony specific to the Ga people. The groom's family arrives at the bride's home with schnapps, refreshments, and an elder spokesman who states their intention",
+        "note": "Drums and Kpanlogo music are essential at Ga celebrations"
+      },
+      "ewe": {
+        "todonu": "The formal introduction where the groom's family visits. This is followed by the Avhe (bride price negotiation) and eventually the wedding ceremony itself",
+        "note": "The Ewe have some of the most elaborate multi-day wedding celebrations in Ghana"
+      },
+      "dagomba": {
+        "note": "Northern Ghana marriages follow Islamic tradition — the Nikkah (Islamic marriage contract) is the central event. A Malam (Islamic scholar) officiates. Bride price (sadaki) is paid directly to the bride per Islamic custom.",
+        "damba": "Important marriages may be timed with the Damba festival for maximum celebration"
+      }
+    }
+  },
+
+  "beliefs": {
+    "overview": "Ghana is a predominantly Christian country, but indigenous traditional beliefs remain deeply woven into daily life across all ethnic groups. The saying goes: 'Ghanaians pray in church on Sunday, pour libation for their ancestors on Monday, and consult the traditional priest when neither works.'",
+    "christianity": {
+      "percentage": "~71%",
+      "denominations": ["Catholic", "Methodist (largest Protestant denomination, since the colonial era)", "Presbyterian", "Anglican", "Pentecostal/Charismatic (dominant since 1980s)", "Seventh-day Adventist"],
+      "note": "Ghana has one of the highest rates of church attendance in the world. The Pentecostal/Charismatic movement, with mega-churches and vibrant gospel music, dominates modern Ghanaian Christianity."
+    },
+    "islam": {
+      "percentage": "~18%",
+      "region": "Predominantly northern Ghana; significant Muslim communities in urban south",
+      "note": "Islam has been present in northern Ghana for over 700 years through trans-Saharan trade routes. Tamale (Northern Region capital) is Ghana's Islamic cultural center."
+    },
+    "traditional_beliefs": {
+      "akan_religion": {
+        "supreme_deity": "Nyame — the omnipotent Supreme God, creator of all things. Often represented by the sky.",
+        "key_concepts": [
+          "Sunsum — the personal spirit/soul of an individual",
+          "Kra — the divine spark (part of God) given to each person at birth",
+          "Ntoro — a spiritual quality inherited from the father",
+          "Mogya — blood lineage inherited from the mother",
+          "Stools — ancestral stools are the most sacred objects in Akan culture; the Asantehene's Golden Stool is the supreme sacred object"
+        ],
+        "ancestors": "The departed are believed to remain active members of the community, watching over, blessing, and sometimes punishing the living. Ancestral stools are regularly 'fed' with food and libations.",
+        "priests": "Okomfo — traditional Akan priests who communicate with deities and ancestors. Okomfo Anokye, who brought the Golden Stool to the Asantehene, is Ghana's most famous legendary priest.",
+        "adae_festivals": "Held every 42 days (the Akan calendar has 42-day cycles called adae). On Akwasidae (Sunday Adae) and Awukudae (Wednesday Adae), ancestors are honored with libations and food offerings poured on ancestral stools."
+      },
+      "ewe_religion": {
+        "supreme_deity": "Mawu (or Mawu-Lisa) — the supreme creator god, often paired as male-female",
+        "vodu": "The Ewe Vodu (vodun) tradition — a pantheon of over 600 spirits associated with natural forces (rivers, sea, thunder, earth). This tradition spread to Haiti (Voodoo), Brazil (Candomblé), Cuba (Santería), and the Americas through enslaved Ewe and related peoples.",
+        "note": "The word 'Voodoo' comes directly from the Ewe/Fon word 'Vodu' (spirit)"
+      },
+      "ga_religion": {
+        "wulomo": "Ga priests (Wulomo) and priestesses (Wolumo) who communicate with the 77 Ga deities. The Wulomo of La in Accra is one of Ghana's most respected traditional religious leaders.",
+        "twin_veneration": "The Ga believe twins are a double divine blessing. The Twin Festival (during Homowo) is a unique Ga celebration."
+      }
+    }
+  },
+
+  "festivals": [
+    {
+      "name": "Homowo Festival",
+      "ethnic_group": "Ga",
+      "region": "Greater Accra",
+      "location": "Accra (especially Ga Mashie / Jamestown) and Ga towns (Prampram, Tema)",
+      "month": "August / September",
+      "duration": "Several weeks (culminating in the main feast day)",
+      "description": "Ghana's most beloved and widely known festival. 'Homowo' means 'hooting at hunger' — celebrating the Ga people's triumph over a devastating historical famine. When rains finally came and crops flourished, the Ga feasted joyfully to mock the hunger they had endured. On the main festival day, chiefs and priests parade through streets, sprinkling kpokpoi (the sacred cornmeal and palm nut dish) at shrines, in streets, and at ancestral spots to feed the ancestors. Families reunite across Ghana and the diaspora.",
+      "highlights": ["Kpokpoi cooking and ritual sprinkling", "Ancestral libations", "Wulomo (priests) in white attire performing rituals", "Family reunions across the diaspora", "Twin Festival — a unique celebration of twins (considered a double divine gift by the Ga)", "Chiefs in palanquins with state umbrellas"],
+      "sacred_food": "Kpokpoi (cornmeal and palm nut soup — eaten only during Homowo)"
+    },
+    {
+      "name": "Akwasidae Festival",
+      "ethnic_group": "Akan (Ashanti)",
+      "region": "Ashanti Region",
+      "location": "Manhyia Palace, Kumasi",
+      "frequency": "Every 42 days (6 weeks) on a Sunday, following the Akan calendar",
+      "description": "A regular royal ceremony of the Ashanti Kingdom, occurring every 42 days. At Manhyia Palace, the Asantehene (Ashanti King, currently Otumfuo Osei Tutu II) holds court, receiving homage from sub-chiefs, divisional chiefs, and his people. Chiefs arrive in elaborate processions wearing Kente and gold, carried in palanquins. The palace forecourt becomes a theater of Ashanti grandeur — with fontomfrom royal drums, hornblowers, praise singers (Okyeame), and adowa dancing.",
+      "highlights": ["Asantehene receiving homage on his throne", "Chiefs arriving in palanquins", "Fontomfrom royal drums", "Kete and adowa dances", "Golden regalia and state swords", "Libations poured on ancestral stools"],
+      "note": "Akwasidae is open to the public and visitors are warmly welcomed. Check the Akan calendar for the next Sunday Adae date before visiting Kumasi."
+    },
+    {
+      "name": "Aboakyir Festival (Deer-Hunting Festival)",
+      "ethnic_group": "Effutu (Winneba people)",
+      "region": "Central Region",
+      "location": "Winneba",
+      "month": "First Saturday of May",
+      "description": "One of Ghana's oldest and most unique festivals. Two rival warrior groups — the Tuafo and Denkyefo Asafo companies — race into the bush to capture a live deer, which is then presented to the chief and sacrificed to the gods. The winning company earns great honor. Originally a leopard hunt (changed to deer when leopards became rare). A spectacular display of Fante warrior culture.",
+      "highlights": ["Competitive deer hunt race", "Asafo warrior companies in traditional attire", "Grand durbar of chiefs and queen mothers", "Traditional dances and music"],
+      "note": "The original hunt required capturing a live leopard — changed to a live deer in the 20th century as leopards became endangered"
+    },
+    {
+      "name": "Hogbetsotso Festival",
+      "ethnic_group": "Anlo Ewe",
+      "region": "Volta Region",
+      "location": "Anloga (Anlo traditional capital)",
+      "month": "First Saturday of November",
+      "description": "The grandest festival of the Anlo Ewe, commemorating their dramatic exodus from Notsie (modern Togo) where they fled the tyranny of King Agorkoli. According to legend, they escaped by walking backwards through a gap in the city wall at night to confuse their pursuers and avoid leaving footprints. 'Hogbetsotso' means 'the festival of exodus'. A time for community unity, stool purification, and ancestral remembrance.",
+      "highlights": ["Durbar of chiefs and elders", "Re-enactment of the Notsie exodus", "State purification ceremonies", "Traditional agbadza drumming and dancing", "Community reconciliation rituals"],
+      "note": "Diaspora Ewe return from Togo, Benin, and globally for this festival"
+    },
+    {
+      "name": "Odwira Festival",
+      "ethnic_group": "Akan (multiple Akan states)",
+      "region": "Ashanti, Eastern, Brong-Ahafo Regions",
+      "month": "September / October (varies by community)",
+      "description": "The most important festival in the Akan calendar — a purification and harvest festival observed by Akan communities across Ghana. Chiefs purify their stools and communities, ancestral spirits are honored, and the new harvest is celebrated. Each Akan community (Akwapim, Akyem, Asante, Bono, etc.) holds its own Odwira. The most elaborate is the Akwapim Odwira (Akropong). Features royal processions, libations, feasting, and ancestor veneration.",
+      "highlights": ["Stool purification ceremonies", "Royal processions with state umbrellas", "Libations and ancestral feasts", "Traditional music and adowa dancing"],
+      "note": "The Akwapim Odwira in Akropong (Eastern Region) and the Asante Odwira are the most elaborate versions"
+    },
+    {
+      "name": "Damba Festival",
+      "ethnic_group": "Dagomba (and other northern groups: Gonja, Mamprusi, Nanumba)",
+      "region": "Northern Region",
+      "location": "Tamale, Yendi, and northern towns",
+      "month": "One month and 10 days after Islamic New Year (Muharram)",
+      "duration": "Several days",
+      "description": "The most important festival in northern Ghana, celebrating the birth of the Prophet Muhammad (PBUH). A spectacular fusion of Islamic observance and traditional Dagbon royal culture. Chiefs arrive on horseback in magnificent processions, accompanied by royal drummers (lunsi) who beat the talking drums. Guinea fowl are slaughtered as offerings. Traditional dancing, horse parades, and feasting continue for days.",
+      "highlights": ["Spectacular horse parades with chiefs in royal regalia", "Lunsi (royal drummers) performing on talking drums", "Guinea fowl sacrifices", "Takai dance (a distinctive circular dance unique to the Dagomba)", "Ya-Naa (paramount chief) holding court"],
+      "note": "The Damba in Tamale is the most accessible for visitors. The horse parades are breathtaking."
+    },
+    {
+      "name": "Panafest (Pan-African Historical Theatre Festival)",
+      "type": "Biennial / Diaspora",
+      "region": "Cape Coast and Accra",
+      "month": "July (biennial)",
+      "description": "A biennial festival founded in the 1980s by playwright Efua Sutherland to celebrate African heritage and inspire homecoming for the global African diaspora. Events are held at the slave castles of Cape Coast and Elmina — a deeply emotional and powerful context. Includes theatrical performances, cultural shows, academic symposia, and emotional visits to the 'Door of No Return'. A touchstone of pan-African identity.",
+      "highlights": ["Performances at Cape Coast Castle and Elmina Castle", "Memorial ceremonies at the Door of No Return", "Diaspora homecoming celebrations", "Cultural performances from across Africa and the diaspora"],
+      "note": "Panafest is profoundly moving — participants from the African diaspora walk through the same dungeons where their ancestors were held before being shipped across the Atlantic"
+    },
+    {
+      "name": "Chale Wote Street Art Festival",
+      "type": "Contemporary / Urban Arts",
+      "region": "Greater Accra",
+      "location": "Jamestown, Accra",
+      "month": "August",
+      "description": "Ghana's most exciting contemporary cultural festival, organized by the Accra[dot]alt creative collective. For one week, Jamestown (one of Accra's oldest and most historic neighborhoods, formerly a colonial port) transforms into a living gallery. Streets explode with murals, installations, live music, spoken word, fashion shows, performance art, and community engagement. Over 30,000 visitors attend annually.",
+      "highlights": ["Live mural painting on building walls", "Performance art and theatre", "Afropunk fashion displays", "Live music across multiple stages", "Youth cultural exchange"],
+      "note": "Chale Wote represents the vibrant, creative, unapologetically African youth culture of modern Ghana. A must-attend for arts lovers."
+    },
+    {
+      "name": "Fetu Afahye",
+      "ethnic_group": "Fante (Oguaa people of Cape Coast)",
+      "region": "Central Region",
+      "location": "Cape Coast",
+      "month": "First Saturday of September",
+      "description": "The harvest festival of the Oguaa (Cape Coast) Fante people, giving thanks to the gods for a bountiful harvest and purifying the town for a new season. Features a grand durbar of chiefs in full Kente regalia, traditional music, dancing, and feasting. The festival also commemorates the foundation of Cape Coast as a community.",
+      "highlights": ["Grand durbar of Fante chiefs", "Colorful Kente displays", "Traditional Asafo company performances", "Communal feasting"]
+    },
+    {
+      "name": "Bakatue Festival",
+      "ethnic_group": "Fante (Elmina people)",
+      "region": "Central Region",
+      "location": "Elmina",
+      "month": "First Tuesday of July",
+      "description": "Marks the opening of the Benya Lagoon fishing season in Elmina. The paramount chief of Elmina performs a ritual casting of a net into the lagoon, symbolically opening it for fishing. Accompanied by colorful canoe regattas, traditional music, and the blessing of fishing equipment and boats.",
+      "highlights": ["Chief's ceremonial net-casting", "Canoe regatta on the Benya Lagoon", "Blessing of fishermen's boats", "Traditional drumming and dancing"]
+    }
+  ],
+
+  "music_and_pop_culture": {
+    "summary": "Ghana is Africa's Highlife homeland — the genre born here in the early 20th century gave rise to much of West Africa's modern music. From E.T. Mensah's dance bands to Reggie Rockstone's Hiplife revolution, Black Sherif's global takeover to Detty December's cultural spectacle, Ghana has shaped African music for over 100 years.",
+    "genres": [
+      {
+        "name": "Highlife",
+        "era": "Early 20th century – present",
+        "description": "Ghana's greatest musical gift to Africa and the world. Born in the 1920s when coastal Ghanaians fused local Akan and Ga rhythms with European brass band music, jazz, and Caribbean sounds. Named 'highlife' because early performances were at formal 'high-class' dances for the elite. Characterized by melodic guitar lines, brass horn sections, upbeat rhythms, and songs about love, loss, and everyday life.",
+        "origin_note": "Highlife is the musical ancestor of Afrobeats — its melodic DNA runs through virtually all modern West African pop music",
+        "legends": [
+          {"name": "E.T. Mensah (1919–1996)", "title": "'King of Highlife'", "note": "The defining figure of dance-band highlife. His band, the Tempos, toured West Africa and even performed with Louis Armstrong. Made highlife the premier music of West African independence-era cities."},
+          {"name": "E.K. Nyame (1927–1977)", "note": "Father of guitar-band highlife. His Akan Trio recorded over 400 tracks, bringing highlife to rural Ghana through acoustic guitar."},
+          {"name": "Ebo Taylor (1936–2023)", "note": "A pioneer who blended highlife with Afrobeat and funk. Rediscovered by international audiences in the 2000s and 2010s, releasing acclaimed albums globally."},
+          {"name": "Pat Thomas", "note": "One of Ghana's greatest voices — a highlife legend who has been performing since the 1960s, still active."},
+          {"name": "Amakye Dede", "note": "Known as the 'Iron Boy' of highlife — one of Ghana's most beloved highlife singer-guitarists."},
+          {"name": "Koo Nimo", "note": "Master of acoustic palm-wine guitar highlife — the most traditional and root form of highlife."}
+        ]
+      },
+      {
+        "name": "Hiplife",
+        "era": "Mid-1990s – present",
+        "founder": "Reggie Rockstone (born in London, raised in Ghana)",
+        "description": "Born in the mid-1990s when Reggie Rockstone merged American hip-hop beats with Ghanaian highlife melodies and rapped in Twi. Hiplife became the voice of Ghanaian youth — urban, assertive, and unapologetically African. It birthed a generation of artists and later evolved into azonto, asakaa, and influenced Afrobeats broadly.",
+        "pioneers": ["Reggie Rockstone ('Godfather of Hiplife')", "Obrafour", "Okyeame Kwame", "Lord Kenya", "Tic Tac", "Akyeame"]
+      },
+      {
+        "name": "Azonto",
+        "era": "Early 2010s",
+        "description": "A dance music genre and viral dance movement born in Accra around 2011–2013. Azonto combined highlife melodies with uptempo electronic production and a distinctive miming dance style (dancers mime everyday actions like ironing, driving, cooking). Sarkodie's 'U Go Kill Me' helped popularize it globally.",
+        "note": "Azonto was one of Africa's first viral dance phenomena before the social media dance era properly began"
+      },
+      {
+        "name": "Asakaa (Ghana Drill)",
+        "era": "2020s",
+        "description": "A subgenre born in Kumasi (nicknamed 'Kumerica' — a portmanteau of Kumasi and America). Young artists from Kumasi combined American drill music with Ghanaian rhythms and Twi lyrics. Black Sherif's global breakthrough and the rise of Yaw Tog put Asakaa on the world map.",
+        "stars": ["Black Sherif", "Yaw Tog", "Kwesi Arthur"]
+      },
+      {
+        "name": "Afro-Dancehall",
+        "description": "A fusion of Jamaican dancehall with Ghanaian highlife/afrobeats. Stonebwoy and Shatta Wale are Ghana's leading stars in this genre, known for their fierce but commercially productive rivalry.",
+        "stars": ["Stonebwoy", "Shatta Wale", "Samini"]
+      },
+      {
+        "name": "Gospel Music",
+        "description": "One of Ghana's biggest music genres. Ghanaian gospel blends contemporary pop with Christian worship. Artists like Joe Mettle, Cecelia Marfo, and Sonnie Badu have international followings.",
+        "stars": ["Joe Mettle (Grammy consideration)", "Sonnie Badu", "Celestine Donkor", "Joyce Blessing"]
+      }
+    ],
+    "legendary_artists": [
+      {"name": "Reggie Rockstone", "title": "Godfather of Hiplife", "note": "Invented Hiplife in the mid-1990s. Ghanaian-British artist who transformed Ghanaian music by rapping in Twi."},
+      {"name": "E.T. Mensah", "title": "King of Highlife", "note": "Defined the highlife era of the 1950s–70s. Took Ghanaian music to the world stage."},
+      {"name": "Ebo Taylor", "title": "Highlife-Afrobeat pioneer", "note": "A bridge between traditional highlife and modern Afrobeats, rediscovered internationally."},
+      {"name": "Kojo Antwi", "title": "Mr. Music Man", "note": "Ghana's romantic highlife superstar of the 1980s–2000s."}
+    ],
+    "current_stars": [
+      {"name": "Sarkodie", "full_name": "Michael Owusu Addo", "hometown": "Tema", "genre": "Hiplife / Hip-hop", "achievement": "Ghana's greatest rapper. BET Best International Act: Africa (2012). Inaugural BET Hip Hop Awards Best International Flow (2019). Artist of the Decade at Ghana Music Awards (2019). Has collaborated with Drake, Busta Rhymes, Akon, and Akwaboah."},
+      {"name": "Stonebwoy", "full_name": "Livingstone Etse Satekla", "hometown": "Ashaiman, Accra", "genre": "Afro-Dancehall / Reggae", "achievement": "First Ghanaian to win BET Best International Act (2014 and 2015). Multiple VGMA Artist of the Year awards. Collaborated with Sean Paul, Beenie Man, Damian Marley."},
+      {"name": "Shatta Wale", "full_name": "Charles Nii Armah Mensah Jr.", "hometown": "Accra", "genre": "Dancehall / Afrobeats", "achievement": "One of Ghana's biggest superstars. Collaborated with Beyoncé on 'Already' from The Lion King: The Gift (2019) — a defining moment for Ghanaian music globally."},
+      {"name": "Black Sherif", "full_name": "Mohammed Ismail Sherif", "hometown": "Konongo, Ashanti Region", "genre": "Asakaa / Afrobeats", "achievement": "'Second Sermon' featuring Burna Boy became one of 2022's biggest global hits. 'Kweku the Traveller' achieved viral global success. One of Africa's fastest-rising artists of the 2020s."},
+      {"name": "King Promise", "full_name": "Gregory Bortey Newman", "hometown": "Accra", "genre": "Afropop / R&B", "achievement": "Ghana's smoothest contemporary Afropop artist. Known for silky vocals and international collaborations."},
+      {"name": "Kwesi Arthur", "full_name": "Emmanuel Kwesi Danso Arthur", "hometown": "Tema", "genre": "Hip-hop / Afrobeats", "achievement": "BET Hip Hop Awards Best International Flow nominee. Known for introspective, internationally flavored hip-hop."},
+      {"name": "KiDi", "full_name": "Dennis Nana Dwamena", "hometown": "Accra", "genre": "Afropop / Highlife", "achievement": "VGMA Artiste of the Year (2021). Known for blending contemporary afropop with highlife melodies."},
+      {"name": "Kuami Eugene", "full_name": "Eugene Marfo", "hometown": "Akim Oda, Eastern Region", "genre": "Highlife / Afropop", "achievement": "VGMA Artiste of the Year (2019, 2020). Known for his powerful voice and highlife-rooted sound."},
+      {"name": "Amaarae", "full_name": "Ama Serwah Genfi", "hometown": "Accra (raised partly in Atlanta)", "genre": "Alt-R&B / Afrofusion", "achievement": "'SAD GIRLZ LUV MONEY' became a global viral hit (2022). Ghana's leading alternative music voice, blending Afrobeats with indie R&B."},
+      {"name": "Gyakie", "full_name": "Jackeline Acheampong", "hometown": "Kumasi / Accra", "genre": "Afropop / Soul", "achievement": "'Forever' became one of Africa's biggest songs of 2021, charting in multiple countries."}
+    ],
+    "detty_december": {
+      "name": "Detty December",
+      "description": "Ghana's annual December festival season has grown into one of Africa's most anticipated cultural moments. Every December, the Ghanaian diaspora returns home from the UK, USA, Canada, and Europe, and international celebrities, artists, and tourists descend on Accra for a month of concerts, parties, beach events, fashion shows, and cultural activities. The term 'Detty December' (from Ghanaian Pidgin 'dirty' meaning wild/fun) captures the spirit of the season.",
+      "key_events": ["Afronation Ghana (major Afrobeats concert)", "Afrochella (now AfricanXXchange — fashion, music, art)", "Various New Year's Eve concerts", "Club nights in Osu, East Legon, and Labadi"],
+      "impact": "Detty December has made Accra Africa's biggest December destination, injecting billions of cedis into the economy and bringing global media attention to Ghanaian culture"
+    },
+    "film": {
+      "name": "Ghallywood",
+      "description": "Ghana's film industry (Ghallywood) is smaller than Nollywood but produces quality films. Landmark works include 'Heritage Africa' (1989) and more recently 'The Burial of Kojo' (2018), which gained international acclaim on Netflix.",
+      "note": "Many Ghanaian actors work across both Ghallywood and Nollywood productions"
+    }
+  },
+
+  "administrative_divisions": {
+    "structure": "16 Regions (expanded from 10 in 2019)",
+    "note": "Ghana reorganized from 10 to 16 regions in 2019, creating 6 new regions from existing ones to bring governance closer to the people.",
+    "regions": [
+      {"name": "Greater Accra", "capital": "Accra", "zone": "South", "note": "Smallest region by area but most populous; national capital"},
+      {"name": "Ashanti", "capital": "Kumasi", "zone": "Middle", "note": "Most populous region; heartland of Akan-Ashanti culture; cocoa country"},
+      {"name": "Western", "capital": "Sekondi-Takoradi", "zone": "South", "note": "Ghana's oil capital; Takoradi is the main port city"},
+      {"name": "Western North", "capital": "Sefwi Wiawso", "zone": "Middle", "note": "Created in 2019 from the old Western Region; gold and cocoa country"},
+      {"name": "Central", "capital": "Cape Coast", "zone": "South", "note": "Historical heartland; Elmina and Cape Coast Castles; Fante homeland"},
+      {"name": "Eastern", "capital": "Koforidua", "zone": "Middle", "note": "Akwapim hills; Lake Volta; Krobo bead culture"},
+      {"name": "Volta", "capital": "Ho", "zone": "East", "note": "Ewe heartland; Lake Volta; Togo border; waterfalls"},
+      {"name": "Oti", "capital": "Dambai", "zone": "East", "note": "Created in 2019; Volta River basin; Krachi and Nchumuru peoples"},
+      {"name": "Bono", "capital": "Sunyani", "zone": "Middle", "note": "Brong Ahafo heartland; cocoa and yam farming"},
+      {"name": "Bono East", "capital": "Techiman", "zone": "Middle", "note": "Created in 2019; Techiman market is one of West Africa's largest"},
+      {"name": "Ahafo", "capital": "Goaso", "zone": "Middle", "note": "Created in 2019; dense forest; Tano River basin"},
+      {"name": "Northern", "capital": "Tamale", "zone": "North", "note": "Dagomba heartland; Tamale is Ghana's fastest-growing city; Islamic culture"},
+      {"name": "Savannah", "capital": "Damongo", "zone": "North", "note": "Created in 2019; Mole National Park; Gonja and Brafour peoples"},
+      {"name": "North East", "capital": "Nalerigu", "zone": "North", "note": "Created in 2019; Mamprusi and Kusasi peoples"},
+      {"name": "Upper East", "capital": "Bolgatanga", "zone": "North", "note": "Frafra, Kassena, and Builsa peoples; Paga Crocodile Pond; Nkoranza"},
+      {"name": "Upper West", "capital": "Wa", "zone": "North", "note": "Dagaaba and Sissala peoples; least populated region; savanna"}
+    ]
+  },
+
+  "proverbs_and_wisdom": [
+    {
+      "proverb": "Onipa na ohia onipa.",
+      "language": "Akan (Twi)",
+      "meaning": "A person needs people.",
+      "lesson": "No one can thrive alone — community and interdependence are essential to human life."
+    },
+    {
+      "proverb": "Obra ye bo.",
+      "language": "Akan (Twi)",
+      "meaning": "Life is precious / Life is a rock.",
+      "lesson": "Life is precious and must be treated with care and resilience."
+    },
+    {
+      "proverb": "Sankofa.",
+      "language": "Akan (Twi)",
+      "meaning": "Go back and fetch it — it is not wrong to go back for what you forgot.",
+      "lesson": "We must return to our roots to understand and build our future. The past is not something to leave behind, but to draw strength from.",
+      "note": "Represented by the iconic Sankofa bird symbol (looking backward while flying forward). One of Africa's most globally recognized philosophical concepts."
+    },
+    {
+      "proverb": "Ɔkra na ɛhyia ɔkra.",
+      "language": "Akan (Twi)",
+      "meaning": "It is the soul that calls out to the soul.",
+      "lesson": "True connection between people is spiritual and goes beyond the surface."
+    },
+    {
+      "proverb": "Funtunfunefu Denkyemfunefu, wɔdidi foro mu na wɔkasa a, na wɔbo afire.",
+      "language": "Akan (Twi)",
+      "meaning": "The Siamese crocodiles share one stomach, yet when they eat, they fight over food.",
+      "lesson": "Unity is essential — fighting among those who share the same destiny helps no one. A warning against internal conflict.",
+      "note": "This is one of the most famous Adinkra symbols — the Funtunfunefu (two-headed crocodile)"
+    },
+    {
+      "proverb": "Wo kae akyire a, wonhwehwɛ ne akyi.",
+      "language": "Akan (Twi)",
+      "meaning": "If you remember what is behind, you will not have to look for what is ahead.",
+      "lesson": "Learning from history prevents repeating mistakes in the future."
+    },
+    {
+      "proverb": "Ŋutifafa adeŋe xɔxɔa.",
+      "language": "Ewe",
+      "meaning": "Patience brings everything to ripeness.",
+      "lesson": "Good things come to those who wait with patience."
+    },
+    {
+      "proverb": "Gye Nyame.",
+      "language": "Akan (Twi)",
+      "meaning": "Except God — nothing in the past or present or future, except God.",
+      "lesson": "Absolute trust in God's supremacy above all things.",
+      "note": "The most widely used Adinkra symbol in Ghana and across the global African diaspora"
+    }
+  ],
+
+  "travel_and_places": {
+    "note": "Ghana is one of West Africa's most accessible and welcoming travel destinations — consistently ranked among the continent's safest countries for tourists. The 2019 'Year of Return' transformed Ghana's global tourism profile.",
+    "must_visit": [
+      {
+        "name": "Cape Coast Castle",
+        "region": "Central Region",
+        "type": "UNESCO World Heritage Site / Historical",
+        "description": "The most significant slave fort in Africa and a deeply emotional journey into the heart of the transatlantic slave trade. Originally built by the Swedes in 1653, it passed through Danish and British hands. Enslaved Africans were held in dark dungeons below before being shipped through the 'Door of No Return' to the Americas. A place of both immense suffering and powerful remembrance. Visiting the dungeons and standing at the Door of No Return is a transformative experience.",
+        "note": "The Year of Return (2019) brought hundreds of thousands of diaspora visitors to Cape Coast. African Americans, Caribbeans, and Black Britons come to emotionally connect with their ancestral history."
+      },
+      {
+        "name": "Elmina Castle",
+        "region": "Central Region",
+        "type": "UNESCO World Heritage Site / Historical",
+        "description": "The oldest European-built structure in sub-Saharan Africa, built by the Portuguese in 1482 as a gold trading post, later becoming the largest slave holding fort on the West African coast. Located in the charming fishing town of Elmina, it towers over the lagoon where colourful Fante fishing boats depart at dawn.",
+        "note": "Together with Cape Coast Castle, Elmina is part of UNESCO's 'Forts and Castles of Volta, Greater Accra, Central and Western Regions' World Heritage Site"
+      },
+      {
+        "name": "Kumasi & Manhyia Palace",
+        "region": "Ashanti Region",
+        "type": "Cultural Capital / Living Kingdom",
+        "description": "The capital of the Ashanti Kingdom and Ghana's second-largest city. Home to the Manhyia Palace (the Asantehene's seat), the Kejetia Market (one of West Africa's largest open-air markets), the National Cultural Centre, and the Kumasi Zoo. Surrounding villages include Bonwire (Kente weaving), Ntonso (Adinkra printing), and Ahwiaa (woodcarving).",
+        "must_see": ["Manhyia Palace Museum", "Kejetia Market", "Bonwire Kente village", "Ntonso Adinkra village", "Akwasidae festival (every 42 days)"]
+      },
+      {
+        "name": "Mole National Park",
+        "region": "Savannah Region",
+        "type": "Wildlife / Nature",
+        "description": "Ghana's largest and most important wildlife reserve. Home to over 90 species of mammals including elephants, hippos, buffaloes, baboons, warthogs, lions (rare), and over 300 bird species. Walking safaris right next to elephants are possible here — one of Africa's most thrilling wildlife experiences.",
+        "note": "Mole is unique in offering walking safaris with rangers, allowing you to get extremely close to elephants on foot."
+      },
+      {
+        "name": "Accra",
+        "region": "Greater Accra",
+        "type": "Capital City / Cultural Hub",
+        "description": "One of Africa's most vibrant capital cities. Key sites include: Kwame Nkrumah Memorial Park and Mausoleum, Independence Square (Black Star Square), National Museum, Arts Centre, Jamestown (historic harbor district), Osu (Accra's entertainment hub), Labadi Beach, and the National Theatre.",
+        "hidden_gems": ["Jamestown Lighthouse climb (panoramic views)", "Fantasy coffin makers of Teshie-Nungua", "Arts Centre market (crafts, Kente, Adinkra)", "La Pleasure Beach"],
+        "detty_december": "Accra in December is an unforgettable experience — Afronation, AfricanXXchange, New Year's Eve concerts, and a diaspora-fueled energy unlike any other time of year."
+      },
+      {
+        "name": "Kakum National Park",
+        "region": "Central Region",
+        "type": "Rainforest / Nature",
+        "description": "A dense tropical rainforest with an extraordinary canopy walkway — seven rope bridges suspended 40 meters above the forest floor, stretching 330 meters through the treetops. One of only a few such canopy walks in Africa. Home to forest elephants, bongos, Diana monkeys, and countless bird species.",
+        "note": "The canopy walk at Kakum is Ghana's single most visited tourist attraction — not for the faint-hearted!"
+      },
+      {
+        "name": "Lake Volta",
+        "region": "Volta Region",
+        "type": "Natural Wonder / Infrastructure",
+        "description": "Created by the Akosombo Dam (built 1961–1966), Lake Volta is one of the world's largest man-made lakes by surface area (8,502 km²). The Akosombo Dam was one of Kwame Nkrumah's signature infrastructure projects. Lake Volta crosses several regions and supports fishing communities. The ferry journey across the lake is a unique Ghanaian experience.",
+        "note": "Nkrumah's controversial Akosombo Dam project displaced over 80,000 Ghanaians from their ancestral lands — a complex historical legacy"
+      },
+      {
+        "name": "Wli Waterfalls",
+        "region": "Volta Region",
+        "type": "Nature / Scenic",
+        "description": "The highest waterfall in West Africa, hidden in the Agumatsa Wildlife Sanctuary near the Togo border. A 45-minute hike through rainforest leads to the spectacular lower falls (143m). Thousands of bats nest in the cliffs above. A longer hike reaches the upper falls through stunning forest.",
+        "note": "Best visited during or after the rainy season (August–October) when water flow is at its peak"
+      },
+      {
+        "name": "Aburi Botanical Gardens",
+        "region": "Eastern Region",
+        "type": "Nature / Colonial Heritage",
+        "description": "A stunning colonial-era botanical garden in the cool Akwapim Hills, 800m above sea level. Established in 1890 by the British, it features massive cotton silk trees, exotic plant collections, and cool temperatures. A favorite weekend escape from hot Accra — just 35km away.",
+        "note": "The Aburi Hills are also home to some of Ghana's finest craftspeople and woodcarvers"
+      }
+    ],
+    "budget_tips": [
+      "Trotros (shared minibuses) are the cheapest way to travel between cities — far cheaper than private taxis or Uber",
+      "Chop bars serve the most authentic and affordable food — a full plate of fufu and light soup can cost as little as GHS 15–30",
+      "Haggling is expected at markets — always start at 50% of the first price quoted",
+      "OTC buses (VIP, STC) are comfortable intercity options, cheaper than flying",
+      "Beach hotels in Ada Foah and Busua are affordable alternatives to Accra hotels"
+    ],
+    "safety_tips": [
+      "Ghana is one of Africa's safest and most politically stable countries — ranked among the continent's top democracies",
+      "Accra's traffic is notorious — add extra time to all journeys during rush hours",
+      "Tap water is not reliably safe — drink bottled or filtered water",
+      "The coastal rip currents at Labadi and other beaches can be strong — heed warning signs",
+      "When visiting chiefs' palaces, dress modestly and remove shoes when entering inner chambers",
+      "Always greet elders first and use the right hand when receiving or giving items"
+    ]
+  }
+}

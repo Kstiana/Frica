@@ -1,1 +1,1126 @@
+{
+  "meta": {
+    "country": "Nigeria",
+    "slug": "nigeria",
+    "last_updated": "2025",
+    "data_version": "1.0",
+    "description": "Complete cultural data for Nigeria — powering all Frica country page sections."
+  },
 
+  "overview": {
+    "name": "Nigeria",
+    "native_name": "Nigeria",
+    "official_name": "Federal Republic of Nigeria",
+    "flag_emoji": "🇳🇬",
+    "iso_alpha2": "NG",
+    "iso_alpha3": "NGA",
+    "capital": "Abuja",
+    "largest_city": "Lagos",
+    "region": "West Africa",
+    "subregion": "Western Africa",
+    "population": 220000000,
+    "population_note": "Most populous country in Africa; approximately 1 in 6 Africans is Nigerian",
+    "area_km2": 923768,
+    "area_rank_africa": 14,
+    "official_languages": ["English"],
+    "major_indigenous_languages": ["Yoruba", "Hausa", "Igbo"],
+    "other_languages": ["Fulfulde", "Kanuri", "Ibibio", "Tiv", "Ijaw", "Edo", "Nupe", "Igala"],
+    "total_languages": 520,
+    "currency": "Nigerian Naira (NGN)",
+    "currency_symbol": "₦",
+    "calling_code": "+234",
+    "internet_tld": ".ng",
+    "independence_date": "October 1, 1960",
+    "independence_from": "United Kingdom",
+    "national_day": "October 1 (Independence Day)",
+    "government_type": "Federal Presidential Republic",
+    "geopolitical_zones": 6,
+    "total_states": 36,
+    "fct": "Abuja (Federal Capital Territory)",
+    "gdp_rank_africa": 1,
+    "gdp_note": "Largest economy in Africa",
+    "religion": {
+      "christianity": "~50%",
+      "islam": "~50%",
+      "note": "Nearly equally divided. Indigenous beliefs often practiced alongside either faith (syncretism)."
+    },
+    "short_description": "Africa's most populous nation and largest economy, Nigeria is the beating heart of Afrobeats music, Nollywood cinema, and the ancient civilizations of the Yoruba, Igbo, and Hausa-Fulani peoples — a country often called the 'Giant of Africa'.",
+    "tagline": "Giant of Africa",
+    "known_for": [
+      "Afrobeats music — Burna Boy, Wizkid, Davido, Asake, Rema",
+      "Nollywood — world's 2nd largest film industry by volume",
+      "Yoruba, Igbo, and Hausa-Fulani civilizations",
+      "Benin Kingdom bronze sculptures",
+      "Jollof Rice (the West African Jollof War 😄)",
+      "Lagos — Africa's most populous city",
+      "Niger Delta oil wealth",
+      "Ancient Nok terracotta civilization"
+    ],
+    "borders": ["Benin (West)", "Niger (North)", "Chad (Northeast)", "Cameroon (East)"],
+    "coastline": "Gulf of Guinea (Atlantic Ocean), 853 km"
+  },
+
+  "history": {
+    "summary": "Nigeria's history stretches back thousands of years, home to some of the most sophisticated civilizations on the African continent — from the ancient Nok culture to the empires of Kanem-Bornu, the Oyo Empire, the Benin Kingdom, and the Sokoto Caliphate. The region was a major hub of trans-Saharan trade and later became devastated by the Atlantic slave trade. British colonization began in the 19th century, culminating in the 1914 amalgamation of the Northern and Southern Protectorates. Nigeria gained independence on October 1, 1960, and became a republic in 1963. A brutal civil war (Biafran War, 1967–1970) tested the nation's unity. Military rule dominated much of post-independence history until the return to civilian democratic rule in 1999.",
+    "timeline": [
+      {
+        "period": "500 BCE – 200 CE",
+        "event": "Nok Culture",
+        "description": "One of the earliest known cultures in sub-Saharan Africa. The Nok people created sophisticated terracotta sculptures of humans and animals, the oldest sub-Saharan terracotta figures ever found. Discovered in Kaduna State."
+      },
+      {
+        "period": "9th – 19th century",
+        "event": "Kanem-Bornu Empire",
+        "description": "One of the longest-lasting states in African history, centered around Lake Chad. A powerful Islamic empire and trans-Saharan trade hub that existed for nearly 1,000 years."
+      },
+      {
+        "period": "11th – 19th century",
+        "event": "Hausa City-States",
+        "description": "The Hausa established powerful, independent city-states including Kano, Katsina, Daura, Zaria (Zazzau), Gobir, Biram, and Rano — sophisticated urban centers of trade, scholarship, and Islamic learning."
+      },
+      {
+        "period": "13th – 19th century",
+        "event": "Oyo Empire",
+        "description": "One of the most powerful states in West African history. The Yoruba Oyo Empire controlled much of present-day southwest Nigeria, Benin Republic, and Togo. Known for its cavalry, complex bureaucracy, and the Alaafin kingship."
+      },
+      {
+        "period": "13th – 19th century",
+        "event": "Benin Kingdom",
+        "description": "One of Africa's greatest kingdoms, centered in modern-day Edo State. The Benin Kingdom was renowned for its extraordinary bronze, brass, and ivory artworks — the famous Benin Bronzes — and a sophisticated royal court under the Oba (king)."
+      },
+      {
+        "period": "15th century",
+        "event": "Contact with Europeans",
+        "description": "Portuguese traders arrived in the Benin Kingdom in 1486, marking the beginning of European contact. The slave trade from the Bight of Benin and Bight of Biafra became one of the largest sources of enslaved Africans sent to the Americas."
+      },
+      {
+        "period": "1804 – 1808",
+        "event": "Sokoto Jihad & Caliphate",
+        "description": "Usman dan Fodio led a jihad against the Hausa city-states, establishing the Sokoto Caliphate — the largest empire in Africa at the time, covering much of northern Nigeria. It transformed the religious and political landscape of the North."
+      },
+      {
+        "period": "1861 – 1914",
+        "event": "British Colonization",
+        "description": "Britain annexed Lagos in 1861, and gradually colonized the rest of Nigeria through the Royal Niger Company and military conquest. In 1914, Lord Frederick Lugard amalgamated the Northern and Southern Protectorates into one entity — 'Nigeria' — a name coined by journalist Flora Shaw."
+      },
+      {
+        "period": "October 1, 1960",
+        "event": "Independence",
+        "description": "Nigeria gained independence from Britain on October 1, 1960. Nnamdi Azikiwe became the first President (1963), while Sir Abubakar Tafawa Balewa served as the first Prime Minister."
+      },
+      {
+        "period": "1967 – 1970",
+        "event": "Nigerian Civil War (Biafran War)",
+        "description": "The Igbo-dominated southeastern region declared independence as the Republic of Biafra. The war resulted in over 1 million deaths, largely from starvation. Federal forces defeated Biafra in 1970. The war remains one of the defining traumas of Nigerian history."
+      },
+      {
+        "period": "1970s – 1990s",
+        "event": "Oil Boom & Military Rule",
+        "description": "Oil discovered in the Niger Delta transformed Nigeria into a petro-state. A succession of military governments ruled Nigeria, punctuated by coups and counter-coups. The period saw both rapid economic growth and severe political instability."
+      },
+      {
+        "period": "1999 – present",
+        "event": "Return to Democracy",
+        "description": "Nigeria returned to civilian democratic rule in 1999 under President Olusegun Obasanjo. The 4th Republic has seen successive peaceful transfers of power between political parties, marking a significant democratic milestone for the continent."
+      }
+    ]
+  },
+
+  "ethnic_groups": {
+    "total": "250+",
+    "note": "Nigeria has approximately 250–371 ethnic groups speaking over 500 languages. The three largest groups (Hausa-Fulani, Yoruba, and Igbo) account for approximately 60–70% of the population.",
+    "major": [
+      {
+        "name": "Hausa-Fulani",
+        "population_percentage": "~29%",
+        "region": "Northern Nigeria",
+        "states": ["Kano", "Katsina", "Kaduna", "Sokoto", "Kebbi", "Zamfara", "Jigawa", "Bauchi", "Borno", "Yobe", "Adamawa", "Gombe", "Taraba"],
+        "language": "Hausa",
+        "religion": "Predominantly Islam (Muslim for nearly 1,000 years)",
+        "social_structure": "Hierarchical — organized under Emirs and the Sokoto Caliphate system. Traditionally led by kings (Emirs). Strongly patriarchal and patrilineal.",
+        "origin": "The Hausa are indigenous to northern Nigeria, forming city-states over 1,000 years ago. The Fulani, originally nomadic pastoralists, migrated from the west (Senegambia/Futa Jallon) and by the 19th century merged with the Hausa through intermarriage and the Usman dan Fodio jihad.",
+        "notable_facts": [
+          "Hausa city-states (Kano, Katsina, Zaria) were major trans-Saharan trade centers",
+          "Converted to Islam from the 10th–11th century through Arab traders",
+          "Sokoto Caliphate (1804) was the largest empire in Africa at the time",
+          "Hausa is one of the most widely spoken languages in Africa (50+ million speakers)",
+          "Known for leather craft, textile dyeing (indigo), and trade"
+        ],
+        "food": ["Tuwo Shinkafa (mashed rice)", "Miyan Kuka (baobab leaf soup)", "Suya (spiced grilled meat)", "Kilishi (beef jerky)", "Masa (rice cake)", "Miyan Taushe (pumpkin soup)", "Dan Wake (bean dumplings)", "Fura da Nono (millet and milk)", "Kunu (millet drink)", "Alkubus (steamed bread)"],
+        "dressing": {
+          "men": ["Babban Riga (grand flowing robe)", "Jalabiya (kaftan)", "Shokoto (trousers)", "Fula/Hula (embroidered cap)", "Takobi (sword for royalty)"],
+          "women": ["Zani (colorful wrapper)", "Abaya (long dress)", "Hijab/Veil", "Indigo-dyed fabrics", "Colorful embroidered blouses"]
+        },
+        "marriage_traditions": [
+          "Kamu ceremony — the formal presentation and veiling of the bride",
+          "Fatihah (Nikkah) — Islamic marriage contract, traditionally conducted at the mosque after Friday prayers by men only",
+          "Sadaki — bride price paid in cash or kind to the bride's family",
+          "Walima — the post-wedding feast hosted by the groom's family",
+          "Henna (Lalle) — intricate henna decoration applied to the bride before the wedding",
+          "Daurin aure — the tying of the marriage knot ceremony",
+          "Gender-separated celebrations — men and women celebrate in separate spaces per Islamic tradition"
+        ],
+        "beliefs": [
+          "Islam (Sunni, predominantly Maliki school)",
+          "Bori spirit possession cult — a pre-Islamic spirit tradition that survived alongside Islam",
+          "Veneration of Sufi orders, particularly the Qadiriyya and Tijaniyya brotherhoods",
+          "Sheikh Usman dan Fodio revered as a great reformer and spiritual leader",
+          "Belief in jinn (spirits) and their influence on daily life"
+        ]
+      },
+      {
+        "name": "Yoruba",
+        "population_percentage": "~21%",
+        "region": "Southwestern Nigeria",
+        "states": ["Lagos", "Ogun", "Oyo", "Osun", "Ondo", "Ekiti", "Kwara (partly)", "Kogi (partly)"],
+        "language": "Yoruba (with many dialects: Oyo, Ijebu, Ekiti, Ondo, Egba, etc.)",
+        "religion": "Mixed — Christians, Muslims, and traditional Yoruba religion (Ifa/Orisha worship) often in same families",
+        "social_structure": "City-state based, each ruled by an Oba (hereditary king). Strong emphasis on family lineage, respect for elders, and age-grade associations. Historically the most urbanized Africans in precolonial times.",
+        "origin": "The Yoruba trace their origin to Ile-Ife, believed to be where the god Oduduwa descended from heaven and created the earth. The Ooni of Ife is considered the spiritual head of all Yoruba. They migrated to their present lands west of the Niger River over a millennium ago.",
+        "notable_facts": [
+          "Ile-Ife is considered the spiritual birthplace of the Yoruba and their gods",
+          "The Oyo Empire was one of the most powerful states in West Africa (13th–19th century)",
+          "Yoruba religion (Candomblé, Santería, Trinidad Orisha) spread to the Americas through the slave trade",
+          "One of the most urbanized precolonial African cultures",
+          "Yoruba diaspora is one of the largest African diaspora groups in Brazil, Cuba, and the USA"
+        ],
+        "food": ["Amala (yam flour swallow)", "Ewedu (jute leaf soup)", "Gbegiri (bean soup)", "Efo Riro (vegetable stew)", "Ofada Rice with Ayamase (green pepper stew)", "Obe Ata (pepper stew)", "Ila Alasepo (okra soup)", "Moin Moin (bean pudding)", "Akara (fried bean cake)", "Pounded Yam", "Ogi/Pap (corn porridge)", "Boli (roasted plantain)", "Adalu (bean and corn pottage)"],
+        "dressing": {
+          "men": ["Agbada (grand flowing robe — the most prestigious attire)", "Buba (loose top)", "Sokoto (trousers)", "Fila/Abeti-Aja (cap)", "Danshiki (embroidered shirt)"],
+          "women": ["Iro (wrapper/skirt)", "Buba (loose blouse)", "Gele (elaborate headwrap — a Yoruba art form)", "Ipele (shawl over shoulder)", "Aso-Oke (hand-woven prestige fabric in etu/sanyan/alaari)", "Adire (indigo tie-dye fabric, unique to Yoruba)"]
+        },
+        "marriage_traditions": [
+          "Introduction (Milo) — groom's family formally visits bride's family to ask for her hand",
+          "Bride Price (Eru Iyawo) — gifts including palm wine, kola nuts, schnapps, and money presented to bride's family",
+          "Prostration (Idobale) — groom and his men prostrate fully before bride's family as a mark of deep respect",
+          "Palm Wine ceremony — bride searches for groom in the crowd and offers him palm wine to confirm her choice",
+          "Aso-Ebi — matching fabric worn by guests of each family to signal their group affiliation",
+          "Gele tying — an elaborate headwrap is ceremonially tied on the bride",
+          "Traditional titles may be conferred on the groom by the bride's family"
+        ],
+        "beliefs": [
+          "Ifa Divination System — the Yoruba oracle system recognized by UNESCO as Intangible Cultural Heritage",
+          "Orisha worship — 401 deities including: Shango (thunder), Ogun (iron/war), Yemoja (water), Osun (river/fertility), Obatala (creation), Esu/Elegba (trickster/crossroads)",
+          "Belief in Ori — personal spiritual intuition and destiny",
+          "Egungun — ancestral masquerade tradition, believing ancestors return to interact with the living",
+          "Belief in reincarnation (Abiku — spirit children who repeatedly die young)",
+          "Oduduwa — the progenitor deity and ancestor of all Yoruba people"
+        ]
+      },
+      {
+        "name": "Igbo",
+        "population_percentage": "~18%",
+        "region": "Southeastern Nigeria",
+        "states": ["Anambra", "Imo", "Enugu", "Abia", "Ebonyi", "parts of Delta", "parts of Rivers", "parts of Benue"],
+        "language": "Igbo (with many dialects: Onitsha, Owerri, Nnewi, Abia, Nsukka, etc.)",
+        "religion": "Predominantly Christian (Catholic and Protestant), with traditional beliefs remaining important",
+        "social_structure": "Traditionally republican and decentralized — no kings or centralized rulers. Power distributed among village councils of elders (Umunna — extended patrilineal clan). Title-taking (Ozo, Nze) is a major path to social prestige.",
+        "origin": "The Igbo are believed to have originated in the Nri Kingdom, one of Nigeria's oldest kingdoms (around 900 CE). Nri is considered the spiritual homeland of the Igbo — its priests (Eze Nri) held religious authority but no military power, a unique model in African history.",
+        "notable_facts": [
+          "The Nri Kingdom (c. 900 CE) is considered the oldest kingdom in Nigeria",
+          "Traditionally republican — one of Africa's most decentralized precolonial societies",
+          "The Igbo-Ukwu bronze artifacts (9th century) prove advanced metallurgy predating the Benin Bronzes",
+          "Declared independence as the Republic of Biafra in 1967 (civil war 1967–1970)",
+          "Entrepreneurial spirit — Igbo are among the most commercially active groups in Nigeria and the diaspora"
+        ],
+        "food": ["Ofe Onugbu (bitter leaf soup)", "Ofe Oha (oha leaf soup)", "Ofe Nsala (white soup)", "Ofe Owerri (mixed vegetable soup)", "Egusi soup", "Abacha (African salad — dried shredded cassava)", "Nkwobi (spiced cow foot)", "Ugba (oil bean seed — Ukpaka)", "Okpa (Bambara nut pudding)", "Ji (yam — ceremonially important)", "Ofe Akwu (palm nut stew)", "Agidi/Ogi (corn pudding)"],
+        "dressing": {
+          "men": ["Isiagu (lion-head print shirt — chieftaincy attire)", "George wrapper (for formal occasions)", "Okpu Agu (red cap — worn by titled men)", "Isi-agu shirt with wrapper and walking stick", "Buba and wrapper"],
+          "women": ["George fabric wrapper and blouse", "Coral bead sets (Mgba — prestigious, can cost millions of naira)", "Headtie (Nkwo)", "Waist beads (Jigida) — symbolizing femininity and fertility", "Akwete cloth (handwoven, from Akwete, Abia State)"]
+        },
+        "marriage_traditions": [
+          "List presentation — groom presents a list of items (palm wine, yam, goat, drinks, money) to bride's family as bride price",
+          "Igba Nkwu / Igba Nkwu Nwanyi (wine-carrying ceremony) — the heart of the Igbo traditional wedding. The bride searches for her groom in the crowd carrying a cup of palm wine; she kneels before him and offers him the cup to confirm her acceptance",
+          "Iku Aka — formal knocking on the door by the groom's family to formally announce their intention",
+          "Oji (kola nut) — breaking and sharing kola is sacred in every Igbo gathering and ceremony",
+          "New Yam must not be eaten before the first son eats it ceremonially — yam is sacred",
+          "Bride price (Ime Ego) negotiations between families — a sign of respect, not purchase",
+          "Umunna (extended family) involvement — all family members participate, making it a community affair"
+        ],
+        "beliefs": [
+          "Chukwu/Chineke — the Supreme Being and Creator God",
+          "Chi — personal guardian spirit and destiny assigned at birth",
+          "Ala/Ana — the earth goddess, most important deity, keeper of morality and law",
+          "Agwu — deity of divination and medicine",
+          "Ancestors (Ndi Ichie) — deeply revered; believed to watch over the living",
+          "Odinani — the traditional Igbo religious and philosophical system",
+          "Masquerades (Mmanwu) — the masked ancestral spirits that return from the spirit world during festivals",
+          "Eze Nri — the sacred priest-king who could ritually cleanse murderers and individuals with spiritual offenses"
+        ]
+      },
+      {
+        "name": "Ijaw (Izon)",
+        "population_percentage": "~10%",
+        "region": "Niger Delta",
+        "states": ["Bayelsa", "Rivers", "Delta", "Ondo (partly)", "Edo (partly)", "Akwa Ibom (partly)"],
+        "language": "Ijaw / Izon (and dialects: Nembe, Kalabari, Okrika, Ibani, etc.)",
+        "religion": "Christianity (predominantly), with traditional water spirit beliefs",
+        "origin": "One of the oldest indigenous groups in Nigeria; the Ijaw have lived in the Niger Delta for over 7,000 years according to some archaeological evidence. They are among the earliest inhabitants of Nigeria.",
+        "notable_facts": [
+          "One of the oldest peoples in Nigeria, inhabiting the Delta for millennia",
+          "Powerful trading middlemen during the 18th–19th century Atlantic slave and palm oil trade",
+          "Kalabari and Nembe city-states were major trading powers",
+          "The Niger Delta oil conflict involves Ijaw communities seeking resource rights",
+          "President Goodluck Jonathan (2010–2015) was Ijaw — first Ijaw to become Nigerian president"
+        ],
+        "food": ["Banga soup (palm nut soup)", "Pepper soup (fresh fish / catfish)", "Starch (akpu)", "Owo soup", "Amiedi (palm nut and vegetable soup)", "Seafood stews (fresh fish, periwinkle, crab, shrimp)", "Igi (fermented cassava dumplings)"],
+        "dressing": {
+          "men": ["Wrapper tied at the waist", "Traditional cap", "Elaborate beaded necklaces for royalty"],
+          "women": ["Colorful wrappers and blouses", "Elaborate headties", "Coral and glass bead jewelry"]
+        },
+        "beliefs": [
+          "Owu — water spirit masquerades, deeply important in Ijaw spiritual life",
+          "Egbesu — deity of war and justice, particularly among the Western Ijaw",
+          "Belief in water spirits (Oru Engemi) that inhabit rivers and seas",
+          "Sacrifices and rituals performed at waterside shrines",
+          "Juju (traditional medicine) remains influential"
+        ]
+      },
+      {
+        "name": "Kanuri",
+        "population_percentage": "~4%",
+        "region": "Northeastern Nigeria",
+        "states": ["Borno", "Yobe"],
+        "language": "Kanuri",
+        "religion": "Islam",
+        "notable_facts": [
+          "Descendants of the ancient Kanem-Bornu Empire — one of Africa's longest-lasting kingdoms",
+          "The Shehu of Borno is their paramount ruler",
+          "Maiduguri (Borno State capital) is their cultural heartland"
+        ]
+      },
+      {
+        "name": "Tiv",
+        "population_percentage": "~3.5%",
+        "region": "North-Central / Middle Belt",
+        "states": ["Benue", "Nasarawa", "Taraba", "Plateau"],
+        "language": "Tiv",
+        "religion": "Christianity predominantly, with indigenous beliefs",
+        "notable_facts": [
+          "Known for their intricate Tiv cloth (Anger/Ange) with distinctive black and white zebra-like stripes",
+          "One of the most numerous ethnic groups in the Middle Belt",
+          "Known for the Kwagh-hir puppet theatre tradition",
+          "Richard Akura is a famous Tiv traditional leader"
+        ]
+      },
+      {
+        "name": "Ibibio",
+        "population_percentage": "~3.5%",
+        "region": "South-South",
+        "states": ["Akwa Ibom", "Cross River (partly)"],
+        "language": "Ibibio (closely related to Efik)",
+        "religion": "Christianity predominantly",
+        "notable_facts": [
+          "Known for the Ekpo masquerade society",
+          "Closely related to the Annang and Efik peoples",
+          "Akwa Ibom State is the epicenter of Ibibio culture"
+        ]
+      },
+      {
+        "name": "Edo (Bini)",
+        "population_percentage": "~3%",
+        "region": "South-South",
+        "states": ["Edo", "Delta (partly)", "Ondo (partly)"],
+        "language": "Edo (Bini)",
+        "religion": "Christianity predominantly, with indigenous royal traditions",
+        "origin": "The Edo people are the heirs of the Benin Kingdom (c. 900 CE – present), one of Africa's greatest precolonial civilizations. The Oba of Benin remains their paramount traditional ruler.",
+        "notable_facts": [
+          "Home of the famous Benin Bronzes — stolen by British forces in 1897 and currently being repatriated from world museums",
+          "The Oba of Benin is one of Africa's most ancient and respected monarchies",
+          "The Igue Festival is their most important royal festival",
+          "Benin City was described by European visitors in the 16th century as one of the world's great cities"
+        ]
+      },
+      {
+        "name": "Efik",
+        "population_percentage": "~2%",
+        "region": "South-South",
+        "states": ["Cross River", "Akwa Ibom (partly)"],
+        "language": "Efik",
+        "religion": "Christianity predominantly",
+        "notable_facts": [
+          "Calabar (Cross River State capital) is the Efik cultural heartland",
+          "Ekpe (Leopard) society — a powerful secret society with cultural and political authority",
+          "Known for the Calabar Carnival (Africa's biggest street party)",
+          "Efik cuisine (Edikang Ikong soup) is renowned across Nigeria"
+        ]
+      }
+    ]
+  },
+
+  "languages": {
+    "official": ["English"],
+    "lingua_franca": ["Nigerian Pidgin (Naija) — spoken by over 75 million Nigerians as a first or second language"],
+    "major_indigenous": [
+      {
+        "name": "Hausa",
+        "speakers": "~67 million (Nigeria) + 50+ million across West Africa",
+        "region": "Northern Nigeria",
+        "script": "Latin (official); Ajami (Arabic script — traditional)"
+      },
+      {
+        "name": "Yoruba",
+        "speakers": "~47 million",
+        "region": "Southwestern Nigeria",
+        "note": "Also spoken in Benin Republic, Togo, and diaspora communities worldwide"
+      },
+      {
+        "name": "Igbo",
+        "speakers": "~25 million",
+        "region": "Southeastern Nigeria",
+        "note": "Has over 20 recognized dialects"
+      },
+      {
+        "name": "Fulfulde (Fula)",
+        "speakers": "~13 million in Nigeria",
+        "region": "Widespread across northern Nigeria and beyond"
+      },
+      {
+        "name": "Kanuri",
+        "speakers": "~4 million",
+        "region": "Borno and Yobe States"
+      }
+    ],
+    "total_languages": "Over 520 living languages",
+    "interesting_facts": [
+      "Nigeria is the most linguistically diverse country in Africa",
+      "Nigerian Pidgin (Naija) is not officially recognized but is the most widely spoken everyday language",
+      "Each of the 36 states typically has multiple indigenous languages",
+      "The Ekpeye and Ogbia languages of the Niger Delta have fewer than 30,000 speakers each"
+    ]
+  },
+
+  "food": {
+    "summary": "Nigerian cuisine is bold, aromatic, and deeply layered — built on palm oil, crayfish, fermented locust beans (dawadawa/iru), hot peppers, and an enormous variety of leafy vegetables. Every ethnic group has its own distinct culinary tradition, but shared elements run through the whole country. 'Swallows' (dough-like balls eaten by hand, never chewed) are paired with rich soups and stews across all regions.",
+    "staple_ingredients": ["Palm oil", "Crayfish (dried)", "Locust beans (Iru/Dawadawa — fermented)", "Yam", "Cassava (Garri/Eba/Fufu)", "Plantain", "Rice", "Maize/Corn", "Millet (North)", "Sorghum (North)", "Peppers (scotch bonnet, tatashe)", "Leafy greens (bitter leaf, ugu/pumpkin leaf, spinach, waterleaf, oha, uziza)"],
+    "dishes": [
+      {
+        "name": "Jollof Rice",
+        "origin": "National / West African",
+        "description": "Nigeria's most famous dish. Rice cooked in a base of tomatoes, peppers, onions, and spices until perfectly seasoned. The subject of the West African 'Jollof Wars' with Ghana. Party Jollof (cooked over firewood) is considered the gold standard.",
+        "served_with": "Fried chicken, moin moin, plantain (dodo), coleslaw"
+      },
+      {
+        "name": "Pounded Yam",
+        "origin": "National / Yoruba",
+        "description": "Yam boiled then pounded in a mortar until smooth and stretchy. The king of Nigerian 'swallows'. Served with any soup — egusi, bitterleaf, oha, ofe nsala. Achieving the right stretchy, smooth consistency is a point of pride.",
+        "served_with": "Egusi soup, Ofe Onugbu, Ofe Nsala, Banga soup"
+      },
+      {
+        "name": "Egusi Soup",
+        "origin": "National (most popular in Igbo, Yoruba, and Edo cuisines)",
+        "description": "Thick, hearty soup made from ground melon seeds (egusi), palm oil, assorted meats, fish, crayfish, and leafy vegetables (bitter leaf, spinach, or ugu). One of Nigeria's most beloved soups.",
+        "served_with": "Pounded yam, eba, fufu, semo"
+      },
+      {
+        "name": "Suya",
+        "origin": "Hausa-Fulani (Northern Nigeria)",
+        "description": "Nigeria's most iconic street food. Thin skewers of beef (or chicken) marinated in a spice blend (yaji) of groundnut powder, chili, ginger, paprika, and other spices, then grilled over charcoal. Served with sliced raw onion and tomato.",
+        "note": "Suya spots come alive at night in every Nigerian city"
+      },
+      {
+        "name": "Amala, Ewedu, and Gbegiri",
+        "origin": "Yoruba (Oyo State)",
+        "description": "The holy trinity of Yoruba cuisine. Amala is a dark brown swallow made from dried yam flour (elubo). Ewedu is a slimy, bright green soup made from blended jute leaves. Gbegiri is a smooth, orange-colored bean soup. The three are combined in one bowl — the famous 'Abula'.",
+        "note": "This combination is particularly beloved in Ibadan and Oyo"
+      },
+      {
+        "name": "Ofe Onugbu (Bitter Leaf Soup)",
+        "origin": "Igbo (Southeastern Nigeria)",
+        "description": "A rich, dark soup made from fresh bitter leaves (washed multiple times to reduce bitterness), cocoyam (as thickener), assorted meat, stockfish, dried fish, crayfish, and palm oil. A staple at Igbo celebrations.",
+        "served_with": "Pounded yam, fufu, eba"
+      },
+      {
+        "name": "Banga Soup",
+        "origin": "Niger Delta / Urhobo / Ijaw / Itsekiri",
+        "description": "A rich, aromatic soup made by extracting the juice from palm nuts (banga). Has a distinctive red-orange color and is seasoned with scent leaves, oburunbebe stick, atama leaves, and other Delta-specific spices. One of Nigeria's most complex soups.",
+        "served_with": "Starch (akpu), semo, or eaten with rice as 'Banga Rice'"
+      },
+      {
+        "name": "Tuwo Shinkafa",
+        "origin": "Hausa-Fulani (Northern Nigeria)",
+        "description": "A thick, moldable rice pudding made by mashing cooked rice until it becomes dough-like. The northern equivalent of pounded yam. Served with Northern soups.",
+        "served_with": "Miyan Kuka, Miyan Taushe, Okra soup"
+      },
+      {
+        "name": "Miyan Kuka",
+        "origin": "Hausa-Fulani",
+        "description": "A distinctive Northern soup made from powdered dried baobab leaves and dried okra. Has a slimy, earthy texture and deep flavor. A staple in Hausa-Fulani households.",
+        "served_with": "Tuwo shinkafa or tuwo masara"
+      },
+      {
+        "name": "Abacha (African Salad)",
+        "origin": "Igbo (particularly Anambra and Enugu)",
+        "description": "Shredded dried cassava soaked in water, then dressed with palm oil, ugba (oil bean seeds), potash, crayfish, onion, utazi leaves, and assorted fish or meat. Served cold as a side dish or snack. A beloved Igbo street food.",
+        "note": "Often served at Igbo celebrations and funerals"
+      },
+      {
+        "name": "Nkwobi",
+        "origin": "Igbo",
+        "description": "Spicy cow foot (or cow leg) cooked in a rich sauce of palm oil, utazi leaves, potash, ehuru (calabash nutmeg), and peppers. Served in a traditional wooden bowl (orokpo). A popular bar food and restaurant delicacy.",
+        "served_with": "Palm wine, beer, or pepper soup"
+      },
+      {
+        "name": "Ofada Rice with Ayamase",
+        "origin": "Yoruba (Ogun State — Ofada town)",
+        "description": "Locally grown unpolished Nigerian rice with a slightly earthy, nutty flavor, served with Ayamase — a controversial green pepper-based designer stew made with green scotch bonnets, locust beans, and assorted meats. Very spicy and intensely flavorful.",
+        "note": "Traditionally wrapped and served in banana leaves ('ewe ofada')"
+      },
+      {
+        "name": "Edikang Ikong",
+        "origin": "Efik / Ibibio (Cross River & Akwa Ibom)",
+        "description": "Considered one of Nigeria's most nutritious soups. Made with a combination of ugu (pumpkin leaves) and waterleaf, cooked with assorted meats, periwinkles, dried fish, and palm oil. A celebration of the richness of Cross River cooking.",
+        "served_with": "Pounded yam, fufu, eba"
+      },
+      {
+        "name": "Moin Moin",
+        "origin": "Yoruba / National",
+        "description": "Steamed bean pudding made from blended black-eyed peas, peppers, onion, and crayfish. Can be enriched with egg, fish, beef, or corned beef. Served as a side dish or main snack. Beloved across all Nigerian ethnic groups.",
+        "served_with": "Jollof rice, Garri and Groundnut, or eaten alone"
+      },
+      {
+        "name": "Pepper Soup",
+        "origin": "National (every ethnic group has a version)",
+        "description": "A light, intensely spicy broth made with aromatic pepper soup spices (ehuru, uda, uziza seeds), scotch bonnets, and various proteins — catfish, goat meat, chicken, cow leg, or offal. The ultimate Nigerian comfort food. Served at births, funerals, and cold evenings.",
+        "note": "Each region has its signature version — catfish pepper soup is the most famous"
+      },
+      {
+        "name": "Kilishi",
+        "origin": "Hausa-Fulani",
+        "description": "Thin slices of beef marinated in a paste of groundnut, spices, and peppers, then dried in the sun and grilled. The northern Nigerian equivalent of beef jerky. A famous snack and souvenir from Kano.",
+        "note": "Kano and Bauchi produce the finest Kilishi in Nigeria"
+      },
+      {
+        "name": "Akara",
+        "origin": "Yoruba (now eaten across Nigeria and West Africa)",
+        "description": "Deep-fried balls of blended black-eyed peas, peppers, and onions. Crispy on the outside, soft inside. The classic Nigerian breakfast street food — eaten with pap (ogi/akamu) or bread.",
+        "note": "The Yoruba also call the northern version 'Kosai'"
+      },
+      {
+        "name": "Efo Riro",
+        "origin": "Yoruba",
+        "description": "A rich vegetable stew made with tete (spinach) or soko leaves, palm oil, locust beans (iru), crayfish, assorted meat, and peppers. One of the most nutritious and beloved Yoruba dishes.",
+        "served_with": "Pounded yam, amala, eba"
+      },
+      {
+        "name": "Okpa",
+        "origin": "Igbo (particularly Enugu)",
+        "description": "A dense, satisfying pudding made from Bambara nut (okpa) flour, palm oil, peppers, and crayfish. Steamed in banana leaves or plastic bags. The most popular breakfast food in Enugu — sold in the streets from the early morning.",
+        "note": "Known as the 'Enugu breakfast' — you cannot leave Enugu without trying Okpa"
+      },
+      {
+        "name": "Garri (Eba)",
+        "origin": "National — particularly South",
+        "description": "Garri is dried, roasted cassava granules — the most consumed food in Nigeria. When soaked in cold water with groundnuts and sugar, it becomes a beloved snack. When stirred into hot water, it becomes 'Eba' — the most widely eaten swallow in Nigeria.",
+        "note": "Eating Garri and Groundnut with cold water is a national experience"
+      }
+    ],
+    "drinks": [
+      {"name": "Palm Wine (Emu/Nkwu enu)", "description": "Naturally fermented sap tapped from oil or raffia palm trees. Slightly alcoholic, sweet when fresh, more sour as it ferments. Sacred in Igbo ceremonies."},
+      {"name": "Zobo (Hibiscus Drink)", "description": "Deep red drink made from dried hibiscus (roselle) petals, ginger, and spices. Very popular nationwide. Can be served chilled."},
+      {"name": "Kunu", "description": "A mildly fermented northern drink made from millet, sorghum, or maize. Can be plain or spiced with ginger and cloves."},
+      {"name": "Fura da Nono", "description": "Northern Nigeria's most beloved refreshment. Spiced millet balls (fura) dissolved in fresh cow's milk (nono). Sold by Fulani women across the North."},
+      {"name": "Pito", "description": "Traditional beer brewed from sorghum or millet, popular in Middle Belt and Northern Nigeria."},
+      {"name": "Burukutu", "description": "A stronger traditional beer made from fermented sorghum, particularly popular in Benue and Plateau States."}
+    ]
+  },
+
+  "dressing": {
+    "summary": "Nigerian fashion is one of the most vibrant and globally influential in Africa. From hand-woven Aso-Oke to the bold Ankara prints, from the flowing Agbada to the regal Isiagu, Nigerian traditional attire carries deep cultural meaning while constantly evolving with modern global fashion trends.",
+    "national_fabrics": [
+      {
+        "name": "Ankara (African Wax Print)",
+        "description": "Brightly colored, boldly patterned wax-resist fabric. Though produced industrially (originally Dutch/Indonesian), it has become synonymous with Nigerian and African identity. Used by all ethnic groups for everything from casual to formal wear.",
+        "note": "The most widely used fabric in modern Nigerian fashion"
+      },
+      {
+        "name": "Aso-Oke",
+        "origin": "Yoruba",
+        "description": "Hand-woven prestige fabric, considered the most prestigious traditional textile in Nigeria. Comes in three classic colors: etu (deep blue-black), sanyan (beige/ivory), and alaari (rich magenta). Worn at weddings, coronations, and major ceremonies.",
+        "made_in": "Iseyin, Oyo State is the most famous Aso-Oke weaving center"
+      },
+      {
+        "name": "George Fabric",
+        "origin": "Used predominantly by Igbo and Niger Delta peoples",
+        "description": "Heavy, luxurious imported fabric (originally from India) with a distinctive sheen. Used by Igbo women for traditional weddings and formal ceremonies. Comes in many colors and patterns."
+      },
+      {
+        "name": "Akwete Cloth",
+        "origin": "Igbo (Akwete, Abia State)",
+        "description": "Traditional hand-woven cloth from the Akwete village in Abia State. Features bold geometric patterns. Used in traditional ceremonies and increasingly in modern fashion."
+      },
+      {
+        "name": "Adire",
+        "origin": "Yoruba",
+        "description": "Traditional Yoruba tie-dye fabric, typically in indigo blue. Two main techniques: Adire eleko (starch resist) and Adire oniko (tied resist). Abeokuta in Ogun State is the capital of Adire production.",
+        "note": "Experiencing a major global fashion revival"
+      },
+      {
+        "name": "Ange/Anger Cloth",
+        "origin": "Tiv (Benue State)",
+        "description": "Distinctive black and white striped hand-woven cloth worn by the Tiv people. The zebra-like stripes are immediately recognizable."
+      }
+    ],
+    "traditional_attire": {
+      "yoruba": {
+        "men": {
+          "formal": "Agbada — a three-piece set of grand flowing outer robe, buba (inner top), and sokoto (trousers). Often worn with a fila (embroidered cap). The pinnacle of Yoruba male elegance.",
+          "everyday": "Buba and sokoto with a fila",
+          "note": "Embroidery quality and fabric type indicate social status"
+        },
+        "women": {
+          "formal": "Iro (wrapper) + Buba (top) + Gele (headwrap) + Ipele (shoulder shawl), made from Aso-Oke or George fabric",
+          "note": "The Gele is an art form — skilled Gele tiers are highly sought after for weddings"
+        }
+      },
+      "hausa_fulani": {
+        "men": {
+          "formal": "Babban Riga — a grand embroidered floor-length robe with very wide sleeves, worn over a kaftan and shokoto trousers. The embroidery (zari work) around the neck and chest indicates status.",
+          "cap": "Fula/Hula — embroidered cap",
+          "note": "The most elaborate embroidery can take weeks to complete by hand"
+        },
+        "women": {
+          "formal": "Wrapper (zani/abaya) with matching blouse and hijab/veil. Indigo-dyed fabrics are traditional.",
+          "henna": "Intricate lalle (henna) designs on hands and feet for celebrations"
+        }
+      },
+      "igbo": {
+        "men": {
+          "formal": "Isiagu (lion-head print shirt) + George fabric wrapper + Okpu Agu (red cap, worn by titled men only) + walking stick",
+          "note": "The red Okpu Agu is a symbol of achievement and traditional title"
+        },
+        "women": {
+          "formal": "George fabric wrapper + blouse + beaded headtie + multiple strands of coral beads (Mgba) + waist beads (Jigida)",
+          "note": "Coral bead sets are family heirlooms, passed from mother to daughter"
+        }
+      }
+    },
+    "modern_fashion": {
+      "summary": "Nigeria is Africa's undisputed fashion capital. Lagos hosts Africa's most influential fashion week (Lagos Fashion Week). Nigerian designers like Lisa Folawiyo, Deola Sagoe, Mai Atafo, and Adama Paris have global followings.",
+      "trends": [
+        "Ankara fusion — traditional Ankara fabric in contemporary cuts",
+        "Aso-Ebi culture — matching fabric for wedding parties (now a continental trend)",
+        "Gender-fluid traditional styling",
+        "Bridal Agbada for grooms",
+        "Couture Gele — heavily beaded and architecturally structured headwraps",
+        "Streetwear blending Naija identity with global trends"
+      ]
+    },
+    "wedding_styles": {
+      "yoruba_bride": "Aso-Oke fabric in buba + iro + elaborate Gele; coral beads and gold jewelry",
+      "igbo_bride": "Rich George fabric wrapper and blouse; beaded crown (Ogodo); coral bead necklaces and bracelets; Jigida waist beads",
+      "hausa_bride": "Lace or silk gown; Kamu ceremony headdress; intricate lalle (henna) on hands and feet; colorful veils",
+      "national_trend": "Aso-Ebi — matching fabrics worn by both families. Brides often have two different traditional wedding outfits for entrance and later change"
+    }
+  },
+
+  "marriage_traditions": {
+    "overview": "Marriage in Nigeria is fundamentally a union of two families, not just two individuals. The process typically involves multiple ceremonies — a traditional (customary) wedding, a religious ceremony (church or mosque), and often a reception. The traditional wedding is considered the most culturally significant. Bride price (a token of respect and appreciation, not a purchase) is universal across Nigerian cultures.",
+    "common_elements": [
+      "Bride price / Dowry — varies by ethnic group; involves gifts of money, drinks (schnapps, wine), kola nuts, and other items presented to the bride's family",
+      "Family involvement — both extended families must consent and actively participate",
+      "Aso-Ebi — matching fabrics worn by each family's supporters",
+      "Multiple ceremony phases — introduction, traditional wedding, and religious/court wedding",
+      "Music, dance, and elaborate feasting are central to all Nigerian weddings",
+      "Kola nut — sacred at all Nigerian formal gatherings; breaking and sharing kola precedes any serious discussion"
+    ],
+    "by_ethnicity": {
+      "yoruba": {
+        "key_ceremony": "The palm wine presentation (Itori/Eru Iyawo). The bride searches for her groom among the guests carrying a cup of palm wine. When she finds him, she kneels before him and offers the cup — his drinking from it is her public acceptance of him.",
+        "prostration": "The groom and his men must prostrate fully (lie face down) before the bride's family as a sign of deep respect — a defining feature of Yoruba weddings",
+        "bride_price": "Eru Iyawo — an elaborate list including schnapps, palm wine, kola nuts, obi abata (bitter kola), orogbo (bitter berry), obi (kola nut), honey, money, fabric"
+      },
+      "igbo": {
+        "key_ceremony": "Igba Nkwu (wine-carrying ceremony) — the bride searches for her groom in the crowd while carrying palm wine. When she finds him, she kneels and offers him the cup. His drinking confirms acceptance. She then returns to pour wine for her father, who passes the cup to the groom.",
+        "bride_price": "Formal list presentation negotiated between families; includes yams, palm wine, goats, drinks, and money. The Iku Aka (knocking) ceremony formally opens negotiations.",
+        "kola_nut": "Obi (kola nut) must be presented and broken at every stage — it is the highest form of Igbo hospitality and prayer"
+      },
+      "hausa": {
+        "key_ceremony": "Fatihah (Nikkah) — the Islamic marriage contract. Traditionally conducted at the mosque by a Malam (Islamic scholar). The bride is represented by her Wali (guardian, usually her father).",
+        "kamu": "A ceremony where the bride is unveiled to the groom's family. Women sing traditional songs and the bride's female relatives and friends celebrate.",
+        "sadaki": "A token bride price paid to the bride directly, not her family — an Islamic requirement",
+        "walima": "The post-wedding feast hosted by the groom's family — obligatory in Islamic tradition"
+      }
+    }
+  },
+
+  "beliefs": {
+    "overview": "Nigeria is roughly equally divided between Christianity (~50%) and Islam (~50%), with indigenous traditional beliefs remaining vital across all groups — often practiced alongside or woven into both major religions (syncretism). The saying goes: 'A Nigerian prays in the mosque in the morning, goes to church on Sunday, and consults the traditional healer when nothing else works.'",
+    "christianity": {
+      "denominations": ["Catholic", "Anglican (Church of Nigeria)", "Methodist", "Baptist", "Pentecostal/Charismatic (dominant since 1980s)"],
+      "major_churches": ["Redeemed Christian Church of God (RCCG) — one of the world's largest churches", "Winners' Chapel (Living Faith Church)", "Church of God Mission", "Mountain of Fire and Miracles Ministries"],
+      "note": "Nigeria is home to some of the world's largest Pentecostal churches. The Redemption Camp on the Lagos-Ibadan expressway hosts millions during annual conventions."
+    },
+    "islam": {
+      "denomination": "Predominantly Sunni (Maliki school)",
+      "sufi_orders": ["Qadiriyya", "Tijaniyya"],
+      "note": "12 northern states practice Sharia law (criminal code) as of 1999–2000. Islam arrived in Hausaland from the 10th–11th century through trans-Saharan trade routes."
+    },
+    "traditional_religions": {
+      "yoruba": {
+        "name": "Ifa/Orisha Tradition",
+        "supreme_being": "Olodumare / Olorun",
+        "divination": "Ifa — a complex divination system using a divining chain (opele) or palm nuts (ikin). Recognized by UNESCO as Intangible Cultural Heritage.",
+        "major_deities": [
+          "Eshu/Elegba — deity of the crossroads, messenger of all gods",
+          "Ogun — deity of iron, war, and labor",
+          "Shango — deity of thunder and lightning, deified Oyo king",
+          "Yemoja — mother of all waters",
+          "Osun — deity of the river, love, and fertility",
+          "Obatala — deity of creation and purity, maker of human bodies",
+          "Oya — deity of storms, wind, and transformation",
+          "Orunmila — deity of wisdom and knowledge, patron of Ifa divination"
+        ],
+        "masquerades": "Egungun — ancestral masquerades; Gelede — masquerades honoring women's power; Oro — male-only secret society",
+        "diaspora": "Yoruba religion traveled to the Americas as Candomblé (Brazil), Santería/Lucumí (Cuba/Caribbean), and Trinidad Orisha through enslaved Yoruba people"
+      },
+      "igbo": {
+        "name": "Odinani",
+        "supreme_being": "Chukwu (the Great God) / Chineke (Creator)",
+        "key_concepts": [
+          "Ala — earth goddess, most important deity, keeper of morality",
+          "Chi — personal guardian spirit assigned at birth",
+          "Agwu — deity of divination and medicine",
+          "Anyanwu — the sun deity",
+          "Amadioha — deity of thunder and lightning",
+          "Ikenga — personal deity of achievement and industry (carved wooden shrine)"
+        ],
+        "masquerades": "Mmanwu — masked ancestral spirits that emerge during festivals to judge the community, settle disputes, and celebrate. Feared and respected."
+      },
+      "other": {
+        "bori": "A spirit possession tradition of the Hausa-Fulani that predates Islam and coexists with it",
+        "owu": "Water spirit masquerades of the Ijaw people",
+        "ekpe": "Leopard society of the Efik and Cross River peoples — historically the most powerful sociopolitical institution in the region",
+        "ogboni": "A powerful secret society among the Yoruba and some Igbo, associated with earth worship and political authority"
+      }
+    }
+  },
+
+  "festivals": [
+    {
+      "name": "Osun-Osogbo Festival",
+      "ethnic_group": "Yoruba",
+      "state": "Osun State",
+      "location": "Osogbo (Osun-Osogbo Sacred Grove, UNESCO World Heritage Site)",
+      "month": "August",
+      "duration": "Two weeks",
+      "description": "A sacred festival dedicated to Osun, the Yoruba river goddess of fertility, water, and love. Held at the 700-year-old sacred grove along the Osun River. Begins with Iwopopo (cleansing of the city), followed by the lighting of the ancient 16-point lamp, and culminates in a procession to the river shrine led by the Arugba — a virgin of royal lineage who carries a sacred calabash of offerings on her head. Attracts thousands of Osun worshippers and tourists from around the world.",
+      "highlights": ["Arugba procession (virgin calabash-carrier)", "Iwopopo (city cleansing ceremony)", "Lighting of the Ina Olojumerindinlogun (500-year-old lamp)", "Traditional drumming and dance", "Iboriade (crowns of past rulers assembled for blessings)"],
+      "unesco_status": "The Osun-Osogbo Sacred Grove is a UNESCO World Heritage Site"
+    },
+    {
+      "name": "Durbar Festival",
+      "ethnic_group": "Hausa-Fulani",
+      "states": ["Kano", "Kaduna", "Zaria", "Katsina"],
+      "month": "Eid al-Fitr (after Ramadan) and Eid al-Adha",
+      "duration": "1–3 days",
+      "description": "One of Nigeria's most visually spectacular events. A grand royal cavalry procession in which the Emir and his horsemen, dressed in elaborate historic armor, robes, and headdresses, parade through the city. Riders demonstrate equestrian skills at full gallop before the Emir. Originally a military review, it evolved into the grandest celebration of northern Nigerian culture.",
+      "highlights": ["Grand cavalry parade", "Turbaned horsemen in medieval armor", "Emir's royal procession", "Traditional music (goge, kakaki trumpets, drums)", "Colorful costumes and flags"],
+      "note": "The Kano Durbar is the most famous and elaborate; the procession at the Kano Emirate Palace is unmissable"
+    },
+    {
+      "name": "New Yam Festival (Iri Ji / Iwa Ji)",
+      "ethnic_group": "Igbo",
+      "states": ["Anambra", "Imo", "Enugu", "Abia", "Ebonyi"],
+      "month": "August – October (varies by community)",
+      "duration": "1–3 days",
+      "description": "The most important festival in Igbo culture. Celebrates the harvest of the new yam — yam is sacred to the Igbo and no one may eat the new yam before it is formally presented to the gods and ancestors. The traditional ruler ceremonially eats the first yam of the season, followed by community feasting, traditional music, Mmanwu (masquerade) displays, and wrestling competitions. A time of communal thanksgiving and cultural pride.",
+      "highlights": ["Ceremonial first eating of new yam by the Eze/Obi", "Mmanwu (ancestral masquerades)", "Traditional wrestling (Mgba)", "Community feasting and celebrations", "Title-taking ceremonies sometimes held concurrently"]
+    },
+    {
+      "name": "Eyo Festival (Adamu Orisha Play)",
+      "ethnic_group": "Yoruba (Lagos Indigenes / Isale-Eko)",
+      "state": "Lagos State",
+      "location": "Lagos Island (procession from Carter Bridge to Iga Idunganran Palace)",
+      "month": "Variable (often May)",
+      "duration": "1 day",
+      "description": "One of Lagos' most iconic cultural events. Thousands of 'Eyo' masquerades dress in flowing white robes and tall hats (agogo), carrying staffs (opambata), and parade through the streets of Lagos Island. Traditionally held to honor a deceased Oba (king) or notable figure and to ease their passage to the spirit world. No hats may be worn by spectators during the festival.",
+      "highlights": ["Thousands of white-robed Eyo masquerades", "Grand procession through Lagos Island", "Different conclaves (groups) representing different Lagos quarters", "Chanting, drumming, and traditional songs"],
+      "note": "Widely believed to be the forerunner of the modern Brazilian carnival — through the Yoruba diaspora"
+    },
+    {
+      "name": "Argungu Fishing Festival",
+      "ethnic_group": "Hausa (Kebbi Kingdom)",
+      "state": "Kebbi State",
+      "location": "Argungu, on the Sokoto-Kebbi River",
+      "month": "February/March",
+      "duration": "4 days",
+      "description": "One of Nigeria's oldest and most famous festivals, dating to 1934 (though its roots are much older), celebrating the end of the historic enmity between the Sokoto Caliphate and the Kebbi Kingdom. Thousands of fishermen plunge into the river simultaneously, using only traditional hand nets and calabash floats, competing to catch the largest fish within 45 minutes. The largest catch wins. Accompanied by swimming competitions, traditional music, crafts, and cultural displays.",
+      "highlights": ["Mass fishing competition — thousands of men enter the river simultaneously", "The winner with the largest fish is celebrated", "Boat races and canoe competitions", "Traditional music and cultural displays"],
+      "note": "Fish weighing over 40kg have been caught at this festival"
+    },
+    {
+      "name": "Ojude Oba Festival",
+      "ethnic_group": "Yoruba (Ijebu people)",
+      "state": "Ogun State",
+      "location": "Ijebu-Ode",
+      "month": "Third day after Eid al-Adha (Ileya)",
+      "description": "Meaning 'Festival in the King's Court', this annual festival was established in 1892 when the Ijebu Muslims celebrated the Awujale's benevolence in granting them land for a mosque. Age-grade groups (Regberegbes) parade in matching outfits before the Awujale (king of Ijebu), paying homage with music, dance, and horseback riding. Known for spectacular displays of Yoruba fashion — described as a 'fashion runway meets royal court'.",
+      "highlights": ["Regberegbe age-grade parades in matching traditional attire", "Spectacular horseback riding displays", "Elaborate fashion and jewelry", "Prayers and homage to the Awujale"]
+    },
+    {
+      "name": "Calabar Carnival",
+      "ethnic_group": "Efik / Cross River peoples",
+      "state": "Cross River State",
+      "location": "Calabar",
+      "month": "December (entire month)",
+      "duration": "Month-long (peak on December 26–28)",
+      "description": "Billed as 'Africa's Biggest Street Party'. A month-long carnival and cultural festival showcasing Nigerian creativity through music, dance, elaborate costumes, and cultural performances. Competing carnival bands parade through Calabar's streets in extravagant costumes. Draws hundreds of thousands of visitors annually.",
+      "highlights": ["Competing carnival bands in spectacular costumes", "Live music performances", "Cultural masquerades and dances", "Food and craft exhibitions"],
+      "note": "The Calabar Carnival is the most commercially significant festival in Nigeria in terms of tourism"
+    },
+    {
+      "name": "Igue Festival",
+      "ethnic_group": "Edo (Bini)",
+      "state": "Edo State",
+      "location": "Benin City",
+      "month": "December",
+      "duration": "One week",
+      "description": "The most sacred royal festival of the Benin Kingdom. The Oba of Benin performs ancient rituals to renew his spiritual powers and bless his subjects for the coming year. Involves elaborate royal processions, ancestral prayers, and the display of the Oba's royal regalia. Chieftaincy titles may be conferred. A living link to the ancient Benin Kingdom's traditions.",
+      "highlights": ["Oba's royal procession and regalia", "Ancestral prayers and rituals", "Traditional music and dances", "Chieftaincy title ceremonies"]
+    },
+    {
+      "name": "Sango Festival (World Sango Festival)",
+      "ethnic_group": "Yoruba",
+      "state": "Oyo State",
+      "location": "Oyo (Palace of the Alaafin of Oyo)",
+      "month": "August",
+      "description": "Annual festival honoring Shango, the Yoruba deity of thunder and lightning, and the 4th Alaafin (King) of Oyo who was deified. The festival is observed in over 40 countries worldwide where the Yoruba diaspora spread (particularly Brazil, Cuba, and the Caribbean). Features possession rituals by Sango devotees, fire displays, thunderstone artifacts, and elaborate traditional music.",
+      "highlights": ["Shango devotee possession dances", "Thunderstone (edun ara) ceremonies", "Batakoto drumming", "International Yoruba diaspora participation"]
+    },
+    {
+      "name": "Ofala Festival",
+      "ethnic_group": "Igbo (Onitsha)",
+      "state": "Anambra State",
+      "location": "Onitsha",
+      "month": "October/November",
+      "description": "One of the oldest Igbo royal festivals. Celebrated by the Obi (king) of Onitsha to mark the beginning of a new Igbo year (Igu Aro), affirm his authority, and bless his people. The Obi appears in full regalia to receive homage from his subjects. Chieftaincy titles are conferred. Features ancestral masquerades, traditional dances, and a display of wealth and cultural pride.",
+      "highlights": ["Obi of Onitsha in full royal regalia", "Chieftaincy title conferment", "Ancestral masquerades (Mmanwu)", "Royal dances and music"]
+    },
+    {
+      "name": "Olojo Festival",
+      "ethnic_group": "Yoruba (Ile-Ife)",
+      "state": "Osun State",
+      "location": "Ile-Ife",
+      "month": "September/October",
+      "description": "One of the most ancient Yoruba festivals, celebrating 'the day of the first dawn' — the day Ogun, the first son of Oduduwa, descended to earth with iron tools. The Ooni of Ife (spiritual head of all Yoruba) emerges from seclusion wearing the sacred Are Crown — worn only once a year. The Are Crown is considered the most sacred regalia in all of Yorubaland.",
+      "highlights": ["Ooni of Ife wearing the sacred Are Crown (once per year)", "Procession through Ile-Ife", "Traditional worship of Ogun", "Cultural dances and music"]
+    }
+  ],
+
+  "music_and_pop_culture": {
+    "summary": "Nigeria is the undisputed music capital of Africa. Afrobeats — the global genre born from Lagos — has conquered the world's major music charts, collaborated with international superstars, and brought African music to billions of listeners. Nigeria also birthed Nollywood, the world's second-largest film industry by volume.",
+    "genres": [
+      {
+        "name": "Afrobeats",
+        "description": "The dominant genre of the 21st century — an umbrella term for contemporary Nigerian pop music blending highlife, R&B, hip-hop, dancehall, and electronic music with distinctly Nigerian rhythms and melodies. Born in Lagos, it now dominates global music charts.",
+        "pioneers": ["Fela Kuti (Afrobeat — the original, with a 't')", "King Sunny Ade", "Ebenezer Obey"],
+        "modern_stars": ["Burna Boy (Grammy winner)", "Wizkid (Grammy collaborator)", "Davido", "Asake", "Rema", "Fireboy DML", "Omah Lay", "Tems (Grammy winner)", "Ckay", "Ayra Starr"],
+        "global_impact": "Collaborated with Beyoncé, Drake, Ed Sheeran, Justin Bieber, Chris Brown, and many others. Dominated Spotify and Apple Music charts globally."
+      },
+      {
+        "name": "Afrobeat (Original)",
+        "founder": "Fela Anikulapo Kuti (1938–1997)",
+        "description": "The original genre created by Fela Kuti — a fusion of Yoruba music, jazz, funk, highlife, and politically charged lyrics. A weapon against military dictatorship and social injustice. Different from modern 'Afrobeats'. Fela is Nigeria's greatest musical legend.",
+        "key_works": ["Zombie (1977)", "Lady (1972)", "Shakara (1972)", "Water No Get Enemy", "Sorrow Tears and Blood"]
+      },
+      {
+        "name": "Highlife",
+        "description": "One of the oldest West African popular genres, blending traditional Nigerian rhythms with Western brass band music. Developed in the early 20th century, popular in Igbo and Yoruba communities. The grandfather of modern Afrobeats.",
+        "legends": ["Cardinal Rex Lawson", "Oliver De Coque", "Chief Stephen Osita Osadebe", "Celestine Ukwu"]
+      },
+      {
+        "name": "Jùjú Music",
+        "description": "A Yoruba guitar-based popular music genre developed in the 1920s. Characterised by talking drums, guitar, and Yoruba vocals. Made famous internationally by King Sunny Ade.",
+        "legends": ["King Sunny Ade", "Ebenezer Obey", "Sir Shina Peters"]
+      },
+      {
+        "name": "Fuji Music",
+        "description": "Yoruba Muslim music genre born from Ajisari (Muslim pre-dawn wake-up calls during Ramadan). Very fast-paced, percussive, and competitive. Hugely popular in Lagos.",
+        "legends": ["Alhaji Sikiru Ayinde Barrister (founder)", "Wasiu Ayinde Marshal (K1 de Ultimate)", "Saheed Osupa"]
+      },
+      {
+        "name": "Naija Hip-Hop",
+        "description": "Nigerian hip-hop that blends American rap with Pidgin English, Yoruba, Igbo, and Hausa. Emerged in the 1990s–2000s and continues to grow.",
+        "stars": ["M.I Abaga", "Olamide", "Vector", "Falz", "Phyno", "Reminisce", "Eedris Abdulkareem"]
+      },
+      {
+        "name": "Afropop / Afroswing",
+        "description": "Lighter, danceable pop music with African melodies and contemporary production. Hugely popular in clubs and streaming platforms.",
+        "stars": ["Davido", "Wizkid", "Ckay", "Fireboy DML", "Zinoleesky"]
+      },
+      {
+        "name": "Apala",
+        "description": "Traditional Yoruba Muslim percussion music, using the gangan (talking drum) and sekere (beaded gourd rattle). Developed by Haruna Ishola in the 1940s.",
+        "legend": "Haruna Ishola"
+      }
+    ],
+    "legendary_artists": [
+      {
+        "name": "Fela Anikulapo Kuti",
+        "genre": "Afrobeat",
+        "era": "1960s – 1997",
+        "legacy": "The greatest Nigerian musician of all time. A revolutionary artist and activist who used music to fight military dictatorship. Founded the Kalakuta Republic commune. His music influenced hip-hop, funk, jazz, and contemporary Afrobeats globally. His son Femi Kuti and grandson Made Kuti carry on the tradition."
+      },
+      {
+        "name": "King Sunny Ade",
+        "genre": "Jùjú Music",
+        "era": "1960s – present",
+        "legacy": "Brought Jùjú music to global audiences. Grammy-nominated. Known as the 'Minister of Enjoyment'."
+      },
+      {
+        "name": "Miriam Makeba (honorary mention — sang Nigerian music)",
+        "note": "While South African, Makeba championed African music globally"
+      }
+    ],
+    "current_stars": [
+      {"name": "Burna Boy", "full_name": "Damini Ebunoluwa Ogulu", "hometown": "Port Harcourt", "genre": "Afrobeats / Afrofusion", "achievement": "Grammy Award winner (2021, Best Global Music Album — 'Twice as Tall'). Self-styled 'African Giant'."},
+      {"name": "Wizkid", "full_name": "Ayodeji Ibrahim Balogun", "hometown": "Lagos (Ojuelegba)", "genre": "Afrobeats", "achievement": "Grammy Award winner (2021, Best Music Video — 'Brown Skin Girl' with Beyoncé). 'Starboy'."},
+      {"name": "Davido", "full_name": "David Adedeji Adeleke", "hometown": "Lagos/Atlanta", "genre": "Afrobeats", "achievement": "One of Afrobeats' biggest global stars. Known for anthems like 'Fall', 'IF', 'Assurance'."},
+      {"name": "Tems", "full_name": "Temilade Openiyi", "hometown": "Lagos", "genre": "Afrofusion / R&B / Soul", "achievement": "Grammy Award winner (2023, Best Melodic Rap Performance — with Future & Drake). First Nigerian female Grammy winner."},
+      {"name": "Asake", "full_name": "Ahmed Ololade", "hometown": "Lagos", "genre": "Afrobeats / Street-pop", "achievement": "One of the fastest-rising artists of the 2020s. Known for blending Fuji rhythms with contemporary pop."},
+      {"name": "Rema", "full_name": "Divine Ikubor", "hometown": "Benin City", "genre": "Afrobeats", "achievement": "'Calm Down' became one of the most-streamed Afrobeats songs globally, duetting with Selena Gomez."},
+      {"name": "Ckay", "full_name": "Chukwuka Ekweani", "hometown": "Enugu", "genre": "Afropop", "achievement": "'Love Nwantiti' became the most-streamed African song in history (2021)."},
+      {"name": "Ayra Starr", "full_name": "Oyinkansola Sarah Aderibigbe", "hometown": "Cotonou/Lagos", "genre": "Afropop / R&B", "achievement": "One of the leading voices of the new generation of Nigerian female artists."},
+      {"name": "Olamide", "full_name": "Olamide Adedeji", "hometown": "Lagos (Bariga/Isale Eko)", "genre": "Naija Hip-Hop / Street-pop", "achievement": "The king of the Nigerian streets. Built YBNL Nation label. Discovered Fireboy DML, Asake, and many others."},
+      {"name": "Falz", "full_name": "Folarin Falana", "hometown": "Lagos", "genre": "Conscious Hip-Hop", "achievement": "Nigeria's most socially conscious rapper. Son of human rights lawyer Femi Falana. Known for 'This is Nigeria'."}
+    ],
+    "nollywood": {
+      "name": "Nollywood",
+      "rank": "World's 2nd largest film industry by volume (number of films produced annually)",
+      "note": "Nollywood produces approximately 2,500 films per year — surpassed only by Bollywood (India)",
+      "history": "Nollywood began in 1992 with the release of 'Living in Bondage' (directed by Chris Obi Rapu), which pioneered the direct-to-video format that made films affordable and widely accessible",
+      "legends": ["Pete Edochie", "Genevieve Nnaji", "Omotola Jalade-Ekeinde", "Richard Mofe-Damijo (RMD)", "Patience Ozokwor", "Ngozi Ezeonu", "Ramsey Nouah"],
+      "modern_stars": ["Genevieve Nnaji", "Funke Akindele", "Toyin Abraham", "Mercy Johnson", "Odunlade Adekola", "Timini Egbuson"],
+      "global_impact": "Netflix has invested heavily in Nollywood. 'Lion Heart' by Genevieve Nnaji (2018) was the first Nigerian film selected for the Oscars foreign film category. 'Lionheart' was acquired by Netflix in 2018 for a record $3.8 million."
+    },
+    "comedy": {
+      "note": "Nigerian stand-up comedy and skit-making has exploded globally through social media",
+      "stars": ["AY Makun", "Basketmouth", "Bovi", "Mr Macaroni (Debo Adedayo)", "Craze Clown", "Mark Angel", "Taaooma", "Sydney Talker"]
+    }
+  },
+
+  "administrative_divisions": {
+    "structure": "36 States + Federal Capital Territory (Abuja)",
+    "geopolitical_zones": [
+      {
+        "zone": "North West",
+        "states": [
+          {"name": "Jigawa", "capital": "Dutse"},
+          {"name": "Kaduna", "capital": "Kaduna"},
+          {"name": "Kano", "capital": "Kano"},
+          {"name": "Katsina", "capital": "Katsina"},
+          {"name": "Kebbi", "capital": "Birnin Kebbi"},
+          {"name": "Sokoto", "capital": "Sokoto"},
+          {"name": "Zamfara", "capital": "Gusau"}
+        ],
+        "dominant_group": "Hausa-Fulani",
+        "religion": "Predominantly Muslim",
+        "notable": "Kano is the commercial hub of northern Nigeria; Sokoto is the seat of the Sokoto Caliphate"
+      },
+      {
+        "zone": "North East",
+        "states": [
+          {"name": "Adamawa", "capital": "Yola"},
+          {"name": "Bauchi", "capital": "Bauchi"},
+          {"name": "Borno", "capital": "Maiduguri"},
+          {"name": "Gombe", "capital": "Gombe"},
+          {"name": "Taraba", "capital": "Jalingo"},
+          {"name": "Yobe", "capital": "Damaturu"}
+        ],
+        "dominant_group": "Kanuri (Borno), Fulani, Hausa, and over 40 smaller groups",
+        "religion": "Predominantly Muslim",
+        "notable": "Borno State was the seat of the Kanem-Bornu Empire; one of Africa's longest-lasting kingdoms"
+      },
+      {
+        "zone": "North Central (Middle Belt)",
+        "states": [
+          {"name": "Benue", "capital": "Makurdi"},
+          {"name": "Kogi", "capital": "Lokoja"},
+          {"name": "Kwara", "capital": "Ilorin"},
+          {"name": "Nasarawa", "capital": "Lafia"},
+          {"name": "Niger", "capital": "Minna"},
+          {"name": "Plateau", "capital": "Jos"},
+          {"name": "FCT (Abuja)", "capital": "Abuja"}
+        ],
+        "dominant_groups": "Tiv (Benue), Igala (Kogi), Nupe (Niger), Gbagyi, many others",
+        "religion": "Mix of Christianity and Islam",
+        "notable": "Lokoja (Kogi) is where the Niger and Benue Rivers meet — historic first capital of Nigeria; Jos (Plateau) is known as Nigeria's 'home of peace and tourism'"
+      },
+      {
+        "zone": "South West",
+        "states": [
+          {"name": "Ekiti", "capital": "Ado-Ekiti"},
+          {"name": "Lagos", "capital": "Ikeja"},
+          {"name": "Ogun", "capital": "Abeokuta"},
+          {"name": "Ondo", "capital": "Akure"},
+          {"name": "Osun", "capital": "Osogbo"},
+          {"name": "Oyo", "capital": "Ibadan"}
+        ],
+        "dominant_group": "Yoruba",
+        "religion": "Mixed (Christianity, Islam, traditional beliefs)",
+        "notable": "Lagos is Africa's most populous city and financial capital; Ile-Ife (Osun State) is the spiritual homeland of the Yoruba; Ibadan is one of Africa's largest cities by area"
+      },
+      {
+        "zone": "South East",
+        "states": [
+          {"name": "Abia", "capital": "Umuahia"},
+          {"name": "Anambra", "capital": "Awka"},
+          {"name": "Ebonyi", "capital": "Abakaliki"},
+          {"name": "Enugu", "capital": "Enugu"},
+          {"name": "Imo", "capital": "Owerri"}
+        ],
+        "dominant_group": "Igbo",
+        "religion": "Predominantly Christian",
+        "notable": "Anambra is Nigeria's leading commercial state after Lagos; Nnewi is Nigeria's industrial hub; Owerri is a major entertainment city ('Owu Capital of Nigeria')"
+      },
+      {
+        "zone": "South South (Niger Delta)",
+        "states": [
+          {"name": "Akwa Ibom", "capital": "Uyo"},
+          {"name": "Bayelsa", "capital": "Yenagoa"},
+          {"name": "Cross River", "capital": "Calabar"},
+          {"name": "Delta", "capital": "Asaba"},
+          {"name": "Edo", "capital": "Benin City"},
+          {"name": "Rivers", "capital": "Port Harcourt"}
+        ],
+        "dominant_groups": "Ijaw, Ibibio, Efik, Edo (Bini), Urhobo, Isoko, Itsekiri, Ogoni, Annang",
+        "religion": "Predominantly Christian",
+        "notable": "This zone produces the bulk of Nigeria's oil wealth. Port Harcourt is the oil capital. Benin City is home to the ancient Benin Kingdom. Calabar is Nigeria's tourism capital."
+      }
+    ]
+  },
+
+  "proverbs_and_wisdom": [
+    {
+      "proverb": "Ọjọ́ tí a bá ń sunkún, a máa ń rọra.",
+      "language": "Yoruba",
+      "meaning": "The day we cry is usually a slow day.",
+      "lesson": "Grief slows everything down; take life one step at a time."
+    },
+    {
+      "proverb": "Onye wetara oji wetara ndụ.",
+      "language": "Igbo",
+      "meaning": "He who brings kola nut brings life.",
+      "lesson": "Hospitality and respect are the foundation of life and community."
+    },
+    {
+      "proverb": "Mutum ya fi duniya girma, amma duniya ba ta fi shi ba.",
+      "language": "Hausa",
+      "meaning": "A man may consider himself greater than the world, but the world is not smaller than him.",
+      "lesson": "Humility is essential — no man is bigger than the world around him."
+    },
+    {
+      "proverb": "Agwa bụ mma — Character is beauty.",
+      "language": "Igbo",
+      "meaning": "Character is beauty.",
+      "lesson": "True beauty lies in a person's character, not their appearance."
+    },
+    {
+      "proverb": "Bi a bá mọ ibí tí ìpàdé wà, a óò máa yára pàdé.",
+      "language": "Yoruba",
+      "meaning": "If we know where rain would beat us, we would not allow it.",
+      "lesson": "Wisdom and foresight prevent problems."
+    },
+    {
+      "proverb": "Ina wuta a kan ransa — Fire burns on its own fuel.",
+      "language": "Hausa",
+      "meaning": "Fire feeds on itself.",
+      "lesson": "Anger and conflict consume those who start them."
+    },
+    {
+      "proverb": "Igwe bụ ike.",
+      "language": "Igbo",
+      "meaning": "Unity is strength.",
+      "lesson": "There is power in numbers and community solidarity."
+    },
+    {
+      "proverb": "Ẹni tó bá pa ẹja ìgbà oru, kì í jẹ ẹ ní òwurọ̀.",
+      "language": "Yoruba",
+      "meaning": "He who kills a fish at night does not eat it in the morning.",
+      "lesson": "Patience — the fruits of hard work may not come immediately."
+    }
+  ],
+
+  "travel_and_places": {
+    "note": "Nigeria has some of West Africa's most compelling destinations — from ancient kingdoms to modern megacities, rainforests, savannas, and a stunning coastline.",
+    "must_visit": [
+      {
+        "name": "Osun-Osogbo Sacred Grove",
+        "state": "Osun State",
+        "type": "UNESCO World Heritage Site",
+        "description": "A sacred forest along the Osun River, one of the last such groves that once bordered all Yoruba cities. Home to shrines, sculptures, and the annual Osun-Osogbo Festival. A UNESCO World Heritage Site and a deeply spiritual place.",
+        "best_time": "August (festival) but beautiful year-round"
+      },
+      {
+        "name": "Lagos",
+        "state": "Lagos State",
+        "type": "Megacity / Cultural Hub",
+        "description": "Africa's most populous city and its undisputed pop culture capital. Home to the Afrobeats industry, Nollywood, incredible street food, Victoria Island's nightlife, the Lekki Conservation Centre, Nike Art Gallery, and Eko Atlantic (the new city being built into the ocean).",
+        "hidden_gems": ["Badagry (slave history and beaches)", "Seme Border market", "Epe waterfront"]
+      },
+      {
+        "name": "Benin City & Benin Kingdom",
+        "state": "Edo State",
+        "type": "Ancient Kingdom / Cultural Heritage",
+        "description": "One of Africa's greatest precolonial cities. The seat of the ancient Benin Kingdom, famed for the Benin Bronzes (some of Africa's greatest artworks, currently being repatriated from world museums). The Oba's Palace and the National Museum Benin are must-visits.",
+        "must_see": ["Oba's Palace", "National Museum Benin", "Ancient Earthwork Walls (UNESCO tentative)"]
+      },
+      {
+        "name": "Yankari National Park",
+        "state": "Bauchi State",
+        "type": "Wildlife / Nature",
+        "description": "Nigeria's premier game reserve and one of the finest in West Africa. Home to elephants, lions, baboons, warthogs, buffalo, and over 350 bird species. Also features the Wikki Warm Springs — natural thermal pools perfect for swimming.",
+        "highlight": "Wikki Warm Springs — crystal-clear natural thermal springs"
+      },
+      {
+        "name": "Abuja",
+        "state": "Federal Capital Territory",
+        "type": "Capital City",
+        "description": "Nigeria's purpose-built capital (opened 1991). Home to Aso Rock (the distinctive granite monolith), the Nigerian National Mosque and National Christian Centre, the Zuma Rock (nicknamed 'the gateway to Abuja'), Millennium Park, and the Transcorp Hilton.",
+        "must_see": ["Aso Rock", "Zuma Rock", "National Mosque", "Millennium Park"]
+      },
+      {
+        "name": "Obudu Mountain Resort",
+        "state": "Cross River State",
+        "type": "Nature / Tourism",
+        "description": "One of Nigeria's most beautiful natural destinations, located on the Obudu Plateau near the Cameroon border at 1,576m elevation. Features lush highland vegetation, a cable car ride, waterfalls, and cool temperatures — a refreshing escape from the heat.",
+        "note": "Often called 'Nigeria's Switzerland' for its cool highland climate"
+      },
+      {
+        "name": "Ile-Ife",
+        "state": "Osun State",
+        "type": "Cultural / Spiritual Heritage",
+        "description": "The spiritual homeland of the Yoruba people — where Oduduwa is said to have created the earth. Home to the Ooni's Palace, the Ife Museum (containing priceless terracotta and bronze heads), the Ore Grove (ancient sacred site), and Obafemi Awolowo University (one of Africa's most beautiful campuses).",
+        "note": "Every Yoruba festival has roots in Ile-Ife"
+      },
+      {
+        "name": "Kano",
+        "state": "Kano State",
+        "type": "Ancient City / Cultural Heritage",
+        "description": "Nigeria's second-largest city and one of Africa's oldest and most historic cities. Home to the ancient Kano City Walls (15th century), the Gidan Makama Museum, the Kurmi Market (one of West Africa's oldest markets, trading for over 1,000 years), and the famous Kofar Mata Dye Pits (dyeing indigo cloth for centuries).",
+        "must_see": ["Kurmi Market", "Kofar Mata Dye Pits", "Emir's Palace", "Kano City Walls"]
+      },
+      {
+        "name": "Cross River National Park (Oban Hills)",
+        "state": "Cross River State",
+        "type": "Rainforest / Biodiversity",
+        "description": "Part of the most biodiverse rainforest in West Africa. Home to chimpanzees, forest elephants, drill monkeys, and hundreds of bird species. One of Nigeria's most important conservation areas.",
+        "note": "The Drill Ranch at Calabar rehabilitates endangered drill monkeys"
+      }
+    ],
+    "budget_tips": [
+      "Lagos to Abuja by bus (₦5,000–₦8,000) is cheaper than flying (₦25,000+) but takes 8–10 hours",
+      "Buka (local canteen) meals are the most authentic and affordable — from ₦500–₦2,000 per plate",
+      "Dangote Cement-colored danfo buses in Lagos are the cheapest way to move around the city",
+      "The best suya is always from roadside spots after dark — not restaurants"
+    ],
+    "safety_tips": [
+      "Abuja and Port Harcourt GRA are generally the safest areas for visitors",
+      "Avoid driving at night on unfamiliar interstate routes",
+      "Use only licensed taxis or ride-hailing apps (Bolt, InDriver) in major cities",
+      "Keep vigilant in markets and crowded areas — pickpocketing exists in busy spots",
+      "Always respect local customs — dress modestly when visiting mosques or traditional palaces"
+    ]
+  }
+}
