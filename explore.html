@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore — Frica | Africa's Living Cultural Magazine</title>
+  <meta name="description" content="Explore Africa through stories, myths, inventions, diaspora spotlights, trending culture, and random discoveries from the world's richest continent." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:         #0d0f0a;
+      --bg-card:    #131610;
+      --bg-raise:   #1a1e14;
+      --gold:       #c8952a;
+      --gold-light: #e8b84b;
+      --gold-dim:   rgba(200,149,42,0.13);
+      --green:      #2a4a2e;
+      --green-mid:  #3d6b43;
+      --cream:      #f0e8d5;
+      --text:       #e8e0cc;
+      --text-muted: rgba(232,224,204,0.45);
+      --text-soft:  rgba(232,224,204,0.72);
+      --border:     rgba(200,149,42,0.18);
+      --border-dim: rgba(232,224,204,0.07);
+      --red:        #c0392b;
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  20px;
+      --radius-xl:  32px;
+      --nav-h:      68px;
+      --t:          0.28s;
+    }
+
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-weight:400; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button { cursor:pointer; border:none; background:none; font-family:inherit; }
+    ul { list-style:none; }
+
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--gold); border-radius:3px; }
+
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity:0.03; pointer-events:none; z-index:9999; }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    .nav { position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:1000; background:rgba(13,15,10,0.94); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dim); display:flex; align-items:center; padding:0 clamp(1.25rem,4vw,3rem); transition:border-color var(--t); }
+    .nav.scrolled { border-color:var(--border); }
+    .nav-inner { width:100%; max-width:1400px; margin:0 auto; display:flex; align-items:center; gap:2rem; }
+    .logo { display:flex; align-items:center; gap:.6rem; flex-shrink:0; }
+    .logo-mark { width:36px; height:36px; background:var(--gold); border-radius:8px; display:grid; place-items:center; font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:#0d0f0a; }
+    .logo-text { font-family:'Playfair Display',serif; font-weight:700; font-size:1.4rem; color:var(--cream); }
+    .logo-text span { color:var(--gold); }
+    .nav-links { display:flex; align-items:center; gap:.25rem; flex:1; }
+    .nav-links a { padding:.45rem .85rem; border-radius:var(--radius-sm); font-size:.875rem; font-weight:500; color:var(--text-soft); transition:color var(--t),background var(--t); }
+    .nav-links a:hover { color:var(--cream); background:var(--border-dim); }
+    .nav-links a.active { color:var(--gold-light); }
+    .nav-right { display:flex; align-items:center; gap:.75rem; margin-left:auto; }
+    .hamburger { display:none; flex-direction:column; gap:5px; padding:8px; border-radius:var(--radius-sm); }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--text-soft); border-radius:2px; transition:var(--t); }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .mobile-menu { display:none; position:fixed; top:var(--nav-h); left:0; right:0; background:rgba(13,15,10,0.97); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); z-index:999; padding:1.5rem clamp(1.25rem,4vw,3rem); flex-direction:column; gap:.5rem; animation:slideDown .25s ease; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { padding:.75rem 1rem; border-radius:var(--radius-sm); font-size:1rem; font-weight:500; color:var(--text-soft); transition:var(--t); border-bottom:1px solid var(--border-dim); }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { color:var(--cream); background:var(--border-dim); }
+    @keyframes slideDown { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .page-hero { padding-top:calc(var(--nav-h) + 3rem); padding-bottom:2.5rem; padding-inline:clamp(1.25rem,4vw,3rem); position:relative; overflow:hidden; }
+    .hero-orb { position:absolute; border-radius:50%; filter:blur(100px); opacity:.18; pointer-events:none; }
+    .orb1 { width:700px; height:700px; background:radial-gradient(circle,var(--green-mid),transparent); top:-20%; left:-10%; }
+    .orb2 { width:500px; height:500px; background:radial-gradient(circle,rgba(200,149,42,.5),transparent); bottom:-15%; right:3%; }
+    .orb3 { width:350px; height:350px; background:radial-gradient(circle,rgba(192,57,43,.3),transparent); top:10%; right:25%; }
+    .hero-grid { position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(200,149,42,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(200,149,42,.035) 1px,transparent 1px); background-size:60px 60px; mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent); }
+
+    .hero-inner { max-width:1400px; margin:0 auto; position:relative; z-index:1; }
+
+    .hero-top-row { display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; margin-bottom:2.5rem; }
+
+    .hero-badge { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem 1rem; background:var(--gold-dim); border:1px solid var(--border); border-radius:999px; font-size:.78rem; font-weight:500; color:var(--gold-light); letter-spacing:.08em; text-transform:uppercase; margin-bottom:1rem; }
+    .badge-dot { width:6px; height:6px; background:var(--gold); border-radius:50%; animation:pulse 2s ease infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
+
+    .hero-title { font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(2.4rem,5vw,4rem); color:var(--cream); line-height:1.08; letter-spacing:-.02em; }
+    .hero-title em { font-style:italic; color:var(--gold-light); }
+
+    /* Random discovery button */
+    .discover-btn { display:flex; align-items:center; gap:.75rem; padding:.85rem 1.75rem; background:linear-gradient(135deg,var(--green),var(--green-mid)); border:1px solid rgba(61,107,67,.5); border-radius:var(--radius-xl); font-size:.9rem; font-weight:700; color:var(--cream); transition:var(--t); flex-shrink:0; }
+    .discover-btn:hover { transform:scale(1.03); box-shadow:0 8px 24px rgba(42,74,46,.4); }
+    .discover-btn-icon { font-size:1.2rem; transition:transform .4s ease; }
+    .discover-btn:hover .discover-btn-icon { transform:rotate(180deg); }
+
+    /* Category filter row */
+    .category-row { display:flex; gap:.5rem; overflow-x:auto; scrollbar-width:none; padding-bottom:.25rem; }
+    .category-row::-webkit-scrollbar { display:none; }
+    .cat-pill { display:flex; align-items:center; gap:.4rem; padding:.45rem 1rem; border-radius:999px; border:1px solid var(--border-dim); font-size:.8rem; font-weight:600; color:var(--text-muted); background:transparent; white-space:nowrap; flex-shrink:0; transition:var(--t); cursor:pointer; }
+    .cat-pill:hover { color:var(--cream); border-color:var(--border); background:var(--border-dim); }
+    .cat-pill.active { background:var(--gold); color:#0d0f0a; border-color:transparent; }
+
+    /* ── MAIN LAYOUT ─────────────────────────────────────────── */
+    .main-wrap { padding:0 clamp(1.25rem,4vw,3rem) 6rem; }
+    .main-inner { max-width:1400px; margin:0 auto; display:grid; grid-template-columns:1fr 320px; gap:2.5rem; align-items:start; }
+
+    /* ── FEED ────────────────────────────────────────────────── */
+    .feed { display:flex; flex-direction:column; gap:3rem; }
+
+    /* Section header */
+    .feed-section-hd { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem; }
+    .feed-section-label { display:inline-flex; align-items:center; gap:.5rem; font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); }
+    .feed-section-label::before { content:''; display:block; width:20px; height:1.5px; background:var(--gold); }
+    .feed-section-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1.35rem; color:var(--cream); margin-top:.3rem; }
+    .feed-section-link { font-size:.78rem; font-weight:600; color:var(--gold-light); display:flex; align-items:center; gap:.3rem; transition:gap var(--t); }
+    .feed-section-link:hover { gap:.6rem; }
+
+    /* ── FEATURED STORY ──────────────────────────────────────── */
+    .featured-story { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-xl); overflow:hidden; transition:var(--t); cursor:pointer; position:relative; }
+    .featured-story::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--green-mid),var(--gold),var(--red)); }
+    .featured-story:hover { border-color:var(--border); box-shadow:0 20px 50px rgba(0,0,0,.5); }
+
+    .story-body { padding:2.5rem; }
+    .story-category { font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); margin-bottom:.85rem; display:flex; align-items:center; gap:.5rem; }
+    .story-category::before { content:''; width:20px; height:1.5px; background:var(--gold); }
+    .story-title { font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(1.5rem,3.5vw,2.2rem); color:var(--cream); line-height:1.15; letter-spacing:-.02em; margin-bottom:1rem; }
+    .story-title em { font-style:italic; color:var(--gold-light); }
+    .story-lead { font-size:1rem; color:var(--text-soft); line-height:1.8; margin-bottom:1.5rem; max-width:680px; }
+    .story-meta { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+    .story-flag { font-size:1.4rem; }
+    .story-country { font-size:.82rem; color:var(--text-muted); font-weight:500; }
+    .story-read { display:inline-flex; align-items:center; gap:.4rem; font-size:.82rem; font-weight:700; color:var(--gold-light); transition:gap var(--t); }
+    .story-read:hover { gap:.7rem; }
+
+    .story-aside { padding:2rem 2.5rem; border-top:1px solid var(--border-dim); background:rgba(42,74,46,.08); display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .story-aside-item { }
+    .story-aside-num { font-family:'Playfair Display',serif; font-weight:700; font-size:1.6rem; color:var(--gold-light); line-height:1; }
+    .story-aside-label { font-size:.72rem; color:var(--text-muted); margin-top:.25rem; }
+
+    /* ── MASONRY CARD GRID ───────────────────────────────────── */
+    .card-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+
+    .card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); cursor:pointer; position:relative; }
+    .card::before { content:''; position:absolute; top:0; left:0; right:0; height:2.5px; background:var(--card-color,var(--gold)); opacity:0; transition:opacity var(--t); border-radius:2px 2px 0 0; }
+    .card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,.4); }
+    .card:hover::before { opacity:1; }
+    .card.tall { grid-row:span 2; }
+    .card.wide { grid-column:span 2; }
+
+    .card-inner { padding:1.5rem; height:100%; display:flex; flex-direction:column; }
+    .card-emoji { font-size:1.75rem; margin-bottom:.85rem; display:block; }
+    .card-cat { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--card-color,var(--gold)); margin-bottom:.35rem; }
+    .card-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); line-height:1.3; margin-bottom:.5rem; }
+    .card-desc { font-size:.8rem; color:var(--text-muted); line-height:1.65; flex:1; }
+    .card-foot { margin-top:1rem; padding-top:.85rem; border-top:1px solid var(--border-dim); display:flex; align-items:center; justify-content:space-between; }
+    .card-tag { font-size:.68rem; font-weight:500; padding:.2rem .55rem; border-radius:var(--radius-sm); background:var(--border-dim); color:var(--text-muted); }
+    .card-flag { font-size:1rem; }
+
+    /* ── MYTHS & FOLKLORE ────────────────────────────────────── */
+    .myth-stack { display:flex; flex-direction:column; gap:1rem; }
+
+    .myth-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.75rem; transition:var(--t); cursor:pointer; position:relative; overflow:hidden; }
+    .myth-card::after { content:'"'; position:absolute; bottom:-1.5rem; right:1rem; font-family:'Playfair Display',serif; font-size:10rem; color:rgba(200,149,42,.05); line-height:1; pointer-events:none; }
+    .myth-card:hover { border-color:var(--border); transform:translateX(4px); }
+
+    .myth-header { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1rem; }
+    .myth-icon { width:44px; height:44px; border-radius:10px; background:var(--myth-bg,rgba(200,149,42,.12)); display:grid; place-items:center; font-size:1.2rem; flex-shrink:0; }
+    .myth-cat { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--myth-color,var(--gold)); margin-bottom:.25rem; }
+    .myth-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; color:var(--cream); line-height:1.3; }
+    .myth-origin { font-size:.72rem; color:var(--text-muted); margin-top:.15rem; }
+    .myth-body { font-size:.84rem; color:var(--text-soft); line-height:1.75; }
+    .myth-moral { margin-top:.85rem; padding:.75rem 1rem; background:var(--bg-raise); border-radius:var(--radius-md); border-left:2.5px solid var(--myth-color,var(--gold)); font-size:.78rem; color:var(--text-muted); line-height:1.6; }
+    .myth-moral strong { color:var(--gold-light); }
+
+    /* ── INVENTIONS & FIRSTS ─────────────────────────────────── */
+    .inventions-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr)); gap:1rem; }
+
+    .invention-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.5rem; transition:var(--t); position:relative; overflow:hidden; }
+    .invention-card::before { content:attr(data-num); position:absolute; top:-.75rem; right:.75rem; font-family:'Playfair Display',serif; font-weight:900; font-size:5rem; color:rgba(200,149,42,.06); line-height:1; pointer-events:none; }
+    .invention-card:hover { border-color:var(--border); background:var(--bg-raise); }
+
+    .invention-type { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:.6rem; }
+    .invention-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; color:var(--cream); margin-bottom:.4rem; line-height:1.3; }
+    .invention-origin { font-size:.75rem; color:var(--text-muted); display:flex; align-items:center; gap:.3rem; margin-bottom:.7rem; }
+    .invention-desc { font-size:.82rem; color:var(--text-soft); line-height:1.65; }
+    .invention-impact { margin-top:.85rem; font-size:.75rem; color:var(--green-mid); font-weight:600; display:flex; align-items:center; gap:.35rem; }
+    .invention-impact::before { content:'→'; }
+
+    /* ── DIASPORA SPOTLIGHT ──────────────────────────────────── */
+    .diaspora-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr)); gap:1rem; }
+
+    .diaspora-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); }
+    .diaspora-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.4); }
+
+    .diaspora-header { padding:1.5rem; border-bottom:1px solid var(--border-dim); background:linear-gradient(135deg,var(--dc-bg,rgba(200,149,42,.08)),transparent); display:flex; align-items:center; gap:1rem; }
+    .diaspora-avatar { width:52px; height:52px; border-radius:12px; background:linear-gradient(135deg,var(--da1,#2e7d5e),var(--da2,#c8952a)); display:grid; place-items:center; font-size:1.5rem; flex-shrink:0; }
+    .diaspora-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; color:var(--cream); }
+    .diaspora-field { font-size:.72rem; color:var(--gold); font-family:'DM Mono',monospace; letter-spacing:.06em; margin-top:.15rem; }
+    .diaspora-origins { font-size:.72rem; color:var(--text-muted); margin-top:.1rem; }
+
+    .diaspora-body { padding:1.25rem 1.5rem 1.5rem; }
+    .diaspora-desc { font-size:.84rem; color:var(--text-soft); line-height:1.7; margin-bottom:.85rem; }
+    .diaspora-quote { font-family:'Playfair Display',serif; font-style:italic; font-size:.88rem; color:var(--cream); line-height:1.6; padding:.75rem 1rem; background:var(--bg-raise); border-radius:var(--radius-md); border-left:2.5px solid var(--gold); }
+
+    /* ── RANDOM DISCOVERY MODAL ──────────────────────────────── */
+    .disco-overlay { position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,.9); backdrop-filter:blur(16px); display:none; align-items:center; justify-content:center; padding:1.5rem; }
+    .disco-overlay.open { display:flex; }
+
+    .disco-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); width:100%; max-width:600px; overflow:hidden; animation:discoIn .4s cubic-bezier(0.34,1.56,0.64,1); position:relative; }
+    @keyframes discoIn { from{opacity:0;transform:scale(.85) rotate(-2deg)} to{opacity:1;transform:scale(1) rotate(0)} }
+
+    .disco-header { padding:2rem 2rem 1.5rem; background:linear-gradient(135deg,var(--green),rgba(200,149,42,.2)); border-bottom:1px solid var(--border-dim); position:relative; }
+    .disco-close { position:absolute; top:1rem; right:1rem; width:30px; height:30px; border-radius:8px; background:rgba(0,0,0,.3); color:var(--cream); display:grid; place-items:center; font-size:.8rem; cursor:pointer; transition:var(--t); }
+    .disco-close:hover { background:rgba(0,0,0,.6); }
+    .disco-type { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); margin-bottom:.5rem; }
+    .disco-emoji { font-size:3rem; display:block; margin-bottom:.75rem; }
+    .disco-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1.6rem; color:var(--cream); line-height:1.2; }
+    .disco-origin { font-size:.8rem; color:var(--text-muted); margin-top:.35rem; }
+
+    .disco-body { padding:1.75rem 2rem; }
+    .disco-text { font-size:.92rem; color:var(--text-soft); line-height:1.8; margin-bottom:1.25rem; }
+    .disco-fact { padding:1rem; background:var(--bg-raise); border:1px solid var(--border-dim); border-radius:var(--radius-md); font-size:.82rem; color:var(--text-muted); line-height:1.65; }
+    .disco-fact strong { color:var(--gold-light); }
+
+    .disco-footer { padding:1.25rem 2rem; border-top:1px solid var(--border-dim); display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .disco-again { display:flex; align-items:center; gap:.5rem; padding:.65rem 1.5rem; background:var(--gold); color:#0d0f0a; border-radius:var(--radius-lg); font-size:.88rem; font-weight:700; transition:var(--t); }
+    .disco-again:hover { background:var(--gold-light); }
+    .disco-dismiss { font-size:.82rem; color:var(--text-muted); transition:color var(--t); }
+    .disco-dismiss:hover { color:var(--cream); }
+
+    /* ── SIDEBAR ─────────────────────────────────────────────── */
+    .sidebar { display:flex; flex-direction:column; gap:1.25rem; position:sticky; top:calc(var(--nav-h) + 2rem); }
+
+    .side-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; }
+    .side-card-title { padding:1rem 1.25rem; font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--border-dim); }
+
+    /* Trending topics */
+    .trending-list { }
+    .trending-item { display:flex; align-items:center; gap:.85rem; padding:.85rem 1.25rem; border-bottom:1px solid var(--border-dim); cursor:pointer; transition:var(--t); }
+    .trending-item:last-child { border-bottom:none; }
+    .trending-item:hover { background:var(--bg-raise); }
+    .trending-rank { font-family:'DM Mono',monospace; font-size:.65rem; color:var(--text-muted); width:16px; flex-shrink:0; }
+    .trending-info { flex:1; }
+    .trending-name { font-size:.84rem; font-weight:600; color:var(--cream); }
+    .trending-sub  { font-size:.72rem; color:var(--text-muted); margin-top:.1rem; }
+    .trending-arrow { color:var(--text-muted); font-size:.75rem; opacity:0; transition:opacity var(--t); }
+    .trending-item:hover .trending-arrow { opacity:1; }
+
+    /* This week in Africa */
+    .week-list { padding:1rem 1.25rem; display:flex; flex-direction:column; gap:.75rem; }
+    .week-item { }
+    .week-date { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.08em; color:var(--gold); margin-bottom:.2rem; }
+    .week-event { font-size:.82rem; color:var(--text-soft); line-height:1.55; }
+    .week-where { font-size:.7rem; color:var(--text-muted); margin-top:.15rem; }
+
+    /* Bookmarks sidebar */
+    .bookmarks-body { padding:1rem 1.25rem; }
+    .bm-empty { font-size:.82rem; color:var(--text-muted); text-align:center; padding:.75rem; }
+    .bm-item { display:flex; align-items:center; gap:.6rem; padding:.5rem .65rem; border-radius:var(--radius-sm); background:var(--bg-raise); border:1px solid var(--border-dim); font-size:.8rem; color:var(--text-soft); cursor:pointer; transition:var(--t); margin-bottom:.4rem; }
+    .bm-item:hover { border-color:var(--border); color:var(--cream); }
+    .bm-remove { margin-left:auto; font-size:.65rem; color:var(--text-muted); padding:.1rem .3rem; border-radius:3px; transition:var(--t); }
+    .bm-remove:hover { background:var(--border-dim); color:var(--red); }
+
+    /* Africa numbers */
+    .numbers-grid { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; padding:1rem 1.25rem; }
+    .number-item { background:var(--bg-raise); border:1px solid var(--border-dim); border-radius:var(--radius-md); padding:.85rem; text-align:center; }
+    .number-val { font-family:'Playfair Display',serif; font-weight:700; font-size:1.35rem; color:var(--gold-light); line-height:1; }
+    .number-label { font-size:.7rem; color:var(--text-muted); margin-top:.25rem; line-height:1.4; }
+
+    /* ── AFRICA THIS WEEK ─────────────────────────────────────── */
+    .week-feed { display:grid; grid-template-columns:1fr 1fr; gap:.85rem; }
+    .week-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-md); padding:1.25rem; transition:var(--t); }
+    .week-card:hover { border-color:var(--border); background:var(--bg-raise); }
+    .week-card-top { display:flex; align-items:center; gap:.6rem; margin-bottom:.6rem; }
+    .week-card-emoji { font-size:1.25rem; }
+    .week-card-type { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); }
+    .week-card-title { font-weight:700; font-size:.88rem; color:var(--cream); margin-bottom:.35rem; line-height:1.3; }
+    .week-card-desc { font-size:.75rem; color:var(--text-muted); line-height:1.6; }
+    .week-card-where { font-size:.7rem; color:var(--text-muted); margin-top:.5rem; display:flex; align-items:center; gap:.3rem; }
+
+    /* ── BACK TOP + FOOTER ───────────────────────────────────── */
+    .back-top { position:fixed; bottom:2rem; right:2rem; width:44px; height:44px; background:var(--gold); color:#0d0f0a; border-radius:10px; display:grid; place-items:center; cursor:pointer; opacity:0; transform:translateY(10px); transition:opacity var(--t),transform var(--t),background var(--t); z-index:500; box-shadow:0 4px 20px rgba(200,149,42,.35); }
+    .back-top.show { opacity:1; transform:translateY(0); }
+    .back-top:hover { background:var(--gold-light); }
+    .footer { background:var(--bg-card); border-top:1px solid var(--border-dim); padding:2.5rem clamp(1.25rem,4vw,3rem); }
+    .footer-inner { max-width:1400px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; font-size:.82rem; color:var(--text-muted); }
+    .footer-links { display:flex; gap:1.5rem; }
+    .footer-links a { color:var(--text-muted); transition:color var(--t); }
+    .footer-links a:hover { color:var(--gold-light); }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width:1100px) { .main-inner { grid-template-columns:1fr; } .sidebar { position:static; display:grid; grid-template-columns:1fr 1fr; } }
+    @media (max-width:768px)  { .nav-links { display:none; } .hamburger { display:flex; } .card-grid { grid-template-columns:1fr; } .card.tall,.card.wide { grid-row:auto; grid-column:auto; } .week-feed { grid-template-columns:1fr; } .story-aside { grid-template-columns:1fr 1fr; } .sidebar { grid-template-columns:1fr; } }
+    @media (max-width:520px)  { .inventions-grid { grid-template-columns:1fr; } .diaspora-grid { grid-template-columns:1fr; } .numbers-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">F</div>
+        <span class="logo-text">Fr<span>i</span>ca</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="explore.html" class="active">Explore</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="countries.html">🌍 Countries</a>
+    <a href="culture.html">🎭 Culture</a>
+    <a href="learn.html">📖 Learn</a>
+    <a href="discover.html">🧭 Discover</a>
+    <a href="explore.html">✨ Explore</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-orb orb3"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-top-row">
+        <div>
+          <div class="hero-badge"><div class="badge-dot"></div> Africa's Living Cultural Magazine</div>
+          <h1 class="hero-title">Explore <em>everything</em><br />Africa has to offer</h1>
+        </div>
+        <button class="discover-btn" id="randomBtn">
+          <span class="discover-btn-icon">🎲</span>
+          Random Discovery
+        </button>
+      </div>
+      <div class="category-row" id="categoryRow">
+        <button class="cat-pill active" data-cat="all">✨ All</button>
+        <button class="cat-pill" data-cat="history">🏛️ History</button>
+        <button class="cat-pill" data-cat="music">🎵 Music</button>
+        <button class="cat-pill" data-cat="food">🍛 Food</button>
+        <button class="cat-pill" data-cat="myths">🌙 Myths</button>
+        <button class="cat-pill" data-cat="inventions">💡 Inventions</button>
+        <button class="cat-pill" data-cat="diaspora">🌍 Diaspora</button>
+        <button class="cat-pill" data-cat="nature">🦁 Nature</button>
+        <button class="cat-pill" data-cat="royalty">👑 Royalty</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-wrap">
+    <div class="main-inner">
+
+      <!-- FEED -->
+      <div class="feed" id="mainFeed">
+
+        <!-- ── FEATURED STORY ── -->
+        <section>
+          <div class="feed-section-hd">
+            <div><div class="feed-section-label">Editor's pick</div><div class="feed-section-title">Featured Story</div></div>
+          </div>
+          <div class="featured-story" id="featuredStory"></div>
+        </section>
+
+        <!-- ── TRENDING CARDS ── -->
+        <section id="trendingSection">
+          <div class="feed-section-hd">
+            <div><div class="feed-section-label">Right now</div><div class="feed-section-title">Trending in Africa</div></div>
+            <a href="culture.html" class="feed-section-link">See all culture →</a>
+          </div>
+          <div class="card-grid" id="trendingCards"></div>
+        </section>
+
+        <!-- ── AFRICA THIS WEEK ── -->
+        <section id="weekSection">
+          <div class="feed-section-hd">
+            <div><div class="feed-section-label">This week</div><div class="feed-section-title">Africa This Week</div></div>
+          </div>
+          <div class="week-feed" id="weekFeed"></div>
+        </section>
+
+        <!-- ── MYTHS & FOLKLORE ── -->
+        <section id="mythsSection">
+          <div class="feed-section-hd">
+            <div><div class="feed-section-label">Ancient stories</div><div class="feed-section-title">Myths &amp; Folklore</div></div>
+            <a href="learn.html" class="feed-section-link">Explore more →</a>
+          </div>
+          <div class="myth-stack" id="mythStack"></div>
+        </section>
+
+        <!-- ── INVENTIONS & FIRSTS ── -->
+        <section id="inventionsSection">
+          <div class="feed-section-hd">
+            <div><div class="feed-section-label">Africa invented it first</div><div class="feed-section-title">African Inventions &amp; World Firsts</div></div>
+          </div>
+          <div class="inventions-grid" id="inventionsGrid"></div>
+        </section>
+
+        <!-- ── DIASPORA SPOTLIGHT ── -->
+        <section id="diasporaSection">
+          <div class="feed-section-hd">
+            <div><div class="feed-section-label">Global impact</div><div class="feed-section-title">Diaspora Spotlight</div></div>
+          </div>
+          <div class="diaspora-grid" id="diasporaGrid"></div>
+        </section>
+
+      </div><!-- /feed -->
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- Trending Topics -->
+        <div class="side-card">
+          <div class="side-card-title">🔥 Trending Topics</div>
+          <div class="trending-list" id="trendingList"></div>
+        </div>
+
+        <!-- Africa in Numbers -->
+        <div class="side-card">
+          <div class="side-card-title">📊 Africa in Numbers</div>
+          <div class="numbers-grid" id="numbersGrid"></div>
+        </div>
+
+        <!-- This Week in Africa (sidebar version) -->
+        <div class="side-card">
+          <div class="side-card-title">📅 Historical This Day</div>
+          <div class="week-list" id="historyToday"></div>
+        </div>
+
+        <!-- Saved / Bookmarks -->
+        <div class="side-card">
+          <div class="side-card-title">📌 Saved to Frica</div>
+          <div class="bookmarks-body" id="bookmarksBody"></div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RANDOM DISCOVERY MODAL -->
+  <div class="disco-overlay" id="discoOverlay">
+    <div class="disco-card" id="discoCard">
+      <div class="disco-header">
+        <button class="disco-close" id="discoClose">✕</button>
+        <div class="disco-type" id="discoType"></div>
+        <span class="disco-emoji" id="discoEmoji"></span>
+        <div class="disco-title" id="discoTitle"></div>
+        <div class="disco-origin" id="discoOrigin"></div>
+      </div>
+      <div class="disco-body">
+        <p class="disco-text" id="discoText"></p>
+        <div class="disco-fact" id="discoFact"></div>
+      </div>
+      <div class="disco-footer">
+        <button class="disco-again" id="discoAgain">🎲 Discover another</button>
+        <button class="disco-dismiss" id="discoDismiss">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-top" id="backTop"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2025 Frica. Built with love for Africa.</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a><a href="countries.html">Countries</a>
+        <a href="culture.html">Culture</a><a href="learn.html">Learn</a>
+        <a href="discover.html">Discover</a>
+      </div>
+      <div>Made in <span style="color:var(--gold)">Africa 🌍</span></div>
+    </div>
+  </footer>
+
+  <script>
+  'use strict';
+
+  /* ═══════════════════════════════════════════════════════════════
+     DATA
+  ═══════════════════════════════════════════════════════════════ */
+
+  const FEATURED_STORIES = [
+    {
+      cat:'Ancient History', flag:'🇸🇩', country:'Sudan',
+      title:'Sudan Has More <em>Ancient Pyramids</em> Than Egypt — and Almost Nobody Knows',
+      lead:'The Kingdom of Kush built over 200 pyramids at Meroë — steeper, narrower, and in many ways more mysterious than Egypt\'s. They were constructed over 500 years by Nubian kings and queens who ruled one of the ancient world\'s most powerful empires. Most stand untouched, unguarded, and unvisited in the middle of the Saharan Desert.',
+      stats:[
+        { num:'200+', label:'Nubian pyramids in Sudan' },
+        { num:'700 BCE', label:'Kush Empire founded' },
+        { num:'500 yrs', label:'Period of pyramid building' },
+      ],
+      body:'At its peak (around 700 BCE), the Kushite pharaohs actually conquered Egypt — becoming the 25th Dynasty of Egypt, ruling from Khartoum to the Mediterranean. The Meroitic script they developed has never been fully deciphered. Their pyramids at Meroë, Nuri, and El-Kurru are UNESCO World Heritage Sites, yet receive a fraction of the visitors that Egypt\'s monuments attract.'
+    },
+    {
+      cat:'Cultural Impact', flag:'🇳🇬', country:'Nigeria',
+      title:'How <em>Afrobeats</em> Conquered the World in Less Than a Decade',
+      lead:'In 2015, Afrobeats was barely known outside West Africa. By 2025, it is the world\'s fastest-growing music genre — collaborating with Beyoncé, Drake, Ed Sheeran, and Justin Bieber, and dominating global streaming charts from Spotify to Apple Music. This is the story of how Lagos exported its soul to the world.',
+      stats:[
+        { num:'3B+', label:'Afrobeats streams monthly' },
+        { num:'4', label:'Nigerian Grammy winners' },
+        { num:'2015', label:'Year of global breakthrough' },
+      ],
+      body:'The story begins with Fela Kuti\'s Afrobeat in the 1970s — a politically charged fusion of jazz, funk, and Yoruba music. By the mid-2010s, a new generation of Lagos artists had taken the melodic DNA of Afrobeat and merged it with contemporary R&B, hip-hop, and dancehall, creating the phenomenon now known as Afrobeats. Wizkid\'s collaboration with Drake in 2016 was the inflection point. Burna Boy\'s Grammy win in 2021 was the coronation.'
+    },
+  ];
+
+  const TRENDING_CARDS = [
+    { emoji:'🎵', cat:'music', color:'#2e7d5e', title:'Amapiano Is Taking Over Global Dance Floors', desc:'The South African genre born in the townships of Johannesburg\'s East Rand has gone from underground house parties to Coachella, Afronation, and the world\'s biggest clubs. Log drum + piano = a global movement.', tag:'South Africa', flag:'🇿🇦', tall:true },
+    { emoji:'🏛️', cat:'history', color:'#1a6ea8', title:'The Benin Bronzes Are Coming Home', desc:'After 127 years in European museums, the stolen 3,000+ bronze and ivory artworks looted from the Benin Kingdom in 1897 are being repatriated to Nigeria. One of the most significant cultural justice events of the 21st century.', tag:'Nigeria', flag:'🇳🇬' },
+    { emoji:'🦍', cat:'nature', color:'#3d6b43', title:'Mountain Gorilla Population Grows for 4th Consecutive Year', desc:'Conservation efforts in Rwanda, Uganda, and DRC have increased the mountain gorilla population from a low of 620 (1989) to over 1,000 — one of Africa\'s greatest conservation success stories.', tag:'Rwanda · Uganda · DRC', flag:'🇷🇼' },
+    { emoji:'🌍', cat:'diaspora', color:'#8b3a9e', title:'Year of Return Legacy: Ghana Becomes Diaspora Capital', desc:'Building on the 2019 Year of Return, Ghana continues to draw African Americans, Black Britons, and Caribbeans seeking ancestral connection — permanently changing Ghana\'s cultural and economic landscape.', tag:'Ghana', flag:'🇬🇭', wide:true },
+    { emoji:'👑', cat:'royalty', color:'#c8952a', title:'Otumfuo Osei Tutu II — 25 Years as Asantehene', desc:'Ghana\'s Asantehene marked 25 years on the Golden Stool, presiding over the world\'s most watched Akwasidae ceremonies. Under his reign, the Ashanti Kingdom has become a global cultural power.', tag:'Ghana', flag:'🇬🇭' },
+    { emoji:'🍛', cat:'food', color:'#d4622a', title:'African Cuisine Is Having Its Global Moment', desc:'Nigerian jollof, Ethiopian injera, and Moroccan tagine are appearing on Michelin-starred menus worldwide. African chefs are winning international competitions and reshaping how the world understands "fine dining."', tag:'Pan-African', flag:'🌍' },
+  ];
+
+  const WEEK_ITEMS = [
+    { emoji:'🎵', type:'Music', title:'Burna Boy Headlined Coachella 2025', desc:'The Nigerian Afrobeats giant became the first African artist to headline the main stage at Coachella — a landmark moment for African music\'s global reach.', where:'🇺🇸 California, USA' },
+    { emoji:'🏛️', type:'Heritage', title:'Mali Digitizes 500,000 Timbuktu Manuscripts', desc:'A major UNESCO-backed project has digitally preserved 500,000 handwritten manuscripts from Timbuktu — ancient texts on astronomy, law, medicine, and Quranic scholarship.', where:'🇲🇱 Timbuktu, Mali' },
+    { emoji:'🦁', type:'Conservation', title:'Cheetah Reintroduced to Ethiopia After 100 Years', desc:'The Ethiopian Wolf Conservation Programme successfully reintroduced cheetahs to Awash National Park after their absence for over a century.', where:'🇪🇹 Awash, Ethiopia' },
+    { emoji:'💡', type:'Innovation', title:'Rwanda Launches Africa\'s First Drone Delivery Network', desc:'Zipline\'s Rwanda network, the world\'s first nationwide drone delivery system, has now delivered over 1 million medical packages to remote hospitals.', where:'🇷🇼 Nationwide, Rwanda' },
+    { emoji:'🎭', type:'Cinema', title:'Nigerian Film Wins Berlin Film Festival Golden Bear', desc:'A breakthrough win at one of cinema\'s most prestigious festivals — part of Nollywood\'s evolution from direct-to-video to international art cinema.', where:'🇩🇪 Berlin, Germany' },
+    { emoji:'🤝', type:'Politics', title:'African Union Launches Pan-African Passport Initiative', desc:'A push to make the African Union Passport a reality — enabling visa-free movement across all 55 AU member states and potentially unifying the continent\'s travel.', where:'🇪🇹 Addis Ababa, Ethiopia' },
+  ];
+
+  const MYTHS = [
+    {
+      icon:'🌙', color:'#8b3a9e', bg:'rgba(139,58,158,.15)',
+      cat:'Creation Myth', origin:'Yoruba, Nigeria 🇳🇬',
+      title:'Oduduwa and the Creation of Earth',
+      body:'In the beginning, there was only sky and water. The Supreme God Olodumare sent Oduduwa down from the heavens on a chain, carrying a calabash of sand and a five-toed hen. He poured the sand onto the primordial water, and the hen scattered it to form land. Where Oduduwa placed his foot became Ile-Ife — the sacred city that remains the spiritual capital of all Yoruba people. The word "Ile-Ife" means "the land that expanded" — a direct reference to this creation.',
+      moral:'Every Yoruba person traces their origin to Ile-Ife and to Oduduwa. All Yoruba obas (kings) present their crowns at Ile-Ife to receive the spiritual authority of Oduduwa.'
+    },
+    {
+      icon:'🐍', color:'#2e7d5e', bg:'rgba(46,125,94,.15)',
+      cat:'Cosmic Myth', origin:'Fon People, Benin / Dahomey 🇧🇯',
+      title:'Ayido Hwedo — The Rainbow Serpent Who Holds the World',
+      body:'Before the world existed, the cosmic serpent Dan Ayido Hwedo carried the creator god Mawu-Lisa in its mouth as it moved through space, creating mountains, valleys, and rivers with its winding body. When the world was complete, the serpent coiled beneath the earth to support it — and in the sky, it became the rainbow. The world\'s mountains are the excrement of Ayido Hwedo from its long journey. When the serpent shifts, the earth trembles (earthquakes). This myth — carried to Haiti through the slave trade — became the basis of the Haitian Vodou serpent spirit Damballah.',
+      moral:'The myth of Ayido Hwedo spread to the Americas through enslaved Fon people and became one of the foundational deities of Haitian Vodou, Brazilian Candomblé, and Cuban Santería — living proof of how African spiritual traditions survived the Middle Passage.'
+    },
+    {
+      icon:'⭐', color:'#c8952a', bg:'rgba(200,149,42,.15)',
+      cat:'Origin Story', origin:'Akan, Ghana 🇬🇭',
+      title:'How Kente Was Learned from Ananse the Spider',
+      body:'Two Akan weavers — Ota Kraban and Kwaku Ameyaw — from the village of Bonwire were walking through the forest when they saw a spider (Anansi) weaving its web with extraordinary intricacy and beauty. Mesmerized, they watched the spider work for days, studying every movement, every crossing of thread, every pattern it created. They returned home and spent months recreating what they had seen — using cotton thread instead of spider silk. The result was the first Kente cloth. They presented it to the Asantehene, who immediately made it the exclusive dress of royalty. Ananse the spider is the trickster-wisdom figure at the center of Akan mythology — also the source of American "Anansi" spider stories.',
+      moral:'Kente cloth is not just fabric — it is a philosophy woven into thread. Every pattern tells a story; every color carries meaning. The spider\'s web — interconnected, structural, geometric — is literally encoded in every strip of Kente.'
+    },
+    {
+      icon:'🦅', color:'#1a6ea8', bg:'rgba(26,110,168,.15)',
+      cat:'Warrior Legend', origin:'Mandé / West African 🌍',
+      title:'Sundiata Keita — The Lion King Who Founded the Mali Empire',
+      body:'Sundiata Keita was born crippled — unable to walk as a child, he was mocked by the court of the Manding Kingdom. His mother Sogolon Wulen Condé was humiliated by the king\'s other wives. One day, enraged by seeing his mother insulted for the last time, Sundiata gripped an iron rod and hauled himself to his feet for the first time — permanently. He then uprooted a baobab tree with his bare hands and brought it to his mother\'s doorstep. He went into exile, trained as a warrior, and in 1235 CE defeated the powerful sorcerer king Sumanguru Kante at the Battle of Kirina — founding the Mali Empire, which would become the largest in West African history under his grandson Mansa Musa.',
+      moral:'The Sundiata Epic (Sunjata) is West Africa\'s Iliad — an oral epic performed by griots for 800 years. Scholars believe it was a direct inspiration for Disney\'s "The Lion King" — Simba\'s story mirrors Sundiata\'s exile and return almost exactly.'
+    },
+  ];
+
+  const INVENTIONS = [
+    { num:'01', type:'Mathematics', name:'The Ishango Bone', origin:'🇨🇩 Congo Basin, ~22,000 BCE', desc:'The oldest known mathematical object in the world — a baboon fibula with tally marks found in the DRC. Mathematical analysis shows it may represent a six-month lunar calendar and early understanding of prime numbers — 22,000 years before the ancient Greeks.', impact:'The world\'s oldest evidence of advanced mathematical thinking.' },
+    { num:'02', type:'Medicine', name:'Trepanation (Brain Surgery)', origin:'🌍 Multiple African sites, ~5,000 BCE', desc:'Archaeological evidence of successful trepanation (drilling holes in the skull for medical purposes) has been found at African sites predating Egyptian records. Ancient Egyptians also documented sophisticated surgical procedures including sutures, wound treatment, and anatomical knowledge.', impact:'African civilizations practiced neurosurgery 7,000 years ago.' },
+    { num:'03', type:'Architecture', name:'Great Zimbabwe Stone Walls', origin:'🇿🇼 Zimbabwe, 11th–15th century CE', desc:'The largest ancient stone structure in sub-Saharan Africa — built WITHOUT mortar, cement, or any adhesive. 900,000 granite stones stacked with precision that has kept the walls standing for 800+ years. For decades, colonial scholars refused to believe Africans built it. Archaeological proof is definitive.', impact:'Proves pre-colonial African architectural sophistication at a continental scale.' },
+    { num:'04', type:'Writing System', name:'Ge\'ez Script (Ethiopic)', origin:'🇪🇹 Ethiopia / Eritrea, 4th century CE', desc:'The Ge\'ez script — still used today for Amharic, Tigrinya, and other Ethiopian languages — is one of the world\'s oldest continuously used writing systems. It is an abugida (each character represents a consonant-vowel combination) and has 276 characters. Used for 1,700 years of unbroken literary tradition.', impact:'The world\'s oldest continuously used indigenous African writing system.' },
+    { num:'05', type:'Astronomy', name:'Nabta Playa Star Calendar', origin:'🇪🇬 Egypt (Nubian Desert), ~7,000 BCE', desc:'A circular arrangement of stones in the Nubian Desert of Egypt — aligned with astronomical precision to mark the summer solstice, the rising of certain stars, and key calendar dates. It predates Stonehenge by 1,000 years and demonstrates sophisticated astronomical knowledge by early African pastoralists.', impact:'One of the world\'s oldest known astronomical observatories — 7,000 BCE.' },
+    { num:'06', type:'University', name:'University of al-Qarawiyyin', origin:'🇲🇦 Fes, Morocco, 859 CE', desc:'Founded in 859 CE by Fatima al-Fihri — a woman — the University of al-Qarawiyyin in Fes, Morocco is recognized by UNESCO and the Guinness World Records as the world\'s oldest continuously operating university. It predates Oxford (1096) by 237 years and Bologna (1088) by 229 years.', impact:'The world\'s oldest university, founded by an African woman in 859 CE.' },
+    { num:'07', type:'Metallurgy', name:'Igbo-Ukwu Bronzes', origin:'🇳🇬 Igbo-Ukwu, Nigeria, 9th century CE', desc:'Bronze artifacts discovered in Igbo-Ukwu, Nigeria — dated to the 9th century CE — show sophisticated lost-wax (cire perdue) casting techniques of extraordinary complexity. These were created 600 years before the famous Benin Bronzes and demonstrate that advanced African metallurgy predates European contact by centuries.', impact:'Proof of sophisticated African bronze casting 600 years before the Benin Kingdom.' },
+    { num:'08', type:'Coffee', name:'Coffee — Discovered in Ethiopia', origin:'🇪🇹 Kaffa Region, Ethiopia, ~850 CE', desc:'According to the most widely documented account, an Ethiopian goat herder named Kaldi noticed his goats became unusually energetic after eating berries from a certain tree. The local monastery\'s abbot made a drink from the berries and found it kept him alert through evening prayers. The word "coffee" comes from "Kaffa" — the Ethiopian region where it was first found.', impact:'The world\'s most consumed beverage was invented in Africa.' },
+  ];
+
+  const DIASPORA = [
+    { emoji:'🎵', name:'Fela Kuti', field:'Music & Political Activism', origins:'🇳🇬 Yoruba, Nigeria', da1:'#d4622a', da2:'#2a4a2e', bg:'rgba(212,98,42,.08)',
+      desc:'Created Afrobeat — a genre fusing Yoruba music, jazz, funk, and political protest lyrics. Used music as a direct weapon against Nigerian military dictatorship. Arrested 200+ times, yet never stopped performing. His Kalakuta Republic commune was a state within a state.',
+      quote:'"Music is the weapon of the future." — Fela Anikulapo Kuti'
+    },
+    { emoji:'📚', name:'Chimamanda Ngozi Adichie', field:'Literature & Feminism', origins:'🇳🇬 Igbo, Nigeria', da1:'#8b3a9e', da2:'#1a6ea8', bg:'rgba(139,58,158,.08)',
+      desc:'Author of "Purple Hibiscus," "Half of a Yellow Sun," and "Americanah." Her TED Talk "We Should All Be Feminists" was sampled by Beyoncé and distributed to every 16-year-old in Sweden. Translated into 30+ languages. Her "The Danger of a Single Story" is the most-watched TED Talk on African identity.',
+      quote:'"The single story creates stereotypes, and the problem with stereotypes is not that they are untrue, but that they are incomplete." — Chimamanda Ngozi Adichie'
+    },
+    { emoji:'⚽', name:'Didier Drogba', field:'Football & Humanitarian Work', origins:'🇨🇮 Bété, Côte d\'Ivoire', da1:'#2e7d5e', da2:'#c8952a', bg:'rgba(46,125,94,.08)',
+      desc:'One of Chelsea\'s greatest ever players and the face of Ivorian football. But his greatest achievement may be stopping a civil war — his 2005 World Cup qualification speech to both sides of the Ivorian conflict ("Please lay down your weapons, hold elections, and all will be better") led to a cease-fire that lasted several months.',
+      quote:'"A country cannot be rebuilt without forgiveness." — Didier Drogba'
+    },
+    { emoji:'🔬', name:'Philip Emeagwali', field:'Computer Science', origins:'🇳🇬 Igbo, Nigeria', da1:'#1a6ea8', da2:'#3d6b43', bg:'rgba(26,110,168,.08)',
+      desc:'Nigerian computer scientist and civil engineer who designed the formula for making computers work faster. In 1989, he won the Gordon Bell Prize — the Nobel Prize of computing — for programming a Connection Machine supercomputer to perform 3.1 billion calculations per second. His work laid foundations for the modern internet\'s speed.',
+      quote:'"The Internet is the greatest tool ever created for the empowerment of the individual." — Philip Emeagwali'
+    },
+    { emoji:'🎨', name:'El Anatsui', field:'Contemporary Art', origins:'🇬🇭 Ewe, Ghana', da1:'#c8952a', da2:'#8b3a9e', bg:'rgba(200,149,42,.08)',
+      desc:'Ghana\'s greatest living artist, now based in Nigeria. Creates monumental tapestry-like sculptures from discarded bottle caps and aluminum foil — works that hang in the Tate Modern, the Metropolitan Museum, and the Guggenheim. Called "Africa\'s answer to abstract expressionism" by the New York Times.',
+      quote:'"I prefer to work with found materials, partly because they carry the weight of human experience." — El Anatsui'
+    },
+    { emoji:'🏛️', name:'Kofi Annan', field:'Diplomacy & Peace', origins:'🇬🇭 Fante/Asante, Ghana', da1:'#3d6b43', da2:'#1a6ea8', bg:'rgba(61,107,67,.08)',
+      desc:'Ghana\'s greatest diplomat. Served as the 7th UN Secretary-General (1997–2006) and was awarded the Nobel Peace Prize in 2001. Led the United Nations through the Kosovo crisis, HIV/AIDS declaration, and the Millennium Development Goals. His quiet, principled leadership transformed global diplomacy.',
+      quote:'"To live is to choose. But to choose well, you must know who you are and what you stand for, where you want to go and why you want to get there." — Kofi Annan'
+    },
+  ];
+
+  const TRENDING_TOPICS = [
+    { rank:'01', name:'Afrobeats x Global Pop', sub:'Music · Burna Boy, Wizkid, Tems' },
+    { rank:'02', name:'Benin Bronzes Repatriation', sub:'Heritage · Nigeria' },
+    { rank:'03', name:'Amapiano World Tour', sub:'Music · South Africa' },
+    { rank:'04', name:'Rwanda Gorilla Conservation', sub:'Wildlife · East Africa' },
+    { rank:'05', name:'Detty December 2025', sub:'Travel · Ghana · Accra' },
+    { rank:'06', name:'Great Zimbabwe Origins', sub:'History · Zimbabwe' },
+    { rank:'07', name:'Year of Return Legacy', sub:'Diaspora · Ghana' },
+    { rank:'08', name:'Nollywood Netflix Partnership', sub:'Cinema · Nigeria' },
+    { rank:'09', name:'Africa Free Trade Zone (AfCFTA)', sub:'Economy · Pan-African' },
+    { rank:'10', name:'Ethiopian Coffee Ceremony UNESCO', sub:'Culture · Ethiopia' },
+  ];
+
+  const AFRICA_NUMBERS = [
+    { val:'54', label:'Sovereign Nations' },
+    { val:'2,000+', label:'Languages Spoken' },
+    { val:'1.4B', label:'People' },
+    { val:'30.4M', label:'km² Land Area' },
+    { val:'9', label:'UNESCO Sites in Ethiopia' },
+    { val:'200+', label:'Pyramids in Sudan' },
+    { val:'7,000', label:'Years of Written History' },
+    { val:'3,000+', label:'Distinct Cultures' },
+  ];
+
+  const HISTORY_TODAY = [
+    { date:'March 6, 1957', event:'Ghana gained independence — first sub-Saharan African country to do so', where:'🇬🇭 Accra' },
+    { date:'October 1, 1960', event:'Nigeria gained independence from British rule', where:'🇳🇬 Lagos' },
+    { date:'May 25, 1963', event:'Organisation of African Unity founded — now the African Union', where:'🇪🇹 Addis Ababa' },
+    { date:'April 27, 1994', event:'South Africa held its first democratic elections — Nelson Mandela elected President', where:'🇿🇦 Nationwide' },
+    { date:'July 9, 2011', event:'South Sudan declared independence — world\'s youngest country born', where:'🇸🇸 Juba' },
+  ];
+
+  const RANDOM_DISCOVERIES = [
+    { type:'Ancient Fact', emoji:'🏺', title:'The First Written Treaty in History Was African', origin:'Egypt & Hittites, 1259 BCE', text:'The Treaty of Kadesh — signed between Egyptian Pharaoh Ramesses II and Hittite King Hattusili III in 1259 BCE — is the oldest known written peace treaty in human history. A replica hangs at the United Nations headquarters in New York as a symbol of international diplomacy. The original is inscribed on the walls of Karnak Temple in Luxor, Egypt.', fact:'<strong>UN Connection:</strong> A copy of the Treaty of Kadesh has been displayed at the UN Headquarters in New York since 1970 — Africa gave the world its first model of international peace negotiations.' },
+    { type:'Music Fact', emoji:'🎵', title:'The Blues — America\'s Most Influential Music — Came From Africa', origin:'West Africa → Mississippi Delta, USA', text:'Musicologists have traced the roots of American Blues music directly to West African musical traditions — particularly the pentatonic scales, call-and-response patterns, and emotional expressiveness of Malian Mandé music. Ali Farka Touré, the Malian guitarist, proved this connection by playing alongside American blues legends and showing identical musical DNA.', fact:'<strong>The Chain:</strong> West African music → enslaved Africans in America → Blues → Jazz → Rock & Roll → Pop music. Africa created the musical grammar of the modern world.' },
+    { type:'Language Fact', emoji:'🗣️', title:'Swahili Words Have Been to Space', origin:'Kenya / Tanzania — International Space Station', text:'NASA uses Swahili terminology in some space mission contexts, and several Swahili words have entered scientific naming conventions. More significantly, Kenyan-American astronaut Victor Glover (whose grandmother was Kenyan) carried African cultural pride to the ISS. The word "safari" (journey in Swahili) is used globally. "Kwaheri" (goodbye) has been spoken from orbit.', fact:'<strong>Space Connection:</strong> African languages have reached orbit. "Uhuru" (Swahili for "freedom") was the name of the first African space satellite — launched by Kenya in 1970.' },
+    { type:'Architecture Fact', emoji:'🏗️', title:'The Great Mosque of Djenné Is Rebuilt Every Year — By the Whole City', origin:'🇲🇱 Djenné, Mali', text:'The Great Mosque of Djenné — the world\'s largest mud-brick building and a UNESCO World Heritage Site — undergoes an annual community replastering festival. Every year, before the rains come, the ENTIRE population of Djenné gathers to replaster the mosque\'s walls with fresh banco (mud and straw). It is one of Africa\'s most extraordinary communal rituals — architecture as annual community event.', fact:'<strong>UNESCO Status:</strong> The Great Mosque of Djenné has been a UNESCO World Heritage Site since 1988. It was first built in the 13th century, though the current structure dates to 1907.' },
+    { type:'Wildlife Fact', emoji:'🐘', title:'African Elephants Can Recognize 100+ Individual Humans', origin:'🌍 Pan-African research', text:'Research has proven that African elephants can recognize and remember over 100 individual humans — distinguishing between those who are threats and those who are safe, based on voice, clothing, and scent. They also hold "funerals" for their dead — gathering around deceased herd members for days, touching the bones with their trunks. Elephant matriarchs remember water sources from droughts 50+ years prior.', fact:'<strong>Memory Scale:</strong> The largest recorded elephant herd memory is 63 years — a matriarch who remembered a water source visited before her researchers were born.' },
+    { type:'Culinary Fact', emoji:'☕', title:'Coffee Was Drunk in Ethiopia 1,000 Years Before Europe Discovered It', origin:'🇪🇹 Kaffa, Ethiopia', text:'The coffee plant (Coffea arabica) is native to Ethiopia — specifically the Kaffa and Sidama regions. Ethiopians have been drinking coffee in various forms (including chewing the leaves and berries) for at least 1,000 years before the Arab world and Europe discovered it. The Ethiopian coffee ceremony — roasting, grinding, brewing, and sharing three rounds of coffee — is one of the world\'s oldest living cultural rituals.', fact:'<strong>Global Scale:</strong> Coffee is the world\'s second most traded commodity (after oil). Ethiopia — the country that invented it — is still the world\'s 5th largest coffee producer.' },
+    { type:'Philosophical Fact', emoji:'🌍', title:'Ubuntu: Africa\'s Greatest Gift to Global Philosophy', origin:'🌍 Nguni peoples, Southern Africa', text:'"Umuntu ngumuntu ngabantu" — I am a person because of other people. The Ubuntu philosophy of interconnected humanity has influenced global business, governance, conflict resolution, and social theory. Nelson Mandela used it to explain South Africa\'s Truth and Reconciliation Commission. Desmond Tutu made it the basis of his theology. The GNU/Linux operating system Ubuntu was named after it.', fact:'<strong>Tech Connection:</strong> Ubuntu Linux — one of the world\'s most popular operating systems — was named after the African philosophy by South African entrepreneur Mark Shuttleworth in 2004.' },
+    { type:'Royal Fact', emoji:'👑', title:'Mansa Musa\'s Pilgrimage Caused Inflation Across Three Continents', origin:'🇲🇱 Mali Empire, 1324 CE', text:'When Mali Emperor Mansa Musa made his hajj to Mecca in 1324, he traveled with 60,000 people and 80–100 camels each carrying 300 lbs of gold. He gave so much gold away along the route (Egypt, Libya, Saudi Arabia) that he caused hyperinflation across North Africa and the Middle East that lasted 10 years. The price of gold crashed wherever he passed. He is considered the wealthiest individual in all of human history — estimated $400 billion in today\'s money.', fact:'<strong>Historical Record:</strong> Mansa Musa appears on the Catalan Atlas (1375) — one of the most important medieval maps — as a king holding a gold nugget, visible even to European cartographers.' },
+    { type:'Conservation Fact', emoji:'🦁', title:'Africa Has 25% of Earth\'s Biodiversity in 20% of Its Land Area', origin:'🌍 Pan-African', text:'Africa is the world\'s second-largest continent, covering 20% of Earth\'s land surface — but it contains approximately 25% of the world\'s biodiversity. The Congo Rainforest is the world\'s second-largest lung after the Amazon. Africa has 54 countries but houses the world\'s largest land animal (African elephant), fastest land animal (cheetah), tallest animal (giraffe), and largest bird (ostrich).', fact:'<strong>Congo Basin:</strong> The Congo Rainforest absorbs 1.5 billion tons of CO2 per year — making it one of the most critical carbon sinks for the entire planet\'s climate.' },
+    { type:'Innovation Fact', emoji:'💡', title:'M-Pesa: Africa Invented Mobile Money Before the Rest of the World', origin:'🇰🇪 Kenya, 2007', text:'In 2007, Vodafone and Safaricom launched M-Pesa in Kenya — a mobile phone-based money transfer system that allowed people without bank accounts to send, receive, and store money via SMS. Kenya became the world\'s first mobile money economy. By 2010, 40% of Kenya\'s GDP flowed through M-Pesa. The world\'s banking system has been playing catch-up ever since. Today M-Pesa has 51 million users across 7 countries.', fact:'<strong>Global Influence:</strong> Silicon Valley\'s Venmo, Cash App, and global fintech startups were all inspired by M-Pesa\'s model. Africa didn\'t copy the West on mobile payments — the West copied Africa.' },
+  ];
+
+  /* ═══════════════════════════════════════════════════════════════
+     RENDER
+  ═══════════════════════════════════════════════════════════════ */
+
+  // Featured Story (rotates daily)
+  function renderFeatured() {
+    const idx  = Math.floor(Date.now() / 86400000) % FEATURED_STORIES.length;
+    const s    = FEATURED_STORIES[idx];
+    document.getElementById('featuredStory').innerHTML = `
+      <div class="story-body">
+        <div class="story-category">${s.cat}</div>
+        <h2 class="story-title">${s.title}</h2>
+        <p class="story-lead">${s.lead}</p>
+        <div class="story-meta">
+          <span class="story-flag">${s.flag}</span>
+          <span class="story-country">${s.country}</span>
+          <span class="story-read">Read full story →</span>
+        </div>
+      </div>
+      <div class="story-aside">
+        ${s.stats.map(st => `<div class="story-aside-item"><div class="story-aside-num">${st.num}</div><div class="story-aside-label">${st.label}</div></div>`).join('')}
+      </div>
+    `;
+  }
+
+  // Trending Cards
+  function renderTrendingCards(catFilter = 'all') {
+    const data = catFilter === 'all' ? TRENDING_CARDS : TRENDING_CARDS.filter(c => c.cat === catFilter);
+    document.getElementById('trendingCards').innerHTML = data.map(c => `
+      <div class="card ${c.tall ? 'tall' : ''} ${c.wide ? 'wide' : ''}" style="--card-color:${c.color}">
+        <div class="card-inner">
+          <span class="card-emoji">${c.emoji}</span>
+          <div class="card-cat">${c.cat}</div>
+          <div class="card-title">${c.title}</div>
+          <div class="card-desc">${c.desc}</div>
+          <div class="card-foot">
+            <span class="card-tag">${c.tag}</span>
+            <span class="card-flag">${c.flag}</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Africa This Week
+  function renderWeekFeed() {
+    document.getElementById('weekFeed').innerHTML = WEEK_ITEMS.map(w => `
+      <div class="week-card">
+        <div class="week-card-top">
+          <span class="week-card-emoji">${w.emoji}</span>
+          <div class="week-card-type">${w.type}</div>
+        </div>
+        <div class="week-card-title">${w.title}</div>
+        <div class="week-card-desc">${w.desc}</div>
+        <div class="week-card-where">📍 ${w.where}</div>
+      </div>
+    `).join('');
+  }
+
+  // Myths
+  function renderMyths(catFilter = 'all') {
+    const data = catFilter === 'all' ? MYTHS : MYTHS.filter(m => m.cat.toLowerCase().includes(catFilter));
+    document.getElementById('mythStack').innerHTML = data.map(m => `
+      <div class="myth-card" style="--myth-color:${m.color};--myth-bg:${m.bg}">
+        <div class="myth-header">
+          <div class="myth-icon" style="background:${m.bg}">${m.icon}</div>
+          <div>
+            <div class="myth-cat">${m.cat}</div>
+            <div class="myth-title">${m.title}</div>
+            <div class="myth-origin">${m.origin}</div>
+          </div>
+        </div>
+        <div class="myth-body">${m.body}</div>
+        <div class="myth-moral"><strong>Cultural significance:</strong> ${m.moral}</div>
+      </div>
+    `).join('');
+  }
+
+  // Inventions
+  function renderInventions() {
+    document.getElementById('inventionsGrid').innerHTML = INVENTIONS.map(inv => `
+      <div class="invention-card" data-num="${inv.num}">
+        <div class="invention-type">${inv.type}</div>
+        <div class="invention-name">${inv.name}</div>
+        <div class="invention-origin">${inv.origin}</div>
+        <div class="invention-desc">${inv.desc}</div>
+        <div class="invention-impact">${inv.impact}</div>
+      </div>
+    `).join('');
+  }
+
+  // Diaspora
+  function renderDiaspora() {
+    document.getElementById('diasporaGrid').innerHTML = DIASPORA.map(d => `
+      <div class="diaspora-card">
+        <div class="diaspora-header" style="--dc-bg:${d.bg}">
+          <div class="diaspora-avatar" style="--da1:${d.da1};--da2:${d.da2}">${d.emoji}</div>
+          <div>
+            <div class="diaspora-name">${d.name}</div>
+            <div class="diaspora-field">${d.field}</div>
+            <div class="diaspora-origins">${d.origins}</div>
+          </div>
+        </div>
+        <div class="diaspora-body">
+          <div class="diaspora-desc">${d.desc}</div>
+          <div class="diaspora-quote">${d.quote}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Sidebar
+  function renderTrendingList() {
+    document.getElementById('trendingList').innerHTML = TRENDING_TOPICS.map(t => `
+      <div class="trending-item">
+        <div class="trending-rank">${t.rank}</div>
+        <div class="trending-info">
+          <div class="trending-name">${t.name}</div>
+          <div class="trending-sub">${t.sub}</div>
+        </div>
+        <div class="trending-arrow">→</div>
+      </div>
+    `).join('');
+  }
+
+  function renderNumbers() {
+    document.getElementById('numbersGrid').innerHTML = AFRICA_NUMBERS.map(n => `
+      <div class="number-item">
+        <div class="number-val">${n.val}</div>
+        <div class="number-label">${n.label}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderHistoryToday() {
+    document.getElementById('historyToday').innerHTML = HISTORY_TODAY.map(h => `
+      <div class="week-item">
+        <div class="week-date">${h.date}</div>
+        <div class="week-event">${h.event}</div>
+        <div class="week-where">${h.where}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderBookmarks() {
+    const bm  = JSON.parse(localStorage.getItem('frica_bookmarks') || '[]');
+    const el  = document.getElementById('bookmarksBody');
+    if (!bm.length) { el.innerHTML = '<div class="bm-empty">No saved items yet. Explore and bookmark your favourites!</div>'; return; }
+    el.innerHTML = bm.slice(0, 6).map(slug => `
+      <div class="bm-item">
+        <span>🌍</span>
+        <span>${slug.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}</span>
+        <button class="bm-remove" onclick="removeBM('${slug}')">✕</button>
+      </div>
+    `).join('');
+  }
+
+  function removeBM(slug) {
+    let bm = JSON.parse(localStorage.getItem('frica_bookmarks') || '[]');
+    bm = bm.filter(b => b !== slug);
+    localStorage.setItem('frica_bookmarks', JSON.stringify(bm));
+    renderBookmarks();
+  }
+
+  /* ── RANDOM DISCOVERY ──────────────────────────────────────── */
+  let lastDiscoIdx = -1;
+
+  function openDisco() {
+    let idx;
+    do { idx = Math.floor(Math.random() * RANDOM_DISCOVERIES.length); } while (idx === lastDiscoIdx);
+    lastDiscoIdx = idx;
+    const d = RANDOM_DISCOVERIES[idx];
+
+    document.getElementById('discoType').textContent   = d.type;
+    document.getElementById('discoEmoji').textContent  = d.emoji;
+    document.getElementById('discoTitle').textContent  = d.title;
+    document.getElementById('discoOrigin').textContent = d.origin;
+    document.getElementById('discoText').textContent   = d.text;
+    document.getElementById('discoFact').innerHTML     = d.fact;
+    document.getElementById('discoOverlay').classList.add('open');
+  }
+
+  function closeDisco() { document.getElementById('discoOverlay').classList.remove('open'); }
+
+  document.getElementById('randomBtn').addEventListener('click', openDisco);
+  document.getElementById('discoClose').addEventListener('click', closeDisco);
+  document.getElementById('discoDismiss').addEventListener('click', closeDisco);
+  document.getElementById('discoAgain').addEventListener('click', openDisco);
+  document.getElementById('discoOverlay').addEventListener('click', e => { if (e.target === document.getElementById('discoOverlay')) closeDisco(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDisco(); });
+
+  /* ── CATEGORY FILTER ───────────────────────────────────────── */
+  document.getElementById('categoryRow').addEventListener('click', e => {
+    const pill = e.target.closest('.cat-pill'); if (!pill) return;
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const cat = pill.dataset.cat;
+
+    // Show/hide sections based on category
+    const sections = { trendingSection:true, weekSection:true, mythsSection:true, inventionsSection:true, diasporaSection:true };
+
+    if (cat !== 'all') {
+      Object.keys(sections).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+      // Show relevant section
+      if (cat === 'myths')      { document.getElementById('mythsSection').style.display      = 'block'; renderMyths(cat); }
+      if (cat === 'inventions') { document.getElementById('inventionsSection').style.display = 'block'; }
+      if (cat === 'diaspora')   { document.getElementById('diasporaSection').style.display   = 'block'; }
+      if (['history','music','food','nature','royalty'].includes(cat)) {
+        document.getElementById('trendingSection').style.display = 'block';
+        renderTrendingCards(cat);
+      }
+    } else {
+      Object.keys(sections).forEach(id => {
+        const el = document.getElementById(id); if (el) el.style.display = 'block';
+      });
+      renderTrendingCards('all');
+      renderMyths('all');
+    }
+  });
+
+  /* ── NAV & MISC ────────────────────────────────────────────── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+  }, { passive:true });
+
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+  /* ── INIT ──────────────────────────────────────────────────── */
+  renderFeatured();
+  renderTrendingCards();
+  renderWeekFeed();
+  renderMyths();
+  renderInventions();
+  renderDiaspora();
+  renderTrendingList();
+  renderNumbers();
+  renderHistoryToday();
+  renderBookmarks();
+  </script>
+  <script src="assets/js/search.js"></script>
+<script src="assets/js/bookmark.js"></script>
+</body>
+</html>

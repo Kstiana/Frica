@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Culture — Frica | Food, Music, Fashion, Traditions & More</title>
+  <meta name="description" content="Explore Africa's rich cultures — food, dressing, music, marriage traditions, beliefs, and festivals across all 54 countries." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --bg:         #0d0f0a;
+      --bg-card:    #131610;
+      --bg-raise:   #1a1e14;
+      --gold:       #c8952a;
+      --gold-light: #e8b84b;
+      --gold-dim:   rgba(200,149,42,0.13);
+      --green:      #2a4a2e;
+      --green-mid:  #3d6b43;
+      --cream:      #f0e8d5;
+      --text:       #e8e0cc;
+      --text-muted: rgba(232,224,204,0.45);
+      --text-soft:  rgba(232,224,204,0.72);
+      --border:     rgba(200,149,42,0.18);
+      --border-dim: rgba(232,224,204,0.07);
+      --red:        #c0392b;
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  20px;
+      --radius-xl:  32px;
+      --nav-h:      68px;
+      --tab-h:      56px;
+      --ease:       cubic-bezier(0.4,0,0.2,1);
+      --t:          0.28s;
+
+      /* Tab accent colors */
+      --food:        #d4622a;
+      --dressing:    #c8952a;
+      --music:       #2e7d5e;
+      --traditions:  #8b3a9e;
+      --beliefs:     #1a6ea8;
+      --festivals:   #b8420a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul { list-style: none; }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.03; pointer-events: none; z-index: 9999;
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    .nav {
+      position: fixed; top:0; left:0; right:0;
+      height: var(--nav-h); z-index: 1000;
+      background: rgba(13,15,10,0.94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-dim);
+      display: flex; align-items: center;
+      padding: 0 clamp(1.25rem,4vw,3rem);
+      transition: border-color var(--t);
+    }
+    .nav.scrolled { border-color: var(--border); }
+
+    .nav-inner {
+      width:100%; max-width:1400px; margin:0 auto;
+      display:flex; align-items:center; gap:2rem;
+    }
+
+    .logo { display:flex; align-items:center; gap:.6rem; flex-shrink:0; }
+    .logo-mark {
+      width:36px; height:36px; background:var(--gold); border-radius:8px;
+      display:grid; place-items:center;
+      font-family:'Playfair Display',serif; font-weight:900;
+      font-size:1.1rem; color:#0d0f0a;
+    }
+    .logo-text { font-family:'Playfair Display',serif; font-weight:700; font-size:1.4rem; color:var(--cream); }
+    .logo-text span { color:var(--gold); }
+
+    .nav-links { display:flex; align-items:center; gap:.25rem; flex:1; }
+    .nav-links a {
+      padding:.45rem .85rem; border-radius:var(--radius-sm);
+      font-size:.875rem; font-weight:500; color:var(--text-soft);
+      transition: color var(--t), background var(--t);
+    }
+    .nav-links a:hover { color:var(--cream); background:var(--border-dim); }
+    .nav-links a.active { color:var(--gold-light); }
+
+    .nav-right { display:flex; align-items:center; gap:.75rem; margin-left:auto; }
+    .nav-icon-btn {
+      width:36px; height:36px; border-radius:8px;
+      display:grid; place-items:center;
+      color:var(--text-muted); background:var(--border-dim);
+      transition:var(--t);
+    }
+    .nav-icon-btn:hover { color:var(--gold-light); background:var(--gold-dim); }
+
+    .hamburger { display:none; flex-direction:column; gap:5px; padding:8px; border-radius:var(--radius-sm); }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--text-soft); border-radius:2px; transition:var(--t); }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+
+    .mobile-menu {
+      display:none; position:fixed; top:var(--nav-h); left:0; right:0;
+      background:rgba(13,15,10,0.97); backdrop-filter:blur(24px);
+      border-bottom:1px solid var(--border); z-index:999;
+      padding:1.5rem clamp(1.25rem,4vw,3rem);
+      flex-direction:column; gap:.5rem;
+      animation: slideDown .25s ease;
+    }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a {
+      padding:.75rem 1rem; border-radius:var(--radius-sm);
+      font-size:1rem; font-weight:500; color:var(--text-soft);
+      transition:var(--t); border-bottom:1px solid var(--border-dim);
+    }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { color:var(--cream); background:var(--border-dim); }
+
+    @keyframes slideDown {
+      from { opacity:0; transform:translateY(-8px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* ============================================================
+       PAGE HERO
+    ============================================================ */
+    .page-hero {
+      padding-top: calc(var(--nav-h) + 3.5rem);
+      padding-bottom: 2.5rem;
+      padding-inline: clamp(1.25rem,4vw,3rem);
+      position: relative; overflow: hidden;
+    }
+
+    .hero-orb {
+      position:absolute; border-radius:50%;
+      filter:blur(100px); opacity:.2; pointer-events:none;
+    }
+    .orb1 { width:600px; height:600px; background:radial-gradient(circle,var(--food),transparent); top:-20%; left:-10%; }
+    .orb2 { width:500px; height:500px; background:radial-gradient(circle,rgba(200,149,42,.5),transparent); bottom:-10%; right:5%; }
+    .orb3 { width:400px; height:400px; background:radial-gradient(circle,var(--green-mid),transparent); top:20%; right:25%; }
+
+    .hero-grid-lines {
+      position:absolute; inset:0; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(200,149,42,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(200,149,42,.035) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent);
+    }
+
+    .hero-inner {
+      max-width:1400px; margin:0 auto;
+      position:relative; z-index:1;
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:3rem; align-items:center;
+    }
+
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.4rem 1rem;
+      background:var(--gold-dim); border:1px solid var(--border);
+      border-radius:999px; font-size:.78rem; font-weight:500;
+      color:var(--gold-light); letter-spacing:.08em;
+      text-transform:uppercase; margin-bottom:1.25rem;
+    }
+    .badge-dot { width:6px; height:6px; background:var(--gold); border-radius:50%; animation:pulse 2s ease infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
+
+    .hero-title {
+      font-family:'Playfair Display',serif;
+      font-weight:900;
+      font-size:clamp(2.4rem,5vw,4rem);
+      color:var(--cream); line-height:1.08;
+      letter-spacing:-.02em; margin-bottom:1.1rem;
+    }
+    .hero-title em { font-style:italic; color:var(--gold-light); }
+
+    .hero-desc {
+      font-size:1.05rem; color:var(--text-soft);
+      max-width:480px; line-height:1.75; margin-bottom:2rem;
+    }
+
+    /* Culture category pills */
+    .hero-cats {
+      display:flex; flex-wrap:wrap; gap:.6rem;
+    }
+
+    .hero-cat {
+      display:flex; align-items:center; gap:.45rem;
+      padding:.5rem 1rem; border-radius:var(--radius-xl);
+      border:1.5px solid var(--border-dim);
+      font-size:.82rem; font-weight:600;
+      color:var(--text-soft); background:transparent;
+      transition:var(--t); cursor:pointer;
+    }
+    .hero-cat:hover, .hero-cat.active {
+      color:var(--cream);
+      border-color:var(--cat-color,var(--gold));
+      background:rgba(var(--cat-rgb,200,149,42),.1);
+    }
+    .hero-cat-dot {
+      width:7px; height:7px; border-radius:50%;
+      background:var(--cat-color,var(--gold));
+    }
+
+    /* Right side — floating culture mosaic */
+    .hero-mosaic {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      grid-template-rows:auto auto auto;
+      gap:.75rem;
+    }
+
+    .mosaic-card {
+      background:var(--bg-card);
+      border:1px solid var(--border-dim);
+      border-radius:var(--radius-md);
+      padding:1.1rem;
+      position:relative; overflow:hidden;
+      transition:border-color var(--t), transform var(--t);
+      cursor:pointer;
+    }
+    .mosaic-card:hover { border-color:var(--border); transform:translateY(-2px); }
+
+    .mosaic-card.tall { grid-row:span 2; }
+    .mosaic-card.wide { grid-column:span 2; }
+
+    .mosaic-card::before {
+      content:''; position:absolute;
+      top:0; left:0; right:0; height:2px;
+      background:var(--mc-color,var(--gold));
+      border-radius:2px 2px 0 0;
+    }
+
+    .mosaic-icon { font-size:1.6rem; margin-bottom:.6rem; display:block; }
+    .mosaic-label {
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      letter-spacing:.12em; text-transform:uppercase;
+      color:var(--mc-color,var(--gold)); margin-bottom:.25rem;
+    }
+    .mosaic-title {
+      font-family:'Playfair Display',serif;
+      font-weight:700; font-size:.92rem;
+      color:var(--cream); line-height:1.3;
+    }
+    .mosaic-sub { font-size:.72rem; color:var(--text-muted); margin-top:.25rem; }
+
+    /* ============================================================
+       STICKY TABS
+    ============================================================ */
+    .tabs-bar {
+      position:sticky;
+      top:var(--nav-h); z-index:100;
+      background:rgba(13,15,10,0.96);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border-dim);
+      padding:0 clamp(1.25rem,4vw,3rem);
+    }
+
+    .tabs-inner {
+      max-width:1400px; margin:0 auto;
+      display:flex; align-items:stretch;
+      gap:0; overflow-x:auto;
+      scrollbar-width:none;
+    }
+    .tabs-inner::-webkit-scrollbar { display:none; }
+
+    .tab-btn {
+      display:flex; align-items:center; gap:.5rem;
+      padding:0 1.25rem; height:var(--tab-h);
+      font-size:.875rem; font-weight:600;
+      color:var(--text-muted);
+      border-bottom:2.5px solid transparent;
+      white-space:nowrap;
+      transition:color var(--t), border-color var(--t);
+      flex-shrink:0;
+    }
+    .tab-btn:hover { color:var(--cream); }
+    .tab-btn.active {
+      color:var(--tab-accent,var(--gold-light));
+      border-color:var(--tab-accent,var(--gold));
+    }
+
+    .tab-emoji { font-size:1rem; }
+
+    /* ============================================================
+       CONTENT AREA
+    ============================================================ */
+    .content-area {
+      padding: 3rem clamp(1.25rem,4vw,3rem) 6rem;
+    }
+
+    .content-inner { max-width:1400px; margin:0 auto; }
+
+    .tab-panel { display:none; }
+    .tab-panel.active { display:block; animation:fadeUp .35s ease both; }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(16px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* ── Panel header ─────────────────────────────────────── */
+    .panel-header {
+      display:flex; align-items:flex-end;
+      justify-content:space-between; flex-wrap:wrap;
+      gap:1.5rem; margin-bottom:2.5rem;
+    }
+
+    .panel-label {
+      display:inline-flex; align-items:center; gap:.5rem;
+      font-family:'DM Mono',monospace; font-size:.72rem;
+      letter-spacing:.15em; text-transform:uppercase;
+      color:var(--panel-color,var(--gold)); margin-bottom:.6rem;
+    }
+    .panel-label::before {
+      content:''; display:block; width:24px; height:1.5px;
+      background:var(--panel-color,var(--gold)); border-radius:1px;
+    }
+
+    .panel-title {
+      font-family:'Playfair Display',serif;
+      font-weight:700; font-size:clamp(1.6rem,3.5vw,2.4rem);
+      color:var(--cream); line-height:1.15; letter-spacing:-.02em;
+    }
+    .panel-title em { font-style:italic; color:var(--panel-color,var(--gold-light)); }
+
+    .panel-desc {
+      font-size:.95rem; color:var(--text-soft); max-width:500px; line-height:1.7;
+    }
+
+    /* Filter chips */
+    .filter-chips {
+      display:flex; gap:.4rem; flex-wrap:wrap;
+    }
+
+    .chip {
+      padding:.35rem .85rem; border-radius:var(--radius-xl);
+      border:1px solid var(--border-dim); font-size:.78rem; font-weight:500;
+      color:var(--text-muted); background:transparent;
+      transition:var(--t); cursor:pointer;
+    }
+    .chip:hover { color:var(--cream); border-color:var(--border); background:var(--border-dim); }
+    .chip.active {
+      background:var(--panel-color,var(--gold));
+      color:#0d0f0a; border-color:transparent; font-weight:600;
+    }
+
+    /* ============================================================
+       FOOD TAB
+    ============================================================ */
+    .food-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(min(300px,100%),1fr));
+      gap:1.1rem;
+    }
+
+    .food-card {
+      background:var(--bg-card);
+      border:1px solid var(--border-dim);
+      border-radius:var(--radius-lg);
+      overflow:hidden; cursor:pointer;
+      transition:border-color var(--t), transform var(--t), box-shadow var(--t);
+      position:relative;
+    }
+    .food-card::before {
+      content:''; position:absolute;
+      top:0; left:0; right:0; height:2.5px;
+      background:var(--food); opacity:0; transition:opacity var(--t);
+      border-radius:2px 2px 0 0;
+    }
+    .food-card:hover { border-color:var(--border); transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,0,0,.45); }
+    .food-card:hover::before { opacity:1; }
+
+    .food-card-emoji {
+      font-size:3rem; padding:1.5rem 1.5rem .75rem;
+      display:block; line-height:1;
+    }
+
+    .food-card-body { padding:0 1.5rem 1.5rem; }
+
+    .food-card-origin {
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--food); margin-bottom:.35rem;
+    }
+
+    .food-card-name {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.15rem; color:var(--cream); margin-bottom:.5rem; line-height:1.3;
+    }
+
+    .food-card-desc {
+      font-size:.82rem; color:var(--text-muted); line-height:1.65;
+      display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+      margin-bottom:1rem;
+    }
+
+    .food-card-footer {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:.9rem 1.5rem; border-top:1px solid var(--border-dim);
+    }
+
+    .food-card-tag {
+      font-size:.72rem; font-weight:500;
+      padding:.25rem .6rem; border-radius:var(--radius-sm);
+      background:rgba(212,98,42,.12); color:#e8845a;
+      border:1px solid rgba(212,98,42,.2);
+    }
+
+    .food-card-country {
+      font-size:.75rem; color:var(--text-muted);
+      display:flex; align-items:center; gap:.35rem;
+    }
+
+    /* Featured food card */
+    .food-card.featured {
+      grid-column:span 2;
+      display:grid; grid-template-columns:auto 1fr;
+    }
+
+    .food-card.featured .food-card-emoji { font-size:4rem; padding:2rem; align-self:center; }
+    .food-card.featured .food-card-name  { font-size:1.4rem; }
+    .food-card.featured .food-card-desc  { -webkit-line-clamp:4; }
+
+    /* ============================================================
+       DRESSING TAB
+    ============================================================ */
+    .dressing-layout {
+      display:grid; grid-template-columns:280px 1fr; gap:2rem; align-items:start;
+    }
+
+    .dressing-nav {
+      position:sticky; top:calc(var(--nav-h) + var(--tab-h) + 1.5rem);
+      background:var(--bg-card);
+      border:1px solid var(--border-dim);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+    }
+
+    .dressing-nav-title {
+      padding:1rem 1.25rem;
+      font-family:'DM Mono',monospace; font-size:.68rem;
+      letter-spacing:.12em; text-transform:uppercase;
+      color:var(--gold); border-bottom:1px solid var(--border-dim);
+    }
+
+    .dressing-nav-item {
+      display:flex; align-items:center; gap:.75rem;
+      padding:.9rem 1.25rem; cursor:pointer;
+      border-bottom:1px solid var(--border-dim);
+      font-size:.875rem; font-weight:500;
+      color:var(--text-soft);
+      transition:var(--t); border-left:2.5px solid transparent;
+    }
+    .dressing-nav-item:last-child { border-bottom:none; }
+    .dressing-nav-item:hover { color:var(--cream); background:var(--border-dim); }
+    .dressing-nav-item.active {
+      color:var(--gold-light); background:var(--gold-dim);
+      border-left-color:var(--gold);
+    }
+    .dressing-nav-icon { font-size:1.1rem; }
+
+    .dressing-content { display:none; }
+    .dressing-content.active { display:block; animation:fadeUp .3s ease both; }
+
+    .fabric-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr));
+      gap:1rem; margin-bottom:2rem;
+    }
+
+    .fabric-card {
+      background:var(--bg-card); border:1px solid var(--border-dim);
+      border-radius:var(--radius-md); padding:1.5rem;
+      transition:var(--t);
+    }
+    .fabric-card:hover { border-color:var(--border); background:var(--bg-raise); }
+
+    .fabric-swatch {
+      width:48px; height:48px; border-radius:10px;
+      display:grid; place-items:center; font-size:1.5rem;
+      margin-bottom:1rem;
+      background:linear-gradient(135deg,var(--sw1,#c8952a),var(--sw2,#2a4a2e));
+    }
+
+    .fabric-name {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1rem; color:var(--cream); margin-bottom:.25rem;
+    }
+
+    .fabric-origin {
+      font-size:.72rem; color:var(--gold); letter-spacing:.06em;
+      margin-bottom:.6rem; font-family:'DM Mono',monospace;
+    }
+
+    .fabric-desc { font-size:.82rem; color:var(--text-muted); line-height:1.65; }
+
+    /* Attire showcase */
+    .attire-section { margin-top:2rem; }
+
+    .attire-heading {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.15rem; color:var(--cream); margin-bottom:1rem;
+      display:flex; align-items:center; gap:.75rem;
+    }
+    .attire-heading::after {
+      content:''; flex:1; height:1px; background:var(--border-dim);
+    }
+
+    .attire-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));
+      gap:.85rem;
+    }
+
+    .attire-card {
+      background:var(--bg-raise); border:1px solid var(--border-dim);
+      border-radius:var(--radius-md); padding:1.25rem;
+      transition:var(--t);
+    }
+    .attire-card:hover { border-color:var(--border); }
+
+    .attire-label {
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--dressing,var(--gold)); margin-bottom:.4rem;
+    }
+
+    .attire-name {
+      font-weight:600; font-size:.92rem; color:var(--cream);
+      margin-bottom:.4rem;
+    }
+
+    .attire-desc { font-size:.78rem; color:var(--text-muted); line-height:1.6; }
+
+    /* ============================================================
+       MUSIC TAB
+    ============================================================ */
+    .music-hero-row {
+      display:grid; grid-template-columns:1fr 1fr 1fr;
+      gap:1.1rem; margin-bottom:2rem;
+    }
+
+    .genre-card {
+      background:var(--bg-card); border:1px solid var(--border-dim);
+      border-radius:var(--radius-lg); padding:1.75rem;
+      cursor:pointer; position:relative; overflow:hidden;
+      transition:var--(t),border-color var(--t),transform var(--t);
+    }
+
+    .genre-card::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(135deg,var(--gc-color,rgba(46,125,94,.15)),transparent);
+      opacity:0; transition:opacity var(--t);
+    }
+
+    .genre-card:hover { border-color:var(--border); transform:translateY(-3px); }
+    .genre-card:hover::after { opacity:1; }
+
+    .genre-icon { font-size:2rem; margin-bottom:.85rem; display:block; }
+
+    .genre-name {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.1rem; color:var(--cream); margin-bottom:.4rem;
+    }
+
+    .genre-origin {
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--gc-color,var(--green-mid)); margin-bottom:.6rem;
+    }
+
+    .genre-desc { font-size:.8rem; color:var(--text-muted); line-height:1.65; }
+
+    .genre-tags {
+      display:flex; flex-wrap:wrap; gap:.3rem; margin-top:.85rem;
+    }
+
+    .genre-tag {
+      font-size:.68rem; padding:.2rem .5rem;
+      border-radius:var(--radius-sm);
+      background:var(--border-dim); color:var(--text-muted);
+    }
+
+    /* Artists grid */
+    .artists-section { margin-top:2.5rem; }
+
+    .artists-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));
+      gap:1rem;
+    }
+
+    .artist-card {
+      background:var(--bg-card); border:1px solid var(--border-dim);
+      border-radius:var(--radius-md); padding:1.35rem;
+      transition:var(--t); position:relative; overflow:hidden;
+    }
+    .artist-card:hover { border-color:var(--border); background:var(--bg-raise); }
+
+    .artist-avatar {
+      width:52px; height:52px; border-radius:12px;
+      background:linear-gradient(135deg,var(--av1,#2e7d5e),var(--av2,#c8952a));
+      display:grid; place-items:center;
+      font-size:1.4rem; margin-bottom:.85rem;
+    }
+
+    .artist-name {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:.95rem; color:var(--cream); margin-bottom:.2rem;
+    }
+
+    .artist-genre {
+      font-size:.72rem; color:var(--green-mid);
+      font-weight:500; margin-bottom:.5rem;
+      font-family:'DM Mono',monospace; letter-spacing:.06em;
+    }
+
+    .artist-country { font-size:.75rem; color:var(--text-muted); }
+    .artist-note {
+      font-size:.75rem; color:var(--text-soft); line-height:1.55;
+      margin-top:.6rem; padding-top:.6rem; border-top:1px solid var(--border-dim);
+    }
+
+    /* Legend vs Current toggle */
+    .music-toggle {
+      display:flex; background:var(--bg-card);
+      border:1px solid var(--border-dim); border-radius:var(--radius-lg);
+      padding:.3rem; gap:.2rem; width:fit-content; margin-bottom:1.5rem;
+    }
+
+    .music-toggle-btn {
+      padding:.45rem 1.25rem; border-radius:var(--radius-md);
+      font-size:.82rem; font-weight:600; color:var(--text-muted);
+      transition:var(--t);
+    }
+    .music-toggle-btn.active {
+      background:var(--gold); color:#0d0f0a;
+    }
+    .music-toggle-btn:hover:not(.active) { color:var(--cream); }
+
+    /* ============================================================
+       TRADITIONS TAB
+    ============================================================ */
+    .traditions-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));
+      gap:1.25rem;
+    }
+
+    .tradition-card {
+      background:var(--bg-card); border:1px solid var(--border-dim);
+      border-radius:var(--radius-lg); overflow:hidden;
+      transition:var(--t); cursor:pointer;
+      display:flex; flex-direction:column;
+    }
+    .tradition-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,.4); }
+
+    .tradition-header {
+      padding:1.5rem 1.5rem 1rem;
+      background:linear-gradient(135deg,var(--tc-bg,rgba(139,58,158,.1)),transparent);
+      border-bottom:1px solid var(--border-dim);
+    }
+
+    .tradition-type {
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      letter-spacing:.12em; text-transform:uppercase;
+      color:var(--tc-color,var(--traditions)); margin-bottom:.4rem;
+    }
+
+    .tradition-name {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.15rem; color:var(--cream); margin-bottom:.3rem;
+    }
+
+    .tradition-group {
+      font-size:.78rem; color:var(--text-muted);
+      display:flex; align-items:center; gap:.4rem;
+    }
+
+    .tradition-body { padding:1.25rem 1.5rem; flex:1; }
+
+    .tradition-desc {
+      font-size:.84rem; color:var(--text-soft); line-height:1.7;
+      margin-bottom:1rem;
+    }
+
+    .tradition-steps { display:flex; flex-direction:column; gap:.5rem; }
+
+    .tradition-step {
+      display:flex; align-items:flex-start; gap:.75rem;
+    }
+
+    .step-num {
+      width:22px; height:22px; border-radius:6px;
+      background:var(--tc-bg,rgba(139,58,158,.15));
+      border:1px solid var(--tc-color,var(--traditions));
+      display:grid; place-items:center; flex-shrink:0;
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      color:var(--tc-color,var(--traditions)); margin-top:.1rem;
+    }
+
+    .step-text { font-size:.8rem; color:var(--text-muted); line-height:1.6; }
+
+    /* ============================================================
+       BELIEFS TAB
+    ============================================================ */
+    .beliefs-layout {
+      display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;
+    }
+
+    .belief-block {
+      background:var(--bg-card); border:1px solid var(--border-dim);
+      border-radius:var(--radius-lg); overflow:hidden;
+      transition:var(--t);
+    }
+    .belief-block:hover { border-color:var(--border); }
+
+    .belief-block.span2 { grid-column:span 2; }
+
+    .belief-header {
+      padding:1.5rem 1.75rem 1rem;
+      border-bottom:1px solid var(--border-dim);
+      display:flex; align-items:center; gap:1rem;
+    }
+
+    .belief-icon {
+      width:48px; height:48px; border-radius:12px;
+      display:grid; place-items:center; font-size:1.4rem; flex-shrink:0;
+    }
+
+    .belief-title-block {}
+    .belief-name {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.1rem; color:var(--cream);
+    }
+    .belief-origin {
+      font-size:.75rem; color:var(--text-muted); margin-top:.15rem;
+    }
+
+    .belief-body { padding:1.25rem 1.75rem 1.5rem; }
+
+    .belief-desc {
+      font-size:.86rem; color:var(--text-soft); line-height:1.7; margin-bottom:1rem;
+    }
+
+    .belief-deities { display:flex; flex-direction:column; gap:.6rem; }
+
+    .deity-row {
+      display:flex; align-items:flex-start; gap:.75rem;
+      padding:.7rem .85rem; background:var(--bg-raise);
+      border:1px solid var(--border-dim); border-radius:var(--radius-md);
+    }
+
+    .deity-emoji { font-size:1.1rem; flex-shrink:0; margin-top:.05rem; }
+    .deity-name  { font-weight:600; font-size:.85rem; color:var(--cream); }
+    .deity-role  { font-size:.75rem; color:var(--text-muted); margin-top:.1rem; line-height:1.5; }
+
+    /* UNESCO badge */
+    .unesco-badge {
+      display:inline-flex; align-items:center; gap:.4rem;
+      padding:.3rem .8rem;
+      background:rgba(26,110,168,.12); border:1px solid rgba(26,110,168,.3);
+      border-radius:var(--radius-xl); font-size:.72rem; font-weight:600;
+      color:#5aaae0; margin-top:.75rem;
+    }
+
+    /* ============================================================
+       FESTIVALS TAB
+    ============================================================ */
+    .festivals-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));
+      gap:1.25rem;
+    }
+
+    .festival-card {
+      background:var(--bg-card); border:1px solid var(--border-dim);
+      border-radius:var(--radius-lg); overflow:hidden;
+      transition:var(--t); cursor:pointer; display:flex; flex-direction:column;
+    }
+    .festival-card:hover { border-color:var(--border); transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,0,0,.45); }
+
+    .festival-card-top {
+      padding:1.5rem;
+      background:linear-gradient(135deg,var(--fc-bg,rgba(184,66,10,.12)),transparent);
+      border-bottom:1px solid var(--border-dim);
+      display:flex; gap:1rem; align-items:flex-start;
+    }
+
+    .festival-emoji {
+      font-size:2.2rem; flex-shrink:0; line-height:1;
+    }
+
+    .festival-meta {}
+
+    .festival-when {
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--fc-color,var(--festivals)); margin-bottom:.3rem;
+    }
+
+    .festival-name {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.05rem; color:var(--cream); margin-bottom:.25rem; line-height:1.3;
+    }
+
+    .festival-group { font-size:.75rem; color:var(--text-muted); }
+
+    .festival-body { padding:1.25rem 1.5rem; flex:1; }
+
+    .festival-desc {
+      font-size:.83rem; color:var(--text-soft); line-height:1.7; margin-bottom:1rem;
+    }
+
+    .festival-highlights { display:flex; flex-direction:column; gap:.4rem; }
+
+    .highlight-item {
+      display:flex; align-items:center; gap:.6rem;
+      font-size:.78rem; color:var(--text-muted);
+    }
+    .highlight-item::before {
+      content:''; width:5px; height:5px; border-radius:50%;
+      background:var(--fc-color,var(--festivals)); flex-shrink:0;
+    }
+
+    .festival-card-foot {
+      padding:.85rem 1.5rem; border-top:1px solid var(--border-dim);
+      display:flex; align-items:center; justify-content:space-between;
+    }
+
+    .festival-location {
+      font-size:.75rem; color:var(--text-muted);
+      display:flex; align-items:center; gap:.3rem;
+    }
+
+    .festival-badge {
+      font-size:.68rem; font-weight:600; padding:.2rem .6rem;
+      border-radius:var(--radius-sm); background:var(--fc-bg,rgba(184,66,10,.12));
+      color:var(--fc-color,var(--festivals));
+      border:1px solid rgba(184,66,10,.2);
+    }
+
+    /* ============================================================
+       MODAL
+    ============================================================ */
+    .modal-overlay {
+      position:fixed; inset:0; z-index:2000;
+      background:rgba(0,0,0,.85); backdrop-filter:blur(10px);
+      display:none; align-items:center; justify-content:center;
+      padding:1.5rem;
+    }
+    .modal-overlay.open { display:flex; }
+
+    .modal {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-xl); width:100%; max-width:680px;
+      max-height:85vh; overflow-y:auto;
+      animation:modalIn .25s ease;
+      position:relative;
+    }
+
+    @keyframes modalIn {
+      from { opacity:0; transform:scale(.95) translateY(-12px); }
+      to   { opacity:1; transform:scale(1) translateY(0); }
+    }
+
+    .modal-close {
+      position:absolute; top:1.25rem; right:1.25rem;
+      width:32px; height:32px; border-radius:8px;
+      background:var(--bg-raise); border:1px solid var(--border-dim);
+      color:var(--text-muted); display:grid; place-items:center;
+      font-size:.85rem; transition:var(--t); z-index:1;
+    }
+    .modal-close:hover { color:var(--cream); background:var(--border); }
+
+    .modal-body { padding:2rem; }
+
+    .modal-tag {
+      font-family:'DM Mono',monospace; font-size:.65rem;
+      letter-spacing:.12em; text-transform:uppercase;
+      color:var(--gold); margin-bottom:.75rem;
+    }
+
+    .modal-title {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.6rem; color:var(--cream); margin-bottom:.5rem; line-height:1.2;
+    }
+
+    .modal-subtitle { font-size:.85rem; color:var(--text-muted); margin-bottom:1.5rem; }
+
+    .modal-divider { height:1px; background:var(--border-dim); margin:1.25rem 0; }
+
+    .modal-section-title {
+      font-family:'DM Mono',monospace; font-size:.68rem;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:var(--gold); margin-bottom:.75rem;
+    }
+
+    .modal-text {
+      font-size:.9rem; color:var(--text-soft); line-height:1.75;
+    }
+
+    .modal-list { display:flex; flex-direction:column; gap:.5rem; }
+
+    .modal-list-item {
+      display:flex; align-items:flex-start; gap:.65rem;
+      font-size:.875rem; color:var(--text-soft); line-height:1.6;
+    }
+    .modal-list-item::before {
+      content:'→'; color:var(--gold); flex-shrink:0; margin-top:.05rem;
+    }
+
+    /* ============================================================
+       SHARED SECTION STYLES
+    ============================================================ */
+    .section-gap { margin-top:3rem; }
+
+    .subsection-title {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:1.4rem; color:var(--cream); margin-bottom:1.25rem;
+      display:flex; align-items:center; gap:.75rem;
+    }
+    .subsection-title::after { content:''; flex:1; height:1px; background:var(--border-dim); }
+
+    /* ── Back to top ─────────────────────────────────────── */
+    .back-top {
+      position:fixed; bottom:2rem; right:2rem;
+      width:44px; height:44px; background:var(--gold); color:#0d0f0a;
+      border-radius:10px; display:grid; place-items:center; cursor:pointer;
+      opacity:0; transform:translateY(10px);
+      transition:opacity var(--t),transform var(--t),background var(--t);
+      z-index:500; box-shadow:0 4px 20px rgba(200,149,42,.35);
+    }
+    .back-top.show  { opacity:1; transform:translateY(0); }
+    .back-top:hover { background:var(--gold-light); }
+
+    /* ── Footer ───────────────────────────────────────────── */
+    .footer {
+      background:var(--bg-card); border-top:1px solid var(--border-dim);
+      padding:2.5rem clamp(1.25rem,4vw,3rem);
+    }
+    .footer-inner {
+      max-width:1400px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:1.5rem; flex-wrap:wrap;
+      font-size:.82rem; color:var(--text-muted);
+    }
+    .footer-links { display:flex; gap:1.5rem; flex-wrap:wrap; }
+    .footer-links a { color:var(--text-muted); transition:color var(--t); }
+    .footer-links a:hover { color:var(--gold-light); }
+    .footer-gold { color:var(--gold); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width:1024px) {
+      .hero-inner       { grid-template-columns:1fr; }
+      .hero-mosaic      { display:none; }
+      .dressing-layout  { grid-template-columns:1fr; }
+      .dressing-nav     { position:static; }
+      .music-hero-row   { grid-template-columns:1fr 1fr; }
+      .beliefs-layout   { grid-template-columns:1fr; }
+      .belief-block.span2 { grid-column:span 1; }
+    }
+
+    @media (max-width:768px) {
+      .nav-links   { display:none; }
+      .hamburger   { display:flex; }
+      .food-card.featured { grid-column:span 1; display:flex; flex-direction:column; }
+      .food-card.featured .food-card-emoji { font-size:3rem; padding:1.5rem 1.5rem .75rem; }
+      .music-hero-row { grid-template-columns:1fr; }
+      .traditions-grid { grid-template-columns:1fr; }
+      .festivals-grid  { grid-template-columns:1fr; }
+    }
+
+    @media (max-width:520px) {
+      .food-grid   { grid-template-columns:1fr; }
+      .fabric-grid { grid-template-columns:1fr; }
+      .artists-grid{ grid-template-columns:1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">F</div>
+        <span class="logo-text">Fr<span>i</span>ca</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="culture.html" class="active">Culture</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="explore.html">Explore</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="nav-icon-btn" aria-label="Search">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="countries.html">🌍 Countries</a>
+    <a href="culture.html">🎭 Culture</a>
+    <a href="learn.html">📖 Learn</a>
+    <a href="discover.html">🧭 Discover</a>
+    <a href="explore.html">✨ Explore</a>
+  </div>
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <div class="page-hero">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-orb orb3"></div>
+    <div class="hero-grid-lines"></div>
+
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <div class="badge-dot"></div>
+          3,000+ Cultures · 54 Countries
+        </div>
+        <h1 class="hero-title">
+          Africa's Living<br /><em>Culture</em>
+        </h1>
+        <p class="hero-desc">
+          From the drumbeats of Kumasi to the spice markets of Marrakech, from Kente cloth to Afrobeats — explore the richest cultural tapestry on Earth.
+        </p>
+        <div class="hero-cats">
+          <button class="hero-cat" style="--cat-color:#d4622a;--cat-rgb:212,98,42" onclick="switchTab('food')">
+            <div class="hero-cat-dot"></div> Food
+          </button>
+          <button class="hero-cat" style="--cat-color:#c8952a;--cat-rgb:200,149,42" onclick="switchTab('dressing')">
+            <div class="hero-cat-dot"></div> Dressing
+          </button>
+          <button class="hero-cat" style="--cat-color:#2e7d5e;--cat-rgb:46,125,94" onclick="switchTab('music')">
+            <div class="hero-cat-dot"></div> Music
+          </button>
+          <button class="hero-cat" style="--cat-color:#8b3a9e;--cat-rgb:139,58,158" onclick="switchTab('traditions')">
+            <div class="hero-cat-dot"></div> Traditions
+          </button>
+          <button class="hero-cat" style="--cat-color:#1a6ea8;--cat-rgb:26,110,168" onclick="switchTab('beliefs')">
+            <div class="hero-cat-dot"></div> Beliefs
+          </button>
+          <button class="hero-cat" style="--cat-color:#b8420a;--cat-rgb:184,66,10" onclick="switchTab('festivals')">
+            <div class="hero-cat-dot"></div> Festivals
+          </button>
+        </div>
+      </div>
+
+      <!-- Mosaic -->
+      <div class="hero-mosaic">
+        <div class="mosaic-card tall" style="--mc-color:var(--food)">
+          <span class="mosaic-icon">🍛</span>
+          <div class="mosaic-label">Food</div>
+          <div class="mosaic-title">Jollof Rice to Injera</div>
+          <div class="mosaic-sub">54 cuisines · 1000+ dishes</div>
+        </div>
+        <div class="mosaic-card" style="--mc-color:var(--music)">
+          <span class="mosaic-icon">🎵</span>
+          <div class="mosaic-label">Music</div>
+          <div class="mosaic-title">Afrobeats · Amapiano · Highlife</div>
+        </div>
+        <div class="mosaic-card" style="--mc-color:var(--dressing)">
+          <span class="mosaic-icon">👘</span>
+          <div class="mosaic-label">Dressing</div>
+          <div class="mosaic-title">Kente · Agbada · Ankara</div>
+        </div>
+        <div class="mosaic-card wide" style="--mc-color:var(--festivals)">
+          <span class="mosaic-icon">🎊</span>
+          <div class="mosaic-label">Festivals</div>
+          <div class="mosaic-title">Osun-Osogbo · Homowo · Durbar · Timkat</div>
+          <div class="mosaic-sub">70+ annual festivals across 54 countries</div>
+        </div>
+        <div class="mosaic-card" style="--mc-color:var(--beliefs)">
+          <span class="mosaic-icon">🌿</span>
+          <div class="mosaic-label">Beliefs</div>
+          <div class="mosaic-title">Ifa · Ubuntu · Vodun</div>
+        </div>
+        <div class="mosaic-card" style="--mc-color:var(--traditions)">
+          <span class="mosaic-icon">🤝</span>
+          <div class="mosaic-label">Traditions</div>
+          <div class="mosaic-title">Igba Nkwu · Kamu · Prostration</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       STICKY TABS
+  ============================================================ -->
+  <div class="tabs-bar" id="tabsBar">
+    <div class="tabs-inner">
+      <button class="tab-btn active" data-tab="food"        style="--tab-accent:var(--food)">       <span class="tab-emoji">🍛</span> Food & Cuisine   </button>
+      <button class="tab-btn"        data-tab="dressing"    style="--tab-accent:var(--dressing)">   <span class="tab-emoji">👘</span> Dressing         </button>
+      <button class="tab-btn"        data-tab="music"       style="--tab-accent:var(--music)">      <span class="tab-emoji">🎵</span> Music            </button>
+      <button class="tab-btn"        data-tab="traditions"  style="--tab-accent:var(--traditions)"> <span class="tab-emoji">🤝</span> Traditions       </button>
+      <button class="tab-btn"        data-tab="beliefs"     style="--tab-accent:var(--beliefs)">    <span class="tab-emoji">🌿</span> Beliefs          </button>
+      <button class="tab-btn"        data-tab="festivals"   style="--tab-accent:var(--festivals)">  <span class="tab-emoji">🎊</span> Festivals        </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CONTENT AREA
+  ============================================================ -->
+  <div class="content-area">
+    <div class="content-inner">
+
+      <!-- ══════════════════════════════════════════════════════
+           FOOD TAB
+      ══════════════════════════════════════════════════════════ -->
+      <div class="tab-panel active" id="panel-food" style="--panel-color:var(--food)">
+        <div class="panel-header">
+          <div>
+            <div class="panel-label">54 Cuisines</div>
+            <h2 class="panel-title">Food &amp; <em>Cuisine</em></h2>
+            <p class="panel-desc">Africa's food is bold, aromatic, and deeply communal. From swallows and soups to tagines and jollof — no continent eats with more soul.</p>
+          </div>
+          <div class="filter-chips" id="foodFilter">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="West Africa">West Africa</button>
+            <button class="chip" data-filter="East Africa">East Africa</button>
+            <button class="chip" data-filter="North Africa">North Africa</button>
+            <button class="chip" data-filter="Southern Africa">Southern Africa</button>
+            <button class="chip" data-filter="Central Africa">Central Africa</button>
+          </div>
+        </div>
+
+        <div class="food-grid" id="foodGrid"></div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           DRESSING TAB
+      ══════════════════════════════════════════════════════════ -->
+      <div class="tab-panel" id="panel-dressing" style="--panel-color:var(--dressing)">
+        <div class="panel-header">
+          <div>
+            <div class="panel-label">Textiles · Fashion · Identity</div>
+            <h2 class="panel-title">Dressing &amp; <em>Fashion</em></h2>
+            <p class="panel-desc">African fashion is coded communication — every fabric, pattern, and colour carries meaning. Kente, Ankara, Agbada, Adire — these aren't just clothes, they're culture.</p>
+          </div>
+        </div>
+
+        <div class="dressing-layout">
+          <!-- Sidebar nav -->
+          <div class="dressing-nav">
+            <div class="dressing-nav-title">Browse by Style</div>
+            <div class="dressing-nav-item active" data-dress="fabrics">
+              <span class="dressing-nav-icon">🧵</span> Sacred Fabrics
+            </div>
+            <div class="dressing-nav-item" data-dress="yoruba">
+              <span class="dressing-nav-icon">👘</span> Yoruba Attire
+            </div>
+            <div class="dressing-nav-item" data-dress="igbo">
+              <span class="dressing-nav-icon">💎</span> Igbo Attire
+            </div>
+            <div class="dressing-nav-item" data-dress="hausa">
+              <span class="dressing-nav-icon">🕌</span> Hausa-Fulani Attire
+            </div>
+            <div class="dressing-nav-item" data-dress="akan">
+              <span class="dressing-nav-icon">👑</span> Akan (Ghana) Attire
+            </div>
+            <div class="dressing-nav-item" data-dress="northgh">
+              <span class="dressing-nav-icon">🌾</span> Northern Ghana (Batakari)
+            </div>
+            <div class="dressing-nav-item" data-dress="eastafrica">
+              <span class="dressing-nav-icon">🌊</span> East African Styles
+            </div>
+            <div class="dressing-nav-item" data-dress="modern">
+              <span class="dressing-nav-icon">✨</span> Modern African Fashion
+            </div>
+          </div>
+
+          <!-- Content panels -->
+          <div>
+            <div class="dressing-content active" id="dress-fabrics">
+              <h3 class="subsection-title">Africa's Sacred Fabrics</h3>
+              <div class="fabric-grid" id="fabricGrid"></div>
+            </div>
+            <div class="dressing-content" id="dress-yoruba"></div>
+            <div class="dressing-content" id="dress-igbo"></div>
+            <div class="dressing-content" id="dress-hausa"></div>
+            <div class="dressing-content" id="dress-akan"></div>
+            <div class="dressing-content" id="dress-northgh"></div>
+            <div class="dressing-content" id="dress-eastafrica"></div>
+            <div class="dressing-content" id="dress-modern"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           MUSIC TAB
+      ══════════════════════════════════════════════════════════ -->
+      <div class="tab-panel" id="panel-music" style="--panel-color:var(--music)">
+        <div class="panel-header">
+          <div>
+            <div class="panel-label">Genres · Artists · Legends</div>
+            <h2 class="panel-title">Music &amp; <em>Pop Culture</em></h2>
+            <p class="panel-desc">Africa didn't just influence global music — it created it. Afrobeats, Amapiano, Highlife, Mbalax, Gnawa — the world is finally listening.</p>
+          </div>
+          <div class="filter-chips" id="musicRegionFilter">
+            <button class="chip active" data-filter="all">All Regions</button>
+            <button class="chip" data-filter="West">West Africa</button>
+            <button class="chip" data-filter="East">East Africa</button>
+            <button class="chip" data-filter="North">North Africa</button>
+            <button class="chip" data-filter="South">Southern Africa</button>
+          </div>
+        </div>
+
+        <div class="music-hero-row" id="genreGrid"></div>
+
+        <div class="artists-section">
+          <div class="panel-header" style="margin-bottom:1.5rem">
+            <h3 class="subsection-title" style="font-size:1.25rem">Artists</h3>
+            <div class="music-toggle">
+              <button class="music-toggle-btn active" id="btn-current">Current Stars</button>
+              <button class="music-toggle-btn" id="btn-legends">Legends</button>
+            </div>
+          </div>
+          <div class="artists-grid" id="artistsGrid"></div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           TRADITIONS TAB
+      ══════════════════════════════════════════════════════════ -->
+      <div class="tab-panel" id="panel-traditions" style="--panel-color:var(--traditions)">
+        <div class="panel-header">
+          <div>
+            <div class="panel-label">Marriage · Rites · Ceremonies</div>
+            <h2 class="panel-title">Marriage &amp; <em>Traditions</em></h2>
+            <p class="panel-desc">In Africa, marriage is not between two people — it's between two families, two lineages, and two futures. Every tradition is a story.</p>
+          </div>
+          <div class="filter-chips" id="tradFilter">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="marriage">Marriage</button>
+            <button class="chip" data-filter="rite">Rites of Passage</button>
+            <button class="chip" data-filter="greeting">Greetings &amp; Etiquette</button>
+          </div>
+        </div>
+        <div class="traditions-grid" id="tradGrid"></div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           BELIEFS TAB
+      ══════════════════════════════════════════════════════════ -->
+      <div class="tab-panel" id="panel-beliefs" style="--panel-color:var(--beliefs)">
+        <div class="panel-header">
+          <div>
+            <div class="panel-label">Spirituality · Religion · Philosophy</div>
+            <h2 class="panel-title">Beliefs &amp; <em>Spirituality</em></h2>
+            <p class="panel-desc">Africa's spiritual landscape is the oldest and richest on Earth — from the 401 Orisha of the Yoruba to Ubuntu philosophy, from Vodun to Ifa divination.</p>
+          </div>
+        </div>
+        <div class="beliefs-layout" id="beliefsGrid"></div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           FESTIVALS TAB
+      ══════════════════════════════════════════════════════════ -->
+      <div class="tab-panel" id="panel-festivals" style="--panel-color:var(--festivals)">
+        <div class="panel-header">
+          <div>
+            <div class="panel-label">Annual · Royal · Sacred</div>
+            <h2 class="panel-title">Festivals &amp; <em>Celebrations</em></h2>
+            <p class="panel-desc">Africa's festivals are the most extraordinary on Earth — from the Durbar's cavalry splendour to the spiritual depth of Osun-Osogbo. Every one is a world of its own.</p>
+          </div>
+          <div class="filter-chips" id="festFilter">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="harvest">Harvest</button>
+            <button class="chip" data-filter="royal">Royal</button>
+            <button class="chip" data-filter="spiritual">Spiritual</button>
+            <button class="chip" data-filter="arts">Arts &amp; Music</button>
+          </div>
+        </div>
+        <div class="festivals-grid" id="festGrid"></div>
+      </div>
+
+    </div><!-- /content-inner -->
+  </div><!-- /content-area -->
+
+  <!-- ============================================================
+       MODAL
+  ============================================================ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-top" id="backTop">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2025 Frica. Built with love for Africa.</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="countries.html">Countries</a>
+        <a href="learn.html">Learn</a>
+        <a href="discover.html">Discover</a>
+      </div>
+      <div>Made in <span class="footer-gold">Africa 🌍</span></div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       DATA + JAVASCRIPT
+  ============================================================ -->
+  <script>
+  'use strict';
+
+  /* ──────────────────────────────────────────────────────────────
+     DATA
+  ────────────────────────────────────────────────────────────── */
+
+  const FOODS = [
+    { emoji:'🍛', name:'Jollof Rice',         origin:'West Africa',     country:'🇳🇬🇬🇭',  tag:'Staple',    region:'West Africa',     desc:'Rice slow-cooked in a rich tomato-pepper base. The subject of the legendary Ghana vs Nigeria Jollof War. Party Jollof — cooked over firewood — is the gold standard. Served at every celebration across West Africa.',  served:'Fried chicken, plantain, moin moin', featured:true },
+    { emoji:'🫙', name:'Fufu & Light Soup',    origin:'Ghana / Akan',    country:'🇬🇭',      tag:'Swallow',   region:'West Africa',     desc:'Boiled cassava and plantain pounded until smooth and elastic. Never chewed — rolled into a ball and swallowed with soup. Sunday fufu is sacred in Ghana — the sound of pounding is the sound of home.',  served:'Light soup, groundnut soup, palm nut soup' },
+    { emoji:'🍚', name:'Waakye',               origin:'Northern Ghana',  country:'🇬🇭',      tag:'Breakfast', region:'West Africa',     desc:'Rice and black-eyed peas cooked with dried sorghum leaves that give it a distinctive reddish-earthy colour. Ghana\'s ultimate breakfast bowl, served with shito, fried fish, spaghetti, boiled egg, and fried plantain.',  served:'Shito, fried fish, plantain, avocado' },
+    { emoji:'🥩', name:'Suya',                 origin:'Hausa-Fulani',    country:'🇳🇬',      tag:'Street Food',region:'West Africa',    desc:'Thin beef skewers coated in a spice blend of groundnut powder, chili, ginger, and paprika, grilled over charcoal. Nigeria\'s most iconic street food — suya spots come alive after dark in every Nigerian city.',  served:'Sliced raw onion, tomato, yaji spice' },
+    { emoji:'🍞', name:'Injera',               origin:'Ethiopia',        country:'🇪🇹',      tag:'Bread',     region:'East Africa',     desc:'A spongy, sour flatbread made from fermented teff flour. Both the plate and the utensil — food is placed on top and eaten by tearing pieces of injera to scoop up stews (wot). UNESCO-recognized as cultural heritage.',  served:'Doro wot (chicken stew), tikel gomen, misir wot' },
+    { emoji:'🍲', name:'Tagine',               origin:'Morocco / Berber',country:'🇲🇦',      tag:'Stew',      region:'North Africa',    desc:'A slow-cooked stew named after the conical earthenware pot it cooks in. Layers of meat (chicken, lamb, or fish) with preserved lemons, olives, dried fruits, and warming spices — cinnamon, cumin, saffron, ginger.',  served:'Couscous or crusty bread, harissa' },
+    { emoji:'🥣', name:'Ugali / Posho',        origin:'East Africa',     country:'🇰🇪🇹🇿🇺🇬', tag:'Swallow',   region:'East Africa',     desc:'A stiff maize flour porridge — the staple food of East Africa. Called Ugali in Kenya and Tanzania, Posho in Uganda, Sadza in Zimbabwe. Dense, filling, and neutral in flavour — the perfect base for stews and vegetables.',  served:'Sukuma wiki (kale), nyama choma (roasted meat), fish stew' },
+    { emoji:'🫕', name:'Egusi Soup',           origin:'Nigeria / West',  country:'🇳🇬',      tag:'Soup',      region:'West Africa',     desc:'A thick, hearty soup made from ground melon seeds, palm oil, assorted meats, crayfish, and leafy vegetables. One of Nigeria\'s most beloved soups. Each ethnic group has its own version — Igbo, Yoruba, and Edo preparations all differ significantly.',  served:'Pounded yam, eba (garri), fufu, semo' },
+    { emoji:'🫙', name:'Biltong',              origin:'South Africa',    country:'🇿🇦',      tag:'Snack',     region:'Southern Africa',  desc:'Air-dried, spiced meat — typically beef or game. Made by curing strips with salt, vinegar, coriander, and black pepper, then hanging to dry. A South African institution — found in every home, sports stadium, and road trip.',  served:'Eaten alone, with cheese, or crumbled over dishes' },
+    { emoji:'🍱', name:'Abacha (African Salad)',origin:'Igbo Nigeria',   country:'🇳🇬',      tag:'Salad',     region:'West Africa',     desc:'Shredded sun-dried cassava soaked in water, dressed with palm oil, ugba (oil bean seeds), potash, crayfish, utazi leaves, and fresh fish. A beloved Igbo street food served cold at celebrations and funerals alike.',  served:'As a side dish or standalone snack' },
+    { emoji:'🥘', name:'Thiéboudienne',        origin:'Senegal',         country:'🇸🇳',      tag:'National Dish',region:'West Africa',  desc:'Senegal\'s national dish — rice cooked in a rich tomato-fish broth with vegetables. UNESCO-recognized as Intangible Cultural Heritage. The name means "rice and fish" in Wolof. The most sophisticated rice dish in West Africa.',  served:'Fresh lime, hot peppers, pickled vegetables' },
+    { emoji:'🥘', name:'Piri Piri Chicken',    origin:'Mozambique / Angola', country:'🇲🇿',  tag:'Grilled',   region:'East Africa',     desc:'Chicken marinated in piri piri (African bird\'s eye chili) sauce with garlic, lemon, and paprika, then grilled over charcoal. Born in Mozambique — the original piri piri before Nando\'s made it global. Deeply smoky and fiercely spiced.',  served:'Chips (fries), grilled vegetables, tomato salad' },
+    { emoji:'🥗', name:'Couscous',             origin:'North Africa / Berber', country:'🇲🇦🇩🇿🇹🇳', tag:'Staple', region:'North Africa', desc:'Fine semolina wheat steamed to a light, fluffy texture. UNESCO-recognized Intangible Heritage of Algeria, Morocco, Tunisia, and Mauritania. Traditionally prepared by women steaming it in a couscoussier above a simmering stew. Friday couscous is a sacred Maghrebi ritual.',  served:'Lamb or chicken stew with root vegetables, harissa, preserved lemons' },
+    { emoji:'🥣', name:'Bunny Chow',           origin:'South Africa (Durban)', country:'🇿🇦', tag:'Street Food', region:'Southern Africa', desc:'A hollowed-out half loaf of bread filled with curry — originally invented by Indian South Africans in Durban as a portable meal for workers who couldn\'t eat at restaurants during apartheid. Now an iconic South African street food beloved by all.',  served:'Eaten straight from the bread bowl — no cutlery needed' },
+    { emoji:'🍳', name:'Akara',                origin:'Yoruba Nigeria',  country:'🇳🇬🇧🇯',   tag:'Breakfast', region:'West Africa',     desc:'Deep-fried balls of blended black-eyed peas, peppers, and onions. Crispy outside, soft inside. The classic Nigerian and Beninese breakfast street food. Also found throughout the African diaspora — in Brazil as "acarajé" (UNESCO-recognized).',  served:'Pap (ogi/akamu), bread, or eaten alone' },
+    { emoji:'🫖', name:'Tej (Ethiopian Honey Wine)', origin:'Ethiopia', country:'🇪🇹',       tag:'Drink',     region:'East Africa',     desc:'An ancient fermented honey wine unique to Ethiopia, traditionally brewed with gesho (buckthorn) leaves. Served in a berele (flask-shaped glass). Tej has been brewed in Ethiopia for over 2,000 years and remains the drink of celebration.',  served:'With injera and Ethiopian cuisine' },
+  ];
+
+  const FABRICS = [
+    { emoji:'🟡', name:'Kente Cloth',     origin:'Akan (Ghana)',      sw1:'#c8952a', sw2:'#2a4a2e', desc:'Hand-woven in narrow strips on horizontal looms, then sewn together. Every color and pattern carries specific meaning. Gold = royalty, Green = growth, Red = political power. Originally only Ashanti royalty could wear it.' },
+    { emoji:'🟠', name:'Ankara',          origin:'Pan-African',       sw1:'#d4622a', sw2:'#c8952a', desc:'Bold wax-resist printed fabric that has become synonymous with African identity globally. Used by all ethnic groups for everything from casual to formal wear. The most widely used fabric across Africa.' },
+    { emoji:'🔵', name:'Aso-Oke',         origin:'Yoruba (Nigeria)',   sw1:'#1a3a6e', sw2:'#8b2252', desc:'Hand-woven prestige fabric — the most prestigious traditional textile in Nigeria. Three types: etu (deep blue-black), sanyan (beige), and alaari (magenta). Worn at weddings, coronations, and major ceremonies.' },
+    { emoji:'🟣', name:'Adire',           origin:'Yoruba (Nigeria)',   sw1:'#1a2e6e', sw2:'#3d4a9e', desc:'Traditional Yoruba tie-dye fabric in indigo blue. Two techniques: Adire eleko (starch resist) and Adire oniko (tied resist). Experiencing a major global fashion revival. Abeokuta, Ogun State is the world capital of Adire.' },
+    { emoji:'🟤', name:'George Fabric',   origin:'Igbo (Nigeria)',     sw1:'#8b3a1a', sw2:'#c8952a', desc:'Heavy, luxurious imported fabric with a distinctive sheen. Used by Igbo and Niger Delta women for traditional weddings and formal ceremonies. Originally from India — adopted and made iconic by Igbo culture.' },
+    { emoji:'⬛', name:'Batakari (Fugu)', origin:'Northern Ghana',     sw1:'#2a2a1a', sw2:'#8b7a3a', desc:'Loose, hand-woven cotton smock with embroidery at collar and armholes. The signature garment of northern Ghana. Made from hand-spun cotton in earthy colours. Jerry Rawlings wore it for national unity — now a symbol of Ghanaian identity.' },
+    { emoji:'🟥', name:'Kanga / Kikoi',   origin:'East Africa',        sw1:'#c0392b', sw2:'#2e7d5e', desc:'Brightly coloured rectangular cotton cloth worn as a wrap by women across East Africa. Often bears a Swahili proverb printed along the border. A woman\'s kanga is her communication — the proverb chosen speaks to her mood or message.' },
+    { emoji:'🌿', name:'Bogolan (Mud Cloth)', origin:'Mali / Bamana',  sw1:'#3a2a1a', sw2:'#6b4a2a', desc:'Hand-woven cotton fabric decorated with fermented mud — the patterns are painted using mud that oxidizes into deep brown or black. From Mali\'s Bamana people. Deeply symbolic — worn by hunters, new mothers, and after circumcision.' },
+  ];
+
+  const ATTIRE_SECTIONS = {
+    yoruba: {
+      title: 'Yoruba Traditional Attire', flag: '🇳🇬',
+      intro: 'Yoruba fashion is one of West Africa\'s most sophisticated dress traditions — anchored by the Agbada, Aso-Oke fabric, the Gele headwrap, and the philosophy that how you dress is how you are addressed.',
+      items: [
+        { label:'Men — Formal',  name:'Agbada',              desc:'A grand three-piece flowing outer robe, worn over a buba (inner top) and sokoto (trousers). The pinnacle of Yoruba male elegance. The embroidery quality signals social status.' },
+        { label:'Men — Everyday',name:'Buba & Sokoto',       desc:'A loose top (buba) paired with matching trousers (sokoto) and a fila (cap). The everyday dignified dress of Yoruba men.' },
+        { label:'Women — Formal',name:'Iro + Buba + Gele',   desc:'A wrapper skirt (iro), loose blouse (buba), elaborate headwrap (gele), and shoulder shawl (ipele) — typically in Aso-Oke or George fabric.' },
+        { label:'Women — Fabric', name:'Adire',              desc:'Traditional indigo-dyed Yoruba fabric used in both casual and high-fashion contexts. Abeokuta is the Adire capital of the world.' },
+        { label:'The Gele',      name:'Art of the Headwrap', desc:'The Gele is not just a headwrap — it is an art form. Skilled Gele tiers are sought-after professionals at Nigerian weddings. The architecture of a perfect Gele can take 30+ minutes.' },
+        { label:'Wedding Style', name:'Aso-Ebi',             desc:'Matching fabric worn by the bride\'s and groom\'s families and guests. Aso-Ebi culture has spread across West Africa and the global African diaspora.' },
+      ]
+    },
+    igbo: {
+      title: 'Igbo Traditional Attire', flag: '🇳🇬',
+      intro: 'Igbo dressing is defined by coral beads, George fabric, the prestige of the red Okpu Agu cap for titled men, and the grandeur of the Isiagu lion-print shirt.',
+      items: [
+        { label:'Men — Formal',  name:'Isiagu Shirt',         desc:'A lion-head (isi agu) print shirt worn with George fabric wrapper and a walking stick. The definitive attire of Igbo formal events.' },
+        { label:'Men — Titled',  name:'Okpu Agu (Red Cap)',   desc:'A red cap worn only by men who have taken an Ozo or Nze traditional title. One of the most powerful status symbols in Igbo culture.' },
+        { label:'Women — Formal',name:'George + Coral Beads', desc:'Rich George fabric wrapper and blouse, paired with multiple strands of coral beads (Mgba) — family heirlooms worth millions, passed from mother to daughter.' },
+        { label:'Women — Body',  name:'Jigida (Waist Beads)', desc:'Beaded strands tied around the waist, symbolising femininity, fertility, and adornment. Worn against the skin, hidden under clothing.' },
+        { label:'Fabric',        name:'Akwete Cloth',         desc:'Handwoven cloth from Akwete village (Abia State) with bold geometric patterns. A prized textile at traditional Igbo ceremonies.' },
+        { label:'Wedding Style', name:'Igbo Bride\'s Look',   desc:'Rich George wrapper, beaded headcrown (Ogodo), layers of coral necklaces, bracelets, and Jigida waist beads. One of the most elaborate bridal looks in Africa.' },
+      ]
+    },
+    hausa: {
+      title: 'Hausa-Fulani Traditional Attire', flag: '🇳🇬',
+      intro: 'Hausa-Fulani fashion is defined by the grandeur of the Babban Riga, the intricacy of hand embroidery, and the beauty of lalle (henna) body art on women.',
+      items: [
+        { label:'Men — Formal',  name:'Babban Riga',          desc:'A grand, floor-length embroidered robe worn over a kaftan and shokoto trousers. The embroidery (zari) around the neck and chest is done by hand — the most elaborate can take weeks to complete.' },
+        { label:'Men — Cap',     name:'Fula/Hula Cap',        desc:'An embroidered cap — the Hausa man\'s crown. Never leaving the house without it is a mark of dignity and cultural pride.' },
+        { label:'Women — Dress', name:'Abaya + Hijab',        desc:'Long dress (abaya) with a matching headscarf and sometimes a full veil. Indigo-dyed fabrics are traditional. Elaborate embroidery on cuffs and necklines.' },
+        { label:'Women — Art',   name:'Lalle (Henna)',        desc:'Intricate henna designs applied to hands and feet before celebrations. A bride\'s lalle is applied by skilled women over many hours the night before the wedding.' },
+        { label:'Bride\'s Look', name:'Kamu Ceremony Dress',  desc:'During the Kamu ceremony (bridal unveiling), the bride is dressed in elaborate attire and veiled. Women sing traditional songs around her while the groom\'s family presents gifts.' },
+        { label:'Fabric',        name:'Turare (Perfume)',     desc:'Hausa fashion is incomplete without turare — traditional perfume made from oils and resins. Scent is considered part of a well-dressed person\'s presentation.' },
+      ]
+    },
+    akan: {
+      title: 'Akan (Ashanti/Ghana) Royal Attire', flag: '🇬🇭',
+      intro: 'Akan royal dress is among the most visually spectacular in Africa — layers of Kente, gold jewellery, state umbrellas, and regalia that communicate rank, history, and divine authority.',
+      items: [
+        { label:'Royal — Men',   name:'Kente Toga',           desc:'Kente cloth draped toga-style over the left shoulder, leaving the right shoulder bare. Worn with gold sandals (only royalty may wear sandals in a chief\'s presence), gold rings, anklets, and necklaces.' },
+        { label:'Royal — Women', name:'Kente Two-Piece',       desc:'Kente cloth as a two-piece set — a long skirt and a blouse made from matching or complementary Kente strips, with a duku (headwrap) in matching fabric.' },
+        { label:'Commoner',      name:'Ntoma',                desc:'Plain cloth (not Kente) wrapped toga-style for everyday formal occasions. The quality and source of the cloth communicates wealth and status.' },
+        { label:'Royal Symbol',  name:'State Umbrella',       desc:'The type of finial (decorative top) on a chief\'s state umbrella communicates their specific title and rank. Umbrella carriers are important palace officials.' },
+        { label:'Royal Symbol',  name:'Okyeame Staff',        desc:'The linguist-spokesman\'s carved staff — one of the most important symbols of royal authority. The Okyeame (linguist) speaks on behalf of the chief.' },
+        { label:'Fabric',        name:'Adinkra-Printed Cloth', desc:'Fabric printed with Adinkra symbols using carved calabash stamps dipped in black dye. Originally worn at funerals — dark colours for mourning, bright for celebration.' },
+      ]
+    },
+    northgh: {
+      title: 'Northern Ghana — Batakari Culture', flag: '🇬🇭',
+      intro: 'The Batakari (fugu smock) is the soul of northern Ghanaian identity — worn by Muslims and Christians, farmers and kings, young and old. It is a unifying symbol of northern culture.',
+      items: [
+        { label:'Fabric',        name:'Batakari Smock',       desc:'Loose, hand-woven cotton with embroidery at the collar and armholes. Made from cotton hand-spun and woven on narrow strip looms. Colours are earthy: white, brown, black.' },
+        { label:'Symbol',        name:'National Unity',       desc:'Jerry Rawlings wore the Batakari for his first public appearance as Ghana\'s head of state — a deliberate symbol of pan-Ghanaian unity beyond ethnic lines.' },
+        { label:'Men — Chiefs',  name:'Royal Smock',          desc:'Chiefs and kings of the north wear elaborate Batakari with gold jewellery during festivals like Damba. The Ya-Naa\'s ceremonial attire is the most ornate.' },
+        { label:'Women',         name:'Two-Piece Wrapper',    desc:'Northern Ghanaian women wear two-piece wrapper sets with matching headwraps. Elaborate beadwork is significant — waist beads, necklaces, and bracelets.' },
+        { label:'Occasions',     name:'When to Wear',         desc:'Batakari is worn at all formal occasions, funerals, festivals, and increasingly in cities as a statement of Ghanaian pride. Politicians wear it to signal grassroots connection.' },
+      ]
+    },
+    eastafrica: {
+      title: 'East African Fashion Traditions', flag: '🇰🇪🇹🇿🇪🇹',
+      intro: 'East African fashion spans the Maasai warrior\'s ochre and beads, the Swahili coast\'s kangas with proverbs, Ethiopia\'s habesha kemis, and the global fashion statements of modern Nairobi.',
+      items: [
+        { label:'Maasai',        name:'Shuka (Maasai Cloth)', desc:'A bright red or blue plaid blanket-like cloth worn draped around the body by Maasai men and women in Kenya and Tanzania. Combined with intricate beadwork jewelry — each bead pattern communicates age, marital status, and social position.' },
+        { label:'Maasai',        name:'Beadwork Jewelry',     desc:'Maasai beadwork is one of Africa\'s most recognized art forms. Each colour has specific meaning: red = bravery, blue = sky and water, white = purity, green = health, orange = hospitality. Worn in elaborate collars, earrings, and bracelets.' },
+        { label:'Ethiopia',      name:'Habesha Kemis',        desc:'The traditional white dress of Ethiopian and Eritrean women — a long, elegant cotton dress with embroidered borders in silk thread. Worn at church, weddings, and national celebrations. The Eritrean version is similar with regional variations.' },
+        { label:'Swahili Coast', name:'Kanga',                desc:'A brightly coloured cotton cloth worn as a wrap, always bearing a Swahili proverb along the border. A woman\'s kanga choice communicates her mood and message to those who can read it.' },
+        { label:'Swahili Coast', name:'Kikoi',                desc:'A striped woven cotton cloth from the Kenyan coast, originally worn by men as a wrap. Now a global beach fashion item — adopted worldwide for its versatility and beauty.' },
+        { label:'Uganda',        name:'Gomesi (Busuti)',      desc:'A formal floor-length dress worn by Ugandan women — introduced in the early 20th century but so thoroughly adopted it\'s now considered traditional. Made in bright fabrics with a square neckline and sash tied at the waist.' },
+      ]
+    },
+    modern: {
+      title: 'Modern African Fashion', flag: '✨',
+      intro: 'Modern African fashion is not just trend — it\'s a statement. Lagos, Accra, Nairobi, and Johannesburg have become global fashion capitals, blending ancient textile traditions with contemporary design.',
+      items: [
+        { label:'Lagos',         name:'Lagos Fashion Week',   desc:'Africa\'s most influential fashion event, held annually. Designers like Lisa Folawiyo, Deola Sagoe, and Mai Atafo present collections that blend Ankara, Aso-Oke, and Adire with contemporary silhouettes for global markets.' },
+        { label:'Accra',         name:'Detty December Style', desc:'Ghana\'s December festival season has become Africa\'s biggest fashion spectacle. The global diaspora returns wearing bold Kente fusions, Adinkra jewelry, and Afrocentric streetwear to a worldwide online audience.' },
+        { label:'Global',        name:'Diaspora Fashion',     desc:'African diaspora fashion — from Afropunk in New York to Afrobeats fashion in London — has pushed African textiles into global consciousness. Kente graduation stoles, Ankara streetwear, and Adinkra tattoos are now global cultural signals.' },
+        { label:'Trend',         name:'Ankara Fusion',        desc:'Traditional Ankara fabric recut into contemporary silhouettes — power suits, sneakers, caps, handbags. The most commercially successful fusion of African heritage with modern global fashion.' },
+        { label:'Jewelry',       name:'Adinkra Symbol Jewelry', desc:'Gold and silver pendants, earrings, and bracelets bearing Adinkra symbols — particularly Gye Nyame and Sankofa — have become globally popular as expressions of African pride and philosophy.' },
+        { label:'South Africa',  name:'Amapiano Style',       desc:'The Amapiano music movement from South Africa has spawned its own fashion aesthetic — bucket hats, tracksuits, bold Ankara, and the distinctive Zulu-inspired headwear of artists like Kabza De Small.' },
+      ]
+    },
+  };
+
+  const GENRES = [
+    { icon:'🎵', name:'Afrobeats',  origin:'Nigeria / Lagos', region:'West', color:'#2e7d5e', desc:'The genre that conquered the world. Born in Lagos, Afrobeats blends Yoruba rhythms, R&B, hip-hop, and electronic music. Wizkid, Burna Boy, Davido, Tems, and Rema have taken it to every continent.', tags:['Lagos-born','Global #1','Dance music','Yoruba rhythms'] },
+    { icon:'🎶', name:'Amapiano',   origin:'South Africa / Soweto', region:'South', color:'#8b3a9e', desc:'Born in the townships of South Africa\'s East Rand around 2012. A hypnotic blend of deep house, jazz, and lounge music with a signature log drum bassline and piano melodies. The hottest genre in the world in the 2020s.', tags:['Log drum','South African','House music','Township born'] },
+    { icon:'🎸', name:'Highlife',   origin:'Ghana / 1920s', region:'West', color:'#c8952a', desc:'Ghana\'s greatest sonic gift to the world — born in the 1920s when coastal Ghanaians fused local rhythms with brass band music and jazz. The musical ancestor of Afrobeats — its melodic DNA runs through all modern West African pop.', tags:['1920s origin','Brass horns','Guitar-led','West African classic'] },
+    { icon:'🥁', name:'Afrobeat (Original)', origin:'Nigeria / Fela Kuti', region:'West', color:'#d4622a', desc:'The original — distinct from Afrobeats. Created by Fela Anikulapo Kuti in the 1970s as a political weapon against military dictatorship. Fusion of Yoruba music, jazz, and funk with revolutionary lyrics. Nigeria\'s most globally influential musical export.', tags:['Fela Kuti','Political','Jazz-funk','Revolutionary'] },
+    { icon:'🎻', name:'Mbalax',     origin:'Senegal / Dakar', region:'West', color:'#1a6ea8', desc:'A Senegalese rhythm-based popular music genre incorporating traditional sabar drumming with Cuban and Western influences. Youssou N\'Dour brought Mbalax to global audiences. The sabar drum is the heartbeat of Wolof culture.', tags:['Sabar drums','Wolof culture','Youssou N\'Dour','Dance music'] },
+    { icon:'🎺', name:'Gnawa',      origin:'Morocco', region:'North', color:'#3d6b43', desc:'A spiritual music tradition of the Gnawa people — descendants of enslaved Sub-Saharan Africans in Morocco. Uses the guembri (3-string bass lute), qraqeb (metal castanets), and trance-inducing rhythms for healing ceremonies (lila). A UNESCO Intangible Heritage.', tags:['UNESCO heritage','Spiritual healing','Guembri bass','Trance music'] },
+  ];
+
+  const CURRENT_ARTISTS = [
+    { emoji:'🦍', name:'Burna Boy',     genre:'Afrobeats / Afrofusion', country:'🇳🇬 Nigeria',     av1:'#2e7d5e', av2:'#c8952a', note:'Grammy winner (2021). Self-styled African Giant. His music blends Afrobeats with reggae, dancehall, and afrofusion. One of the most globally successful African artists ever.' },
+    { emoji:'⭐', name:'Wizkid',        genre:'Afrobeats',               country:'🇳🇬 Nigeria',     av1:'#1a3a6e', av2:'#c8952a', note:'Grammy winner (2021) — Brown Skin Girl with Beyoncé. The "Starboy" from Ojuelegba, Lagos. First African artist to fill London\'s O2 Arena solo.' },
+    { emoji:'💎', name:'Tems',          genre:'Afrofusion / R&B',        country:'🇳🇬 Nigeria',     av1:'#8b3a9e', av2:'#2e7d5e', note:'Grammy winner (2023). First Nigerian female Grammy winner. Known for her powerful soprano and genre-defying sound. Collaborated with Drake, Future, and Beyoncé.' },
+    { emoji:'🔥', name:'Davido',        genre:'Afrobeats',               country:'🇳🇬 Nigeria',     av1:'#d4622a', av2:'#8b3a1a', note:'One of Afrobeats\' most consistent superstars. Known for anthems "Fall," "IF," and "Assurance." His humanitarian work during COVID-19 (raising ₦250M for hospitals) added to his legacy.' },
+    { emoji:'🌊', name:'Stonebwoy',     genre:'Afro-Dancehall',          country:'🇬🇭 Ghana',       av1:'#2e7d5e', av2:'#1a6ea8', note:'First Ghanaian to win BET Best International Act (2014 & 2015). Blends reggae and Afrobeats with Ewe culture. Collaborated with Sean Paul, Beenie Man, and Davian Marley.' },
+    { emoji:'🎤', name:'Black Sherif',  genre:'Asakaa / Afrobeats',      country:'🇬🇭 Ghana',       av1:'#3a2a1a', av2:'#8b3a9e', note:'"Second Sermon" featuring Burna Boy became one of 2022\'s biggest global hits. Rose from Konongo, Ashanti Region to become one of Africa\'s fastest-rising stars.' },
+    { emoji:'🎵', name:'Sarkodie',      genre:'Hiplife / Hip-hop',       country:'🇬🇭 Ghana',       av1:'#1a6ea8', av2:'#3a2a1a', note:'Ghana\'s greatest rapper. BET Best International Act winner. First African to win BET Hip Hop Best International Flow. Known for collaborating with Drake, Busta Rhymes, and Akon.' },
+    { emoji:'💫', name:'Asake',         genre:'Street-pop / Afrobeats',  country:'🇳🇬 Nigeria',     av1:'#c8952a', av2:'#d4622a', note:'One of the fastest-rising artists of the 2020s. Blends Fuji music rhythms with contemporary Afrobeats. His debut album "Mr. Money With The Vibe" broke streaming records in Nigeria.' },
+    { emoji:'🌸', name:'Amaarae',       genre:'Alt-R&B / Afrofusion',    country:'🇬🇭 Ghana',       av1:'#8b3a9e', av2:'#1a6ea8', note:'"SAD GIRLZ LUV MONEY" became a global viral phenomenon in 2022. Ghana\'s leading alternative music voice — blending Afrobeats with indie R&B and ethereal production.' },
+    { emoji:'🎶', name:'Rema',          genre:'Afrobeats',               country:'🇳🇬 Nigeria',     av1:'#2e7d5e', av2:'#d4622a', note:'"Calm Down" became one of the most-streamed Afrobeats songs globally, its remix with Selena Gomez reaching #1 in multiple countries. One of Afrobeats\' most distinctive voices.' },
+    { emoji:'🌍', name:'Sauti Sol',     genre:'Afro-pop / African Pop',  country:'🇰🇪 Kenya',       av1:'#3d6b43', av2:'#c8952a', note:'Kenya\'s most successful group. Four-part harmonies fused with Swahili, benga, and afro-pop. Multiple BET Award winners. Known for blending African languages with acoustic guitar.' },
+    { emoji:'🥁', name:'Msizi Baloyi (DBN Gogo)', genre:'Amapiano', country:'🇿🇦 South Africa', av1:'#8b3a9e', av2:'#2a2a6e', note:'One of Amapiano\'s most recognizable DJs. Her mixing style and log drum selections helped define the sound of Amapiano that captured global attention.' },
+  ];
+
+  const LEGEND_ARTISTS = [
+    { emoji:'👑', name:'Fela Kuti',         genre:'Afrobeat (Original)',   country:'🇳🇬 Nigeria',   av1:'#d4622a', av2:'#3a2a1a', note:'Nigeria\'s greatest musician. Created Afrobeat as a political weapon. Founded the Kalakuta Republic. Arrested 200+ times by military government. His son Femi and grandson Made carry on his legacy.' },
+    { emoji:'🎸', name:'King Sunny Ade',    genre:'Jùjú Music',            country:'🇳🇬 Nigeria',   av1:'#c8952a', av2:'#2a4a2e', note:'The "Minister of Enjoyment." Grammy-nominated Nigerian superstar who brought Jùjú music to global audiences in the 1980s. Recipient of Nigeria\'s highest national honours.' },
+    { emoji:'🎺', name:'E.T. Mensah',       genre:'Highlife',              country:'🇬🇭 Ghana',     av1:'#2e7d5e', av2:'#c8952a', note:'"King of Highlife." His band the Tempos defined dance-band highlife of the 1950s–70s. Performed with Louis Armstrong. Took Ghanaian music across West Africa as the sound of independence.' },
+    { emoji:'🎙️', name:'Youssou N\'Dour',  genre:'Mbalax',                country:'🇸🇳 Senegal',   av1:'#1a6ea8', av2:'#3d6b43', note:'Africa\'s most internationally recognized singer. His voice — spanning five octaves — brought Mbalax and Senegalese music to the world. Grammy winner. Former Minister of Culture of Senegal.' },
+    { emoji:'🌹', name:'Cesária Évora',     genre:'Morna',                 country:'🇨🇻 Cabo Verde',av1:'#1a3a6e', av2:'#8b3a9e', note:'"Barefoot Diva." Sang Morna — the soulful music of Cape Verde — with unmatched emotion. Performed barefoot in solidarity with poor women of her country. Grammy winner at age 70.' },
+    { emoji:'🎵', name:'Miriam Makeba',     genre:'African Jazz / World',  country:'🇿🇦 S.Africa',  av1:'#c0392b', av2:'#2e7d5e', note:'"Mama Africa." Exiled from South Africa for fighting apartheid. Her music introduced African sounds to the world. First African artist to win a Grammy. UNESCO Goodwill Ambassador.' },
+    { emoji:'🪗', name:'Ali Farka Touré',   genre:'Desert Blues',          country:'🇲🇱 Mali',      av1:'#c8952a', av2:'#3a2a1a', note:'Proved that the Blues came from Africa — not the reverse. His Malian desert guitar sound is the missing link between African and American music. Double Grammy winner.' },
+    { emoji:'🥁', name:'Babatunde Olatunji',genre:'African Drumming',      country:'🇳🇬 Nigeria',   av1:'#d4622a', av2:'#2a4a2e', note:'Nigerian drummer who brought African percussion to America in 1959 with the landmark album "Drums of Passion." Influenced the entire 1960s American world music movement and Carlos Santana.' },
+  ];
+
+  const TRADITIONS = [
+    { type:'marriage', icon:'🍷', name:'Igba Nkwu (Wine Carrying)',   group:'Igbo, Nigeria', color:'#8b3a9e', bg:'rgba(139,58,158,.1)',
+      desc:'The heart of the Igbo traditional wedding. The bride searches through a crowd of guests carrying a gourd of palm wine. When she finds her groom, she kneels before him and offers the cup. His drinking from it is his public acceptance of her — and her confirmation of choice.',
+      steps:['Groom\'s family presents the formal list of items (palm wine, yam, goat, drinks, money) to bride\'s family', 'The Iku Aka ceremony — formal knocking and announcement of intention', 'On the wedding day, the bride searches the crowd carrying palm wine', 'She kneels before the groom and offers him the cup. He drinks — sealing the union', 'She returns to her father, who passes the cup to the groom to complete the ceremony', 'Community feasting, Mmanwu masquerades, and dancing follow']
+    },
+    { type:'marriage', icon:'🥂', name:'Prostration (Idobale)',         group:'Yoruba, Nigeria', color:'#c8952a', bg:'rgba(200,149,42,.1)',
+      desc:'The most distinctive feature of a Yoruba traditional wedding — the groom and all his men must prostrate fully (lie face-down on the ground) before the bride\'s family as a mark of deep and sincere respect. This full prostration is non-negotiable and defines Yoruba ceremonial culture.',
+      steps:['Groom\'s family knocks formally — presenting schnapps, kola nuts, and palm wine at the bride\'s family\'s door', 'Eru Iyawo (bride price list) is fulfilled — gifts including schnapps, honey, bitter kola, fabric, and cash', 'The groom and his men PROSTRATE fully before the bride\'s family — the most defining moment', 'The palm wine ceremony — the bride searches the crowd and kneels before the groom to offer wine', 'Aso-Ebi: families in matching fabrics differentiate their group', 'Gele-tying ceremony — the bride\'s headwrap is elaborately tied']
+    },
+    { type:'marriage', icon:'💍', name:'Kamu Ceremony',                 group:'Hausa-Fulani, Nigeria', color:'#1a6ea8', bg:'rgba(26,110,168,.1)',
+      desc:'A distinctly Hausa ceremony where the bride is formally unveiled to the groom\'s family. Women sing traditional songs, intricate lalle (henna) adorns the bride\'s hands and feet, and the groom\'s family presents gifts. Held the night before the Nikkah (Islamic marriage contract).',
+      steps:['Sadaki: The Islamic bride price is paid directly to the bride (not her family) — a Quranic requirement', 'Fatihah / Nikkah: The Islamic marriage contract signed at the mosque, officiated by a Malam', 'Lalle night: Women gather to apply intricate henna on the bride over several hours', 'Kamu ceremony: The bride is unveiled to the groom\'s family with singing and gifts', 'Walima: The post-wedding feast hosted by the groom\'s family — obligatory in Islamic tradition', 'Celebrations are gender-separated per Islamic custom']
+    },
+    { type:'marriage', icon:'🌿', name:'Knocking Ceremony (Ghana)',      group:'Akan / Ga / Multiple, Ghana', color:'#2e7d5e', bg:'rgba(46,125,94,.1)',
+      desc:'Ghana\'s universal first step of marriage across all ethnic groups — the groom\'s family "knocks" on the bride\'s family\'s door with schnapps, drinks, and gifts to formally ask permission to proceed. No Ghanaian marriage can begin without this ceremony.',
+      steps:['Groom\'s family arrives with schnapps (mandatory), refreshments, and an elder spokesperson', 'A libation is poured by an elder — ancestors must be informed and invited to bless the union', 'The spokesperson formally states the family\'s intention — "we have seen a beautiful flower in your garden"', 'The bride\'s family confers privately, then accepts or declines', 'If accepted, a list of items and bride price is presented for the groom\'s family to fulfill', 'A second formal knock is held once all items are gathered — the official ceremony']
+    },
+    { type:'rite', icon:'🦁', name:'Maasai Warrior Initiation (Eunoto)', group:'Maasai, Kenya/Tanzania', color:'#d4622a', bg:'rgba(212,98,42,.1)',
+      desc:'The most important rite of passage in Maasai society. Young men (moran/warriors) shave their long ochre-red hair — which they have grown for years — to mark their transition from junior warrior to senior warrior status. After Eunoto, they may marry and own cattle.',
+      steps:['Years of junior warrior (moran) life — long ochre-dyed hair, distinctive red shuka, life in the bush', 'The Eunoto ceremony is held collectively for an age-group (ilkiama) of young men', 'Mothers shave their sons\' heads — an intensely emotional moment for both', 'The shaved hair is buried as a symbol of the old self being left behind', 'New responsibilities: can now marry, own cattle, participate in elder councils', 'The ceremony marks a man\'s full entry into Maasai adult society']
+    },
+    { type:'rite', icon:'💀', name:'Famadihana (Turning of the Bones)', group:'Malagasy, Madagascar', color:'#8b3a9e', bg:'rgba(139,58,158,.1)',
+      desc:'A uniquely Malagasy funerary tradition — every 5 to 7 years, families exhume the bones of their ancestors, rewrap them in fresh silk shrouds, dance with them to live music, and share family news with them before reinterring them. A celebration of the relationship between the living and the dead.',
+      steps:['Family receives a sign — usually through dreams — that an ancestor wishes to be rewrapped', 'The family assembles, musicians are hired, and food is prepared for a large feast', 'The ancestral crypt is opened and the wrapped remains are brought out', 'Family members dance and celebrate with the remains — telling ancestors family news', 'New silk shrouds (lamba mena) are wrapped around the remains with fresh perfume', 'The ancestor is returned to the crypt after blessings and prayers']
+    },
+    { type:'greeting', icon:'🤲', name:'Ubuntu Philosophy',               group:'Nguni peoples / Pan-African', color:'#3d6b43', bg:'rgba(61,107,67,.1)',
+      desc:'"Umuntu ngumuntu ngabantu" — I am because we are. Ubuntu is the Nguni Bantu philosophical concept of communal humanity that has become Africa\'s most globally recognized philosophical export. It underpinned Nelson Mandela\'s approach to reconciliation and is the foundation of African communal ethics.',
+      steps:['Core meaning: "I am human because of other humans" — no person exists in isolation', '"Sawubona" (I see you) and "Ngikhona" (I am here) — the Zulu greeting embodies Ubuntu in exchange', 'In practice: collective decision-making, communal child-rearing, sharing of resources', 'Ubuntu in governance: Truth and Reconciliation Commission (post-apartheid South Africa) was Ubuntu in action', 'Spread globally: Nelson Mandela, Desmond Tutu, and African leaders brought Ubuntu to world consciousness', 'The African Union\'s motto — "Unity, Solidarity, Development" — is Ubuntu in institutional form']
+    },
+    { type:'greeting', icon:'🍵', name:'Kola Nut Ceremony',               group:'West African / Pan-West', color:'#c8952a', bg:'rgba(200,149,42,.1)',
+      desc:'The kola nut is the most sacred element of West African hospitality and ceremony. Presenting kola is the highest form of respect — it opens every gathering, blessing, marriage negotiation, funeral, and official meeting across Yoruba, Igbo, Hausa, and many other cultures.',
+      steps:['The eldest person present breaks and distributes the kola nut — this role cannot be usurped by a younger person', 'A prayer/libation is offered before the kola is broken — ancestors are invited to share', 'The kola is broken (Igbo: "Obi") — each piece distributed to guests in order of seniority', 'In Igbo culture: "He who brings kola nut brings life" — refusing kola is a serious insult', 'In Yoruba culture: Bitter kola (obi abata), orogbo, and obi (kola) are all used in ceremonies', 'Even in modern urban Nigeria and Ghana, kola nut remains essential at all traditional events']
+    },
+  ];
+
+  const BELIEFS = [
+    { icon:'🌿', name:'Ifa / Orisha System',  origin:'Yoruba, Nigeria / Diaspora', iconBg:'rgba(46,125,94,.2)', iconColor:'#2e7d5e',
+      desc:'The Yoruba Ifa divination system is one of humanity\'s oldest and most complex philosophical and spiritual traditions — recognized by UNESCO as Intangible Cultural Heritage. It involves 256 odus (chapters) containing the complete knowledge of the universe, accessed through divination by a babalawo (priest) using palm nuts or a divining chain.',
+      deities:[
+        { emoji:'⚡', name:'Shango',   role:'Deity of thunder and lightning; deified 4th Alaafin of Oyo; patron of justice' },
+        { emoji:'⚔️', name:'Ogun',    role:'Deity of iron, war, labor, and technology; patron of blacksmiths, soldiers, and drivers' },
+        { emoji:'🌊', name:'Yemoja',  role:'Mother of all waters; protector of women and children; queen of the ocean' },
+        { emoji:'💛', name:'Osun',    role:'Deity of rivers, love, and fertility; one of the most powerful Orisha' },
+        { emoji:'🤍', name:'Obatala', role:'Creator deity; sculptor of human bodies; deity of purity, wisdom, and peace' },
+        { emoji:'🔀', name:'Esu',     role:'Trickster; messenger between humans and gods; ruler of crossroads and choices' },
+      ], unesco:true
+    },
+    { icon:'🌍', name:'Ubuntu Philosophy',    origin:'Nguni / Pan-African',       iconBg:'rgba(61,107,67,.2)', iconColor:'#3d6b43',
+      desc:'"Umuntu ngumuntu ngabantu" — I am a person because of other people. Ubuntu is Africa\'s most globally known philosophical concept — the foundation of communal ethics, reconciliation, and collective humanity. It underpins South African democracy, the Truth and Reconciliation Commission, and Nelson Mandela\'s vision of the Rainbow Nation.',
+      deities:[
+        { emoji:'🤝', name:'Communal Living',    role:'No individual exists in isolation — every person\'s dignity and wellbeing is communally maintained' },
+        { emoji:'👁️', name:'Sawubona',           role:'"I see you" — the Zulu greeting acknowledges the full humanity of the other person' },
+        { emoji:'🔄', name:'Restorative Justice', role:'Ubuntu prefers healing and restoration over punishment — as seen in South Africa\'s Truth and Reconciliation Commission' },
+        { emoji:'🌱', name:'Ubuntu in Education', role:'"It takes a village to raise a child" — the most famous expression of Ubuntu in the world' },
+      ], unesco:false
+    },
+    { icon:'🥁', name:'Vodun (Voodoo)',         origin:'Ewe / Fon, West Africa + Diaspora', iconBg:'rgba(139,58,158,.2)', iconColor:'#8b3a9e',
+      desc:'Vodun is a living religion originating among the Ewe and Fon peoples of coastal West Africa (Benin, Togo, Ghana). It involves a complex pantheon of over 600 spirits (vodu) associated with natural forces — rivers, thunder, earth, and sea. Enslaved West Africans carried Vodun to the Americas, where it transformed into Haitian Voodoo, Brazilian Candomblé, and Cuban Santería.',
+      deities:[
+        { emoji:'⚡', name:'Heviosso (Xevioso)', role:'Deity of thunder and lightning — the most powerful Fon deity. Equivalent to Yoruba\'s Shango.' },
+        { emoji:'🌊', name:'Mami Wata',          role:'Water spirit — a powerful feminine spirit of rivers, oceans, and wealth. Worshipped across Sub-Saharan Africa.' },
+        { emoji:'🐍', name:'Dan (Ayido Hwedo)',   role:'The cosmic serpent — symbol of the rainbow and the cycle of life. Held the earth together when God created it.' },
+        { emoji:'🌍', name:'Sakpata',             role:'Deity of the earth and smallpox — governs disease and healing. Deeply respected and feared.' },
+      ], unesco:false
+    },
+    { icon:'☀️', name:'Akan Religious System',  origin:'Akan, Ghana',               iconBg:'rgba(200,149,42,.2)', iconColor:'#c8952a',
+      desc:'The Akan believe in Nyame — the omnipotent Supreme God who created all things. Below Nyame are countless abosom (lesser deities) and the ever-present ancestral spirits (asaman). The most sacred objects in Akan culture are ancestral stools — physical vessels holding the spiritual power of lineages. The Golden Stool of Ashanti holds the soul of the entire Ashanti nation.',
+      deities:[
+        { emoji:'☀️', name:'Nyame',    role:'The Supreme Creator God — omnipotent, omniscient, omnipresent. Everything begins and ends with Nyame.' },
+        { emoji:'🪑', name:'Ancestral Stools', role:'Carved wooden stools are the most sacred objects — each lineage\'s stool holds the sunsum (soul) of all past ancestors.' },
+        { emoji:'🌳', name:'Nyame Dua', role:'"God\'s Tree" — a forked branch placed outside homes as a spiritual altar and symbol of divine protection.' },
+        { emoji:'⚡', name:'Asaase Yaa', role:'The earth goddess — mother of all things. Thursday (Yawoada) is her sacred day — farming is forbidden on Thursdays.' },
+      ], unesco:false
+    },
+    { icon:'📿', name:'Ifa Diaspora',           origin:'Yoruba diaspora worldwide',  iconBg:'rgba(26,110,168,.2)', iconColor:'#1a6ea8',
+      desc:'Through the slave trade, Yoruba spiritual traditions traveled to the Americas and became new religions in their new homes — while retaining the core Orisha pantheon and Ifa divination system. Candomblé in Brazil (10+ million practitioners), Santería/Lucumí in Cuba and the Caribbean, Trinidad Orisha, and Umbanda are all children of Yoruba spirituality.', span2:true,
+      deities:[
+        { emoji:'🇧🇷', name:'Candomblé (Brazil)',  role:'10+ million practitioners. Yoruba Orisha renamed as Orixás. Shango became Xangô, Yemoja became Iemanjá, Ogun became Ogum.' },
+        { emoji:'🇨🇺', name:'Santería / Lucumí (Cuba)', role:'Yoruba religion blended with Catholicism during slavery — each Orisha matched to a Catholic saint as camouflage. Still practiced by millions.' },
+        { emoji:'🇭🇹', name:'Haitian Vodou',        role:'Descended from Fon and Ewe Vodun, blended with Yoruba and Kongo traditions. The religion of Haiti\'s independence revolution (1804).' },
+        { emoji:'🌍', name:'Global African Spirituality', role:'Over 100 million people worldwide practice religions descended directly from West African spiritual traditions.' },
+      ], unesco:false
+    },
+  ];
+
+  const FESTIVALS = [
+    { emoji:'🌊', name:'Osun-Osogbo Festival', when:'August', group:'Yoruba, Osun State Nigeria', location:'Osogbo, Nigeria', category:'spiritual',
+      color:'#2e7d5e', bg:'rgba(46,125,94,.1)', badge:'UNESCO Heritage Site',
+      desc:'A sacred two-week festival honouring Osun, the Yoruba river goddess of fertility and love. Held at the 700-year-old sacred grove along the Osun River. The Arugba — a virgin of royal blood — carries offerings on her head in a procession to the river shrine while thousands watch in reverence.',
+      highlights:['Arugba procession — virgin of royal blood carries sacred calabash', 'Lighting of the 500-year-old 16-point lamp (Ina Olojumerindinlogun)', 'Iwopopo — ritual cleansing of the city', 'International Osun devotees from Nigeria, Brazil, Cuba, and the USA', 'UNESCO-listed Sacred Grove of Osogbo']
+    },
+    { emoji:'🏇', name:'Durbar Festival',       when:'Eid al-Fitr & Eid al-Adha', group:'Hausa-Fulani, Northern Nigeria', location:'Kano, Katsina, Zaria', category:'royal',
+      color:'#c8952a', bg:'rgba(200,149,42,.1)', badge:'Royal Cavalry',
+      desc:'One of Africa\'s most visually spectacular events — a grand royal cavalry procession where the Emir and thousands of horsemen in historic medieval armour, robes, and headdresses parade through the city. Originally a military review, it became the grandest cultural celebration of the north.',
+      highlights:['Thousands of turbaned horsemen in medieval armour', 'Emir\'s grand procession to his palace', 'Kakaki trumpets (6-foot bronze trumpets, sounded only for royalty)', 'Equestrian demonstrations at full gallop before the Emir', 'Colorful flags of each district\'s cavalry']
+    },
+    { emoji:'🍠', name:'New Yam Festival (Iri Ji)', when:'August–October', group:'Igbo, Southeastern Nigeria', location:'All Igbo communities', category:'harvest',
+      color:'#d4622a', bg:'rgba(212,98,42,.1)', badge:'Most Sacred Igbo Festival',
+      desc:'The most important festival in Igbo culture — no one may eat the new yam before it is formally presented to the gods and ancestors. Yam is sacred to the Igbo. The traditional ruler ceremonially eats the first yam of the season, unlocking the harvest for the entire community.',
+      highlights:['Ceremonial first eating of new yam by the Eze or Obi', 'Mmanwu (ancestral masquerades) emerge from the spirit world', 'Traditional wrestling (Mgba) competitions', 'Community feasting and title-taking ceremonies', 'Libations and prayers to Ala (earth goddess) and ancestors']
+    },
+    { emoji:'🥁', name:'Homowo Festival',        when:'August/September', group:'Ga people, Accra Ghana', location:'Greater Accra, Ghana', category:'harvest',
+      color:'#3d6b43', bg:'rgba(61,107,67,.1)', badge:'Hooting at Hunger',
+      desc:'"Homowo" means "hooting at hunger" — celebrating the Ga people\'s triumph over a devastating historical famine. Chiefs and priests parade through streets sprinkling kpokpoi (the sacred ceremonial food) at ancestral shrines to feed the departed, while families reunite across the diaspora.',
+      highlights:['Kpokpoi — sacred palm nut and cornmeal dish cooked only for Homowo', 'Wulomo (Ga priests) in white performing ancestral rituals', 'Twin Festival — celebrating twins as a double divine blessing', 'Chiefs in palanquins under state umbrellas', 'Family reunions — Ghanaians return home from all over the world']
+    },
+    { emoji:'🕯️', name:'Timkat (Ethiopian Epiphany)', when:'January 19', group:'Ethiopian Orthodox Christians', location:'Lalibela, Gondar, Addis Ababa', category:'spiritual',
+      color:'#1a6ea8', bg:'rgba(26,110,168,.1)', badge:'UNESCO Intangible Heritage',
+      desc:'Ethiopia\'s most spectacular religious festival, celebrating the baptism of Jesus. Priests carry the Tabot (replica of the Ark of the Covenant) on their heads, wrapped in elaborate velvet covers, in a candlelit midnight procession to a body of water where worshippers are ritually blessed. Lalibela\'s celebration draws thousands.',
+      highlights:['Midnight procession by candlelight with priests carrying the Tabot', 'Mass ritual blessing with holy water at dawn', 'Spectacular white robes (netela) worn by all worshippers', 'Lalibela celebration is the most spectacular — rock-hewn churches as backdrop', 'UNESCO Intangible Cultural Heritage since 2019']
+    },
+    { emoji:'🎭', name:'Eyo Festival',            when:'Variable (often May)', group:'Ga / Lagos Indigenes', location:'Lagos Island, Nigeria', category:'spiritual',
+      color:'#8b3a9e', bg:'rgba(139,58,158,.1)', badge:'Lagos Heritage',
+      desc:'One of Lagos\' most iconic cultural events — thousands of Eyo masquerades in flowing white robes and tall hats (agogo) parade through Lagos Island\'s historic streets. Traditionally held to ease a notable person\'s transition to the spirit world. No hats may be worn by spectators.',
+      highlights:['Thousands of white-robed Eyo masquerades filling Lagos Island streets', 'Different conclaves representing different Lagos quarters compete for grandeur', 'No hats allowed for spectators — a sacred rule', 'Believed to be the forerunner of the Brazilian Carnival through the Yoruba diaspora', 'Procession from Carter Bridge to the Iga Idunganran Palace']
+    },
+    { emoji:'🎪', name:'Calabar Carnival',         when:'December', group:'Efik / Cross River peoples', location:'Calabar, Nigeria', category:'arts',
+      color:'#d4622a', bg:'rgba(212,98,42,.1)', badge:'Africa\'s Biggest Street Party',
+      desc:'Billed as "Africa\'s Biggest Street Party." A month-long carnival in December where competing bands parade through Calabar in extravagant costumes, with music, dance, and cultural performances. Draws hundreds of thousands of tourists annually and has transformed Calabar into Nigeria\'s tourism capital.',
+      highlights:['Competing carnival bands in spectacular multi-storey costumes', 'Live music from Nigeria\'s top artists', 'Cultural masquerades and traditional dances', 'Month-long programme of events throughout December', 'The finale procession on December 26 — the peak spectacle']
+    },
+    { emoji:'🌺', name:'Panafest (Pan-African Festival)', when:'July (Biennial)', group:'Pan-African Diaspora', location:'Cape Coast & Elmina, Ghana', category:'arts',
+      color:'#1a6ea8', bg:'rgba(26,110,168,.1)', badge:'Diaspora Homecoming',
+      desc:'A biennial festival for the global African diaspora — theatrical performances, cultural shows, and deeply emotional visits to the slave castles of Cape Coast and Elmina. Diaspora descendants walk through the dungeons where their ancestors were held before being shipped through the "Door of No Return."',
+      highlights:['Performances at Cape Coast Castle and Elmina Castle', 'Memorial ceremonies at the Door of No Return — intensely emotional', 'Cultural performances from across Africa and the diaspora', 'Academic symposia on pan-African identity and history', 'Diaspora Africans from USA, Caribbean, UK, and Brazil attending']
+    },
+  ];
+
+  /* ──────────────────────────────────────────────────────────────
+     RENDER FUNCTIONS
+  ────────────────────────────────────────────────────────────── */
+
+  function renderFood(filter = 'all') {
+    const data = filter === 'all' ? FOODS : FOODS.filter(f => f.region === filter);
+    document.getElementById('foodGrid').innerHTML = data.map((f, i) => `
+      <div class="food-card ${f.featured && filter === 'all' ? 'featured' : ''}"
+           onclick='openFoodModal(${i})'
+           style="animation-delay:${Math.min(i*40,300)}ms">
+        <span class="food-card-emoji">${f.emoji}</span>
+        <div class="food-card-body">
+          <div class="food-card-origin">${f.origin}</div>
+          <div class="food-card-name">${f.name}</div>
+          <div class="food-card-desc">${f.desc}</div>
+        </div>
+        <div class="food-card-footer">
+          <span class="food-card-tag">${f.tag}</span>
+          <span class="food-card-country">${f.country} ${f.origin.split('/')[0].trim()}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openFoodModal(idx) {
+    const f = FOODS[idx];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Food & Cuisine · ${f.origin}</div>
+      <div class="modal-title">${f.emoji} ${f.name}</div>
+      <div class="modal-subtitle">${f.tag} · ${f.country}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-section-title">About this dish</div>
+      <p class="modal-text">${f.desc}</p>
+      ${f.served ? `
+        <div class="modal-divider"></div>
+        <div class="modal-section-title">Best served with</div>
+        <p class="modal-text">${f.served}</p>
+      ` : ''}
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+  }
+
+  function renderFabrics() {
+    document.getElementById('fabricGrid').innerHTML = FABRICS.map(f => `
+      <div class="fabric-card">
+        <div class="fabric-swatch" style="--sw1:${f.sw1};--sw2:${f.sw2}">${f.emoji}</div>
+        <div class="fabric-name">${f.name}</div>
+        <div class="fabric-origin">${f.origin}</div>
+        <div class="fabric-desc">${f.desc}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderDressSection(key) {
+    const s = ATTIRE_SECTIONS[key];
+    if (!s) return;
+    const el = document.getElementById(`dress-${key}`);
+    if (!el || el.innerHTML.trim()) return;
+    el.innerHTML = `
+      <h3 class="subsection-title">${s.flag} ${s.title}</h3>
+      <p style="font-size:.9rem;color:var(--text-soft);line-height:1.75;margin-bottom:1.75rem;max-width:640px">${s.intro}</p>
+      <div class="attire-grid">
+        ${s.items.map(item => `
+          <div class="attire-card">
+            <div class="attire-label">${item.label}</div>
+            <div class="attire-name">${item.name}</div>
+            <div class="attire-desc">${item.desc}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderGenres(regionFilter = 'all') {
+    const data = regionFilter === 'all' ? GENRES : GENRES.filter(g => g.region === regionFilter);
+    document.getElementById('genreGrid').innerHTML = data.map(g => `
+      <div class="genre-card" style="--gc-color:${g.color}">
+        <span class="genre-icon">${g.icon}</span>
+        <div class="genre-origin">${g.origin}</div>
+        <div class="genre-name">${g.name}</div>
+        <div class="genre-desc">${g.desc}</div>
+        <div class="genre-tags">
+          ${g.tags.map(t => `<span class="genre-tag">${t}</span>`).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderArtists(type = 'current') {
+    const data = type === 'current' ? CURRENT_ARTISTS : LEGEND_ARTISTS;
+    document.getElementById('artistsGrid').innerHTML = data.map(a => `
+      <div class="artist-card">
+        <div class="artist-avatar" style="--av1:${a.av1};--av2:${a.av2}">${a.emoji}</div>
+        <div class="artist-name">${a.name}</div>
+        <div class="artist-genre">${a.genre}</div>
+        <div class="artist-country">${a.country}</div>
+        <div class="artist-note">${a.note}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderTraditions(filter = 'all') {
+    const data = filter === 'all' ? TRADITIONS : TRADITIONS.filter(t => t.type === filter);
+    document.getElementById('tradGrid').innerHTML = data.map(t => `
+      <div class="tradition-card" onclick='openTradModal(${TRADITIONS.indexOf(t)})'>
+        <div class="tradition-header" style="--tc-color:${t.color};--tc-bg:${t.bg}">
+          <div class="tradition-type">${t.type === 'marriage' ? 'Marriage Tradition' : t.type === 'rite' ? 'Rite of Passage' : 'Cultural Philosophy'}</div>
+          <div class="tradition-name">${t.icon} ${t.name}</div>
+          <div class="tradition-group">👥 ${t.group}</div>
+        </div>
+        <div class="tradition-body">
+          <div class="tradition-desc">${t.desc}</div>
+          <div class="tradition-steps">
+            ${t.steps.slice(0,3).map((s,i) => `
+              <div class="tradition-step">
+                <div class="step-num" style="--tc-color:${t.color};--tc-bg:${t.bg}">${i+1}</div>
+                <div class="step-text">${s}</div>
+              </div>
+            `).join('')}
+            ${t.steps.length > 3 ? `<div style="font-size:.75rem;color:var(--text-muted);padding-top:.25rem">+ ${t.steps.length - 3} more steps — click to read all</div>` : ''}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openTradModal(idx) {
+    const t = TRADITIONS[idx];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">${t.type === 'marriage' ? 'Marriage Tradition' : t.type === 'rite' ? 'Rite of Passage' : 'Philosophy'} · ${t.group}</div>
+      <div class="modal-title">${t.icon} ${t.name}</div>
+      <div class="modal-subtitle">Practiced by: ${t.group}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-section-title">About this tradition</div>
+      <p class="modal-text">${t.desc}</p>
+      <div class="modal-divider"></div>
+      <div class="modal-section-title">How it works — step by step</div>
+      <div class="modal-list">
+        ${t.steps.map(s => `<div class="modal-list-item">${s}</div>`).join('')}
+      </div>
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+  }
+
+  function renderBeliefs() {
+    document.getElementById('beliefsGrid').innerHTML = BELIEFS.map(b => `
+      <div class="belief-block ${b.span2 ? 'span2' : ''}">
+        <div class="belief-header">
+          <div class="belief-icon" style="background:${b.iconBg}; font-size:1.4rem">${b.icon}</div>
+          <div class="belief-title-block">
+            <div class="belief-name">${b.name}</div>
+            <div class="belief-origin">${b.origin}</div>
+          </div>
+        </div>
+        <div class="belief-body">
+          <p class="belief-desc">${b.desc}</p>
+          <div class="belief-deities">
+            ${b.deities.map(d => `
+              <div class="deity-row">
+                <span class="deity-emoji">${d.emoji}</span>
+                <div>
+                  <div class="deity-name">${d.name}</div>
+                  <div class="deity-role">${d.role}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          ${b.unesco ? `<div class="unesco-badge">🏛 UNESCO Intangible Cultural Heritage</div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderFestivals(filter = 'all') {
+    const data = filter === 'all' ? FESTIVALS : FESTIVALS.filter(f => f.category === filter);
+    document.getElementById('festGrid').innerHTML = data.map((f, i) => `
+      <div class="festival-card" onclick='openFestModal(${FESTIVALS.indexOf(f)})'>
+        <div class="festival-card-top" style="--fc-color:${f.color};--fc-bg:${f.bg}">
+          <span class="festival-emoji">${f.emoji}</span>
+          <div class="festival-meta">
+            <div class="festival-when">${f.when}</div>
+            <div class="festival-name">${f.name}</div>
+            <div class="festival-group">${f.group}</div>
+          </div>
+        </div>
+        <div class="festival-body">
+          <p class="festival-desc">${f.desc.slice(0,200)}${f.desc.length > 200 ? '...' : ''}</p>
+          <div class="festival-highlights">
+            ${f.highlights.slice(0,3).map(h => `<div class="highlight-item" style="--fc-color:${f.color}">${h}</div>`).join('')}
+          </div>
+        </div>
+        <div class="festival-card-foot">
+          <div class="festival-location" style="--fc-color:${f.color}">
+            📍 ${f.location}
+          </div>
+          <span class="festival-badge" style="--fc-color:${f.color};--fc-bg:${f.bg}">${f.badge}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openFestModal(idx) {
+    const f = FESTIVALS[idx];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Festival · ${f.group}</div>
+      <div class="modal-title">${f.emoji} ${f.name}</div>
+      <div class="modal-subtitle">📅 ${f.when} &nbsp;·&nbsp; 📍 ${f.location}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-section-title">About this festival</div>
+      <p class="modal-text">${f.desc}</p>
+      <div class="modal-divider"></div>
+      <div class="modal-section-title">Highlights</div>
+      <div class="modal-list">
+        ${f.highlights.map(h => `<div class="modal-list-item">${h}</div>`).join('')}
+      </div>
+    `;
+    document.getElementById('modalOverlay').classList.add('open');
+  }
+
+  /* ──────────────────────────────────────────────────────────────
+     TABS
+  ────────────────────────────────────────────────────────────── */
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === `panel-${tabId}`));
+    document.getElementById('tabsBar').scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+  });
+
+  /* ──────────────────────────────────────────────────────────────
+     FILTER CHIPS
+  ────────────────────────────────────────────────────────────── */
+  function setupChips(containerId, callback) {
+    document.getElementById(containerId).addEventListener('click', e => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      document.querySelectorAll(`#${containerId} .chip`).forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      callback(chip.dataset.filter);
+    });
+  }
+
+  setupChips('foodFilter',        renderFood);
+  setupChips('musicRegionFilter', renderGenres);
+  setupChips('tradFilter',        renderTraditions);
+  setupChips('festFilter',        renderFestivals);
+
+  /* ──────────────────────────────────────────────────────────────
+     DRESSING NAV
+  ────────────────────────────────────────────────────────────── */
+  document.querySelectorAll('.dressing-nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.dressing-nav-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      const key = item.dataset.dress;
+      document.querySelectorAll('.dressing-content').forEach(c => c.classList.remove('active'));
+      document.getElementById(`dress-${key}`).classList.add('active');
+      if (key !== 'fabrics') renderDressSection(key);
+    });
+  });
+
+  /* ──────────────────────────────────────────────────────────────
+     MUSIC TOGGLE
+  ────────────────────────────────────────────────────────────── */
+  document.getElementById('btn-current').addEventListener('click', () => {
+    document.getElementById('btn-current').classList.add('active');
+    document.getElementById('btn-legends').classList.remove('active');
+    renderArtists('current');
+  });
+
+  document.getElementById('btn-legends').addEventListener('click', () => {
+    document.getElementById('btn-legends').classList.add('active');
+    document.getElementById('btn-current').classList.remove('active');
+    renderArtists('legends');
+  });
+
+  /* ──────────────────────────────────────────────────────────────
+     MODAL
+  ────────────────────────────────────────────────────────────── */
+  document.getElementById('modalClose').addEventListener('click', () => {
+    document.getElementById('modalOverlay').classList.remove('open');
+  });
+  document.getElementById('modalOverlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('modalOverlay'))
+      document.getElementById('modalOverlay').classList.remove('open');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.getElementById('modalOverlay').classList.remove('open');
+  });
+
+  /* ──────────────────────────────────────────────────────────────
+     NAV + MISC
+  ────────────────────────────────────────────────────────────── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+  }, { passive:true });
+
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+  // URL hash routing
+  const hash = window.location.hash.replace('#','');
+  if (['food','dressing','music','traditions','beliefs','festivals'].includes(hash)) {
+    switchTab(hash);
+  }
+
+  /* ──────────────────────────────────────────────────────────────
+     INIT
+  ────────────────────────────────────────────────────────────── */
+  renderFood();
+  renderFabrics();
+  renderGenres();
+  renderArtists('current');
+  renderTraditions();
+  renderBeliefs();
+  renderFestivals();
+  </script>
+</body>
+</html>

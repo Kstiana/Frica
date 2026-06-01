@@ -1,0 +1,2831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frica — Explore Africa in One Place</title>
+  <meta name="description" content="Frica is your gateway to everything African — cultures, languages, food, music, history, and more across all 54 countries." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --bg:         #0d0f0a;
+      --bg-card:    #131610;
+      --bg-raise:   #1a1e14;
+      --gold:       #c8952a;
+      --gold-light: #e8b84b;
+      --gold-dim:   rgba(200,149,42,0.15);
+      --green:      #2a4a2e;
+      --green-mid:  #3d6b43;
+      --cream:      #f0e8d5;
+      --cream-dim:  rgba(240,232,213,0.55);
+      --text:       #e8e0cc;
+      --text-muted: rgba(232,224,204,0.5);
+      --text-soft:  rgba(232,224,204,0.75);
+      --border:     rgba(200,149,42,0.18);
+      --border-dim: rgba(232,224,204,0.08);
+      --red-accent: #c0392b;
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  20px;
+      --radius-xl:  32px;
+      --nav-h:      68px;
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       SCROLLBAR
+    ============================================================ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ============================================================
+       NOISE TEXTURE OVERLAY
+    ============================================================ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 0 clamp(1.25rem, 4vw, 3rem);
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(13,15,10,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--gold);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #0d0f0a;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--cream);
+      letter-spacing: -0.3px;
+    }
+
+    .logo-text span {
+      color: var(--gold);
+    }
+
+    /* Desktop Nav Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      flex: 1;
+    }
+
+    .nav-links a {
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-soft);
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--cream);
+      background: var(--border-dim);
+    }
+
+    .nav-links a.active {
+      color: var(--gold-light);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-left: auto;
+    }
+
+    .nav-search-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--text-muted);
+      background: var(--border-dim);
+      transition: var(--transition);
+    }
+
+    .nav-search-btn:hover {
+      color: var(--gold-light);
+      background: var(--gold-dim);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-soft);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(13,15,10,0.97);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 1.5rem clamp(1.25rem, 4vw, 3rem);
+      flex-direction: column;
+      gap: 0.5rem;
+      animation: slideDown 0.25s ease;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-soft);
+      transition: var(--transition);
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--cream); background: var(--border-dim); }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--nav-h) + 2rem) clamp(1.25rem, 4vw, 3rem) 5rem;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* Animated background */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.35;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+
+    .hero-orb-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--green-mid), transparent);
+      top: -15%; left: -10%;
+      animation-delay: 0s;
+    }
+
+    .hero-orb-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,149,42,0.6), transparent);
+      bottom: -10%; right: -5%;
+      animation-delay: -4s;
+    }
+
+    .hero-orb-3 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(42,74,46,0.5), transparent);
+      top: 30%; right: 10%;
+      animation-delay: -8s;
+    }
+
+    @keyframes drift {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, -25px) scale(1.08); }
+    }
+
+    /* Grid lines */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200,149,42,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,149,42,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    }
+
+    /* Africa silhouette watermark */
+    .hero-africa {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      opacity: 0.04;
+    }
+
+    .hero-africa svg {
+      width: min(70vw, 600px);
+      height: auto;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: var(--gold-dim);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--gold-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.75); }
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 7vw, 5.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+      margin-bottom: 1.25rem;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+      position: relative;
+    }
+
+    .hero-title em::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      border-radius: 2px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--text-soft);
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    /* Search Bar */
+    .hero-search {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    .hero-search-icon {
+      position: absolute;
+      left: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      pointer-events: none;
+    }
+
+    .hero-search-input {
+      width: 100%;
+      height: 60px;
+      background: rgba(26,30,20,0.9);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 0 130px 0 3.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: var(--cream);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-search-input::placeholder { color: var(--text-muted); }
+
+    .hero-search-input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(200,149,42,0.12);
+    }
+
+    .hero-search-btn {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 44px;
+      padding: 0 1.4rem;
+      background: var(--gold);
+      color: #0d0f0a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .hero-search-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-50%) scale(1.02);
+    }
+
+    .hero-search-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      animation: fadeUp 0.7s 0.4s ease both;
+    }
+
+    .hero-search-hint span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      cursor: pointer;
+      transition: color var(--transition);
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-sm);
+      background: var(--border-dim);
+    }
+
+    .hero-search-hint span:hover { color: var(--gold-light); }
+
+    /* Hero Stats */
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(1.5rem, 4vw, 3.5rem);
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.5s ease both;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.35rem;
+    }
+
+    .hero-stat-divider {
+      width: 1px;
+      height: 36px;
+      background: var(--border);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      animation: fadeUp 1s 0.8s ease both;
+    }
+
+    .scroll-arrow {
+      width: 20px; height: 20px;
+      border-right: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      transform: rotate(45deg);
+      animation: bounce 1.5s ease infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50%       { transform: rotate(45deg) translateY(5px); }
+    }
+
+    /* ============================================================
+       SECTION SHARED STYLES
+    ============================================================ */
+    section {
+      padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 4vw, 3rem);
+    }
+
+    .section-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 24px; height: 1.5px;
+      background: var(--gold);
+      border-radius: 1px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      color: var(--cream);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .section-desc {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+      color: var(--text-soft);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .section-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.02em;
+      transition: gap var(--transition);
+      margin-top: 0.5rem;
+    }
+
+    .section-link:hover { gap: 0.7rem; }
+
+    /* ============================================================
+       TRENDING SECTION
+    ============================================================ */
+    .trending { background: var(--bg); }
+
+    .trending-scroll {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .trending-scroll::-webkit-scrollbar { display: none; }
+
+    .trend-card {
+      flex: 0 0 auto;
+      width: clamp(180px, 28vw, 240px);
+      background: var(--bg-card);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trend-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .trend-card:hover {
+      border-color: var(--border);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+
+    .trend-card:hover::before { opacity: 1; }
+
+    .trend-icon {
+      width: 44px; height: 44px;
+      background: var(--gold-dim);
+      border-radius: var(--radius-sm);
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .trend-category {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .trend-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--cream);
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
+
+    .trend-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       EXPLORE BY COUNTRY
+    ============================================================ */
+    .countries { background: var(--bg-card); }
+
+    .countries-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    /* Region Filters */
+    .region-filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .region-btn {
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-xl);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      border: 1px solid var(--border-dim);
+      background: transparent;
+      transition: var(--transition);
+    }
+
+    .region-btn:hover {
+      color: var(--cream);
+      border-color: var(--border);
+      background: var(--bg-raise);
+    }
+
+    .region-btn.active {
+      background: var(--gold);
+      color: #0d0f0a;
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Country Grid */
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
+      gap: 0.875rem;
+    }
+
+    .country-card {
+      background: var(--bg-raise);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+      text-decoration: none;
+    }
+
+    .country-card:hover {
+      border-color: var(--border);
+      background: rgba(200,149,42,0.06);
+      transform: translateY(-2px);
+    }
+
+    .country-flag {
+      font-size: 1.6rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .country-info { min-width: 0; }
+
+    .country-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--cream);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .country-region {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .country-code {
+      margin-left: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* Show More */
+    .countries-footer {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-outline {
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius-xl);
+      border: 1.5px solid var(--border);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cream);
+      background: transparent;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      background: var(--gold-dim);
+    }
+
+    /* ============================================================
+       EXPLORE CULTURE
+    ============================================================ */
+    .culture { background: var(--bg); }
+
+    .culture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+      gap: 1.25rem;
+    }
+
+    .culture-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      cursor: pointer;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .culture-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--card-gradient, linear-gradient(135deg, rgba(200,149,42,0.08), transparent));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .culture-card:hover {
+      border-color: var(--border);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .culture-card:hover::after { opacity: 1; }
+
+    .culture-card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.1rem;
+      display: block;
+    }
+
+    .culture-card-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .culture-card-desc {
+      font-size: 0.875rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .culture-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      transition: gap var(--transition);
+    }
+
+    .culture-card:hover .culture-card-link { gap: 0.7rem; }
+
+    .culture-card-tag {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* Featured culture card */
+    .culture-card.featured {
+      grid-column: span 2;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, rgba(42,74,46,0.4), rgba(200,149,42,0.1));
+      border-color: rgba(42,74,46,0.5);
+    }
+
+    .culture-card.featured .culture-card-title { font-size: 1.6rem; }
+
+    /* ============================================================
+       LEARN A LANGUAGE
+    ============================================================ */
+    .learn {
+      background: var(--bg-card);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .learn::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(42,74,46,0.2), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .learn-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .phrase-card {
+      background: var(--bg-raise);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .phrase-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .phrase-lang-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.9rem;
+      background: var(--gold-dim);
+      border-radius: var(--radius-xl);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    .phrase-nav {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .phrase-nav-btn {
+      width: 30px; height: 30px;
+      border-radius: 6px;
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-dim);
+      transition: var(--transition);
+    }
+
+    .phrase-nav-btn:hover {
+      color: var(--cream);
+      border-color: var(--border);
+      background: var(--gold-dim);
+    }
+
+    .phrase-english {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .phrase-native {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--cream);
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .phrase-pronunciation {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .phrase-meaning {
+      font-size: 0.875rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-dim);
+    }
+
+    .phrase-progress {
+      display: flex;
+      gap: 0.3rem;
+      margin-top: 1.25rem;
+    }
+
+    .phrase-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--border-dim);
+      transition: background var(--transition);
+    }
+
+    .phrase-dot.active { background: var(--gold); }
+
+    /* Language grid */
+    .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.875rem;
+    }
+
+    .lang-item {
+      background: var(--bg-raise);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .lang-item:hover {
+      border-color: var(--border);
+      background: var(--gold-dim);
+    }
+
+    .lang-item.selected {
+      border-color: var(--gold);
+      background: var(--gold-dim);
+    }
+
+    .lang-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--cream);
+    }
+
+    .lang-speakers {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .lang-sample {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.8rem;
+      color: var(--gold);
+      margin-top: 0.2rem;
+    }
+
+    /* ============================================================
+       MINI QUIZ
+    ============================================================ */
+    .quiz { background: var(--bg); }
+
+    .quiz-card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-xl);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green-mid), var(--gold), var(--red-accent));
+    }
+
+    .quiz-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .quiz-score {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .quiz-question {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      color: var(--cream);
+      margin-bottom: 1.75rem;
+      line-height: 1.4;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-option {
+      padding: 1rem 1.25rem;
+      background: var(--bg-raise);
+      border: 1.5px solid var(--border-dim);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      text-align: left;
+      transition: var(--transition);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .quiz-option:hover:not(:disabled) {
+      border-color: var(--border);
+      color: var(--cream);
+      background: var(--bg-card);
+    }
+
+    .quiz-option.correct {
+      border-color: #3a8a4a;
+      background: rgba(58,138,74,0.12);
+      color: #7ddb8d;
+    }
+
+    .quiz-option.wrong {
+      border-color: var(--red-accent);
+      background: rgba(192,57,43,0.12);
+      color: #e07070;
+    }
+
+    .quiz-option-letter {
+      width: 26px; height: 26px;
+      border-radius: 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-dim);
+      display: grid;
+      place-items: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .quiz-option.correct .quiz-option-letter { background: rgba(58,138,74,0.2); border-color: #3a8a4a; color: #7ddb8d; }
+    .quiz-option.wrong .quiz-option-letter   { background: rgba(192,57,43,0.2); border-color: var(--red-accent); color: #e07070; }
+
+    .quiz-feedback {
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .quiz-feedback.show { display: block; }
+
+    .quiz-feedback.correct-fb {
+      background: rgba(58,138,74,0.1);
+      border: 1px solid rgba(58,138,74,0.3);
+      color: #7ddb8d;
+    }
+
+    .quiz-feedback.wrong-fb {
+      background: rgba(192,57,43,0.1);
+      border: 1px solid rgba(192,57,43,0.3);
+      color: #e07070;
+    }
+
+    .quiz-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.75rem;
+      background: var(--gold);
+      color: #0d0f0a;
+      border-radius: var(--radius-lg);
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: background var(--transition), transform var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: scale(1.02);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* ============================================================
+       DISCOVER SECTION
+    ============================================================ */
+    .discover { background: var(--bg-card); }
+
+    .discover-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .discover-card {
+      background: var(--bg-raise);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .discover-card:hover {
+      border-color: var(--border);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    }
+
+    .discover-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: rgba(200,149,42,0.1);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      transition: color var(--transition);
+    }
+
+    .discover-card:hover .discover-number { color: rgba(200,149,42,0.2); }
+
+    .discover-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .discover-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .discover-tag {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.3rem 0.7rem;
+      background: var(--gold-dim);
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.06em;
+    }
+
+    /* ============================================================
+       PROVERB MARQUEE
+    ============================================================ */
+    .marquee-section {
+      background: var(--green);
+      padding: 1.5rem 0;
+      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 35s linear infinite;
+      width: max-content;
+    }
+
+    .marquee-track:hover { animation-play-state: paused; }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 0 3rem;
+      white-space: nowrap;
+    }
+
+    .marquee-item span {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: rgba(240,232,213,0.85);
+    }
+
+    .marquee-item strong {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      font-style: normal;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .marquee-dot {
+      width: 5px; height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       CTA SECTION
+    ============================================================ */
+    .cta-section {
+      background: var(--bg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(42,74,46,0.25), transparent);
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--cream);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .cta-title em { color: var(--gold-light); font-style: italic; }
+
+    .cta-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-ghost {
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cream);
+      background: transparent;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      background: var(--gold-dim);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-dim);
+      padding: 3rem clamp(1.25rem, 4vw, 3rem);
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo { margin-bottom: 1rem; }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .footer-col ul li a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-dim);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-tagline {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-tagline span { color: var(--gold); }
+
+    /* ============================================================
+       SEARCH MODAL
+    ============================================================ */
+    .search-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: clamp(4rem, 10vw, 8rem);
+      padding-inline: 1.25rem;
+    }
+
+    .search-modal.open { display: flex; }
+
+    .search-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      background: var(--bg-raise);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      z-index: 1;
+      animation: popIn 0.2s ease;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.96) translateY(-8px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .search-box-input-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .search-box-input-row svg { color: var(--gold); flex-shrink: 0; }
+
+    .search-box-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      color: var(--cream);
+      padding: 0.5rem 0;
+    }
+
+    .search-box-input::placeholder { color: var(--text-muted); }
+
+    .search-box-close {
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      background: var(--border-dim);
+      color: var(--text-muted);
+      display: grid;
+      place-items: center;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .search-box-close:hover { color: var(--cream); background: var(--border); }
+
+    .search-results {
+      max-height: 420px;
+      overflow-y: auto;
+      padding: 0.75rem;
+    }
+
+    .search-result-item {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .search-result-item:hover { background: var(--bg-card); }
+
+    .search-result-flag { font-size: 1.4rem; }
+
+    .search-result-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--cream);
+    }
+
+    .search-result-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .search-empty {
+      padding: 2.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .search-shortcuts {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      border-top: 1px solid var(--border-dim);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .search-shortcuts kbd {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.15rem 0.4rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+    }
+
+    /* ============================================================
+       FLOATING BACK TO TOP
+    ============================================================ */
+    .back-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px; height: 44px;
+      background: var(--gold);
+      color: #0d0f0a;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity var(--transition), transform var(--transition), background var(--transition);
+      z-index: 500;
+      box-shadow: 0 4px 20px rgba(200,149,42,0.35);
+    }
+
+    .back-top.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .back-top:hover { background: var(--gold-light); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .culture-card.featured { grid-column: span 1; }
+      .learn-layout { grid-template-columns: 1fr; }
+      .discover-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-stats { gap: 1.25rem; }
+      .hero-stat-divider { display: none; }
+      .discover-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .lang-grid { grid-template-columns: 1fr; }
+      .countries-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-search-btn span { display: none; }
+      .culture-grid { grid-template-columns: 1fr; }
+      .country-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ============================================================
+       SCROLL ANIMATIONS
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">F</div>
+        <span class="logo-text">Fr<span>i</span>ca</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="explore.html">Explore</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="nav-search-btn" id="navSearchBtn" aria-label="Open search">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="countries.html">🌍 Countries</a>
+    <a href="culture.html">🎭 Culture</a>
+    <a href="learn.html">📖 Learn</a>
+    <a href="discover.html">🧭 Discover</a>
+    <a href="explore.html">✨ Explore</a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+
+      <!-- Africa Silhouette -->
+      <div class="hero-africa">
+        <svg viewBox="0 0 400 520" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M180 10 C140 12 110 30 90 55 C65 85 58 120 60 155 C62 185 50 200 38 225 C25 252 20 280 28 308 C36 336 55 355 70 378 C88 405 90 435 105 460 C122 488 148 510 175 515 C200 520 220 508 238 492 C258 475 270 450 278 424 C288 394 295 362 308 334 C322 305 342 280 348 250 C355 218 348 185 338 155 C326 122 310 92 300 60 C290 30 275 8 255 5 C230 1 205 8 180 10Z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        54 Countries · 3,000+ Cultures · One Platform
+      </div>
+
+      <h1 class="hero-title">
+        Explore <em>Africa</em><br />in one place
+      </h1>
+
+      <p class="hero-subtitle">
+        From the ancient pyramids of Egypt to the rhythms of Lagos, from Kente cloth to Kilishi — everything Africa, for everyone.
+      </p>
+
+      <!-- Search Bar -->
+      <div class="hero-search">
+        <div class="hero-search-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <input
+          type="text"
+          class="hero-search-input"
+          id="heroSearch"
+          placeholder="Search a country, food, language, tradition..."
+          autocomplete="off"
+        />
+        <button class="hero-search-btn" id="heroSearchBtn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Search</span>
+        </button>
+      </div>
+
+      <!-- Quick suggestions -->
+      <div class="hero-search-hint">
+        <span onclick="doSearch('Nigeria')">🇳🇬 Nigeria</span>
+        <span onclick="doSearch('Kente cloth')">🧵 Kente cloth</span>
+        <span onclick="doSearch('Afrobeats')">🎵 Afrobeats</span>
+        <span onclick="doSearch('Jollof rice')">🍛 Jollof rice</span>
+        <span onclick="doSearch('Swahili')">🗣 Swahili</span>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="54">0</div>
+          <div class="hero-stat-label">Countries</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="2000">0</div>
+          <div class="hero-stat-label">Languages</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="3000">0</div>
+          <div class="hero-stat-label">Cultures</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">1.4B</div>
+          <div class="hero-stat-label">People</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRENDING NOW
+  ============================================================ -->
+  <section class="trending">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-label">Right now</div>
+        <h2 class="section-title">Trending <em>Now</em></h2>
+        <p class="section-desc">What the world is discovering about Africa this week.</p>
+      </div>
+
+      <div class="trending-scroll reveal reveal-delay-1" id="trendingScroll">
+        <div class="trend-card">
+          <div class="trend-icon">🎵</div>
+          <div class="trend-category">Music</div>
+          <div class="trend-title">Afrobeats Takes Over Global Charts</div>
+          <div class="trend-meta">Nigeria · Afrobeats</div>
+        </div>
+        <div class="trend-card">
+          <div class="trend-icon">🧵</div>
+          <div class="trend-category">Fashion</div>
+          <div class="trend-title">Kente Cloth at Paris Fashion Week</div>
+          <div class="trend-meta">Ghana · Traditional Fashion</div>
+        </div>
+        <div class="trend-card">
+          <div class="trend-icon">🦁</div>
+          <div class="trend-category">Wildlife</div>
+          <div class="trend-title">Great Migration Season Begins</div>
+          <div class="trend-meta">Tanzania / Kenya · Safari</div>
+        </div>
+        <div class="trend-card">
+          <div class="trend-icon">🏛️</div>
+          <div class="trend-category">History</div>
+          <div class="trend-title">Benin Bronzes Return Home</div>
+          <div class="trend-meta">Nigeria · Heritage</div>
+        </div>
+        <div class="trend-card">
+          <div class="trend-icon">🍛</div>
+          <div class="trend-category">Food</div>
+          <div class="trend-title">Jollof Rice War: Who Wins?</div>
+          <div class="trend-meta">West Africa · Cuisine</div>
+        </div>
+        <div class="trend-card">
+          <div class="trend-icon">💃</div>
+          <div class="trend-category">Festivals</div>
+          <div class="trend-title">Homowo Festival — Accra</div>
+          <div class="trend-meta">Ghana · Ga Culture</div>
+        </div>
+        <div class="trend-card">
+          <div class="trend-icon">🎬</div>
+          <div class="trend-category">Film</div>
+          <div class="trend-title">Nollywood Hits Netflix Record</div>
+          <div class="trend-meta">Nigeria · Cinema</div>
+        </div>
+        <div class="trend-card">
+          <div class="trend-icon">🌍</div>
+          <div class="trend-category">Travel</div>
+          <div class="trend-title">Detty December: Accra Guide</div>
+          <div class="trend-meta">Ghana · Tourism</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AFRICAN PROVERBS MARQUEE
+  ============================================================ -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- First set -->
+      <div class="marquee-item">
+        <span>"Ubuntu: I am because we are."</span>
+        <strong>Nguni (Southern Africa)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Until the lion tells its own story, the tale of the hunt will always glorify the hunter."</span>
+        <strong>Igbo Proverb</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Onipa na ohia onipa — A person needs people."</span>
+        <strong>Akan (Ghana)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Knowledge is like a garden: if it is not cultivated, it cannot be harvested."</span>
+        <strong>Guinean Proverb</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Sankofa — It is not wrong to go back for what you forgot."</span>
+        <strong>Akan (Ghana)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Agwa bụ mma — Character is beauty."</span>
+        <strong>Igbo (Nigeria)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-item">
+        <span>"Ubuntu: I am because we are."</span>
+        <strong>Nguni (Southern Africa)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Until the lion tells its own story, the tale of the hunt will always glorify the hunter."</span>
+        <strong>Igbo Proverb</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Onipa na ohia onipa — A person needs people."</span>
+        <strong>Akan (Ghana)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Knowledge is like a garden: if it is not cultivated, it cannot be harvested."</span>
+        <strong>Guinean Proverb</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Sankofa — It is not wrong to go back for what you forgot."</span>
+        <strong>Akan (Ghana)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+      <div class="marquee-item">
+        <span>"Agwa bụ mma — Character is beauty."</span>
+        <strong>Igbo (Nigeria)</strong>
+        <div class="marquee-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       EXPLORE BY COUNTRY
+  ============================================================ -->
+  <section class="countries" id="countriesSection">
+    <div class="section-inner">
+      <div class="countries-header">
+        <div class="section-header reveal" style="margin-bottom:0">
+          <div class="section-label">All 54 nations</div>
+          <h2 class="section-title">Explore by <em>Country</em></h2>
+          <p class="section-desc">Every African nation, one tap away.</p>
+        </div>
+        <div class="region-filters reveal reveal-delay-1" id="regionFilters">
+          <button class="region-btn active" data-region="all">All</button>
+          <button class="region-btn" data-region="West Africa">West</button>
+          <button class="region-btn" data-region="East Africa">East</button>
+          <button class="region-btn" data-region="North Africa">North</button>
+          <button class="region-btn" data-region="Southern Africa">South</button>
+          <button class="region-btn" data-region="Central Africa">Central</button>
+        </div>
+      </div>
+
+      <div class="country-grid reveal reveal-delay-2" id="countryGrid">
+        <!-- Populated by JS -->
+      </div>
+
+      <div class="countries-footer reveal reveal-delay-3">
+        <a href="countries.html" class="btn-outline">
+          View All 54 Countries
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPLORE CULTURE
+  ============================================================ -->
+  <section class="culture">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-label">Deep dive</div>
+        <h2 class="section-title">Explore <em>Culture</em></h2>
+        <p class="section-desc">Food, fashion, music, traditions — everything that makes Africa extraordinary.</p>
+      </div>
+
+      <div class="culture-grid">
+        <a href="culture.html#food" class="culture-card reveal" style="--card-gradient: linear-gradient(135deg, rgba(200,80,30,0.1), transparent);">
+          <div class="culture-card-tag">54 cuisines</div>
+          <span class="culture-card-icon">🍛</span>
+          <h3 class="culture-card-title">Food & Cuisine</h3>
+          <p class="culture-card-desc">From Jollof Rice to Injera, from Tagine to Biltong — thousands of dishes, ingredients, and recipes across the continent.</p>
+          <span class="culture-card-link">Discover dishes →</span>
+        </a>
+
+        <a href="culture.html#dressing" class="culture-card reveal reveal-delay-1" style="--card-gradient: linear-gradient(135deg, rgba(200,149,42,0.1), transparent);">
+          <div class="culture-card-tag">Traditional · Modern</div>
+          <span class="culture-card-icon">👘</span>
+          <h3 class="culture-card-title">Dressing & Fashion</h3>
+          <p class="culture-card-desc">Kente cloth, Agbada, Ankara, Aso-Oke, Adire, Batakari — Africa's textile heritage and its influence on global fashion.</p>
+          <span class="culture-card-link">Explore styles →</span>
+        </a>
+
+        <a href="culture.html#music" class="culture-card featured reveal reveal-delay-2" style="--card-gradient: linear-gradient(135deg, rgba(42,74,46,0.2), rgba(200,149,42,0.1));">
+          <div class="culture-card-tag">Genres · Artists · Legends</div>
+          <span class="culture-card-icon">🎵</span>
+          <h3 class="culture-card-title">Music & Pop Culture</h3>
+          <p class="culture-card-desc">Afrobeats, Amapiano, Highlife, Mbalax, Gnawa, Rai, Taarab — Africa's music has taken over the world. Explore the genres, the legends, and the rising stars shaping global sound.</p>
+          <span class="culture-card-link">Explore music →</span>
+        </a>
+
+        <a href="culture.html#traditions" class="culture-card reveal reveal-delay-1" style="--card-gradient: linear-gradient(135deg, rgba(100,60,200,0.08), transparent);">
+          <div class="culture-card-tag">250+ groups</div>
+          <span class="culture-card-icon">🤝</span>
+          <h3 class="culture-card-title">Marriage & Traditions</h3>
+          <p class="culture-card-desc">The Igba Nkwu wine ceremony, the Kamu unveiling, the Yoruba prostration — weddings and rites across Africa.</p>
+          <span class="culture-card-link">See traditions →</span>
+        </a>
+
+        <a href="culture.html#beliefs" class="culture-card reveal reveal-delay-2" style="--card-gradient: linear-gradient(135deg, rgba(30,120,150,0.1), transparent);">
+          <div class="culture-card-tag">Spiritual Africa</div>
+          <span class="culture-card-icon">🌿</span>
+          <h3 class="culture-card-title">Beliefs & Spirituality</h3>
+          <p class="culture-card-desc">Ifa divination, Vodun, Bwiti, Ubuntu philosophy, Islam, Christianity — Africa's spiritual landscape is the richest on Earth.</p>
+          <span class="culture-card-link">Explore beliefs →</span>
+        </a>
+
+        <a href="culture.html#festivals" class="culture-card reveal reveal-delay-3" style="--card-gradient: linear-gradient(135deg, rgba(200,149,42,0.08), transparent);">
+          <div class="culture-card-tag">70+ annual festivals</div>
+          <span class="culture-card-icon">🎊</span>
+          <h3 class="culture-card-title">Festivals & Celebrations</h3>
+          <p class="culture-card-desc">Osun-Osogbo, Durbar, Homowo, Timkat, Akwasidae, Calabar Carnival — the most extraordinary celebrations on Earth.</p>
+          <span class="culture-card-link">See festivals →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LEARN A LANGUAGE
+  ============================================================ -->
+  <section class="learn">
+    <div class="section-inner">
+      <div class="learn-layout">
+        <div>
+          <div class="section-header reveal">
+            <div class="section-label">Daily phrases</div>
+            <h2 class="section-title">Learn a<br /><em>Language</em></h2>
+            <p class="section-desc">Africa has over 2,000 languages. Start with a daily phrase from a new one every day.</p>
+            <a href="learn.html" class="section-link">
+              Go to full language section →
+            </a>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="lang-grid reveal reveal-delay-1" id="langGrid">
+            <div class="lang-item selected" data-lang="0">
+              <span class="lang-name">Yoruba</span>
+              <span class="lang-speakers">47 million speakers</span>
+              <span class="lang-sample">"E kaaro"</span>
+            </div>
+            <div class="lang-item" data-lang="1">
+              <span class="lang-name">Swahili</span>
+              <span class="lang-speakers">200 million speakers</span>
+              <span class="lang-sample">"Habari"</span>
+            </div>
+            <div class="lang-item" data-lang="2">
+              <span class="lang-name">Amharic</span>
+              <span class="lang-speakers">57 million speakers</span>
+              <span class="lang-sample">"Selam"</span>
+            </div>
+            <div class="lang-item" data-lang="3">
+              <span class="lang-name">Twi (Akan)</span>
+              <span class="lang-speakers">17 million speakers</span>
+              <span class="lang-sample">"Akwaaba"</span>
+            </div>
+            <div class="lang-item" data-lang="4">
+              <span class="lang-name">Hausa</span>
+              <span class="lang-speakers">67 million speakers</span>
+              <span class="lang-sample">"Sannu"</span>
+            </div>
+            <div class="lang-item" data-lang="5">
+              <span class="lang-name">Zulu</span>
+              <span class="lang-speakers">12 million speakers</span>
+              <span class="lang-sample">"Sawubona"</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phrase Card -->
+        <div class="reveal reveal-delay-2">
+          <div class="phrase-card" id="phraseCard">
+            <div class="phrase-card-header">
+              <div class="phrase-lang-badge">
+                <span id="phraseLangFlag">🇳🇬</span>
+                <span id="phraseLangName">Yoruba</span>
+              </div>
+              <div class="phrase-nav">
+                <button class="phrase-nav-btn" id="phrasePrev">‹</button>
+                <button class="phrase-nav-btn" id="phraseNext">›</button>
+              </div>
+            </div>
+
+            <div class="phrase-english" id="phraseEnglish">How to say: Good morning</div>
+            <div class="phrase-native" id="phraseNative">E kaaro</div>
+            <div class="phrase-pronunciation" id="phrasePronounciation">[ eh KAH-roh ]</div>
+            <div class="phrase-meaning" id="phraseMeaning">
+              A warm morning greeting in Yoruba. Literally translates to "you wake up well." Responded to with "E kaaro o" — adding the "o" extends warmth and respect.
+            </div>
+
+            <div class="phrase-progress" id="phraseProgress">
+              <!-- Dots populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MINI QUIZ
+  ============================================================ -->
+  <section class="quiz">
+    <div class="section-inner">
+      <div class="section-header reveal" style="text-align:center; align-items:center; display:flex; flex-direction:column;">
+        <div class="section-label">Test yourself</div>
+        <h2 class="section-title">African <em>Culture Quiz</em></h2>
+        <p class="section-desc" style="text-align:center;">How much do you know about Africa? A new question every session.</p>
+      </div>
+
+      <div class="quiz-card reveal reveal-delay-1" id="quizCard">
+        <div class="quiz-header">
+          <span class="quiz-tag" id="quizTag">Culture · History</span>
+          <span class="quiz-score" id="quizScore">Question 1 of 5</span>
+        </div>
+
+        <div class="quiz-question" id="quizQuestion">
+          Which African country has the most pyramids in the world — more than Egypt?
+        </div>
+
+        <div class="quiz-options" id="quizOptions">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="quiz-feedback" id="quizFeedback"></div>
+
+        <div class="quiz-actions">
+          <button class="btn-primary" id="quizNext" disabled>
+            Next Question
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DISCOVER
+  ============================================================ -->
+  <section class="discover">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-label">Travel Africa</div>
+        <h2 class="section-title">Discover <em>Places</em></h2>
+        <p class="section-desc">Beyond the postcards — real travel guides for real Africa explorers.</p>
+      </div>
+
+      <div class="discover-grid">
+        <a href="discover.html#hidden-gems" class="discover-card reveal">
+          <div class="discover-number">01</div>
+          <div class="discover-title">Hidden Gems</div>
+          <div class="discover-desc">Places you won't find in generic travel guides — secret beaches, forgotten kingdoms, and breathtaking landscapes most tourists miss.</div>
+          <span class="discover-tag">Off the beaten path</span>
+        </a>
+
+        <a href="discover.html#budget" class="discover-card reveal reveal-delay-1">
+          <div class="discover-number">02</div>
+          <div class="discover-title">Budget Travel Guides</div>
+          <div class="discover-desc">Travel Africa without breaking the bank. Chop bars, trotros, guesthouses — the real way locals experience the continent.</div>
+          <span class="discover-tag">Affordable Africa</span>
+        </a>
+
+        <a href="discover.html#food-trails" class="discover-card reveal reveal-delay-2">
+          <div class="discover-number">03</div>
+          <div class="discover-title">Food Trails</div>
+          <div class="discover-desc">Follow the food — from Lagos street suya to Marrakech medina spice markets. The best food experiences on the continent.</div>
+          <span class="discover-tag">Culinary adventures</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+  ============================================================ -->
+  <section class="cta-section">
+    <div class="section-inner cta-content reveal">
+      <h2 class="cta-title">Africa is not a<br /><em>monolith.</em></h2>
+      <p class="cta-subtitle">3,000 cultures. 2,000 languages. 54 nations. Each one with a story the world deserves to know. Start exploring.</p>
+      <div class="cta-buttons">
+        <a href="countries.html" class="btn-primary">
+          Explore All Countries
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="learn.html" class="btn-ghost">
+          Learn a Language
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">F</div>
+            <span class="logo-text">Fr<span>i</span>ca</span>
+          </a>
+          <p>Your go-to platform for everything African — cultures, languages, food, music, history, and more across all 54 countries.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="countries.html">All Countries</a></li>
+            <li><a href="culture.html">Culture Hub</a></li>
+            <li><a href="discover.html">Travel & Places</a></li>
+            <li><a href="explore.html">Explore Feed</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="learn.html">Daily Phrases</a></li>
+            <li><a href="learn.html#quiz">Culture Quiz</a></li>
+            <li><a href="learn.html#proverbs">Proverbs</a></li>
+            <li><a href="learn.html#languages">Languages</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Regions</h4>
+          <ul>
+            <li><a href="countries.html?region=west">West Africa</a></li>
+            <li><a href="countries.html?region=east">East Africa</a></li>
+            <li><a href="countries.html?region=north">North Africa</a></li>
+            <li><a href="countries.html?region=south">Southern Africa</a></li>
+            <li><a href="countries.html?region=central">Central Africa</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Frica. Built with love for Africa.</span>
+        <div class="footer-tagline">
+          Made in <span>Africa 🌍</span> — for the world
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ============================================================
+       SEARCH MODAL
+  ============================================================ -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-box">
+      <div class="search-box-input-row">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-box-input" id="modalSearchInput" placeholder="Search countries, cultures, food, music..." autocomplete="off" />
+        <button class="search-box-close" id="searchClose">✕</button>
+      </div>
+      <div class="search-results" id="searchResults">
+        <div class="search-empty">Start typing to search across all of Africa...</div>
+      </div>
+      <div class="search-shortcuts">
+        <kbd>↑↓</kbd> navigate &nbsp;
+        <kbd>Enter</kbd> select &nbsp;
+        <kbd>Esc</kbd> close
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    'use strict';
+
+    // ── Country Data (from countries.json — subset for homepage) ──────
+    const COUNTRIES = [
+      { name:"Nigeria",      slug:"nigeria",              flag:"🇳🇬", region:"West Africa",     code:"NG" },
+      { name:"Ghana",        slug:"ghana",                flag:"🇬🇭", region:"West Africa",     code:"GH" },
+      { name:"Kenya",        slug:"kenya",                flag:"🇰🇪", region:"East Africa",     code:"KE" },
+      { name:"South Africa", slug:"south-africa",         flag:"🇿🇦", region:"Southern Africa", code:"ZA" },
+      { name:"Egypt",        slug:"egypt",                flag:"🇪🇬", region:"North Africa",    code:"EG" },
+      { name:"Ethiopia",     slug:"ethiopia",             flag:"🇪🇹", region:"East Africa",     code:"ET" },
+      { name:"Tanzania",     slug:"tanzania",             flag:"🇹🇿", region:"East Africa",     code:"TZ" },
+      { name:"Morocco",      slug:"morocco",              flag:"🇲🇦", region:"North Africa",    code:"MA" },
+      { name:"Senegal",      slug:"senegal",              flag:"🇸🇳", region:"West Africa",     code:"SN" },
+      { name:"Uganda",       slug:"uganda",               flag:"🇺🇬", region:"East Africa",     code:"UG" },
+      { name:"Cameroon",     slug:"cameroon",             flag:"🇨🇲", region:"Central Africa",  code:"CM" },
+      { name:"Côte d'Ivoire",slug:"cote-divoire",         flag:"🇨🇮", region:"West Africa",     code:"CI" },
+      { name:"Angola",       slug:"angola",               flag:"🇦🇴", region:"Central Africa",  code:"AO" },
+      { name:"Sudan",        slug:"sudan",                flag:"🇸🇩", region:"North Africa",    code:"SD" },
+      { name:"Algeria",      slug:"algeria",              flag:"🇩🇿", region:"North Africa",    code:"DZ" },
+      { name:"Mozambique",   slug:"mozambique",           flag:"🇲🇿", region:"East Africa",     code:"MZ" },
+      { name:"Rwanda",       slug:"rwanda",               flag:"🇷🇼", region:"East Africa",     code:"RW" },
+      { name:"Mali",         slug:"mali",                 flag:"🇲🇱", region:"West Africa",     code:"ML" },
+      { name:"Zambia",       slug:"zambia",               flag:"🇿🇲", region:"Southern Africa", code:"ZM" },
+      { name:"Zimbabwe",     slug:"zimbabwe",             flag:"🇿🇼", region:"Southern Africa", code:"ZW" },
+      { name:"Tunisia",      slug:"tunisia",              flag:"🇹🇳", region:"North Africa",    code:"TN" },
+      { name:"Namibia",      slug:"namibia",              flag:"🇳🇦", region:"Southern Africa", code:"NA" },
+      { name:"Botswana",     slug:"botswana",             flag:"🇧🇼", region:"Southern Africa", code:"BW" },
+      { name:"Madagascar",   slug:"madagascar",           flag:"🇲🇬", region:"East Africa",     code:"MG" },
+      { name:"Cameroon",     slug:"cameroon",             flag:"🇨🇲", region:"Central Africa",  code:"CM" },
+      { name:"Guinea",       slug:"guinea",               flag:"🇬🇳", region:"West Africa",     code:"GN" },
+      { name:"Benin",        slug:"benin",                flag:"🇧🇯", region:"West Africa",     code:"BJ" },
+      { name:"Sierra Leone", slug:"sierra-leone",         flag:"🇸🇱", region:"West Africa",     code:"SL" },
+      { name:"Libya",        slug:"libya",                flag:"🇱🇾", region:"North Africa",    code:"LY" },
+      { name:"DRC",          slug:"democratic-republic-of-the-congo", flag:"🇨🇩", region:"Central Africa", code:"CD" },
+      { name:"Liberia",      slug:"liberia",              flag:"🇱🇷", region:"West Africa",     code:"LR" },
+      { name:"Gabon",        slug:"gabon",                flag:"🇬🇦", region:"Central Africa",  code:"GA" },
+    ];
+
+    // ── Language Phrases ────────────────────────────────────────────
+    const PHRASES = [
+      {
+        lang: "Yoruba", flag: "🇳🇬",
+        phrases: [
+          { english:"Good morning", native:"E kaaro", pronunciation:"[ eh KAH-roh ]", meaning:"A warm morning greeting in Yoruba. Literally 'you wake up well.' Respond with 'E kaaro o' to show extra warmth and respect." },
+          { english:"Welcome", native:"E kaabo", pronunciation:"[ eh KAH-boh ]", meaning:"Said to welcome someone to your home, town, or gathering. A fundamental expression of Yoruba hospitality." },
+          { english:"Thank you", native:"E se", pronunciation:"[ eh SHEH ]", meaning:"Polite thanks. 'E se pupo' means 'thank you very much' — adding 'pupo' (plenty) intensifies the gratitude." },
+          { english:"How are you?", native:"Bawo ni?", pronunciation:"[ BAH-woh nee ]", meaning:"The most common Yoruba greeting after hello. Expect the answer 'Mo wa' (I am here/fine)." },
+        ]
+      },
+      {
+        lang: "Swahili", flag: "🇰🇪",
+        phrases: [
+          { english:"Hello / How are you?", native:"Habari?", pronunciation:"[ hah-BAH-ree ]", meaning:"The most common Swahili greeting. Literally means 'news?' — asking what news do you have? Respond with 'Nzuri' (good/fine)." },
+          { english:"Welcome", native:"Karibu", pronunciation:"[ kah-REE-boo ]", meaning:"One of the most beautiful African words. Used to welcome anyone anywhere. 'Karibuni' is the plural form for welcoming a group." },
+          { english:"Thank you", native:"Asante", pronunciation:"[ ah-SAHN-teh ]", meaning:"The most recognized Swahili word globally. 'Asante sana' means 'thank you very much'. Note: The Asante people of Ghana have a different etymology." },
+          { english:"Unity", native:"Umoja", pronunciation:"[ oo-MOH-jah ]", meaning:"One of the core principles of Kwanzaa. Meaning unity — a fundamental value across East African communities." },
+        ]
+      },
+      {
+        lang: "Amharic", flag: "🇪🇹",
+        phrases: [
+          { english:"Hello / Peace", native:"ሰላም (Selam)", pronunciation:"[ SEH-lahm ]", meaning:"The most common Ethiopian greeting, meaning 'peace.' Used across Ethiopia regardless of ethnicity or religion. Rooted in the Semitic word for peace (Shalom/Salaam)." },
+          { english:"How are you? (formal)", native:"እንዴት ናቸሁ (Indet nachu?)", pronunciation:"[ in-DET nah-choo ]", meaning:"A formal way to ask how someone is doing in Amharic. The informal version for a friend is 'Indet neh?' (to a male) or 'Indet nesh?' (to a female)." },
+          { english:"Thank you", native:"አመሰግናለሁ (Ameseginalehu)", pronunciation:"[ ah-meh-seh-gee-nah-leh-hoo ]", meaning:"A full, formal expression of thanks. Often shortened in conversation to 'Ameseginalhu'. One of the longer thank-you phrases in any African language." },
+          { english:"Farewell", native:"እስቲ ቻው (Esti chaw)", pronunciation:"[ ES-tee chow ]", meaning:"A casual Amharic goodbye, blending the traditional 'esti' with the borrowed 'chaw' (from Italian 'ciao' — left from Italian colonial era in Ethiopia)." },
+        ]
+      },
+      {
+        lang: "Twi (Akan)", flag: "🇬🇭",
+        phrases: [
+          { english:"Welcome", native:"Akwaaba", pronunciation:"[ ah-KWAH-bah ]", meaning:"Ghana's most internationally known word. A warm welcome used everywhere — airports, homes, shops. Ghana is often called 'the land of Akwaaba.'" },
+          { english:"Good morning", native:"Maakye", pronunciation:"[ MAH-cheh ]", meaning:"Good morning in Twi. Responding with 'Maakye' back completes the greeting. A warm exchange expected between neighbours." },
+          { english:"Thank you", native:"Medaase", pronunciation:"[ meh-DAH-seh ]", meaning:"Thank you in Twi. 'Medaase paa' — with 'paa' added — means 'thank you very much.' Paa is an intensifier in Akan." },
+          { english:"Go back and fetch it", native:"Sankofa", pronunciation:"[ san-KOH-fah ]", meaning:"Arguably Africa's most profound single-word philosophy. It means: it is not wrong to return for what you left behind — i.e. learn from your past. Represented by a bird looking backward." },
+        ]
+      },
+      {
+        lang: "Hausa", flag: "🇳🇬",
+        phrases: [
+          { english:"Hello / Greetings", native:"Sannu", pronunciation:"[ SAH-noo ]", meaning:"The most basic Hausa greeting. Can be used at any time of day for anyone. Responding 'Sannu kadai' (greetings only) is a common warm reply." },
+          { english:"Good morning", native:"Ina kwana?", pronunciation:"[ EE-nah KWAH-nah ]", meaning:"Literally: 'How did you spend the night?' A morning greeting checking on the wellbeing of the person. Respond with 'Lafiya lau' (perfectly well)." },
+          { english:"Thank you", native:"Na gode", pronunciation:"[ nah GOH-deh ]", meaning:"Thank you in Hausa. 'Na gode sosai' means 'thank you very much.' Hausa speakers often add hand gestures — touching the chest — when expressing deep gratitude." },
+          { english:"Welcome", native:"Barka da zuwa", pronunciation:"[ BAR-kah dah ZOO-wah ]", meaning:"A full welcome greeting meaning 'blessed is your arrival.' The response is 'Yauwa, barka' — acknowledging the blessing." },
+        ]
+      },
+      {
+        lang: "Zulu", flag: "🇿🇦",
+        phrases: [
+          { english:"I see you", native:"Sawubona", pronunciation:"[ sah-woo-BOH-nah ]", meaning:"The Zulu greeting meaning 'I see you' — acknowledging your full humanity and existence. The response is 'Ngikhona' (I am here). This exchange is the philosophical root of Ubuntu." },
+          { english:"We are here", native:"Ngikhona", pronunciation:"[ ngee-KOH-nah ]", meaning:"The response to Sawubona. Means 'I am here' or 'I exist.' Together, Sawubona and Ngikhona form a profound exchange: I see you — I am seen, therefore I am." },
+          { english:"Thank you", native:"Ngiyabonga", pronunciation:"[ ngee-yah-BON-gah ]", meaning:"Thank you in Zulu. A deeply respectful expression. 'Ngiyabonga kakhulu' means 'thank you very much' — kakhulu meaning greatly/very much." },
+          { english:"I am because we are", native:"Ubuntu", pronunciation:"[ oo-BOON-too ]", meaning:"One of Africa's most globally known philosophical concepts. A Nguni Bantu word and philosophy: 'I am because we are.' The foundation of communal African values." },
+        ]
+      },
+    ];
+
+    // ── Quiz Questions ───────────────────────────────────────────────
+    const QUIZ_QUESTIONS = [
+      {
+        tag: "History · Ancient Civilizations",
+        question: "Which African country has more ancient pyramids than Egypt?",
+        options: ["Libya", "Sudan", "Ethiopia", "Mali"],
+        correct: 1,
+        feedback: "Sudan (ancient Nubia) has over 200 ancient pyramids — more than Egypt! The Nubian pyramids at Meroe were built by the Kingdom of Kush, one of Africa's greatest civilizations. They are narrower and steeper than Egyptian pyramids."
+      },
+      {
+        tag: "Music · Pop Culture",
+        question: "Which African city is considered the birthplace of Afrobeats music?",
+        options: ["Accra", "Nairobi", "Lagos", "Dakar"],
+        correct: 2,
+        feedback: "Lagos, Nigeria is widely considered the birthplace and capital of Afrobeats. Artists like Fela Kuti laid the foundation, and the city's vibrant street culture and music industry gave rise to modern Afrobeats stars like Wizkid, Burna Boy, and Davido."
+      },
+      {
+        tag: "Culture · Textiles",
+        question: "What does the Adinkra symbol 'Sankofa' represent?",
+        options: ["Strength in unity", "Go back and learn from the past", "God is supreme", "Love never loses its way"],
+        correct: 1,
+        feedback: "Sankofa means 'go back and fetch it' — it is not wrong to return for what you left behind. Depicted as a bird looking backward while flying forward, it teaches that we must understand our past to build our future. It is one of Africa's most globally recognized symbols."
+      },
+      {
+        tag: "Geography · Records",
+        question: "Which African country was NEVER colonized by a European power?",
+        options: ["Ghana", "Ethiopia", "Liberia", "Both Ethiopia and Liberia"],
+        correct: 3,
+        feedback: "Both Ethiopia and Liberia were never fully colonized! Ethiopia successfully defeated Italy at the Battle of Adwa (1896) — the most significant African victory over a European colonial army. Liberia was founded by freed American slaves and maintained independence. Italy briefly occupied Ethiopia from 1936–1941, but this is not considered full colonization."
+      },
+      {
+        tag: "Traditions · Language",
+        question: "What does the Zulu greeting 'Sawubona' literally mean?",
+        options: ["How are you?", "Peace be with you", "I see you", "Welcome home"],
+        correct: 2,
+        feedback: "'Sawubona' literally means 'I see you' — acknowledging the full humanity of the person before you. The response is 'Ngikhona' (I am here). This exchange is the philosophical root of Ubuntu: 'I am because we are.' It is considered one of the most profound greetings in any culture."
+      },
+    ];
+
+    // ─────────────────────────────────────────────────────────────────
+    // NAVIGATION
+    // ─────────────────────────────────────────────────────────────────
+    const mainNav     = document.getElementById('mainNav');
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobileMenu');
+
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 40);
+      backTop.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // ─────────────────────────────────────────────────────────────────
+    // HERO COUNTER ANIMATION
+    // ─────────────────────────────────────────────────────────────────
+    function animateCounter(el, target, duration = 1800) {
+      const start = performance.now();
+      const update = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(ease * target);
+        el.textContent = current >= 1000 ? (current >= 2000 ? current.toLocaleString() : current.toLocaleString()) : current;
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target >= 1000 ? target.toLocaleString() : target;
+      };
+      requestAnimationFrame(update);
+    }
+
+    const counterEls = document.querySelectorAll('[data-count]');
+    let countersStarted = false;
+    const counterObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !countersStarted) {
+        countersStarted = true;
+        counterEls.forEach(el => animateCounter(el, parseInt(el.dataset.count)));
+      }
+    });
+    if (counterEls[0]) counterObserver.observe(counterEls[0]);
+
+    // ─────────────────────────────────────────────────────────────────
+    // SCROLL REVEAL
+    // ─────────────────────────────────────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ─────────────────────────────────────────────────────────────────
+    // COUNTRY GRID
+    // ─────────────────────────────────────────────────────────────────
+    const countryGrid   = document.getElementById('countryGrid');
+    const regionFilters = document.getElementById('regionFilters');
+    let activeRegion    = 'all';
+
+    function renderCountries(region) {
+      const filtered = region === 'all'
+        ? COUNTRIES.slice(0, 32)
+        : COUNTRIES.filter(c => c.region === region);
+
+      // Deduplicate
+      const unique = filtered.filter((c, i, a) => a.findIndex(x => x.slug === c.slug) === i);
+      const display = unique.slice(0, 32);
+
+      countryGrid.innerHTML = display.map(c => `
+        <a href="pages/country/${c.slug}.html" class="country-card">
+          <span class="country-flag">${c.flag}</span>
+          <div class="country-info">
+            <div class="country-name">${c.name}</div>
+            <div class="country-region">${c.region}</div>
+          </div>
+          <span class="country-code">${c.code}</span>
+        </a>
+      `).join('');
+    }
+
+    renderCountries('all');
+
+    regionFilters.addEventListener('click', e => {
+      const btn = e.target.closest('.region-btn');
+      if (!btn) return;
+      document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeRegion = btn.dataset.region;
+      renderCountries(activeRegion);
+    });
+
+    // ─────────────────────────────────────────────────────────────────
+    // LANGUAGE / PHRASE CARD
+    // ─────────────────────────────────────────────────────────────────
+    let currentLang   = 0;
+    let currentPhrase = 0;
+
+    function updatePhraseCard() {
+      const lang   = PHRASES[currentLang];
+      const phrase = lang.phrases[currentPhrase];
+
+      document.getElementById('phraseLangFlag').textContent   = lang.flag;
+      document.getElementById('phraseLangName').textContent   = lang.lang;
+      document.getElementById('phraseEnglish').textContent    = `How to say: ${phrase.english}`;
+      document.getElementById('phraseNative').textContent     = phrase.native;
+      document.getElementById('phrasePronounciation').textContent = phrase.pronunciation;
+      document.getElementById('phraseMeaning').textContent    = phrase.meaning;
+
+      const progress = document.getElementById('phraseProgress');
+      progress.innerHTML = lang.phrases.map((_, i) =>
+        `<div class="phrase-dot ${i === currentPhrase ? 'active' : ''}"></div>`
+      ).join('');
+    }
+
+    document.getElementById('phraseNext').addEventListener('click', () => {
+      currentPhrase = (currentPhrase + 1) % PHRASES[currentLang].phrases.length;
+      updatePhraseCard();
+    });
+
+    document.getElementById('phrasePrev').addEventListener('click', () => {
+      currentPhrase = (currentPhrase - 1 + PHRASES[currentLang].phrases.length) % PHRASES[currentLang].phrases.length;
+      updatePhraseCard();
+    });
+
+    document.getElementById('langGrid').addEventListener('click', e => {
+      const item = e.target.closest('.lang-item');
+      if (!item) return;
+      document.querySelectorAll('.lang-item').forEach(i => i.classList.remove('selected'));
+      item.classList.add('selected');
+      currentLang   = parseInt(item.dataset.lang);
+      currentPhrase = 0;
+      updatePhraseCard();
+    });
+
+    updatePhraseCard();
+
+    // ─────────────────────────────────────────────────────────────────
+    // QUIZ
+    // ─────────────────────────────────────────────────────────────────
+    let quizIndex    = 0;
+    let quizAnswered = false;
+    let quizScore    = 0;
+
+    function shuffleArray(arr) {
+      return [...arr].sort(() => Math.random() - 0.5);
+    }
+
+    const SHUFFLED_QUIZ = shuffleArray(QUIZ_QUESTIONS);
+
+    function renderQuiz() {
+      if (quizIndex >= SHUFFLED_QUIZ.length) {
+        // Game over
+        document.getElementById('quizCard').innerHTML = `
+          <div style="text-align:center; padding: 1rem 0;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🌍</div>
+            <div class="quiz-tag" style="justify-content:center; display:inline-flex;">Quiz Complete</div>
+            <h3 style="font-family:'Playfair Display',serif; font-size:2rem; color:var(--cream); margin:1rem 0 0.5rem; font-weight:700;">
+              ${quizScore} / ${SHUFFLED_QUIZ.length}
+            </h3>
+            <p style="color:var(--text-soft); font-size:0.9rem; margin-bottom:2rem; line-height:1.6;">
+              ${quizScore >= 4 ? "Excellent! You know your Africa 🔥" : quizScore >= 2 ? "Not bad — keep exploring Frica to learn more!" : "Africa has so much to teach — keep exploring!"}
+            </p>
+            <button class="btn-primary" onclick="resetQuiz()">
+              Play Again
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      const q = SHUFFLED_QUIZ[quizIndex];
+      quizAnswered = false;
+
+      document.getElementById('quizTag').textContent   = q.tag;
+      document.getElementById('quizScore').textContent = `Question ${quizIndex + 1} of ${SHUFFLED_QUIZ.length}`;
+      document.getElementById('quizQuestion').textContent = q.question;
+
+      const feedback = document.getElementById('quizFeedback');
+      feedback.textContent = '';
+      feedback.className = 'quiz-feedback';
+
+      const nextBtn = document.getElementById('quizNext');
+      nextBtn.disabled = true;
+
+      const letters = ['A', 'B', 'C', 'D'];
+      document.getElementById('quizOptions').innerHTML = q.options.map((opt, i) => `
+        <button class="quiz-option" data-index="${i}">
+          <span class="quiz-option-letter">${letters[i]}</span>
+          ${opt}
+        </button>
+      `).join('');
+
+      document.querySelectorAll('.quiz-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (quizAnswered) return;
+          quizAnswered = true;
+
+          const chosen  = parseInt(btn.dataset.index);
+          const correct = q.correct;
+
+          document.querySelectorAll('.quiz-option').forEach((b, i) => {
+            b.disabled = true;
+            if (i === correct) b.classList.add('correct');
+            else if (i === chosen && chosen !== correct) b.classList.add('wrong');
+          });
+
+          if (chosen === correct) quizScore++;
+
+          feedback.textContent  = (chosen === correct ? '✓ Correct! ' : '✗ Not quite. ') + q.feedback;
+          feedback.className    = `quiz-feedback show ${chosen === correct ? 'correct-fb' : 'wrong-fb'}`;
+          nextBtn.disabled      = false;
+        });
+      });
+    }
+
+    document.getElementById('quizNext').addEventListener('click', () => {
+      quizIndex++;
+      renderQuiz();
+    });
+
+    function resetQuiz() {
+      quizIndex    = 0;
+      quizScore    = 0;
+      quizAnswered = false;
+      document.getElementById('quizCard').innerHTML = `
+        <div class="quiz-header">
+          <span class="quiz-tag" id="quizTag"></span>
+          <span class="quiz-score" id="quizScore"></span>
+        </div>
+        <div class="quiz-question" id="quizQuestion"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-feedback" id="quizFeedback"></div>
+        <div class="quiz-actions">
+          <button class="btn-primary" id="quizNext" disabled>
+            Next Question
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      `;
+      document.getElementById('quizNext').addEventListener('click', () => { quizIndex++; renderQuiz(); });
+      renderQuiz();
+    }
+
+    renderQuiz();
+
+    // ─────────────────────────────────────────────────────────────────
+    // SEARCH
+    // ─────────────────────────────────────────────────────────────────
+    const searchModal   = document.getElementById('searchModal');
+    const modalInput    = document.getElementById('modalSearchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    function openSearch() {
+      searchModal.classList.add('open');
+      setTimeout(() => modalInput.focus(), 50);
+    }
+
+    function closeSearch() {
+      searchModal.classList.remove('open');
+      modalInput.value = '';
+      searchResults.innerHTML = '<div class="search-empty">Start typing to search across all of Africa...</div>';
+    }
+
+    document.getElementById('navSearchBtn').addEventListener('click', openSearch);
+    document.getElementById('searchBackdrop').addEventListener('click', closeSearch);
+    document.getElementById('searchClose').addEventListener('click', closeSearch);
+    document.getElementById('heroSearchBtn').addEventListener('click', openSearch);
+
+    document.getElementById('heroSearch').addEventListener('keydown', e => {
+      if (e.key === 'Enter') openSearch();
+    });
+
+    function doSearch(term) {
+      openSearch();
+      modalInput.value = term;
+      modalInput.dispatchEvent(new Event('input'));
+    }
+
+    modalInput.addEventListener('input', () => {
+      const q = modalInput.value.trim().toLowerCase();
+      if (!q) {
+        searchResults.innerHTML = '<div class="search-empty">Start typing to search across all of Africa...</div>';
+        return;
+      }
+
+      const results = COUNTRIES.filter(c =>
+        c.name.toLowerCase().includes(q) ||
+        c.region.toLowerCase().includes(q) ||
+        c.code.toLowerCase().includes(q)
+      ).slice(0, 8);
+
+      if (!results.length) {
+        searchResults.innerHTML = `<div class="search-empty">No results for "<strong>${q}</strong>". Try a country name or region.</div>`;
+        return;
+      }
+
+      searchResults.innerHTML = results.map(c => `
+        <a href="pages/country/${c.slug}.html" class="search-result-item">
+          <span class="search-result-flag">${c.flag}</span>
+          <div>
+            <div class="search-result-name">${c.name}</div>
+            <div class="search-result-meta">${c.region} · ${c.code}</div>
+          </div>
+        </a>
+      `).join('');
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeSearch();
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+    });
+
+    // ─────────────────────────────────────────────────────────────────
+    // BACK TO TOP
+    // ─────────────────────────────────────────────────────────────────
+    const backTop = document.getElementById('backTop');
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/bookmark.js"></script>
+</body>
+</html>
