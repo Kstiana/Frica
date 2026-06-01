@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghana — Frica | Gateway to Africa</title>
+  <meta name="description" content="Explore Ghana — first sub-Saharan country to gain independence. Kente cloth, Highlife music, Ashanti Kingdom, Cape Coast Castle, Detty December, and Akwaaba." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:         #0d0f0a;
+      --bg-card:    #131610;
+      --bg-raise:   #1a1e14;
+      --gold:       #c8952a;
+      --gold-light: #e8b84b;
+      --gold-dim:   rgba(200,149,42,0.13);
+      --green:      #2a4a2e;
+      --green-mid:  #3d6b43;
+      --cream:      #f0e8d5;
+      --text:       #e8e0cc;
+      --text-muted: rgba(232,224,204,0.45);
+      --text-soft:  rgba(232,224,204,0.72);
+      --border:     rgba(200,149,42,0.18);
+      --border-dim: rgba(232,224,204,0.07);
+      --red:        #c0392b;
+      /* Ghana flag colors */
+      --gh-red:     #ce1126;
+      --gh-gold:    #fcd116;
+      --gh-green:   #006b3f;
+      --gh-black:   #000000;
+      --gh-accent:  #fcd116;
+      --gh-dim:     rgba(252,209,22,0.12);
+      --gh-green-dim: rgba(0,107,63,0.15);
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  20px;
+      --radius-xl:  32px;
+      --nav-h:      68px;
+      --t:          0.28s;
+    }
+
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-weight:400; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button { cursor:pointer; border:none; background:none; font-family:inherit; }
+    ul { list-style:none; }
+
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--gh-gold); border-radius:3px; }
+
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity:0.03; pointer-events:none; z-index:9999; }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    .nav { position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:1000; background:rgba(13,15,10,0.94); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dim); display:flex; align-items:center; padding:0 clamp(1.25rem,4vw,3rem); transition:border-color var(--t); }
+    .nav.scrolled { border-color:var(--border); }
+    .nav-inner { width:100%; max-width:1400px; margin:0 auto; display:flex; align-items:center; gap:1.5rem; }
+    .logo { display:flex; align-items:center; gap:.6rem; flex-shrink:0; }
+    .logo-mark { width:36px; height:36px; background:var(--gold); border-radius:8px; display:grid; place-items:center; font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:#0d0f0a; }
+    .logo-text { font-family:'Playfair Display',serif; font-weight:700; font-size:1.4rem; color:var(--cream); }
+    .logo-text span { color:var(--gold); }
+    .nav-links { display:flex; align-items:center; gap:.25rem; flex:1; }
+    .nav-links a { padding:.45rem .85rem; border-radius:var(--radius-sm); font-size:.875rem; font-weight:500; color:var(--text-soft); transition:color var(--t),background var(--t); }
+    .nav-links a:hover { color:var(--cream); background:var(--border-dim); }
+    .nav-links a.active { color:var(--gold-light); }
+    .nav-right { display:flex; align-items:center; gap:.75rem; margin-left:auto; }
+    .bookmark-btn { display:flex; align-items:center; gap:.5rem; padding:.45rem 1rem; border-radius:var(--radius-lg); border:1.5px solid var(--border-dim); font-size:.8rem; font-weight:600; color:var(--text-soft); transition:var(--t); }
+    .bookmark-btn:hover, .bookmark-btn.saved { border-color:var(--gh-gold); color:var(--gh-gold); background:var(--gh-dim); }
+    .hamburger { display:none; flex-direction:column; gap:5px; padding:8px; border-radius:var(--radius-sm); }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--text-soft); border-radius:2px; transition:var(--t); }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .mobile-menu { display:none; position:fixed; top:var(--nav-h); left:0; right:0; background:rgba(13,15,10,0.97); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); z-index:999; padding:1.5rem clamp(1.25rem,4vw,3rem); flex-direction:column; gap:.5rem; animation:slideDown .25s ease; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { padding:.75rem 1rem; border-radius:var(--radius-sm); font-size:1rem; font-weight:500; color:var(--text-soft); transition:var(--t); border-bottom:1px solid var(--border-dim); }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { color:var(--cream); background:var(--border-dim); }
+    @keyframes slideDown { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .country-hero { padding-top:var(--nav-h); position:relative; overflow:hidden; }
+
+    .hero-bg-strip {
+      height:280px; position:relative; overflow:hidden;
+      background:linear-gradient(135deg,rgba(206,17,38,0.18),rgba(252,209,22,0.1),rgba(0,107,63,0.15));
+    }
+    .hero-bg-strip::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(252,209,22,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(252,209,22,.04) 1px,transparent 1px); background-size:50px 50px; }
+
+    /* Ghana flag stripe accent */
+    .hero-flag-accent { position:absolute; top:0; right:0; bottom:0; width:200px; display:flex; opacity:.1; }
+    .fs { flex:1; }
+    .fs-r { background:var(--gh-red); }
+    .fs-g { background:var(--gh-gold); }
+    .fs-gr { background:var(--gh-green); }
+
+    /* Black star watermark */
+    .hero-star { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:8rem; opacity:.04; pointer-events:none; filter:grayscale(1); }
+
+    .hero-orb { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; }
+    .orb1 { width:450px; height:450px; background:radial-gradient(circle,rgba(206,17,38,.25),transparent); top:-20%; left:-5%; opacity:.4; }
+    .orb2 { width:400px; height:400px; background:radial-gradient(circle,rgba(252,209,22,.35),transparent); bottom:-20%; right:5%; opacity:.3; }
+    .orb3 { width:300px; height:300px; background:radial-gradient(circle,rgba(0,107,63,.3),transparent); top:10%; right:30%; opacity:.3; }
+
+    .hero-content { max-width:1400px; margin:0 auto; padding:clamp(2rem,4vw,3rem) clamp(1.25rem,4vw,3rem); position:relative; z-index:1; display:grid; grid-template-columns:1fr 340px; gap:2.5rem; align-items:end; margin-top:-120px; }
+
+    .breadcrumb { position:absolute; top:calc(var(--nav-h) + 1.25rem); left:clamp(1.25rem,4vw,3rem); z-index:2; display:flex; align-items:center; gap:.5rem; font-size:.78rem; color:var(--text-muted); }
+    .breadcrumb a { transition:color var(--t); }
+    .breadcrumb a:hover { color:var(--gold-light); }
+    .breadcrumb-sep { color:var(--border); }
+
+    .country-flag-big { font-size:clamp(4rem,8vw,7rem); line-height:1; display:block; margin-bottom:1rem; filter:drop-shadow(0 8px 24px rgba(0,0,0,.5)); }
+    .country-name { font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(2.5rem,6vw,5rem); color:var(--cream); line-height:1.05; letter-spacing:-.02em; margin-bottom:.4rem; }
+    .country-official { font-size:.85rem; color:var(--text-muted); margin-bottom:.85rem; }
+    .country-tagline { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:var(--gh-gold); margin-bottom:1.25rem; }
+    .country-desc { font-size:.95rem; color:var(--text-soft); line-height:1.75; max-width:580px; }
+
+    /* Ghana flag badge */
+    .gh-flag-badge { display:flex; height:8px; border-radius:4px; overflow:hidden; margin-bottom:1.25rem; width:72px; position:relative; }
+    .gh-flag-badge .r { flex:1; background:var(--gh-red); }
+    .gh-flag-badge .g { flex:1; background:var(--gh-gold); }
+    .gh-flag-badge .gr { flex:1; background:var(--gh-green); }
+    .gh-flag-badge::after { content:'★'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); color:#000; font-size:.45rem; line-height:1; }
+
+    .known-for { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1.25rem; }
+    .known-tag { font-size:.72rem; font-weight:500; padding:.3rem .7rem; border-radius:var(--radius-sm); background:rgba(252,209,22,.1); border:1px solid rgba(252,209,22,.25); color:#fcd116; }
+
+    /* Stats card */
+    .hero-stats-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); padding:1.75rem; }
+    .stat-row { display:flex; justify-content:space-between; align-items:center; padding:.7rem 0; border-bottom:1px solid var(--border-dim); }
+    .stat-row:last-child { border-bottom:none; }
+    .stat-key { font-size:.78rem; color:var(--text-muted); }
+    .stat-val { font-size:.88rem; color:var(--cream); font-weight:600; text-align:right; max-width:180px; }
+
+    /* ── SECTION NAV ─────────────────────────────────────────── */
+    .section-nav { position:sticky; top:var(--nav-h); z-index:100; background:rgba(13,15,10,0.96); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dim); padding:0 clamp(1.25rem,4vw,3rem); }
+    .section-nav-inner { max-width:1400px; margin:0 auto; display:flex; overflow-x:auto; scrollbar-width:none; }
+    .section-nav-inner::-webkit-scrollbar { display:none; }
+    .sec-btn { display:flex; align-items:center; gap:.4rem; padding:0 1rem; height:50px; font-size:.82rem; font-weight:600; color:var(--text-muted); border-bottom:2.5px solid transparent; white-space:nowrap; transition:color var(--t),border-color var(--t); flex-shrink:0; }
+    .sec-btn:hover { color:var(--cream); }
+    .sec-btn.active { color:var(--gh-gold); border-color:var(--gh-gold); }
+
+    /* ── MAIN LAYOUT ─────────────────────────────────────────── */
+    .main-layout { max-width:1400px; margin:0 auto; padding:3rem clamp(1.25rem,4vw,3rem) 6rem; display:grid; grid-template-columns:1fr 280px; gap:2.5rem; align-items:start; }
+    .sections { display:flex; flex-direction:column; gap:4rem; }
+    .country-section { scroll-margin-top:calc(var(--nav-h) + 56px); }
+
+    /* Section header */
+    .sec-header { margin-bottom:2rem; }
+    .sec-label { display:inline-flex; align-items:center; gap:.5rem; font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.6rem; }
+    .sec-label::before { content:''; display:block; width:24px; height:1.5px; background:var(--gh-gold); }
+    .sec-title { font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(1.5rem,3.5vw,2.2rem); color:var(--cream); line-height:1.15; letter-spacing:-.02em; }
+    .sec-title em { font-style:italic; color:var(--gh-gold); }
+    .sec-desc { font-size:.95rem; color:var(--text-soft); max-width:560px; line-height:1.75; margin-top:.6rem; }
+
+    /* Sub-title */
+    .sub-rule { font-family:'Playfair Display',serif; font-weight:700; font-size:1.1rem; color:var(--cream); display:flex; align-items:center; gap:.75rem; margin-bottom:1.1rem; margin-top:2rem; }
+    .sub-rule::after { content:''; flex:1; height:1px; background:var(--border-dim); }
+
+    /* ── ETHNIC GROUPS ───────────────────────────────────────── */
+    .ethnic-tabs { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.75rem; }
+    .eth-tab { padding:.4rem 1rem; border-radius:var(--radius-xl); border:1px solid var(--border-dim); font-size:.8rem; font-weight:600; color:var(--text-muted); transition:var(--t); cursor:pointer; }
+    .eth-tab:hover { color:var(--cream); border-color:var(--border); }
+    .eth-tab.active { background:var(--gh-gold); color:#0d0f0a; border-color:transparent; }
+    .ethnic-panel { display:none; animation:fadeUp .3s ease both; }
+    .ethnic-panel.active { display:block; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+
+    .ethnic-hero { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-xl); overflow:hidden; margin-bottom:1.5rem; }
+    .ethnic-hero-top { padding:2rem; background:linear-gradient(135deg,rgba(252,209,22,.1),rgba(0,107,63,.06)); border-bottom:1px solid var(--border-dim); display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .ethnic-name { font-family:'Playfair Display',serif; font-weight:900; font-size:2rem; color:var(--cream); margin-bottom:.25rem; }
+    .ethnic-lang { font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.6rem; }
+    .ethnic-pop { font-size:.82rem; color:var(--text-muted); margin-bottom:.75rem; }
+    .ethnic-desc { font-size:.88rem; color:var(--text-soft); line-height:1.75; }
+    .ethnic-facts { display:flex; flex-direction:column; gap:.5rem; }
+    .ethnic-fact { display:flex; align-items:flex-start; gap:.6rem; font-size:.8rem; color:var(--text-muted); line-height:1.55; }
+    .ethnic-fact::before { content:'✦'; color:var(--gh-gold); flex-shrink:0; font-size:.6rem; margin-top:.2rem; }
+    .ethnic-hero-body { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr)); gap:0; }
+    .ethnic-detail { padding:1.25rem 1.5rem; border-right:1px solid var(--border-dim); border-bottom:1px solid var(--border-dim); }
+    .ethnic-detail:last-child { border-right:none; }
+    .ethnic-detail-label { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.5rem; }
+    .ethnic-detail-content { font-size:.82rem; color:var(--text-soft); line-height:1.65; }
+
+    /* ── FOOD ─────────────────────────────────────────────────── */
+    .food-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr)); gap:1rem; }
+    .food-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); cursor:pointer; }
+    .food-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.4); }
+    .food-card.featured { grid-column:span 2; display:grid; grid-template-columns:auto 1fr; }
+    .food-emoji { font-size:2.5rem; padding:1.5rem 1.25rem .75rem; display:block; line-height:1; }
+    .food-card.featured .food-emoji { font-size:3.5rem; padding:1.75rem; align-self:center; }
+    .food-body { padding:0 1.25rem 1.25rem; }
+    .food-card.featured .food-body { padding:1.75rem 1.75rem 1.75rem 0; }
+    .food-origin { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.3rem; }
+    .food-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; color:var(--cream); margin-bottom:.4rem; }
+    .food-card.featured .food-name { font-size:1.35rem; }
+    .food-desc { font-size:.8rem; color:var(--text-muted); line-height:1.65; margin-bottom:.85rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .food-card.featured .food-desc { -webkit-line-clamp:4; }
+    .food-tag { font-size:.68rem; font-weight:500; padding:.2rem .55rem; border-radius:var(--radius-sm); background:rgba(252,209,22,.1); color:var(--gh-gold); border:1px solid rgba(252,209,22,.2); }
+
+    /* ── MARRIAGE ─────────────────────────────────────────────── */
+    .marriage-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr)); gap:1.1rem; }
+    .marriage-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); }
+    .marriage-card:hover { border-color:var(--border); }
+    .marriage-top { padding:1.5rem; border-bottom:1px solid var(--border-dim); background:linear-gradient(135deg,rgba(252,209,22,.08),transparent); }
+    .marriage-type { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.35rem; }
+    .marriage-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; color:var(--cream); margin-bottom:.25rem; }
+    .marriage-group { font-size:.75rem; color:var(--text-muted); }
+    .marriage-body { padding:1.25rem 1.5rem; }
+    .marriage-steps { display:flex; flex-direction:column; gap:.6rem; }
+    .marriage-step { display:flex; align-items:flex-start; gap:.7rem; }
+    .step-n { width:22px; height:22px; border-radius:6px; background:rgba(252,209,22,.12); border:1px solid rgba(252,209,22,.3); display:grid; place-items:center; font-family:'DM Mono',monospace; font-size:.62rem; color:var(--gh-gold); flex-shrink:0; margin-top:.1rem; }
+    .step-text { font-size:.8rem; color:var(--text-muted); line-height:1.6; }
+
+    /* ── BELIEFS ─────────────────────────────────────────────── */
+    .beliefs-layout { display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+    .belief-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); }
+    .belief-card:hover { border-color:var(--border); }
+    .belief-card.wide { grid-column:span 2; }
+    .belief-header { padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-dim); display:flex; align-items:center; gap:.85rem; background:linear-gradient(135deg,var(--bh-bg,rgba(252,209,22,.08)),transparent); }
+    .belief-icon { width:44px; height:44px; border-radius:10px; background:var(--bh-bg,rgba(252,209,22,.12)); display:grid; place-items:center; font-size:1.25rem; flex-shrink:0; }
+    .belief-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); }
+    .belief-sub { font-size:.72rem; color:var(--text-muted); margin-top:.1rem; }
+    .belief-body { padding:1.25rem 1.5rem; }
+    .belief-text { font-size:.85rem; color:var(--text-soft); line-height:1.75; margin-bottom:1rem; }
+    .deity-list { display:flex; flex-direction:column; gap:.5rem; }
+    .deity-item { display:flex; align-items:flex-start; gap:.65rem; padding:.65rem .85rem; background:var(--bg-raise); border:1px solid var(--border-dim); border-radius:var(--radius-md); }
+    .deity-emoji { font-size:1rem; flex-shrink:0; margin-top:.05rem; }
+    .deity-name { font-weight:600; font-size:.82rem; color:var(--cream); }
+    .deity-role { font-size:.74rem; color:var(--text-muted); margin-top:.1rem; line-height:1.5; }
+
+    /* ── FESTIVALS ───────────────────────────────────────────── */
+    .festivals-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr)); gap:1.1rem; }
+    .festival-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); cursor:pointer; }
+    .festival-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.4); }
+    .festival-top { padding:1.5rem; border-bottom:1px solid var(--border-dim); background:linear-gradient(135deg,rgba(252,209,22,.08),rgba(0,107,63,.05)); display:flex; gap:1rem; align-items:flex-start; }
+    .festival-emoji { font-size:2rem; flex-shrink:0; line-height:1; }
+    .festival-when { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.25rem; }
+    .festival-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); margin-bottom:.2rem; line-height:1.3; }
+    .festival-group { font-size:.72rem; color:var(--text-muted); }
+    .festival-body { padding:1.25rem; }
+    .festival-desc { font-size:.82rem; color:var(--text-soft); line-height:1.7; margin-bottom:.85rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .festival-highlights { display:flex; flex-direction:column; gap:.35rem; }
+    .festival-hl { display:flex; align-items:flex-start; gap:.5rem; font-size:.75rem; color:var(--text-muted); }
+    .festival-hl::before { content:'✦'; color:var(--gh-gold); flex-shrink:0; font-size:.6rem; margin-top:.2rem; }
+    .festival-badge { display:inline-block; margin-top:.85rem; padding:.25rem .65rem; border-radius:var(--radius-sm); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; background:rgba(252,209,22,.1); color:var(--gh-gold); border:1px solid rgba(252,209,22,.25); }
+
+    /* ── MUSIC ───────────────────────────────────────────────── */
+    .music-toggle { display:flex; background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:.3rem; gap:.2rem; width:fit-content; margin-bottom:1.5rem; }
+    .music-toggle-btn { padding:.45rem 1.25rem; border-radius:var(--radius-md); font-size:.82rem; font-weight:600; color:var(--text-muted); transition:var(--t); }
+    .music-toggle-btn.active { background:var(--gh-gold); color:#0d0f0a; }
+    .genre-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:1rem; }
+    .genre-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.5rem; transition:var(--t); }
+    .genre-card:hover { border-color:var(--border); background:var(--bg-raise); }
+    .genre-icon { font-size:1.75rem; display:block; margin-bottom:.75rem; }
+    .genre-origin { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.3rem; }
+    .genre-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); margin-bottom:.4rem; }
+    .genre-desc { font-size:.78rem; color:var(--text-muted); line-height:1.65; }
+    .artists-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr)); gap:.85rem; }
+    .artist-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-md); padding:1.25rem; transition:var(--t); }
+    .artist-card:hover { border-color:var(--border); background:var(--bg-raise); }
+    .artist-avatar { width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,var(--av1,var(--gh-gold)),var(--av2,var(--gh-green))); display:grid; place-items:center; font-size:1.3rem; margin-bottom:.75rem; }
+    .artist-name { font-family:'Playfair Display',serif; font-weight:700; font-size:.92rem; color:var(--cream); margin-bottom:.15rem; }
+    .artist-genre { font-size:.7rem; color:var(--gh-gold); font-family:'DM Mono',monospace; letter-spacing:.06em; margin-bottom:.4rem; }
+    .artist-note { font-size:.74rem; color:var(--text-muted); line-height:1.55; padding-top:.5rem; border-top:1px solid var(--border-dim); margin-top:.5rem; }
+
+    /* ── HISTORY TIMELINE ────────────────────────────────────── */
+    .timeline { position:relative; padding-left:2rem; }
+    .timeline::before { content:''; position:absolute; left:.6rem; top:.5rem; bottom:.5rem; width:1.5px; background:linear-gradient(to bottom,var(--gh-red),var(--gh-gold),var(--gh-green),transparent); }
+    .timeline-item { position:relative; margin-bottom:2rem; }
+    .timeline-dot { position:absolute; left:-1.55rem; top:.35rem; width:12px; height:12px; border-radius:50%; background:var(--gh-gold); border:2px solid var(--bg); box-shadow:0 0 0 3px rgba(252,209,22,.2); }
+    .timeline-period { font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.3rem; }
+    .timeline-event { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); margin-bottom:.4rem; }
+    .timeline-desc { font-size:.84rem; color:var(--text-soft); line-height:1.7; }
+
+    /* ── REGIONS ─────────────────────────────────────────────── */
+    .regions-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr)); gap:1rem; }
+    .region-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.35rem; transition:var(--t); }
+    .region-card:hover { border-color:var(--border); background:var(--bg-raise); }
+    .region-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); margin-bottom:.2rem; }
+    .region-capital { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.08em; color:var(--gh-gold); margin-bottom:.5rem; }
+    .region-note { font-size:.8rem; color:var(--text-muted); line-height:1.6; }
+    .region-zone { font-size:.68rem; padding:.2rem .55rem; border-radius:var(--radius-sm); background:var(--gh-dim); color:var(--gh-gold); border:1px solid rgba(252,209,22,.2); display:inline-block; margin-bottom:.5rem; }
+
+    /* ── PROVERBS ─────────────────────────────────────────────── */
+    .proverbs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr)); gap:1rem; }
+    .proverb-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.75rem; transition:var(--t); position:relative; overflow:hidden; }
+    .proverb-card::before { content:'"'; position:absolute; top:-1rem; left:.75rem; font-family:'Playfair Display',serif; font-size:8rem; color:rgba(252,209,22,.05); line-height:1; pointer-events:none; }
+    .proverb-card:hover { border-color:var(--border); transform:translateY(-2px); }
+    .proverb-lang { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.6rem; }
+    .proverb-text { font-family:'Playfair Display',serif; font-style:italic; font-size:1rem; color:var(--cream); line-height:1.55; margin-bottom:.85rem; }
+    .proverb-meaning { font-size:.8rem; color:var(--text-soft); line-height:1.65; padding-top:.75rem; border-top:1px solid var(--border-dim); }
+    .proverb-lesson { margin-top:.5rem; font-size:.75rem; color:var(--text-muted); display:flex; align-items:flex-start; gap:.4rem; line-height:1.55; }
+    .proverb-lesson::before { content:'💡'; flex-shrink:0; }
+
+    /* ── TRAVEL ───────────────────────────────────────────────── */
+    .travel-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr)); gap:1.1rem; }
+    .travel-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); cursor:pointer; }
+    .travel-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.4); }
+    .travel-card.featured { grid-column:span 2; display:grid; grid-template-columns:1fr 1fr; }
+    .travel-visual { padding:1.75rem; background:linear-gradient(135deg,rgba(252,209,22,.1),rgba(0,107,63,.08)); border-bottom:1px solid var(--border-dim); }
+    .travel-card.featured .travel-visual { border-bottom:none; border-right:1px solid var(--border-dim); }
+    .travel-emoji { font-size:2.5rem; display:block; margin-bottom:.75rem; }
+    .travel-type { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.3rem; }
+    .travel-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.1rem; color:var(--cream); margin-bottom:.25rem; }
+    .travel-region { font-size:.72rem; color:var(--text-muted); }
+    .travel-body { padding:1.25rem; }
+    .travel-desc { font-size:.82rem; color:var(--text-soft); line-height:1.7; margin-bottom:.85rem; }
+    .travel-tips { display:flex; flex-direction:column; gap:.35rem; }
+    .travel-tip { font-size:.75rem; color:var(--text-muted); display:flex; align-items:flex-start; gap:.4rem; }
+    .travel-tip::before { content:'→'; color:var(--gh-gold); flex-shrink:0; }
+    .tips-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem; }
+    .tips-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.5rem; }
+    .tips-card-title { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
+    .tips-list { display:flex; flex-direction:column; gap:.6rem; }
+    .tips-item { font-size:.82rem; color:var(--text-soft); display:flex; align-items:flex-start; gap:.5rem; line-height:1.6; }
+    .tips-item::before { content:'💡'; flex-shrink:0; }
+
+    /* ── ADINKRA SYMBOLS ─────────────────────────────────────── */
+    .adinkra-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr)); gap:.85rem; }
+    .adinkra-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.25rem; text-align:center; transition:var(--t); }
+    .adinkra-card:hover { border-color:rgba(252,209,22,.3); background:var(--gh-dim); }
+    .adinkra-symbol { font-size:2rem; display:block; margin-bottom:.5rem; }
+    .adinkra-name { font-family:'Playfair Display',serif; font-weight:700; font-size:.92rem; color:var(--cream); margin-bottom:.25rem; }
+    .adinkra-meaning { font-size:.72rem; color:var(--gh-gold); font-family:'DM Mono',monospace; margin-bottom:.4rem; }
+    .adinkra-desc { font-size:.76rem; color:var(--text-muted); line-height:1.55; }
+
+    /* ── SIDEBAR ─────────────────────────────────────────────── */
+    .sidebar { display:flex; flex-direction:column; gap:1.1rem; position:sticky; top:calc(var(--nav-h) + 58px); }
+    .side-block { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; }
+    .side-block-title { padding:.9rem 1.25rem; font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gh-gold); border-bottom:1px solid var(--border-dim); }
+    .quick-facts { padding:.75rem 1.25rem; }
+    .qf-row { display:flex; justify-content:space-between; align-items:flex-start; padding:.55rem 0; border-bottom:1px solid var(--border-dim); gap:.5rem; }
+    .qf-row:last-child { border-bottom:none; }
+    .qf-key { font-size:.74rem; color:var(--text-muted); flex-shrink:0; }
+    .qf-val { font-size:.78rem; color:var(--cream); font-weight:500; text-align:right; }
+    .jump-links { padding:.75rem; display:flex; flex-direction:column; gap:.3rem; }
+    .jump-link { padding:.5rem .75rem; border-radius:var(--radius-sm); font-size:.8rem; font-weight:500; color:var(--text-muted); transition:var(--t); display:flex; align-items:center; gap:.5rem; }
+    .jump-link:hover { color:var(--cream); background:var(--border-dim); }
+    .jump-link.active-link { color:var(--gh-gold); background:var(--gh-dim); }
+    .related-list { padding:.75rem 1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+    .related-item { display:flex; align-items:center; gap:.6rem; padding:.5rem .65rem; border-radius:var(--radius-sm); background:var(--bg-raise); border:1px solid var(--border-dim); font-size:.82rem; color:var(--text-soft); transition:var(--t); }
+    .related-item:hover { border-color:var(--border); color:var(--cream); }
+
+    /* ── MODAL ────────────────────────────────────────────────── */
+    .modal-overlay { position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,.87); backdrop-filter:blur(12px); display:none; align-items:center; justify-content:center; padding:1.5rem; }
+    .modal-overlay.open { display:flex; }
+    .modal { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); width:100%; max-width:680px; max-height:88vh; overflow-y:auto; animation:modalIn .25s ease; position:relative; }
+    @keyframes modalIn { from{opacity:0;transform:scale(.95) translateY(-10px)} to{opacity:1;transform:scale(1) translateY(0)} }
+    .modal-close { position:absolute; top:1.25rem; right:1.25rem; width:32px; height:32px; border-radius:8px; background:var(--bg-raise); border:1px solid var(--border-dim); color:var(--text-muted); display:grid; place-items:center; font-size:.85rem; cursor:pointer; transition:var(--t); z-index:1; }
+    .modal-close:hover { color:var(--cream); background:var(--border); }
+    .modal-body { padding:2rem; }
+    .modal-tag { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.6rem; }
+    .modal-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1.6rem; color:var(--cream); margin-bottom:.4rem; line-height:1.2; }
+    .modal-sub { font-size:.82rem; color:var(--text-muted); margin-bottom:1.25rem; }
+    .modal-divider { height:1px; background:var(--border-dim); margin:1.1rem 0; }
+    .modal-sec-title { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gh-gold); margin-bottom:.65rem; }
+    .modal-text { font-size:.9rem; color:var(--text-soft); line-height:1.8; }
+    .modal-list { display:flex; flex-direction:column; gap:.5rem; }
+    .modal-list-item { display:flex; align-items:flex-start; gap:.6rem; font-size:.875rem; color:var(--text-soft); line-height:1.6; }
+    .modal-list-item::before { content:'→'; color:var(--gh-gold); flex-shrink:0; }
+
+    /* ── BACK TOP + FOOTER ───────────────────────────────────── */
+    .back-top { position:fixed; bottom:2rem; right:2rem; width:44px; height:44px; background:var(--gh-gold); color:#0d0f0a; border-radius:10px; display:grid; place-items:center; cursor:pointer; opacity:0; transform:translateY(10px); transition:opacity var(--t),transform var(--t); z-index:500; box-shadow:0 4px 20px rgba(252,209,22,.3); }
+    .back-top.show { opacity:1; transform:translateY(0); }
+    .back-top:hover { background:#e8c910; }
+    .footer { background:var(--bg-card); border-top:1px solid var(--border-dim); padding:2.5rem clamp(1.25rem,4vw,3rem); }
+    .footer-inner { max-width:1400px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; font-size:.82rem; color:var(--text-muted); }
+    .footer-links { display:flex; gap:1.5rem; }
+    .footer-links a { color:var(--text-muted); transition:color var(--t); }
+    .footer-links a:hover { color:var(--gold-light); }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width:1100px) { .main-layout { grid-template-columns:1fr; } .sidebar { position:static; display:grid; grid-template-columns:1fr 1fr; } .hero-content { grid-template-columns:1fr; } }
+    @media (max-width:768px) { .nav-links { display:none; } .hamburger { display:flex; } .ethnic-hero-top { grid-template-columns:1fr; } .beliefs-layout { grid-template-columns:1fr; } .belief-card.wide { grid-column:span 1; } .food-card.featured { grid-column:span 1; display:flex; flex-direction:column; } .travel-card.featured { grid-column:span 1; display:flex; flex-direction:column; } .travel-card.featured .travel-visual { border-right:none; border-bottom:1px solid var(--border-dim); } .tips-row { grid-template-columns:1fr; } .sidebar { grid-template-columns:1fr; } }
+    @media (max-width:520px) { .proverbs-grid { grid-template-columns:1fr; } .adinkra-grid { grid-template-columns:1fr 1fr; } .regions-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="../../index.html" class="logo">
+        <div class="logo-mark">F</div>
+        <span class="logo-text">Fr<span>i</span>ca</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../countries.html" class="active">Countries</a></li>
+        <li><a href="../../culture.html">Culture</a></li>
+        <li><a href="../../learn.html">Learn</a></li>
+        <li><a href="../../discover.html">Discover</a></li>
+        <li><a href="../../explore.html">Explore</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="bookmark-btn" id="bookmarkBtn">📌 Save Ghana</button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../../index.html">🏠 Home</a>
+    <a href="../../countries.html">🌍 Countries</a>
+    <a href="../../culture.html">🎭 Culture</a>
+    <a href="../../learn.html">📖 Learn</a>
+    <a href="../../discover.html">🧭 Discover</a>
+    <a href="../../explore.html">✨ Explore</a>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../index.html">Frica</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="../../countries.html">Countries</a>
+    <span class="breadcrumb-sep">/</span>
+    <span style="color:var(--cream)">Ghana</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="country-hero">
+    <div class="hero-bg-strip">
+      <div class="hero-flag-accent">
+        <div class="fs fs-r"></div>
+        <div class="fs fs-g"></div>
+        <div class="fs fs-gr"></div>
+      </div>
+      <div class="hero-star">★</div>
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="hero-orb orb3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="gh-flag-badge">
+          <div class="r"></div><div class="g"></div><div class="gr"></div>
+        </div>
+        <span class="country-flag-big">🇬🇭</span>
+        <h1 class="country-name">Ghana</h1>
+        <div class="country-official">Republic of Ghana</div>
+        <div class="country-tagline">Gateway to Africa · Akwaaba!</div>
+        <p class="country-desc">The first sub-Saharan African country to gain independence in 1957, Ghana is the proud home of Kente cloth, the Golden Stool of the Ashanti, Highlife music, Cape Coast Castle, and Kwame Nkrumah's pan-African vision. With the most welcoming people in West Africa and the famous Akwaaba (welcome) spirit, Ghana has become the continent's model of democracy and cultural pride — and in December, the world's biggest party destination.</p>
+        <div class="known-for">
+          <span class="known-tag">🧵 Kente Cloth</span>
+          <span class="known-tag">🎵 Highlife Music</span>
+          <span class="known-tag">👑 Ashanti Kingdom</span>
+          <span class="known-tag">🏰 Cape Coast Castle</span>
+          <span class="known-tag">🎊 Detty December</span>
+          <span class="known-tag">✨ Sankofa</span>
+          <span class="known-tag">🌟 Kwame Nkrumah</span>
+          <span class="known-tag">🎭 Akwaaba Hospitality</span>
+        </div>
+      </div>
+
+      <div class="hero-stats-card">
+        <div class="stat-row"><span class="stat-key">🌍 Region</span><span class="stat-val">West Africa</span></div>
+        <div class="stat-row"><span class="stat-key">🏛 Capital</span><span class="stat-val">Accra</span></div>
+        <div class="stat-row"><span class="stat-key">👥 Population</span><span class="stat-val">~33 million</span></div>
+        <div class="stat-row"><span class="stat-key">📐 Area</span><span class="stat-val">238,533 km²</span></div>
+        <div class="stat-row"><span class="stat-key">🗣 Official Language</span><span class="stat-val">English</span></div>
+        <div class="stat-row"><span class="stat-key">🗣 Major Languages</span><span class="stat-val">Twi, Ewe, Ga, Dagbani</span></div>
+        <div class="stat-row"><span class="stat-key">💰 Currency</span><span class="stat-val">Ghanaian Cedi (₵)</span></div>
+        <div class="stat-row"><span class="stat-key">📅 Independence</span><span class="stat-val">March 6, 1957</span></div>
+        <div class="stat-row"><span class="stat-key">🏛 Government</span><span class="stat-val">Presidential Republic</span></div>
+        <div class="stat-row"><span class="stat-key">🌐 Internet TLD</span><span class="stat-val">.gh</span></div>
+        <div class="stat-row"><span class="stat-key">📞 Calling Code</span><span class="stat-val">+233</span></div>
+        <div class="stat-row"><span class="stat-key">🌐 Languages Total</span><span class="stat-val">~80 languages</span></div>
+        <div class="stat-row"><span class="stat-key">🏳️ Regions</span><span class="stat-val">16 Regions</span></div>
+        <div class="stat-row"><span class="stat-key">🏆 Notable</span><span class="stat-val">1st sub-Saharan independence (1957)</span></div>
+        <div class="stat-row"><span class="stat-key">🍫 Key Export</span><span class="stat-val">World's 2nd largest cocoa producer</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION NAV -->
+  <div class="section-nav">
+    <div class="section-nav-inner" id="sectionNav">
+      <button class="sec-btn active" data-sec="overview">🗺 Overview</button>
+      <button class="sec-btn" data-sec="ethnic-groups">👥 Ethnic Groups</button>
+      <button class="sec-btn" data-sec="languages">🗣 Languages</button>
+      <button class="sec-btn" data-sec="food">🍛 Food</button>
+      <button class="sec-btn" data-sec="dressing">🧵 Dressing</button>
+      <button class="sec-btn" data-sec="adinkra">✨ Adinkra</button>
+      <button class="sec-btn" data-sec="marriage">💍 Marriage</button>
+      <button class="sec-btn" data-sec="beliefs">🌿 Beliefs</button>
+      <button class="sec-btn" data-sec="festivals">🎊 Festivals</button>
+      <button class="sec-btn" data-sec="music">🎵 Music</button>
+      <button class="sec-btn" data-sec="history">📜 History</button>
+      <button class="sec-btn" data-sec="regions">🗺 Regions</button>
+      <button class="sec-btn" data-sec="proverbs">✨ Proverbs</button>
+      <button class="sec-btn" data-sec="travel">🧭 Travel</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-layout">
+    <div class="sections">
+
+      <!-- ═══════════ OVERVIEW ═══════════ -->
+      <section class="country-section" id="sec-overview">
+        <div class="sec-header">
+          <div class="sec-label">The big picture</div>
+          <h2 class="sec-title">Overview of <em>Ghana</em></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem" id="overviewGrid"></div>
+      </section>
+
+      <!-- ═══════════ ETHNIC GROUPS ═══════════ -->
+      <section class="country-section" id="sec-ethnic-groups">
+        <div class="sec-header">
+          <div class="sec-label">90+ groups · One nation</div>
+          <h2 class="sec-title">Ethnic <em>Groups</em></h2>
+          <p class="sec-desc">Ghana has six major ethnic families. The Akan are the largest, comprising nearly half the population. The diversity of cultures, languages, and traditions makes Ghana one of West Africa's richest cultural tapestries.</p>
+        </div>
+        <div class="ethnic-tabs" id="ethnicTabs"></div>
+        <div id="ethnicPanels"></div>
+      </section>
+
+      <!-- ═══════════ LANGUAGES ═══════════ -->
+      <section class="country-section" id="sec-languages">
+        <div class="sec-header">
+          <div class="sec-label">~80 languages spoken</div>
+          <h2 class="sec-title">Languages of <em>Ghana</em></h2>
+          <p class="sec-desc">Twi is so dominant in Ghana that even non-Akan Ghanaians often learn it as a second indigenous language. English is official, but Twi is the de facto national lingua franca — understood by over 80% of Ghanaians.</p>
+        </div>
+        <div id="languagesGrid"></div>
+      </section>
+
+      <!-- ═══════════ FOOD ═══════════ -->
+      <section class="country-section" id="sec-food">
+        <div class="sec-header">
+          <div class="sec-label">Soulful · Aromatic · Communal</div>
+          <h2 class="sec-title">Food &amp; <em>Cuisine</em></h2>
+          <p class="sec-desc">Ghanaian cuisine is built on fermented starches, rich soups, and the chop bar culture. The most defining feature is the "swallow" tradition — dough-like starches paired with boldly flavoured soups and stews. The best food is always at a chop bar run by Auntie.</p>
+        </div>
+        <div class="food-grid" id="foodGrid"></div>
+      </section>
+
+      <!-- ═══════════ DRESSING ═══════════ -->
+      <section class="country-section" id="sec-dressing">
+        <div class="sec-header">
+          <div class="sec-label">Kente · Ankara · Batakari</div>
+          <h2 class="sec-title">Dressing &amp; <em>Fashion</em></h2>
+          <p class="sec-desc">Ghanaian fashion is anchored by Kente cloth and Adinkra fabric — not just clothes, but coded communication systems. Every pattern and colour carries specific philosophical meaning. Ghana's fashion identity is among the most distinctive on the continent.</p>
+        </div>
+        <div id="dressingContent"></div>
+      </section>
+
+      <!-- ═══════════ ADINKRA SYMBOLS ═══════════ -->
+      <section class="country-section" id="sec-adinkra">
+        <div class="sec-header">
+          <div class="sec-label">Visual philosophy</div>
+          <h2 class="sec-title">Adinkra <em>Symbols</em></h2>
+          <p class="sec-desc">Adinkra is a visual language of over 60 symbols, each representing a philosophical concept, proverb, or value. Developed by the Akan of Ghana — now one of Africa's most globally recognized symbol systems.</p>
+        </div>
+        <div class="adinkra-grid" id="adinkraGrid"></div>
+      </section>
+
+      <!-- ═══════════ MARRIAGE ═══════════ -->
+      <section class="country-section" id="sec-marriage">
+        <div class="sec-header">
+          <div class="sec-label">Family · Community · Libation</div>
+          <h2 class="sec-title">Marriage <em>Traditions</em></h2>
+          <p class="sec-desc">Marriage in Ghana is a community affair — both families must meet, agree, and celebrate together. The universal first step is the Knocking Ceremony. Libation to ancestors must be poured before any important discussion begins.</p>
+        </div>
+        <div class="marriage-grid" id="marriageGrid"></div>
+      </section>
+
+      <!-- ═══════════ BELIEFS ═══════════ -->
+      <section class="country-section" id="sec-beliefs">
+        <div class="sec-header">
+          <div class="sec-label">Nyame · Vodu · Ubuntu</div>
+          <h2 class="sec-title">Beliefs &amp; <em>Spirituality</em></h2>
+          <p class="sec-desc">Ghana is predominantly Christian (~71%), with Islam (~18%) dominant in the north and traditional beliefs deeply woven into daily life. The saying goes: "Ghanaians pray in church on Sunday, pour libation on Monday, and consult the traditional healer when neither works."</p>
+        </div>
+        <div class="beliefs-layout" id="beliefsGrid"></div>
+      </section>
+
+      <!-- ═══════════ FESTIVALS ═══════════ -->
+      <section class="country-section" id="sec-festivals">
+        <div class="sec-header">
+          <div class="sec-label">Harvest · Royal · Sacred · Arts</div>
+          <h2 class="sec-title">Festivals &amp; <em>Celebrations</em></h2>
+          <p class="sec-desc">Ghana's festivals are among the most extraordinary in Africa — from the Homowo's ancestral feast to the Akwasidae's royal splendour. Every one is a living connection between the present and the ancient past.</p>
+        </div>
+        <div class="festivals-grid" id="festivalsGrid"></div>
+      </section>
+
+      <!-- ═══════════ MUSIC ═══════════ -->
+      <section class="country-section" id="sec-music">
+        <div class="sec-header">
+          <div class="sec-label">Highlife · Hiplife · Afrobeats</div>
+          <h2 class="sec-title">Music &amp; <em>Pop Culture</em></h2>
+          <p class="sec-desc">Ghana is Africa's Highlife homeland — the genre born here in the 1920s gave rise to much of West Africa's modern music. From E.T. Mensah to Reggie Rockstone to Black Sherif — Ghana has shaped African sound for over 100 years.</p>
+        </div>
+        <div id="musicContent"></div>
+      </section>
+
+      <!-- ═══════════ HISTORY ═══════════ -->
+      <section class="country-section" id="sec-history">
+        <div class="sec-header">
+          <div class="sec-label">13th century to present</div>
+          <h2 class="sec-title">History of <em>Ghana</em></h2>
+          <p class="sec-desc">From the ancient Ashanti Empire and Cape Coast slave trade, through Kwame Nkrumah's triumphant independence speech in 1957, to the Year of Return in 2019 — Ghana's history is one of Africa's most remarkable stories.</p>
+        </div>
+        <div class="timeline" id="historyTimeline"></div>
+      </section>
+
+      <!-- ═══════════ REGIONS ═══════════ -->
+      <section class="country-section" id="sec-regions">
+        <div class="sec-header">
+          <div class="sec-label">16 Regions (expanded from 10 in 2019)</div>
+          <h2 class="sec-title">Administrative <em>Regions</em></h2>
+          <p class="sec-desc">Ghana reorganized from 10 to 16 regions in 2019, creating 6 new regions to bring governance closer to the people.</p>
+        </div>
+        <div class="regions-grid" id="regionsGrid"></div>
+      </section>
+
+      <!-- ═══════════ PROVERBS ═══════════ -->
+      <section class="country-section" id="sec-proverbs">
+        <div class="sec-header">
+          <div class="sec-label">Wisdom of the ancestors</div>
+          <h2 class="sec-title">Proverbs &amp; <em>Wisdom</em></h2>
+          <p class="sec-desc">Ghanaian proverbs — especially Akan proverbs in Twi — are among the most philosophically rich in Africa. Sankofa, Ubuntu, and Gye Nyame are known the world over.</p>
+        </div>
+        <div class="proverbs-grid" id="proverbsGrid"></div>
+      </section>
+
+      <!-- ═══════════ TRAVEL ═══════════ -->
+      <section class="country-section" id="sec-travel">
+        <div class="sec-header">
+          <div class="sec-label">The land of Akwaaba</div>
+          <h2 class="sec-title">Travel &amp; <em>Places</em></h2>
+          <p class="sec-desc">Ghana is one of West Africa's most accessible and welcoming travel destinations — consistently ranked among the continent's safest countries. The 2019 Year of Return transformed Ghana's global tourism profile forever.</p>
+        </div>
+        <div class="travel-grid" id="travelGrid"></div>
+        <div class="tips-row" id="tipRows"></div>
+      </section>
+
+    </div><!-- /sections -->
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="side-block">
+        <div class="side-block-title">⚡ Quick Facts</div>
+        <div class="quick-facts" id="quickFacts"></div>
+      </div>
+      <div class="side-block">
+        <div class="side-block-title">📍 Jump to Section</div>
+        <div class="jump-links" id="jumpLinks"></div>
+      </div>
+      <div class="side-block">
+        <div class="side-block-title">🌍 Nearby Countries</div>
+        <div class="related-list" id="relatedList"></div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <button class="back-top" id="backTop">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <span>🇬🇭</span>
+        <span>Ghana · Gateway to Africa · Akwaaba!</span>
+      </div>
+      <div class="footer-links">
+        <a href="../../index.html">Home</a>
+        <a href="../../countries.html">All Countries</a>
+        <a href="nigeria.html">← Nigeria</a>
+        <a href="kenya.html">Kenya →</a>
+      </div>
+      <div>© 2025 <span style="color:var(--gold)">Frica</span></div>
+    </div>
+  </footer>
+
+  <script>
+  'use strict';
+
+  /* ═══════════════════════════════════════════════════════════════
+     DATA — Ghana (from ghana.json)
+  ═══════════════════════════════════════════════════════════════ */
+  const GH = {
+
+    overview_cards: [
+      { icon:'🌟', title:'First Sub-Saharan Independence', desc:'On March 6, 1957, Ghana became the first sub-Saharan African country to gain independence from colonial rule. Kwame Nkrumah declared: "Ghana, your beloved country is free forever!" — inspiring independence movements across the entire continent.' },
+      { icon:'🧵', title:'Home of Kente & Adinkra', desc:'Kente cloth is one of the world\'s most recognized African textiles. Every strip, colour, and pattern carries specific meaning. Adinkra symbols — a visual philosophical language — have spread globally as expressions of African wisdom and identity.' },
+      { icon:'🎵', title:'Birthplace of Highlife Music', desc:'Ghana gave the world Highlife — born in the 1920s when coastal Ghanaians fused local rhythms with brass band music and jazz. Highlife is the musical ancestor of Afrobeats — its melodic DNA runs through virtually all modern West African pop music.' },
+      { icon:'🎊', title:'Detty December Capital of Africa', desc:'Every December, the global African diaspora descends on Accra for a month of concerts, parties, beach events, and cultural celebrations. Afronation, AfricanXXchange, and New Year\'s Eve in Accra make Ghana the world\'s most exciting destination in December.' },
+    ],
+
+    ethnic_groups: [
+      {
+        id:'akan', name:'Akan', lang:'Twi (Asante Twi, Akuapem Twi), Fante', pct:'~47.5%', region:'Southern & Central Ghana',
+        religion:'Mixed — Christianity, traditional beliefs (often together)',
+        struct:'Matrilineal — descent, inheritance, and succession traced through the mother\'s line. One of Africa\'s most prominent matrilineal societies. Each lineage has a sacred ancestral stool.',
+        origin:'Oral traditions trace Akan origins to the Bono state (13th century) in Brong-Ahafo. Gradually migrated south and east, establishing powerful states including the Ashanti Confederacy (1670).',
+        facts:['The Golden Stool (Sika Dwa Kofi) — said to have descended from heaven — houses the soul of the entire Ashanti nation','One of Africa\'s most prominent matrilineal societies — you inherit from your mother\'s family','Kente cloth and Adinkra symbols both originate from the Akan people','The Ashanti Empire (1670–1900s) was one of West Africa\'s most powerful states'],
+        food:'Fufu with Light Soup, Fufu with Groundnut Soup, Fufu with Palm Nut Soup, Mpotompoto, Abom, Nkate Nkwan',
+        dressing:'Kente cloth (drape toga-style) · Ntoma (plain cloth wrapper) · Duku (headwrap) · Gold jewelry and sandals for royalty · Adinkra-printed cloth',
+        marriage:'Knocking ceremony (Abusua) · Libation by an elder before any discussion · Bride price (Aseda) in cash and gifts · Schnapps is mandatory at all meetings · Kente cloth for both families',
+        beliefs:'Nyame (Supreme God) · Ancestral stools (most sacred objects) · Sunsum (personal spirit) · Kra (divine spark) · Adae festivals every 42 days to honor ancestors · Okomfo (traditional priest)'
+      },
+      {
+        id:'ewe', name:'Ewe', lang:'Ewe', pct:'~13.9%', region:'Volta Region (southeastern Ghana)',
+        religion:'Predominantly Christianity, with Vodun tradition',
+        struct:'Patrilineal — the founder of a community became chief, succeeded by paternal relatives. Organized into village-level communities with elders. Chiefs are not absolute — councils hold significant power.',
+        origin:'The Ewe trace origin to Notsie (present-day Togo), from which they escaped the tyranny of ruler Agorkoli by walking backwards at night — commemorated in the Hogbetsotso festival.',
+        facts:['The Ewe claim to be original weavers of Kente — their weavers were allegedly captured by the Ashanti','Hogbetsotso festival commemorates their dramatic backwards escape from Notsie, Togo','Ewe percussion is among the most complex and sophisticated in Africa','Ewe Vodun (spiritual tradition) is the origin of Haitian Voodoo and Brazilian Candomblé'],
+        food:'Akple (fermented corn dough), Fetri Detsi (okra soup), Aboboi (palm nut soup with snails), Ademe soup, Fried fish with agbeli kaklo',
+        dressing:'Ewe Kente (geometric patterns, symbolic designs, upright loom) · Toga-style wrapping · Beaded jewelry · Headwrap (duku)',
+        marriage:'Todonu (formal introduction) · Avhe (bride price negotiation) · Agblenu (water pouring ceremony) · Vibrant drumming and dancing essential · Multi-day celebrations',
+        beliefs:'Mawu (supreme creator — often paired as Mawu-Lisa) · Vodu spirits (600+ associated with natural forces) · Trɔwo (river, forest, thunder spirits) · Ancestor veneration · Brekete spirit tradition (Anlo Ewe)'
+      },
+      {
+        id:'ga', name:'Ga-Dangme', lang:'Ga / Dangme (Adangbe)', pct:'~7.8%', region:'Greater Accra (coastal)',
+        religion:'Predominantly Christianity, with deep traditional beliefs',
+        struct:'Patrilineal. The Ga are organized around quarters of Accra — each quarter has its own Mantse (chief). The Ga are the indigenous inhabitants of Accra, the capital.',
+        origin:'The Ga migrated from the east (possibly Yoruba/Bini area of Nigeria) around the 16th century. The Dangme settled east of Accra. Both groups have lived by the coast for centuries as skilled fishermen and traders.',
+        facts:['The Ga are the indigenous people of Accra — Ghana\'s capital is built on their ancestral land','Homowo ("hooting at hunger") is their most important festival — commemorating survival of a great famine','Famous for Fantasy Coffins (Abebuu Adekai) — custom coffins shaped like airplanes, cars, fish, cameras (globally celebrated art)','Kpanlogo drum and dance is the most distinctive Ga musical tradition'],
+        food:'Kpokpoi (sacred Homowo food — palm nut soup with fermented corn), Dzewi (fish stew), Ga Kenkey, Shito (black pepper sauce — Ga origin), Fried tilapia with fresh pepper',
+        dressing:'Kente cloth · Wrapper and blouse · Elaborate beadwork for ceremonies · Headwrap',
+        marriage:'Ayefro (knocking ceremony — Ga specific) · Schnapps and drinks essential · Bride price in cash and kind · Kpanlogo drumming · Elder libation required',
+        beliefs:'Nyomo (Ga deities) · Wulomo (Ga priests/priestesses) · 77 Ga towns each has a patron deity · Ancestral veneration · Twin veneration — Ga believe twins are a double divine blessing'
+      },
+      {
+        id:'dagomba', name:'Dagomba (Mole-Dagbani)', lang:'Dagbani', pct:'~16.6%', region:'Northern Ghana',
+        religion:'Predominantly Islam, with pre-Islamic earth shrine traditions',
+        struct:'Patrilineal and hierarchical — organized under paramount chiefs. The Ya-Naa (King of Absolute Power) is the Dagomba paramount ruler at Yendi. Drummers (Lunsi) serve as hereditary court historians.',
+        origin:'Descended from migrants from the Lake Chad basin around the 15th century, led by the legendary Na Gbewa who founded the first Dagbon state.',
+        facts:['Ya-Naa means "King of Absolute Power" — the Dagomba paramount ruler, based in Yendi','Lunsi (royal drummers) transmit the entire oral history of the state through talking drum language','Damba festival (honoring Prophet Muhammad\'s birth) is their most important celebration','The Batakari smock is the signature garment of northern Ghana — worn by all ethnic groups there'],
+        food:'Tuo Zaafi (TZ — thick millet/corn porridge), Waakye, Ayoyo soup (jute leaf), Groundnut soup, Sorghum porridge, Sagmunu (millet flour dessert)',
+        dressing:'Batakari smock (hand-woven cotton with embroidery) · Fugu (batakari variant) · Two-piece wrapper sets for women · Beadwork jewelry',
+        marriage:'Islamic Nikkah (marriage contract) · Malam officiates · Bride price (sadaki) paid directly to bride · Damba festival timing often chosen for major weddings · Gender-appropriate celebrations',
+        beliefs:'Islam (Sunni, integrated into governance) · Tindana (earth priests mediating between people and land spirits) · Pre-Islamic ancestral shrine traditions surviving alongside Islam · Communal fire festival (Bugun)'
+      },
+    ],
+
+    languages: [
+      { name:'Twi (Akan)', speakers:'~17 million native; understood by 80%+ of Ghanaians', note:'De facto national lingua franca. Asante Twi and Akuapem Twi are the two main dialects. Even non-Akan Ghanaians learn Twi as a second indigenous language.', flag:'🇬🇭' },
+      { name:'Fante', speakers:'~2.5 million', note:'Coastal Akan language. Long-associated with British colonialism — Fante were early adopters of Western education. Cape Coast and Elmina area.', flag:'🇬🇭' },
+      { name:'Ewe', speakers:'~5 million in Ghana', note:'Also spoken in Togo and Benin. Complex tonal language with sophisticated polyrhythmic musical tradition. Volta Region.', flag:'🇬🇭' },
+      { name:'Ga', speakers:'~1 million', note:'The indigenous language of Accra. Homowo festival sung entirely in Ga. Greater Accra Region.', flag:'🇬🇭' },
+      { name:'Dagbani', speakers:'~2 million', note:'Language of the Dagomba people. Northern Ghana. Carried in the talking drums of the royal Lunsi drummers for centuries.', flag:'🇬🇭' },
+      { name:'Hausa', speakers:'~1 million (trade language)', note:'Used as a trade language in northern Ghana. Connects Ghana to the broader West African Sahel trading world.', flag:'🌍' },
+      { name:'English (Official)', speakers:'All educated Ghanaians', note:'Ghana has developed a distinct Ghanaian English with unique vocabulary, idioms, and pronunciation — a source of national pride and humor.', flag:'🇬🇧' },
+      { name:'Ghanaian Pidgin', speakers:'Urban youth & mixed communities', note:'An emerging urban creole particularly among Accra\'s youth — blending English, Twi, and other languages. Increasingly heard in music and social media.', flag:'🇬🇭' },
+    ],
+
+    foods: [
+      { emoji:'🍲', name:'Fufu with Light Soup', origin:'Akan (Ashanti & Fante)', tag:'National Soul Food', desc:'Boiled cassava and plantain pounded in a wooden mortar until smooth, stretchy, and elastic. Served in light soup — a clear, aromatic broth with chicken, goat, or fish. Never chewed — rolled into a ball and swallowed. Sunday fufu is a sacred Ghanaian family ritual.', featured:true },
+      { emoji:'🍱', name:'Waakye', origin:'Northern Ghana (Hausa influence)', tag:'Ultimate Breakfast Bowl', desc:'Rice and black-eyed peas cooked with dried sorghum leaves that give a reddish-earthy colour. Ghana\'s ultimate breakfast bowl — served with shito, fried fish, spaghetti, boiled egg, fried plantain, avocado, and wele. Best Waakye by 7am, sold out by 10.' },
+      { emoji:'🍛', name:'Jollof Rice', origin:'West African (Ghana vs Nigeria debate 😄)', tag:'Party Essential', desc:'Rice cooked in rich tomato-pepper sauce until perfectly seasoned. Ghanaian Jollof is typically cooked over fire — giving it a smoky "party rice" flavor. The Ghana vs Nigeria Jollof War is one of Africa\'s most entertaining cultural debates.' },
+      { emoji:'🫙', name:'Banku with Grilled Tilapia', origin:'Ga-Adangbe (Accra coastlands)', tag:'Street King', desc:'Fermented corn and cassava dough cooked into smooth, sour balls. Served with whole tilapia marinated in pepper and grilled over charcoal, with fresh tomato-onion salsa and shito. Ghana is often called "Banku Nation."' },
+      { emoji:'🌽', name:'Kenkey', origin:'Ga & Fante (two versions)', tag:'Harbour Classic', desc:'Fermented cornmeal dumpling — Ga Kenkey (wrapped in dried corn husks) and Fante Kenkey (banana leaves). Dense, sour, filling. Best eaten at Jamestown harbour with freshly fried herrings and shito — one of Accra\'s most authentic experiences.' },
+      { emoji:'🍌', name:'Kelewele', origin:'National street food', tag:'Night Market Star', desc:'Ripe plantain cubed, soaked in ginger-clove-chili marinade, then deep-fried until caramelized outside and soft inside. Sweet, spicy, utterly addictive. Kelewele vendors come alive after dark — the smell draws crowds from a distance.' },
+      { emoji:'🥘', name:'Red Red', origin:'National / Coastal', tag:'Vegan Friendly', desc:'Black-eyed peas stewed in red palm oil with onions, tomatoes, and smoked fish. Naturally vegan-friendly (without fish), deeply satisfying, and one of Ghana\'s most affordable nutritious meals. Served with fried plantain.' },
+      { emoji:'🫕', name:'Groundnut (Peanut) Soup', origin:'Akan (Ashanti)', tag:'Sunday Classic', desc:'Rich, thick soup made from freshly ground roasted peanuts, tomatoes, peppers, and chicken or goat. Creamy, nutty, deeply satisfying. The Ashanti version with chicken is the gold standard. Served with fufu or rice balls (Omo Tuo).' },
+      { emoji:'🥗', name:'Kontomire Stew (Palava Sauce)', origin:'Akan', tag:'Nutritious Green', desc:'Boiled mashed cocoyam leaves cooked with palm oil, salted fish, boiled eggs, and onion. Deep green, rich, and hearty. One of Ghana\'s most nutritious dishes — packed with iron and vitamins.' },
+      { emoji:'🍳', name:'Tuo Zaafi (TZ)', origin:'Northern Ghana', tag:'Northern Staple', desc:'Thick, smooth porridge of millet or corn flour stirred until dough-like. Softer than banku with a neutral flavor. The ultimate northern Ghanaian comfort food — served with ayoyo (jute leaf) soup or groundnut soup.' },
+      { emoji:'🫙', name:'Shito', origin:'Ga (Accra)', tag:'National Condiment', desc:'Ghana\'s famous black pepper sauce — fried herrings, dried prawns, ginger, garlic, tomatoes, and spices cooked in oil for hours until caramelized into a deep, dark, intensely flavored paste. No Ghanaian meal is complete without shito.' },
+      { emoji:'🥩', name:'Chinchinga (Suya)', origin:'Northern Ghana (Hausa influence)', tag:'Night Grill', desc:'Ghana\'s version of suya — beef, chicken, or liver on skewers, coated in spiced groundnut powder rub and grilled over charcoal. The night market chinchinga experience — with fresh tomatoes, onions, and shito — is unmissable.' },
+    ],
+
+    dressing_fabrics: [
+      { name:'Kente Cloth', origin:'Akan (Ashanti & Ewe)', story:'Woven in narrow strips on horizontal looms then sewn together. Originally only Ashanti royalty could wear it. According to tradition, the first weavers learned by studying a spider (Ananse) weaving its web. Bonwire village in Ashanti Region is the most famous Kente-weaving center.', colors:{ gold:'Royalty, wealth, high status', green:'Growth, renewal, prosperity', red:'Political and spiritual power', blue:'Peace, harmony, love', black:'Maturation, spiritual energy', white:'Purification, festive occasions' } },
+      { name:'Adinkra Cloth', origin:'Akan (Ashanti)', story:'Fabric printed with Adinkra symbols using stamps carved from calabash gourd, dipped in black dye from the Badie tree. Originally worn at funerals (dark colours) and celebrations (bright colours). Made at Ntonso village in Ashanti Region.' },
+      { name:'Ankara (Wax Print)', origin:'Pan-Ghanaian', story:'Bold wax-resist printed fabric used by all Ghanaians for everyday and formal wear. Though originally Dutch/Indonesian, it has become thoroughly Ghanaian and African in identity.' },
+      { name:'Batakari (Fugu Smock)', origin:'Northern Ghana', story:'Hand-woven cotton smock with embroidery at collar and armholes. The signature garment of northern Ghana — worn by all ethnic groups there regardless of religion. Jerry Rawlings wore it as a symbol of national unity.' },
+    ],
+
+    adinkra_symbols: [
+      { symbol:'☀️', name:'Gye Nyame', meaning:'Except God', desc:'The most popular Adinkra symbol. "Nothing in the past, present, or future, except God." A declaration of absolute divine supremacy.' },
+      { symbol:'🦅', name:'Sankofa', meaning:'Go back and fetch it', desc:'Depicted as a bird looking backward while flying forward. The past is not to be left behind — it must be brought forward to build wisely for the future. Africa\'s most globally recognized symbol.' },
+      { symbol:'👑', name:'Adinkrahene', meaning:'King of Adinkra', desc:'Concentric circles representing greatness, charisma, and leadership. Said to inspire all other Adinkra symbols.' },
+      { symbol:'❤️', name:'Akoma', meaning:'The heart', desc:'Patience, tolerance, faithfulness, and endurance. "Take heart." A reminder of the importance of emotional intelligence.' },
+      { symbol:'🐊', name:'Funtunfunefu', meaning:'Siamese crocodiles', desc:'Two-headed crocodile sharing one stomach. "Those who share the same destiny should not fight each other." A warning against internal conflict.' },
+      { symbol:'⭐', name:'Nyame Biribi Wo Soro', meaning:'God is in the heavens', desc:'Symbol of hope and inspiration. God oversees all human affairs — a reminder to seek divine guidance.' },
+      { symbol:'🦁', name:'Dwennimmen', meaning:"Ram's horns", desc:'Strength with humility. Even the strongest (the ram) submits to the slaughter. True strength includes the wisdom to know when to yield.' },
+      { symbol:'🌟', name:'Fawohodie', meaning:'Independence / Freedom', desc:'Symbol of freedom, emancipation, and independence. Adopted as a symbol of Ghana\'s independence movement and pan-African liberation.' },
+      { symbol:'🔗', name:'Odo Nnyew Fie Kwan', meaning:'Love never loses its way home', desc:'Endurance and power of love. Love always finds its way back — no matter how far the journey.' },
+      { symbol:'🌿', name:'Aya', meaning:'Fern / defiance', desc:'The fern is a hardy plant that grows in difficult conditions. Aya represents endurance, resourcefulness, and the ability to thrive in adversity.' },
+      { symbol:'🔄', name:'Ese Ne Tekrema', meaning:'The teeth and the tongue', desc:'Teeth and tongue must work together even though they sometimes clash. A symbol of friendship, interdependence, and cooperation.' },
+      { symbol:'🌙', name:'Osrane Ne Nsoromma', meaning:'Moon and star', desc:'Symbol of love, faithfulness, and harmony between man and woman. Often used in jewelry for couples.' },
+    ],
+
+    marriage_traditions: [
+      {
+        type:'Universal Ghanaian Tradition', name:'Knocking Ceremony (Abusua / Ayefro)', group:'All ethnic groups · Ghana',
+        steps:['Groom\'s family arrives with schnapps (mandatory — signals seriousness), refreshments, and an elder spokesperson','An elder pours libation (schnapps or akpeteshie on the ground) — ancestors must be informed and invited','The spokesperson formally states the family\'s intention: "We have seen a beautiful flower in your garden"','The bride\'s family confers privately, then formally accepts or declines','If accepted, a list of items (bride price) is presented for the groom\'s family to fulfill','A second formal knock is held once all items are gathered — this is the official ceremony day']
+      },
+      {
+        type:'Akan (Ashanti) Marriage', name:'Aseda (Bride Price) & Kente Ceremony', group:'Akan peoples · Central & South Ghana',
+        steps:['Two rounds of knocking — informal first, formal second with all items from the bride\'s list','Gifts must include schnapps, gin, kola nuts, Bible/Quran, cash, fabric, jewelry, and food items','Because the Akan are matrilineal, gifts are presented significantly to the bride\'s MOTHER\'S family (especially her maternal uncle)','Both families coordinate Kente cloth colours — the most visible display of family identity','The Okyeame (elder linguist) speaks on behalf of each family — direct speech considered too blunt for formal occasions','Community celebration with Highlife or Hiplife music, food, and dancing'],
+      },
+      {
+        type:'Ga Marriage', name:'Ayefro (Door-Knocking) Ceremony', group:'Ga people · Greater Accra',
+        steps:['Groom\'s family arrives at bride\'s home with schnapps, refreshments, and a formal elder spokesperson','The Ayefro (door-knocking) ceremony — the elder formally announces the family\'s intention at the door','Libation poured by the eldest man present — calling on ancestors of both families','Bride price negotiated and fulfilled — cash, drinks, fabric, and food items','Kpanlogo drums are essential at Ga celebrations — the music of joy in Ga culture','Bride adorned with beads and traditional attire by her female relatives']
+      },
+      {
+        type:'Dagomba (Northern) Marriage', name:'Islamic Nikkah & Community Celebration', group:'Dagomba & Northern peoples',
+        steps:['Sadaki (Islamic bride price) paid directly to the bride — per Quranic teaching','Fatihah / Nikkah officiated by a Malam (Islamic scholar) — the marriage contract','Damba festival timing is often chosen for important marriages — maximum celebration','Gender-appropriate celebrations — men and women celebrate in separate spaces','Community feast provided by the groom\'s family','Music includes traditional Dagomba talking drums and contemporary Northern Ghanaian music']
+      },
+    ],
+
+    beliefs: [
+      {
+        icon:'☀️', title:'Akan Religious System', sub:'Nyame · Ancestral Stools · Okomfo', bg:'rgba(252,209,22,.12)', wide:false,
+        text:'The Akan believe in Nyame — the omnipotent Supreme God who created all things. Below Nyame are countless abosom (lesser deities) and ever-present ancestral spirits. The most sacred objects in Akan culture are ancestral stools — physical vessels holding the spiritual power of lineages. The Golden Stool of Ashanti holds the soul of the entire Ashanti nation.',
+        deities:[
+          { emoji:'☀️', name:'Nyame', role:'Supreme Creator God — omnipotent, omniscient. Everything begins and ends with Nyame.' },
+          { emoji:'🪑', name:'Ancestral Stools', role:'Carved wooden stools are the most sacred objects — each lineage\'s stool holds the sunsum (soul) of all past ancestors.' },
+          { emoji:'🌳', name:'Nyame Dua', role:'"God\'s Tree" — a forked branch placed outside homes as a spiritual altar and symbol of divine protection.' },
+          { emoji:'🌍', name:'Asaase Yaa', role:'Earth goddess — mother of all things. Farming forbidden on Thursdays (Yawoada) — her sacred day.' },
+          { emoji:'🔮', name:'Okomfo', role:'Traditional Akan priests who communicate with deities and ancestors. Okomfo Anokye brought the Golden Stool to the Asantehene — Ghana\'s most legendary priest.' },
+        ]
+      },
+      {
+        icon:'🌊', title:'Ewe Vodun (Vodou)', sub:'Origin of Haitian Voodoo · 600+ spirits', bg:'rgba(139,58,158,.12)', wide:false,
+        text:'The Ewe Vodun tradition — a rich pantheon of over 600 spirits (vodu) associated with natural forces — rivers, sea, thunder, earth. This tradition spread to Haiti (Voodoo), Brazil (Candomblé), and Cuba (Santería) through enslaved Ewe people. The word "Voodoo" comes directly from the Ewe/Fon word "Vodu" (spirit).',
+        deities:[
+          { emoji:'⚡', name:'Heviosso (Xevioso)', role:'Deity of thunder and lightning — the most powerful Fon/Ewe deity. Equivalent to Yoruba Shango.' },
+          { emoji:'🌊', name:'Mami Wata', role:'Water spirit — a powerful feminine spirit of rivers, oceans, and wealth. Worshipped across West Africa.' },
+          { emoji:'🐍', name:'Dan (Ayido Hwedo)', role:'The cosmic rainbow serpent — symbol of the cycle of life. Became Haitian Vodou\'s Damballah.' },
+          { emoji:'🌍', name:'Trɔwo', role:'Lesser spirits associated with rivers, forests, and natural forces — unique to each Ewe community.' },
+        ]
+      },
+      {
+        icon:'✝️', title:'Christianity in Ghana', sub:'~71% · Pentecostal dominant', bg:'rgba(206,17,38,.1)', wide:false,
+        text:'Ghana has one of the highest rates of church attendance in the world. The Pentecostal/Charismatic movement dominates modern Ghanaian Christianity — with vibrant gospel music, healing ministries, and mega-churches. The Methodist Church (present since the colonial era) was Ghana\'s first major Protestant denomination.',
+        deities:[
+          { emoji:'⛪', name:'Pentecostal/Charismatic Church', role:'The dominant form of Ghanaian Christianity since the 1980s — characterized by vibrant worship, healing, and prophecy' },
+          { emoji:'🙏', name:'Methodist Church Ghana', role:'Oldest Protestant church — established by British missionaries in 1835. Deeply embedded in Ghanaian education history.' },
+          { emoji:'✝️', name:'Presbyterian Church', role:'Strong in southern and Akan areas. One of the most important institutions in Ghana\'s colonial-era education.' },
+          { emoji:'🎵', name:'Gospel Music', role:'One of Ghana\'s biggest music genres. Joe Mettle, Celestine Donkor, and Joyce Blessing have international followings.' },
+        ]
+      },
+      {
+        icon:'☪️', title:'Islam in Ghana', sub:'~18% · Northern Ghana heartland · 700+ years', bg:'rgba(26,110,168,.12)', wide:true,
+        text:'Islam has been present in northern Ghana for over 700 years through trans-Saharan trade routes. Tamale (Northern Region capital) is Ghana\'s Islamic cultural center — the Dagomba, Gonja, and Mamprusi peoples are predominantly Muslim. The Damba festival (celebrating the Prophet Muhammad\'s birth) is one of Ghana\'s most spectacular events. Ghana\'s Muslims are known for a peaceful, tolerant practice of their faith that often coexists with local traditions.',
+        deities:[
+          { emoji:'🕌', name:'Tamale Islamic Heritage', role:'Tamale is Ghana\'s Islamic cultural capital — home to the Friday Mosque and centuries of Islamic scholarship' },
+          { emoji:'🥁', name:'Damba Festival', role:'The most important festival in northern Ghana — celebrating the Prophet Muhammad\'s birth with spectacular horse parades, royal drums, and community celebration' },
+          { emoji:'📖', name:'Tijaniyya Brotherhood', role:'The most widely practiced Sufi order in Ghana\'s north — brought through trade routes from North Africa' },
+          { emoji:'🤝', name:'Christian-Muslim Harmony', role:'Ghana is globally recognized for its peaceful coexistence of Christianity and Islam — families often span both faiths' },
+        ]
+      },
+    ],
+
+    festivals: [
+      { emoji:'🍽️', name:'Homowo Festival', when:'August / September', group:'Ga People · Greater Accra', badge:'Hooting at Hunger',
+        desc:'"Homowo" means "hooting at hunger" — celebrating the Ga people\'s triumph over a devastating historical famine. Chiefs and priests parade through streets sprinkling kpokpoi (sacred ceremonial food) at ancestral shrines to feed the departed. Families reunite across the diaspora. The Twin Festival — celebrating twins as a double divine blessing — is held during Homowo.',
+        highlights:['Kpokpoi — sacred palm nut and cornmeal dish cooked only for Homowo and shared with ancestors', 'Wulomo (Ga priests) in white performing ancestral rituals', 'Twin Festival — unique Ga celebration of twins as doubly divine', 'Chiefs in palanquins under state umbrellas', 'Diaspora Ghanaians return home from across the world']
+      },
+      { emoji:'👑', name:'Akwasidae Festival', when:'Every 42 days (Akan calendar) · Sunday', group:'Ashanti Kingdom · Kumasi', badge:'Royal Court of the Asantehene',
+        desc:'A regular royal ceremony of the Ashanti Kingdom occurring every 42 days. At Manhyia Palace, the Asantehene (currently Otumfuo Osei Tutu II) holds court — receiving homage from sub-chiefs, divisional chiefs, and his people. Chiefs arrive in elaborate Kente and gold, carried in palanquins. The palace forecourt becomes a theatre of Ashanti grandeur with fontomfrom royal drums, hornblowers, and adowa dancing. Open to the public.',
+        highlights:['Asantehene receiving homage on his throne in full regalia', 'Chiefs arriving in palanquins under state umbrellas', 'Fontomfrom royal drums — only sounded for the Asantehene', 'Kete and adowa traditional dances', 'Golden regalia, state swords, and linguist staffs on display']
+      },
+      { emoji:'🦌', name:'Aboakyir Festival (Deer Hunt)', when:'First Saturday of May', group:'Effutu People · Winneba', badge:'Ancient Hunting Tradition',
+        desc:'One of Ghana\'s oldest and most unique festivals. Two rival warrior groups (Tuafo and Denkyefo Asafo companies) race into the bush to capture a LIVE deer, which is presented to the chief and sacrificed to the gods. Originally a leopard hunt (changed when leopards became endangered). A spectacular display of Fante warrior culture.',
+        highlights:['Competitive live deer hunt race between two Asafo warrior companies', 'Grand durbar of chiefs and queen mothers', 'Asafo companies in traditional warrior attire', 'Traditional Fante music and dances']
+      },
+      { emoji:'🦅', name:'Hogbetsotso Festival', when:'First Saturday of November', group:'Anlo Ewe · Anloga (Volta Region)', badge:'Festival of Exodus',
+        desc:'"Hogbetsotso" means "the festival of exodus" — commemorating the Anlo Ewe\'s dramatic escape from Notsie (modern Togo) where they fled the tyranny of King Agorkoli. According to legend, they escaped by walking backwards through a gap in the city wall at night to confuse pursuers. A time for community unity, stool purification, and ancestral remembrance.',
+        highlights:['Durbar of Ewe chiefs and elders', 'Re-enactment of the Notsie exodus', 'State purification ceremonies', 'Traditional agbadza drumming and dancing', 'Diaspora Ewe return from Togo, Benin, and globally']
+      },
+      { emoji:'🎨', name:'Chale Wote Street Art Festival', when:'August', group:'Accra Creative Community · Jamestown', badge:"Africa's Most Exciting Urban Arts Festival",
+        desc:'Ghana\'s most exciting contemporary cultural festival, organized by the Accra[dot]alt creative collective. Jamestown (one of Accra\'s oldest historic neighbourhoods) transforms for one week into a living gallery — streets exploding with murals, installations, live music, spoken word, fashion shows, and performance art. Over 30,000 visitors annually.',
+        highlights:['Live mural painting on building walls and rooftops', 'Performance art and experimental theatre', 'Afropunk fashion displays and shows', 'Live music across multiple stages', 'Youth cultural exchange and community engagement']
+      },
+      { emoji:'🌊', name:'Bakatue Festival', when:'First Tuesday of July', group:'Fante People · Elmina', badge:'Opening of the Fishing Season',
+        desc:'Marks the opening of the Benya Lagoon fishing season in Elmina. The paramount chief of Elmina performs a ritual casting of a net into the lagoon, symbolically opening it for fishing. Accompanied by colorful canoe regattas, traditional music, and the blessing of fishing equipment and boats. One of Ghana\'s most picturesque festivals.',
+        highlights:['Chief\'s ceremonial net-casting opening the lagoon', 'Colorful canoe regatta on the Benya Lagoon', 'Blessing of fishermen\'s boats and equipment', 'Traditional drumming and dancing']
+      },
+      { emoji:'🎭', name:'Panafest (Pan-African Historical Theatre Festival)', when:'July (Biennial)', group:'Pan-African Diaspora · Cape Coast & Elmina', badge:'Diaspora Homecoming',
+        desc:'A biennial festival for the global African diaspora — theatrical performances, cultural shows, and deeply emotional visits to the slave castles of Cape Coast and Elmina. Diaspora descendants walk through the dungeons where their ancestors were held before being shipped through the "Door of No Return." One of Africa\'s most profoundly emotional cultural events.',
+        highlights:['Performances at Cape Coast Castle and Elmina Castle', 'Memorial ceremonies at the Door of No Return', 'Cultural performances from across Africa and the diaspora', 'Academic symposia on pan-African identity', 'Diaspora Africans from USA, Caribbean, UK, and Brazil attending']
+      },
+      { emoji:'🎉', name:'Detty December', when:'December (entire month)', group:'National / Global Diaspora · Accra', badge:"Africa's Biggest Party Season",
+        desc:'Ghana\'s annual December festival season has grown into one of Africa\'s most anticipated cultural moments. Every December, the Ghanaian diaspora returns from the UK, USA, and Canada, and international celebrities, artists, and tourists descend on Accra for a month of concerts, parties, beach events, and cultural activities. The term "Detty December" (from Ghanaian Pidgin "dirty" meaning wild/fun) captures the energy.',
+        highlights:['Afronation Ghana — major Afrobeats concert attracting global stars', 'AfricanXXchange (formerly Afrochella) — fashion, music, and art', 'New Year\'s Eve concerts drawing hundreds of thousands', 'Club nights in Osu, East Legon, Labadi, and Cantonments', 'Ghana becomes the most visited African destination in December']
+      },
+    ],
+
+    music_genres: [
+      { icon:'🎸', name:'Highlife', origin:'Ghana · 1920s', desc:'Ghana\'s greatest sonic gift to the world — born in the 1920s when coastal Ghanaians fused local Akan and Ga rhythms with European brass band music and jazz. The musical ancestor of Afrobeats — its melodic DNA runs through virtually all modern West African pop music.' },
+      { icon:'🎤', name:'Hiplife', origin:'Ghana · Mid-1990s', desc:'Born when Reggie Rockstone merged American hip-hop beats with Ghanaian Highlife melodies and rapped in Twi. Hiplife became the voice of Ghanaian youth — urban, assertive, and unapologetically African. It birthed azonto, asakaa, and influenced Afrobeats broadly.' },
+      { icon:'💃', name:'Azonto', origin:'Accra, Ghana · 2011–2013', desc:'A dance music genre and viral dance movement — one of Africa\'s first viral dance phenomena before the social media era properly began. Dancers mime everyday actions (ironing, driving, cooking) in rhythm. Sarkodie\'s "U Go Kill Me" helped popularize it globally.' },
+      { icon:'🎵', name:'Asakaa (Ghana Drill)', origin:'Kumasi ("Kumerica") · 2020s', desc:'A subgenre born in Kumasi — combining American drill music with Ghanaian rhythms and Twi lyrics. Black Sherif\'s global breakthrough and Yaw Tog\'s rise put Asakaa on the world map. Kumasi is nicknamed "Kumerica" (Kumasi + America).' },
+      { icon:'🌊', name:'Afro-Dancehall', origin:'Ghana · 2000s–present', desc:'A fusion of Jamaican dancehall with Ghanaian Highlife and Afrobeats. Stonebwoy and Shatta Wale are Ghana\'s leading stars — known for their fierce rivalry that became a commercially productive coexistence.' },
+      { icon:'🙏', name:'Gospel Music', origin:'Ghana · Deeply rooted', desc:'One of Ghana\'s biggest music genres. Ghanaian gospel blends contemporary pop with Christian worship. Joe Mettle, Celestine Donkor, Sonnie Badu, and Joyce Blessing have international followings and gospel tours globally.' },
+    ],
+
+    current_artists: [
+      { emoji:'🎤', name:'Sarkodie', genre:'Hiplife / Hip-hop', av1:'#1a6ea8', av2:'#3a2a1a', note:'Ghana\'s greatest rapper. BET Best International Act winner (2012). BET Hip Hop Best International Flow (inaugural 2019). VGMA Artist of the Decade. Collaborated with Drake, Busta Rhymes, and Akon.' },
+      { emoji:'🌊', name:'Stonebwoy', genre:'Afro-Dancehall / Reggae', av1:'#2e7d5e', av2:'#1a6ea8', note:'First Ghanaian to win BET Best International Act (2014 & 2015). Multiple VGMA Artist of the Year. Collaborated with Sean Paul, Beenie Man, and Damian Marley.' },
+      { emoji:'🎵', name:'Shatta Wale', genre:'Dancehall / Afrobeats', av1:'#d4622a', av2:'#c8952a', note:'Collaborated with Beyoncé on "Already" from The Lion King: The Gift (2019) — a defining moment for Ghanaian music globally. One of Ghana\'s biggest superstars.' },
+      { emoji:'🔥', name:'Black Sherif', genre:'Asakaa / Afrobeats', av1:'#3a2a1a', av2:'#8b3a9e', note:'"Second Sermon" featuring Burna Boy became one of 2022\'s biggest global hits. "Kweku the Traveller" achieved viral global success. One of Africa\'s fastest-rising artists of the 2020s.' },
+      { emoji:'💎', name:'King Promise', genre:'Afropop / R&B', av1:'#1a6ea8', av2:'#2e7d5e', note:'Ghana\'s smoothest contemporary Afropop artist. Known for silky vocals and consistent international collaborations. VGMA Artist of the Year nominee multiple times.' },
+      { emoji:'🌸', name:'Amaarae', genre:'Alt-R&B / Afrofusion', av1:'#8b3a9e', av2:'#1a6ea8', note:'"SAD GIRLZ LUV MONEY" became a global viral phenomenon in 2022. Ghana\'s leading alternative music voice — blending Afrobeats with indie R&B and ethereal production.' },
+      { emoji:'🎶', name:'KiDi', genre:'Afropop / Highlife', av1:'#c8952a', av2:'#2e7d5e', note:'VGMA Artiste of the Year (2021). Known for blending contemporary Afropop with Highlife melodies. One of Ghana\'s most consistent hitmakers.' },
+      { emoji:'🌟', name:'Kuami Eugene', genre:'Highlife / Afropop', av1:'#d4622a', av2:'#c8952a', note:'VGMA Artiste of the Year (2019, 2020). Known for his powerful voice and Highlife-rooted sound. From Akim Oda, Eastern Region — deeply roots-conscious.' },
+    ],
+
+    legend_artists: [
+      { emoji:'👑', name:'E.T. Mensah', genre:'Highlife', av1:'#2e7d5e', av2:'#c8952a', note:'"King of Highlife." His band the Tempos defined dance-band Highlife of the 1950s–70s. Performed with Louis Armstrong. Took Ghanaian music across West Africa.' },
+      { emoji:'🎸', name:'Ebo Taylor', genre:'Highlife / Afrobeat fusion', av1:'#c8952a', av2:'#3a2a1a', note:'Pioneer who blended Highlife with Afrobeat and funk. Rediscovered by international audiences in the 2000s–2010s. Released acclaimed albums globally to critical acclaim.' },
+      { emoji:'🎙️', name:'Pat Thomas', genre:'Highlife', av1:'#1a6ea8', av2:'#c8952a', note:'One of Ghana\'s greatest voices — a Highlife legend who has been performing since the 1960s and is still active. Called the "Golden Voice of Africa."' },
+      { emoji:'🎵', name:'Reggie Rockstone', genre:'Hiplife (Godfather)', av1:'#3a2a1a', av2:'#8b3a9e', note:'"Godfather of Hiplife." Invented the genre in the mid-1990s by merging hip-hop with Highlife and rapping in Twi. Transformed Ghanaian music completely.' },
+      { emoji:'🌹', name:'Kojo Antwi', genre:'Highlife / Romantic', av1:'#8b3a9e', av2:'#c8952a', note:'"Mr. Music Man." Ghana\'s romantic Highlife superstar of the 1980s–2000s. His smooth voice and elegant style made him Ghana\'s most beloved ballad singer.' },
+      { emoji:'🥁', name:'Koo Nimo', genre:'Palm-wine Highlife', av1:'#3d6b43', av2:'#c8952a', note:'Master of acoustic palm-wine guitar Highlife — the most traditional root form. A walking encyclopedia of Ghanaian musical heritage. Cultural treasure.' },
+    ],
+
+    history: [
+      { period:'13th century', event:'Bono-Manso Kingdom', desc:'One of the earliest Akan states, founded in present-day Brong-Ahafo. A significant gold-trading center and one of the ancestral homelands of the Akan peoples — setting the foundation for all future Akan states.' },
+      { period:'1471', event:'European Contact — Portuguese Arrive', desc:'Portuguese sailors arrived on the Gold Coast in 1471, establishing the first European fort at Elmina in 1482 — the oldest European building in sub-Saharan Africa. The coastline became known as the "Gold Coast" for its abundant gold.' },
+      { period:'15th–19th century', event:'Transatlantic Slave Trade', desc:'The Gold Coast became one of the most significant departure points for enslaved Africans. Cape Coast Castle and Elmina Castle served as primary holding forts. An estimated millions of Africans passed through the "Door of No Return." Their descendants\' return is what the Year of Return (2019) honored.' },
+      { period:'1670–1701', event:'Founding of the Ashanti Empire', desc:'Osei Tutu I and priest Okomfo Anokye founded the Ashanti Confederacy. The legendary Golden Stool descended from heaven into Osei Tutu\'s lap, unifying all Ashanti clans. By 1701, the Ashanti had defeated the powerful Denkyira kingdom, beginning their rise to dominance.' },
+      { period:'18th–19th century', event:'Ashanti Empire at its Peak', desc:'The Ashanti Empire became one of the most powerful states in West Africa, controlling vast gold and kola trade routes. The Asantehene commanded formidable armies. The empire fought a series of Anglo-Ashanti Wars (1823–1900) against British colonial forces — winning several battles.' },
+      { period:'1874', event:'British Gold Coast Colony', desc:'Britain declared the Gold Coast a Crown Colony. By 1902, following the final Anglo-Ashanti War, the Ashanti Kingdom and Northern Territories were incorporated. Colonial rule brought railways, ports, and modern education — but also extracted enormous wealth.' },
+      { period:'1947–1957', event:'Kwame Nkrumah & the Independence Movement', desc:'Kwame Nkrumah returned from the USA and UK in 1947 and galvanized independence. He founded the Convention People\'s Party (CPP), launched "Positive Action," and was imprisoned by the British in 1950 — leading his party to victory from prison.' },
+      { period:'March 6, 1957', event:'Independence — "Ghana, your beloved country is free forever!"', desc:'Ghana became the first sub-Saharan African country to gain independence from colonial rule. Nkrumah\'s independence speech inspired liberation movements across Africa. His vision of a United States of Africa remains the guiding light of pan-Africanism.' },
+      { period:'1966', event:'Nkrumah Overthrown', desc:'While abroad in Hanoi, a military coup overthrew Nkrumah\'s government. He went into exile in Guinea and died in 1972. He was repatriated and buried in Ghana, where his Mausoleum in Accra remains a sacred site. Nkrumah remains Ghana\'s greatest hero.' },
+      { period:'1992–present', event:'Return to Democracy (4th Republic)', desc:'Ghana adopted a new constitution in 1992 and has since peacefully transferred power multiple times between the NDC and NPP parties — a model of democratic stability admired across Africa. In 2020, Ghana was ranked the most democratic country in West Africa.' },
+      { period:'2019', event:'Year of Return', desc:'President Nana Akufo-Addo launched the Year of Return — marking 400 years since the first enslaved Africans arrived in America. The initiative invited the African diaspora home, attracting hundreds of thousands including Cardi B, Idris Elba, and global celebrities. It permanently changed Ghana\'s cultural and tourism identity.' },
+    ],
+
+    regions: [
+      { name:'Greater Accra', capital:'Accra', zone:'South', note:'Smallest region by area but most populous. National capital. Home of the Ga people.' },
+      { name:'Ashanti', capital:'Kumasi', zone:'Middle', note:'Most populous region. Heartland of Akan-Ashanti culture. Ghana\'s second city. Cocoa country. Bonwire (Kente) and Ntonso (Adinkra) villages here.' },
+      { name:'Western', capital:'Sekondi-Takoradi', zone:'South', note:'Ghana\'s oil capital. Takoradi is the main port city. Rich in timber, gold, and offshore oil.' },
+      { name:'Western North', capital:'Sefwi Wiawso', zone:'Middle', note:'Created in 2019 from the old Western Region. Gold and cocoa country.' },
+      { name:'Central', capital:'Cape Coast', zone:'South', note:'Historical heartland. Elmina and Cape Coast Castles (UNESCO). Fante homeland. Kakum National Park.' },
+      { name:'Eastern', capital:'Koforidua', zone:'Middle', note:'Akwapim Hills. Lake Volta. Krobo bead culture. Aburi Botanical Gardens.' },
+      { name:'Volta', capital:'Ho', zone:'East', note:'Ewe heartland. Lake Volta. Togo border. Wli Waterfalls (highest in West Africa). Kente weavers of Agotime.' },
+      { name:'Oti', capital:'Dambai', zone:'East', note:'Created in 2019. Volta River basin. Krachi and Nchumuru peoples.' },
+      { name:'Bono', capital:'Sunyani', zone:'Middle', note:'Brong-Ahafo heartland. Cocoa and yam farming. Ancient Bono-Manso kingdom area.' },
+      { name:'Bono East', capital:'Techiman', zone:'Middle', note:'Created in 2019. Techiman market is one of West Africa\'s largest.' },
+      { name:'Ahafo', capital:'Goaso', zone:'Middle', note:'Created in 2019. Dense rainforest. Tano River basin.' },
+      { name:'Northern', capital:'Tamale', zone:'North', note:'Dagomba heartland. Tamale is Ghana\'s fastest-growing city. Islamic cultural center. Damba festival.' },
+      { name:'Savannah', capital:'Damongo', zone:'North', note:'Created in 2019. Mole National Park (Ghana\'s best wildlife reserve). Gonja and Brafour peoples.' },
+      { name:'North East', capital:'Nalerigu', zone:'North', note:'Created in 2019. Mamprusi and Kusasi peoples.' },
+      { name:'Upper East', capital:'Bolgatanga', zone:'North', note:'Frafra, Kassena, and Builsa peoples. Paga Crocodile Pond. Bolga baskets.' },
+      { name:'Upper West', capital:'Wa', zone:'North', note:'Dagaaba and Sissala peoples. Least populated region. Savanna landscape.' },
+    ],
+
+    proverbs: [
+      { lang:'Akan (Twi) 🇬🇭', text:'"Onipa na ohia onipa."', meaning:'A person needs people.', lesson:'No individual can thrive in isolation. Community, family, and social connection are essential to being human — the Ghanaian foundation of communal life.' },
+      { lang:'Akan (Twi) 🇬🇭', text:'"Sankofa." (Go back and fetch it.)', meaning:'It is not wrong to go back for what you left behind.', lesson:'We must understand our past to build our future wisely. The iconic Sankofa bird looks backward while flying forward — past and future are inseparable.' },
+      { lang:'Akan (Twi) 🇬🇭', text:'"Gye Nyame." (Except God.)', meaning:'Nothing in the past, present, or future, except God.', lesson:'Absolute trust in divine supremacy above all human affairs. The most widely used Adinkra symbol in Ghana and globally.' },
+      { lang:'Akan (Twi) 🇬🇭', text:'"Funtunfunefu Denkyemfunefu, wɔdidi foro mu na wɔkasa a, na wɔbo afire."', meaning:'The Siamese crocodiles share one stomach, yet when they eat, they fight over food.', lesson:'Those who share the same destiny should not fight each other. Internal conflict hurts everyone in the same community.' },
+      { lang:'Akan (Twi) 🇬🇭', text:'"Obra ye bo."', meaning:'Life is precious / Life is a rock.', lesson:'Life is both precious and resilient. Handle it with care — but know that it is also strong enough to endure.' },
+      { lang:'Ewe 🇬🇭', text:'"Ŋutifafa adeŋe xɔxɔa."', meaning:'Patience brings everything to ripeness.', lesson:'Good things take time to develop. Like fruit that must ripen before it is sweet, the best outcomes in life require patient waiting.' },
+      { lang:'Akan (Twi) 🇬🇭', text:'"Akwaaba."', meaning:'Welcome.', lesson:'More than just a word — Akwaaba is a philosophy of radical hospitality. To welcome a stranger completely, without reservation, is the highest Ghanaian value. Ghana is the Land of Akwaaba.' },
+      { lang:'Akan (Twi) 🇬🇭', text:'"Wo kae akyire a, wonhwehwɛ ne akyi."', meaning:'If you remember what is behind, you will not have to look for what is ahead.', lesson:'Knowledge of history prevents mistakes in the future. A person who understands the past navigates the present with wisdom.' },
+    ],
+
+    travel_places: [
+      { emoji:'🏰', name:'Cape Coast Castle', region:'Central Region', type:'UNESCO World Heritage Site', desc:'The most significant slave fort in Africa and a deeply emotional journey into the heart of the transatlantic slave trade. Built in 1653, enslaved Africans were held in dark dungeons below before being shipped through the "Door of No Return." Visiting the dungeons and standing at the Door is a transformative, irreversible experience. The Year of Return (2019) made Cape Coast a pilgrimage site for the global African diaspora.', tips:['Book a guided tour — the guides are extraordinary storytellers whose ancestors lived through this history', 'Visit the male and female dungeons — they are profoundly moving', 'The Door of No Return experience: stand there for at least 5 minutes in silence'], featured:true },
+      { emoji:'👑', name:'Kumasi & Manhyia Palace', region:'Ashanti Region', type:'Cultural Capital / Living Kingdom', desc:'The capital of the Ashanti Kingdom and Ghana\'s second-largest city. Home to the Manhyia Palace (Asantehene\'s seat), the massive Kejetia Market (one of West Africa\'s largest), and surrounding villages including Bonwire (Kente weaving), Ntonso (Adinkra printing), and Ahwiaa (woodcarving). An absolute cultural feast.', tips:['Visit during Akwasidae (every 42 days) for the royal ceremony — check the Akan calendar', 'Bonwire and Ntonso villages are 30 minutes from Kumasi — take a shared taxi', 'The Manhyia Palace Museum tells the Ashanti story with extraordinary depth'] },
+      { emoji:'🦁', name:'Mole National Park', region:'Savannah Region', type:'Wildlife / Nature', desc:'Ghana\'s largest and most important wildlife reserve. Home to over 90 mammals including elephants, hippos, buffaloes, baboons, and 300+ bird species. The park uniquely offers WALKING safaris right next to wild elephants — one of Africa\'s most thrilling wildlife experiences. Far less visited than East Africa\'s parks but just as extraordinary.', tips:['Walking safaris with rangers let you get within 20 metres of wild elephants', 'Best June–September (dry season — animals congregate around water)', 'Stay at Mole Motel — budget option with a pool overlooking the savanna'] },
+      { emoji:'🌿', name:'Kakum National Park', region:'Central Region', type:'Rainforest / Canopy Walk', desc:'A dense tropical rainforest with an extraordinary canopy walkway — seven rope bridges suspended 40 metres above the forest floor, stretching 330 metres through the treetops. One of only a few such canopy walks in Africa. Home to forest elephants, bongos, Diana monkeys, and countless birds.', tips:['The canopy walk is Ghana\'s most-visited tourist attraction — arrive early to avoid queues', 'Combine with Cape Coast Castle on the same day (15 minutes apart)', 'Listen for the sounds of the forest — early morning visits are most rewarding'] },
+      { emoji:'🌆', name:'Accra', region:'Greater Accra', type:'Capital City / Cultural Hub', desc:'One of Africa\'s most vibrant capitals. Key experiences: Kwame Nkrumah Mausoleum (sacred), Independence Square, National Museum, Arts Centre market, Jamestown (historic harbor), Osu (entertainment), Labadi Beach. And in December — the world\'s most electric destination during Detty December.', tips:['Jamestown Lighthouse climb has the best panoramic view of Accra (free)', 'Arts Centre market for authentic Kente, Adinkra crafts, and jewelry', 'Labadi Beach on Sunday is the true Accra experience'] },
+      { emoji:'🐊', name:'Paga Crocodile Pond', region:'Upper East Region', type:'Sacred Cultural Site / Hidden Gem', desc:'In the village of Paga near the Burkina Faso border, a sacred pond has been home to hundreds of wild Nile crocodiles for centuries. Locals believe the crocodiles are reincarnated souls of community members. Visitors can sit on — and be photographed with — these wild crocodiles, which have never harmed a human. One of Africa\'s most jaw-dropping examples of human-wildlife coexistence through spiritual belief.', tips:['Entry fee goes directly to the community — pay it happily', 'Combine with Bolgatanga market (Ghana\'s best northern market) and Tongo Hills rock formations', 'The chief\'s guide provides extraordinary context for the spiritual covenant behind this phenomenon'] },
+    ],
+
+    budget_tips: ['Trotros (shared minibuses) are the cheapest and most authentic way to travel between cities — far cheaper than Bolt or private taxis', 'Chop bar meals from GHS 15–30 — fufu with light soup is the gold standard of Ghanaian food AT the right price', 'Haggling is expected at markets — always start at 50% of the first quoted price', 'OTC/VIP buses are comfortable intercity options, cheaper than flying', 'Accra to Kumasi by VIP bus (GHS 60–80) is comfortable and takes 4 hours', 'The best waakye in Accra (Auntie Muni\'s) is sold out by 10am — arrive at 7am'],
+
+    safety_tips: ['Ghana is one of Africa\'s safest and most politically stable countries — ranked most democratic in West Africa (2020)', 'Accra\'s traffic is notorious — add 30–60 minutes extra to all city journeys during rush hours', 'Tap water is not reliably safe — drink bottled or filtered water', 'The coastal rip currents at Labadi and other beaches can be strong — heed all warning signs', 'When visiting chiefs\' palaces, dress modestly and remove shoes when entering inner chambers', 'Always greet elders first and use the right hand when receiving or giving items — left hand is considered disrespectful'],
+  };
+
+  /* ═══════════════════════════════════════════════════════════════
+     RENDER FUNCTIONS
+  ═══════════════════════════════════════════════════════════════ */
+
+  const GH_ACCENT = 'var(--gh-gold)';
+
+  // Overview
+  function renderOverview() {
+    document.getElementById('overviewGrid').innerHTML = GH.overview_cards.map(c => `
+      <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-lg);padding:1.5rem;transition:var(--t)" onmouseover="this.style.borderColor='var(--border)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+        <div style="font-size:1.75rem;margin-bottom:.75rem">${c.icon}</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--cream);margin-bottom:.4rem">${c.title}</div>
+        <div style="font-size:.82rem;color:var(--text-soft);line-height:1.65">${c.desc}</div>
+      </div>
+    `).join('');
+  }
+
+  // Ethnic groups
+  function renderEthnicGroups() {
+    const tabs   = document.getElementById('ethnicTabs');
+    const panels = document.getElementById('ethnicPanels');
+
+    tabs.innerHTML = GH.ethnic_groups.map((g, i) => `
+      <button class="eth-tab ${i===0?'active':''}" data-eth="${i}">${g.name}</button>
+    `).join('');
+
+    panels.innerHTML = GH.ethnic_groups.map((g, i) => `
+      <div class="ethnic-panel ${i===0?'active':''}" id="eth-panel-${i}">
+        <div class="ethnic-hero">
+          <div class="ethnic-hero-top">
+            <div>
+              <div class="ethnic-lang">${g.lang} · ${g.region}</div>
+              <div class="ethnic-name">${g.name}</div>
+              <div class="ethnic-pop">${g.pct} of Ghana · ${g.religion}</div>
+              <div class="ethnic-desc">${g.struct}</div>
+              <div style="margin-top:.75rem;font-size:.82rem;color:var(--text-muted);line-height:1.65">${g.origin}</div>
+            </div>
+            <div class="ethnic-facts">
+              ${g.facts.map(f => `<div class="ethnic-fact">${f}</div>`).join('')}
+            </div>
+          </div>
+          <div class="ethnic-hero-body">
+            <div class="ethnic-detail"><div class="ethnic-detail-label">🍛 Food</div><div class="ethnic-detail-content">${g.food}</div></div>
+            <div class="ethnic-detail"><div class="ethnic-detail-label">👘 Dressing</div><div class="ethnic-detail-content">${g.dressing}</div></div>
+            <div class="ethnic-detail"><div class="ethnic-detail-label">💍 Marriage</div><div class="ethnic-detail-content">${g.marriage}</div></div>
+            <div class="ethnic-detail"><div class="ethnic-detail-label">🌿 Beliefs</div><div class="ethnic-detail-content">${g.beliefs}</div></div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    tabs.addEventListener('click', e => {
+      const btn = e.target.closest('.eth-tab'); if (!btn) return;
+      document.querySelectorAll('.eth-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.ethnic-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(`eth-panel-${btn.dataset.eth}`).classList.add('active');
+    });
+  }
+
+  // Languages
+  function renderLanguages() {
+    document.getElementById('languagesGrid').innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:.85rem">
+        ${GH.languages.map(l => `
+          <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-md);padding:1.25rem;transition:var(--t)" onmouseover="this.style.borderColor='var(--border)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem">
+              <span style="font-size:1.25rem">${l.flag}</span>
+              <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:.98rem;color:var(--cream)">${l.name}</div>
+            </div>
+            <div style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gh-gold);margin-bottom:.3rem">${l.speakers}</div>
+            <div style="font-size:.8rem;color:var(--text-muted);line-height:1.6">${l.note}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div style="margin-top:1.5rem;background:linear-gradient(135deg,rgba(252,209,22,.08),rgba(0,107,63,.06));border:1px solid rgba(252,209,22,.2);border-radius:var(--radius-lg);padding:1.5rem">
+        <div style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gh-gold);margin-bottom:.6rem">💡 The Twi Phenomenon</div>
+        <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75">Twi (Akan) is so dominant in Ghana that it functions as a true national lingua franca — even non-Akan Ghanaians in the Volta, Northern, and Greater Accra regions often learn Twi as a second indigenous language. This means that "Akwaaba" (welcome) and "Medaase" (thank you) are understood by the vast majority of Ghanaians regardless of their ethnic background.</p>
+      </div>
+    `;
+  }
+
+  // Food
+  function renderFood() {
+    document.getElementById('foodGrid').innerHTML = GH.foods.map((f, i) => `
+      <div class="food-card ${f.featured && i===0 ? 'featured' : ''}" onclick="openFoodModal(${i})">
+        <span class="food-emoji">${f.emoji}</span>
+        <div class="food-body">
+          <div class="food-origin">${f.origin}</div>
+          <div class="food-name">${f.name}</div>
+          <div class="food-desc">${f.desc}</div>
+          <span class="food-tag">${f.tag}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openFoodModal(i) {
+    const f = GH.foods[i];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Food & Cuisine · ${f.origin}</div>
+      <div class="modal-title">${f.emoji} ${f.name}</div>
+      <div class="modal-sub">${f.tag}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">About this dish</div>
+      <p class="modal-text">${f.desc}</p>
+    `;
+    openModal();
+  }
+
+  // Dressing
+  function renderDressing() {
+    document.getElementById('dressingContent').innerHTML = `
+      <div class="sub-rule">Sacred Fabrics of Ghana</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:.85rem;margin-bottom:2rem">
+        ${GH.dressing_fabrics.map(f => `
+          <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-md);padding:1.35rem;transition:var(--t)" onmouseover="this.style.borderColor='var(--border)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:.98rem;color:var(--cream);margin-bottom:.2rem">${f.name}</div>
+            <div style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gh-gold);margin-bottom:.5rem">${f.origin}</div>
+            <div style="font-size:.8rem;color:var(--text-muted);line-height:1.65">${f.story}</div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="sub-rule">Kente Colour Meanings</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:.65rem;margin-bottom:2rem">
+        ${Object.entries(GH.dressing_fabrics[0].colors).map(([color, meaning]) => `
+          <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-md);padding:.85rem;text-align:center">
+            <div style="font-weight:700;font-size:.88rem;color:var(--cream);text-transform:capitalize;margin-bottom:.25rem">${color}</div>
+            <div style="font-size:.74rem;color:var(--text-muted);line-height:1.55">${meaning}</div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="sub-rule">Wedding Fashion</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr));gap:.85rem">
+        ${[
+          { group:'Ashanti Bride', desc:'Kente cloth as a two-piece set — long skirt and blouse in matching or complementary Kente strips, with Duku (headwrap) in matching fabric. Gold sandals and beaded jewelry complete the look.' },
+          { group:'Ewe Bride', desc:'Ewe Kente (distinct geometric patterns from upright loom) — worn as a wrapper and blouse. Elaborate beadwork necklaces and earrings. Ewe weddings feature some of the most vibrant drumming in Ghana.' },
+          { group:'Northern Ghana Bride', desc:'Colorful wrapper sets with matching headwrap. Elaborate beadwork — waist beads, necklaces, and bracelets carry significant meaning. Batakari smock for the groom.' },
+          { group:'Aso-Ebi Culture', desc:'Both families wear matching fabrics. Aso-Ebi culture from Nigeria has been fully adopted in Ghana — coordinated family fabrics are now standard at Ghanaian weddings across all ethnic groups.' },
+        ].map(w => `
+          <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-md);padding:1.35rem">
+            <div style="font-weight:700;font-size:.9rem;color:var(--cream);margin-bottom:.4rem">${w.group}</div>
+            <div style="font-size:.8rem;color:var(--text-muted);line-height:1.65">${w.desc}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  // Adinkra
+  function renderAdinkra() {
+    document.getElementById('adinkraGrid').innerHTML = GH.adinkra_symbols.map(a => `
+      <div class="adinkra-card">
+        <span class="adinkra-symbol">${a.symbol}</span>
+        <div class="adinkra-name">${a.name}</div>
+        <div class="adinkra-meaning">${a.meaning}</div>
+        <div class="adinkra-desc">${a.desc}</div>
+      </div>
+    `).join('');
+  }
+
+  // Marriage
+  function renderMarriage() {
+    document.getElementById('marriageGrid').innerHTML = GH.marriage_traditions.map(m => `
+      <div class="marriage-card">
+        <div class="marriage-top">
+          <div class="marriage-type">${m.type}</div>
+          <div class="marriage-name">${m.name}</div>
+          <div class="marriage-group">👥 ${m.group}</div>
+        </div>
+        <div class="marriage-body">
+          <div class="marriage-steps">
+            ${m.steps.map((s, i) => `
+              <div class="marriage-step">
+                <div class="step-n">${i+1}</div>
+                <div class="step-text">${s}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Beliefs
+  function renderBeliefs() {
+    document.getElementById('beliefsGrid').innerHTML = GH.beliefs.map(b => `
+      <div class="belief-card ${b.wide ? 'wide' : ''}">
+        <div class="belief-header" style="--bh-bg:${b.bg}">
+          <div class="belief-icon" style="background:${b.bg}">${b.icon}</div>
+          <div>
+            <div class="belief-title">${b.title}</div>
+            <div class="belief-sub">${b.sub}</div>
+          </div>
+        </div>
+        <div class="belief-body">
+          <p class="belief-text">${b.text}</p>
+          <div class="deity-list">
+            ${b.deities.map(d => `
+              <div class="deity-item">
+                <span class="deity-emoji">${d.emoji}</span>
+                <div>
+                  <div class="deity-name">${d.name}</div>
+                  <div class="deity-role">${d.role}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Festivals
+  function renderFestivals() {
+    document.getElementById('festivalsGrid').innerHTML = GH.festivals.map((f, i) => `
+      <div class="festival-card" onclick="openFestModal(${i})">
+        <div class="festival-top">
+          <span class="festival-emoji">${f.emoji}</span>
+          <div>
+            <div class="festival-when">${f.when}</div>
+            <div class="festival-name">${f.name}</div>
+            <div class="festival-group">${f.group}</div>
+          </div>
+        </div>
+        <div class="festival-body">
+          <p class="festival-desc">${f.desc}</p>
+          <div class="festival-highlights">
+            ${f.highlights.slice(0,3).map(h => `<div class="festival-hl">${h}</div>`).join('')}
+          </div>
+          <div class="festival-badge">${f.badge}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openFestModal(i) {
+    const f = GH.festivals[i];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Festival · ${f.group}</div>
+      <div class="modal-title">${f.emoji} ${f.name}</div>
+      <div class="modal-sub">📅 ${f.when}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">About this festival</div>
+      <p class="modal-text">${f.desc}</p>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">Highlights</div>
+      <div class="modal-list">${f.highlights.map(h => `<div class="modal-list-item">${h}</div>`).join('')}</div>
+    `;
+    openModal();
+  }
+
+  // Music
+  function renderMusic() {
+    let showType = 'current';
+    const el = document.getElementById('musicContent');
+
+    function build() {
+      el.innerHTML = `
+        <div class="sub-rule">Genres</div>
+        <div class="genre-grid">
+          ${GH.music_genres.map(g => `
+            <div class="genre-card">
+              <span class="genre-icon">${g.icon}</span>
+              <div class="genre-origin">${g.origin}</div>
+              <div class="genre-name">${g.name}</div>
+              <div class="genre-desc">${g.desc}</div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="sub-rule" style="margin-top:2.5rem">Artists</div>
+        <div class="music-toggle">
+          <button class="music-toggle-btn ${showType==='current'?'active':''}" id="btn-cur">Current Stars</button>
+          <button class="music-toggle-btn ${showType==='legends'?'active':''}" id="btn-leg">Legends</button>
+        </div>
+        <div class="artists-grid" id="artistsGrid"></div>
+
+        <div style="margin-top:2rem;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-lg);padding:1.5rem">
+          <div style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gh-gold);margin-bottom:.85rem">🎊 Detty December & Music</div>
+          <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75">Detty December has transformed Accra into Africa's undisputed December music destination. Afronation Ghana brings global Afrobeats stars to Accra's beaches. AfricanXXchange celebrates Ghana's fashion, music, and art. The Ghana Music Awards (VGMA) — held annually — is West Africa's most prestigious music ceremony, celebrating everything from Highlife to Gospel to Hiplife.</p>
+        </div>
+      `;
+
+      renderArtistsGrid(showType);
+
+      document.getElementById('btn-cur')?.addEventListener('click', () => { showType='current'; build(); });
+      document.getElementById('btn-leg')?.addEventListener('click', () => { showType='legends'; build(); });
+    }
+
+    build();
+  }
+
+  function renderArtistsGrid(type) {
+    const data = type === 'current' ? GH.current_artists : GH.legend_artists;
+    document.getElementById('artistsGrid').innerHTML = data.map(a => `
+      <div class="artist-card">
+        <div class="artist-avatar" style="--av1:${a.av1};--av2:${a.av2}">${a.emoji}</div>
+        <div class="artist-name">${a.name}</div>
+        <div class="artist-genre">${a.genre}</div>
+        <div class="artist-note">${a.note}</div>
+      </div>
+    `).join('');
+  }
+
+  // History
+  function renderHistory() {
+    document.getElementById('historyTimeline').innerHTML = GH.history.map(h => `
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">${h.period}</div>
+        <div class="timeline-event">${h.event}</div>
+        <div class="timeline-desc">${h.desc}</div>
+      </div>
+    `).join('');
+  }
+
+  // Regions
+  function renderRegions() {
+    document.getElementById('regionsGrid').innerHTML = GH.regions.map(r => `
+      <div class="region-card">
+        <div class="region-zone">${r.zone} Ghana</div>
+        <div class="region-name">${r.name} Region</div>
+        <div class="region-capital">Capital: ${r.capital}</div>
+        <div class="region-note">${r.note}</div>
+      </div>
+    `).join('');
+  }
+
+  // Proverbs
+  function renderProverbs() {
+    document.getElementById('proverbsGrid').innerHTML = GH.proverbs.map(p => `
+      <div class="proverb-card">
+        <div class="proverb-lang">${p.lang}</div>
+        <div class="proverb-text">${p.text}</div>
+        <div class="proverb-meaning"><strong style="color:var(--gh-gold)">Meaning:</strong> ${p.meaning}</div>
+        <div class="proverb-lesson">${p.lesson}</div>
+      </div>
+    `).join('');
+  }
+
+  // Travel
+  function renderTravel() {
+    document.getElementById('travelGrid').innerHTML = GH.travel_places.map((p, i) => `
+      <div class="travel-card ${p.featured && i===0 ? 'featured' : ''}" onclick="openTravelModal(${i})">
+        <div class="travel-visual">
+          <span class="travel-emoji">${p.emoji}</span>
+          <div class="travel-type">${p.type}</div>
+          <div class="travel-name">${p.name}</div>
+          <div class="travel-region">📍 ${p.region}</div>
+        </div>
+        <div class="travel-body">
+          <div class="travel-desc">${p.desc.slice(0,200)}${p.desc.length>200?'...':''}</div>
+          <div class="travel-tips">
+            ${p.tips.slice(0,2).map(t => `<div class="travel-tip">${t}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('tipRows').innerHTML = `
+      <div class="tips-card">
+        <div class="tips-card-title">💰 Budget Tips</div>
+        <div class="tips-list">${GH.budget_tips.map(t => `<div class="tips-item">${t}</div>`).join('')}</div>
+      </div>
+      <div class="tips-card">
+        <div class="tips-card-title">🛡️ Safety Tips</div>
+        <div class="tips-list">${GH.safety_tips.map(t => `<div class="tips-item">${t}</div>`).join('')}</div>
+      </div>
+    `;
+  }
+
+  function openTravelModal(i) {
+    const p = GH.travel_places[i];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Travel & Places · ${p.type}</div>
+      <div class="modal-title">${p.emoji} ${p.name}</div>
+      <div class="modal-sub">📍 ${p.region}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">About this place</div>
+      <p class="modal-text">${p.desc}</p>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">Insider Tips</div>
+      <div class="modal-list">${p.tips.map(t => `<div class="modal-list-item">${t}</div>`).join('')}</div>
+    `;
+    openModal();
+  }
+
+  // Sidebar
+  function renderSidebar() {
+    document.getElementById('quickFacts').innerHTML = [
+      { k:'🌍 Region', v:'West Africa' },
+      { k:'🏛 Capital', v:'Accra' },
+      { k:'👥 Population', v:'~33 million' },
+      { k:'📅 Independence', v:'March 6, 1957' },
+      { k:'💰 Currency', v:'Cedi (₵)' },
+      { k:'📞 Dialling Code', v:'+233' },
+      { k:'🗣 Languages', v:'~80 languages' },
+      { k:'🏳️ Regions', v:'16 Regions' },
+      { k:'🏆 1st in Africa', v:'Sub-Saharan independence' },
+      { k:'🍫 Top Export', v:'Cocoa (world #2)' },
+    ].map(r => `
+      <div class="qf-row">
+        <div class="qf-key">${r.k}</div>
+        <div class="qf-val">${r.v}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('jumpLinks').innerHTML = [
+      { sec:'overview',      label:'🗺 Overview' },
+      { sec:'ethnic-groups', label:'👥 Ethnic Groups' },
+      { sec:'languages',     label:'🗣 Languages' },
+      { sec:'food',          label:'🍛 Food' },
+      { sec:'dressing',      label:'🧵 Dressing' },
+      { sec:'adinkra',       label:'✨ Adinkra' },
+      { sec:'marriage',      label:'💍 Marriage' },
+      { sec:'beliefs',       label:'🌿 Beliefs' },
+      { sec:'festivals',     label:'🎊 Festivals' },
+      { sec:'music',         label:'🎵 Music' },
+      { sec:'history',       label:'📜 History' },
+      { sec:'regions',       label:'🗺 Regions' },
+      { sec:'proverbs',      label:'✨ Proverbs' },
+      { sec:'travel',        label:'🧭 Travel' },
+    ].map(l => `<a href="#sec-${l.sec}" class="jump-link">${l.label}</a>`).join('');
+
+    document.getElementById('relatedList').innerHTML = [
+      { flag:'🇳🇬', name:'Nigeria',       slug:'nigeria' },
+      { flag:'🇨🇮', name:"Côte d'Ivoire", slug:'cote-divoire' },
+      { flag:'🇧🇯', name:'Benin',         slug:'benin' },
+      { flag:'🇹🇬', name:'Togo',          slug:'togo' },
+      { flag:'🇧🇫', name:'Burkina Faso',  slug:'burkina-faso' },
+    ].map(c => `
+      <a href="${c.slug}.html" class="related-item">
+        <span style="font-size:1.2rem">${c.flag}</span>
+        <span>${c.name}</span>
+        <span style="margin-left:auto;font-size:.72rem;color:var(--text-muted)">→</span>
+      </a>
+    `).join('');
+  }
+
+  /* ── SECTION NAV OBSERVER ──────────────────────────────────── */
+  const SECTIONS = ['overview','ethnic-groups','languages','food','dressing','adinkra','marriage','beliefs','festivals','music','history','regions','proverbs','travel'];
+
+  document.getElementById('sectionNav').addEventListener('click', e => {
+    const btn = e.target.closest('.sec-btn'); if (!btn) return;
+    const target = document.getElementById(`sec-${btn.dataset.sec}`);
+    if (target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+
+  const secObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id.replace('sec-','');
+        document.querySelectorAll('.sec-btn').forEach(b => b.classList.toggle('active', b.dataset.sec === id));
+        document.querySelectorAll('.jump-link').forEach(l => l.classList.toggle('active-link', l.getAttribute('href') === `#sec-${id}`));
+      }
+    });
+  }, { threshold:0.15, rootMargin:'-68px 0px -60% 0px' });
+
+  SECTIONS.forEach(s => { const el = document.getElementById(`sec-${s}`); if (el) secObserver.observe(el); });
+
+  /* ── MODAL ─────────────────────────────────────────────────── */
+  function openModal()  { document.getElementById('modalOverlay').classList.add('open'); }
+  function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalOverlay').addEventListener('click', e => { if (e.target === document.getElementById('modalOverlay')) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* ── BOOKMARK ──────────────────────────────────────────────── */
+  const bookmarkBtn = document.getElementById('bookmarkBtn');
+  let bm = JSON.parse(localStorage.getItem('frica_bookmarks') || '[]');
+  function updateBMBtn() {
+    const saved = bm.includes('ghana');
+    bookmarkBtn.textContent = saved ? '📌 Saved!' : '📌 Save Ghana';
+    bookmarkBtn.classList.toggle('saved', saved);
+  }
+  bookmarkBtn.addEventListener('click', () => {
+    if (bm.includes('ghana')) bm = bm.filter(b => b !== 'ghana');
+    else bm.push('ghana');
+    localStorage.setItem('frica_bookmarks', JSON.stringify(bm));
+    updateBMBtn();
+  });
+  updateBMBtn();
+
+  /* ── MISC ──────────────────────────────────────────────────── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+  }, { passive:true });
+
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+  /* ── INIT ──────────────────────────────────────────────────── */
+  renderOverview();
+  renderEthnicGroups();
+  renderLanguages();
+  renderFood();
+  renderDressing();
+  renderAdinkra();
+  renderMarriage();
+  renderBeliefs();
+  renderFestivals();
+  renderMusic();
+  renderHistory();
+  renderRegions();
+  renderProverbs();
+  renderTravel();
+  renderSidebar();
+  </script>
+</body>
+</html>

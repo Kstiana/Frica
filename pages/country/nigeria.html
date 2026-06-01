@@ -1,1 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigeria — Frica | Giant of Africa</title>
+  <meta name="description" content="Explore Nigeria — Africa's most populous nation. Yoruba, Igbo, Hausa-Fulani cultures, Afrobeats, Nollywood, food, festivals, history, and all 36 states." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --bg:         #0d0f0a;
+      --bg-card:    #131610;
+      --bg-raise:   #1a1e14;
+      --gold:       #c8952a;
+      --gold-light: #e8b84b;
+      --gold-dim:   rgba(200,149,42,0.13);
+      --green:      #2a4a2e;
+      --green-mid:  #3d6b43;
+      --cream:      #f0e8d5;
+      --text:       #e8e0cc;
+      --text-muted: rgba(232,224,204,0.45);
+      --text-soft:  rgba(232,224,204,0.72);
+      --border:     rgba(200,149,42,0.18);
+      --border-dim: rgba(232,224,204,0.07);
+      --red:        #c0392b;
+      /* Nigeria flag colors */
+      --ng-green:   #008751;
+      --ng-white:   #f0f0f0;
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  20px;
+      --radius-xl:  32px;
+      --nav-h:      68px;
+      --t:          0.28s;
+    }
+
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-weight:400; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button { cursor:pointer; border:none; background:none; font-family:inherit; }
+    ul { list-style:none; }
+
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--gold); border-radius:3px; }
+
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity:0.03; pointer-events:none; z-index:9999; }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    .nav { position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:1000; background:rgba(13,15,10,0.94); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dim); display:flex; align-items:center; padding:0 clamp(1.25rem,4vw,3rem); transition:border-color var(--t); }
+    .nav.scrolled { border-color:var(--border); }
+    .nav-inner { width:100%; max-width:1400px; margin:0 auto; display:flex; align-items:center; gap:1.5rem; }
+    .logo { display:flex; align-items:center; gap:.6rem; flex-shrink:0; }
+    .logo-mark { width:36px; height:36px; background:var(--gold); border-radius:8px; display:grid; place-items:center; font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:#0d0f0a; }
+    .logo-text { font-family:'Playfair Display',serif; font-weight:700; font-size:1.4rem; color:var(--cream); }
+    .logo-text span { color:var(--gold); }
+    .nav-links { display:flex; align-items:center; gap:.25rem; flex:1; }
+    .nav-links a { padding:.45rem .85rem; border-radius:var(--radius-sm); font-size:.875rem; font-weight:500; color:var(--text-soft); transition:color var(--t),background var(--t); }
+    .nav-links a:hover { color:var(--cream); background:var(--border-dim); }
+    .nav-links a.active { color:var(--gold-light); }
+    .nav-right { display:flex; align-items:center; gap:.75rem; margin-left:auto; }
+    .bookmark-btn { display:flex; align-items:center; gap:.5rem; padding:.45rem 1rem; border-radius:var(--radius-lg); border:1.5px solid var(--border-dim); font-size:.8rem; font-weight:600; color:var(--text-soft); transition:var(--t); }
+    .bookmark-btn:hover, .bookmark-btn.saved { border-color:var(--gold); color:var(--gold-light); background:var(--gold-dim); }
+    .hamburger { display:none; flex-direction:column; gap:5px; padding:8px; border-radius:var(--radius-sm); }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--text-soft); border-radius:2px; transition:var(--t); }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .mobile-menu { display:none; position:fixed; top:var(--nav-h); left:0; right:0; background:rgba(13,15,10,0.97); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); z-index:999; padding:1.5rem clamp(1.25rem,4vw,3rem); flex-direction:column; gap:.5rem; animation:slideDown .25s ease; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { padding:.75rem 1rem; border-radius:var(--radius-sm); font-size:1rem; font-weight:500; color:var(--text-soft); transition:var(--t); border-bottom:1px solid var(--border-dim); }
+    .mobile-menu a:last-child { border-bottom:none; }
+    .mobile-menu a:hover { color:var(--cream); background:var(--border-dim); }
+    @keyframes slideDown { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .country-hero { padding-top:var(--nav-h); position:relative; overflow:hidden; }
+
+    .hero-bg-strip {
+      height:280px; position:relative; overflow:hidden;
+      background:linear-gradient(135deg,rgba(0,135,81,0.25),rgba(0,135,81,0.08),rgba(200,149,42,0.12));
+    }
+    .hero-bg-strip::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(200,149,42,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,149,42,.04) 1px,transparent 1px); background-size:50px 50px; }
+
+    /* Nigeria flag stripes decorative */
+    .hero-flag-accent {
+      position:absolute; top:0; right:0; bottom:0; width:220px;
+      display:flex; opacity:.12;
+    }
+    .flag-stripe { flex:1; }
+    .flag-stripe.green { background:var(--ng-green); }
+    .flag-stripe.white { background:white; }
+
+    /* Floating orbs */
+    .hero-orb { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; }
+    .orb1 { width:400px; height:400px; background:radial-gradient(circle,rgba(0,135,81,.3),transparent); top:-20%; left:-5%; opacity:.4; }
+    .orb2 { width:350px; height:350px; background:radial-gradient(circle,rgba(200,149,42,.4),transparent); bottom:-20%; right:10%; opacity:.3; }
+
+    .hero-content { max-width:1400px; margin:0 auto; padding:clamp(2rem,4vw,3rem) clamp(1.25rem,4vw,3rem); position:relative; z-index:1; display:grid; grid-template-columns:1fr 340px; gap:2.5rem; align-items:end; margin-top:-120px; }
+
+    /* Breadcrumb */
+    .breadcrumb { position:absolute; top:calc(var(--nav-h) + 1.25rem); left:clamp(1.25rem,4vw,3rem); z-index:2; display:flex; align-items:center; gap:.5rem; font-size:.78rem; color:var(--text-muted); }
+    .breadcrumb a { transition:color var(--t); }
+    .breadcrumb a:hover { color:var(--gold-light); }
+    .breadcrumb-sep { color:var(--border); }
+
+    /* Flag + country name */
+    .hero-left {}
+    .country-flag-big { font-size:clamp(4rem,8vw,7rem); line-height:1; display:block; margin-bottom:1rem; filter:drop-shadow(0 8px 24px rgba(0,0,0,.5)); }
+    .country-name { font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(2.5rem,6vw,5rem); color:var(--cream); line-height:1.05; letter-spacing:-.02em; margin-bottom:.4rem; }
+    .country-official { font-size:.85rem; color:var(--text-muted); margin-bottom:.85rem; }
+    .country-tagline { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:var(--gold-light); margin-bottom:1.25rem; }
+    .country-desc { font-size:.95rem; color:var(--text-soft); line-height:1.75; max-width:580px; }
+
+    /* Quick stats card */
+    .hero-stats-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); padding:1.75rem; }
+    .stat-row { display:flex; justify-content:space-between; align-items:center; padding:.7rem 0; border-bottom:1px solid var(--border-dim); }
+    .stat-row:last-child { border-bottom:none; }
+    .stat-key { font-size:.78rem; color:var(--text-muted); display:flex; align-items:center; gap:.4rem; }
+    .stat-val { font-size:.88rem; color:var(--cream); font-weight:600; text-align:right; max-width:180px; }
+
+    /* Nigeria flag badge */
+    .ng-flag-badge { display:flex; height:8px; border-radius:4px; overflow:hidden; margin-bottom:1.25rem; width:60px; }
+    .ng-flag-badge div { flex:1; }
+    .ng-flag-badge .g { background:var(--ng-green); }
+    .ng-flag-badge .w { background:#fff; }
+
+    /* Known for tags */
+    .known-for { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1.25rem; }
+    .known-tag { font-size:.72rem; font-weight:500; padding:.3rem .7rem; border-radius:var(--radius-sm); background:rgba(0,135,81,.1); border:1px solid rgba(0,135,81,.25); color:#4dcf8f; }
+
+    /* ── SECTION NAV ─────────────────────────────────────────── */
+    .section-nav { position:sticky; top:var(--nav-h); z-index:100; background:rgba(13,15,10,0.96); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dim); padding:0 clamp(1.25rem,4vw,3rem); }
+    .section-nav-inner { max-width:1400px; margin:0 auto; display:flex; overflow-x:auto; scrollbar-width:none; }
+    .section-nav-inner::-webkit-scrollbar { display:none; }
+    .sec-btn { display:flex; align-items:center; gap:.4rem; padding:0 1rem; height:50px; font-size:.82rem; font-weight:600; color:var(--text-muted); border-bottom:2.5px solid transparent; white-space:nowrap; transition:color var(--t),border-color var(--t); flex-shrink:0; }
+    .sec-btn:hover { color:var(--cream); }
+    .sec-btn.active { color:var(--ng-green); border-color:var(--ng-green); }
+
+    /* ── MAIN LAYOUT ─────────────────────────────────────────── */
+    .main-layout { max-width:1400px; margin:0 auto; padding:3rem clamp(1.25rem,4vw,3rem) 6rem; display:grid; grid-template-columns:1fr 280px; gap:2.5rem; align-items:start; }
+
+    /* ── SECTIONS ────────────────────────────────────────────── */
+    .sections { display:flex; flex-direction:column; gap:4rem; }
+
+    .country-section { scroll-margin-top:calc(var(--nav-h) + 56px); }
+
+    .sec-header { margin-bottom:2rem; }
+    .sec-label { display:inline-flex; align-items:center; gap:.5rem; font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.6rem; }
+    .sec-label::before { content:''; display:block; width:24px; height:1.5px; background:var(--ng-green); }
+    .sec-title { font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(1.5rem,3.5vw,2.2rem); color:var(--cream); line-height:1.15; letter-spacing:-.02em; }
+    .sec-title em { font-style:italic; color:var(--gold-light); }
+    .sec-desc { font-size:.95rem; color:var(--text-soft); max-width:560px; line-height:1.75; margin-top:.6rem; }
+
+    /* Sub-title rule */
+    .sub-rule { font-family:'Playfair Display',serif; font-weight:700; font-size:1.1rem; color:var(--cream); display:flex; align-items:center; gap:.75rem; margin-bottom:1.1rem; margin-top:2rem; }
+    .sub-rule::after { content:''; flex:1; height:1px; background:var(--border-dim); }
+
+    /* ── ETHNIC GROUPS ───────────────────────────────────────── */
+    .ethnic-tabs { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:1.75rem; }
+    .eth-tab { padding:.4rem 1rem; border-radius:var(--radius-xl); border:1px solid var(--border-dim); font-size:.8rem; font-weight:600; color:var(--text-muted); transition:var(--t); cursor:pointer; }
+    .eth-tab:hover { color:var(--cream); border-color:var(--border); }
+    .eth-tab.active { background:var(--ng-green); color:#fff; border-color:transparent; }
+
+    .ethnic-panel { display:none; animation:fadeUp .3s ease both; }
+    .ethnic-panel.active { display:block; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+
+    .ethnic-hero { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-xl); overflow:hidden; margin-bottom:1.5rem; }
+    .ethnic-hero-top { padding:2rem; background:linear-gradient(135deg,rgba(0,135,81,.15),rgba(200,149,42,.06)); border-bottom:1px solid var(--border-dim); display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .ethnic-name { font-family:'Playfair Display',serif; font-weight:900; font-size:2rem; color:var(--cream); margin-bottom:.25rem; }
+    .ethnic-lang { font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.6rem; }
+    .ethnic-pop { font-size:.82rem; color:var(--text-muted); margin-bottom:.75rem; }
+    .ethnic-desc { font-size:.88rem; color:var(--text-soft); line-height:1.75; }
+    .ethnic-facts { display:flex; flex-direction:column; gap:.5rem; }
+    .ethnic-fact { display:flex; align-items:flex-start; gap:.6rem; font-size:.8rem; color:var(--text-muted); line-height:1.55; }
+    .ethnic-fact::before { content:'✦'; color:var(--ng-green); flex-shrink:0; font-size:.6rem; margin-top:.2rem; }
+
+    .ethnic-hero-body { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr)); gap:0; }
+    .ethnic-detail { padding:1.25rem 1.5rem; border-right:1px solid var(--border-dim); border-bottom:1px solid var(--border-dim); }
+    .ethnic-detail:last-child { border-right:none; }
+    .ethnic-detail-label { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:.5rem; }
+    .ethnic-detail-content { font-size:.82rem; color:var(--text-soft); line-height:1.65; }
+    .detail-tags { display:flex; flex-wrap:wrap; gap:.3rem; margin-top:.4rem; }
+    .detail-tag { font-size:.68rem; padding:.2rem .5rem; border-radius:var(--radius-sm); background:var(--border-dim); color:var(--text-muted); }
+
+    /* ── FOOD GRID ───────────────────────────────────────────── */
+    .food-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr)); gap:1rem; }
+    .food-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); cursor:pointer; }
+    .food-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.4); }
+    .food-card.featured { grid-column:span 2; display:grid; grid-template-columns:auto 1fr; }
+    .food-emoji { font-size:2.5rem; padding:1.5rem 1.25rem .75rem; display:block; line-height:1; }
+    .food-card.featured .food-emoji { font-size:3.5rem; padding:1.75rem; align-self:center; }
+    .food-body { padding:0 1.25rem 1.25rem; }
+    .food-card.featured .food-body { padding:1.75rem 1.75rem 1.75rem 0; }
+    .food-origin { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.3rem; }
+    .food-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; color:var(--cream); margin-bottom:.4rem; }
+    .food-card.featured .food-name { font-size:1.35rem; }
+    .food-desc { font-size:.8rem; color:var(--text-muted); line-height:1.65; margin-bottom:.85rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .food-card.featured .food-desc { -webkit-line-clamp:4; }
+    .food-tag { font-size:.68rem; font-weight:500; padding:.2rem .55rem; border-radius:var(--radius-sm); background:rgba(0,135,81,.1); color:#4dcf8f; border:1px solid rgba(0,135,81,.2); }
+
+    /* ── HISTORY TIMELINE ────────────────────────────────────── */
+    .timeline { position:relative; padding-left:2rem; }
+    .timeline::before { content:''; position:absolute; left:.6rem; top:.5rem; bottom:.5rem; width:1.5px; background:linear-gradient(to bottom,var(--ng-green),var(--gold),transparent); }
+    .timeline-item { position:relative; margin-bottom:2rem; }
+    .timeline-dot { position:absolute; left:-1.55rem; top:.35rem; width:12px; height:12px; border-radius:50%; background:var(--ng-green); border:2px solid var(--bg); box-shadow:0 0 0 3px rgba(0,135,81,.2); flex-shrink:0; }
+    .timeline-period { font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.3rem; }
+    .timeline-event { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); margin-bottom:.4rem; }
+    .timeline-desc { font-size:.84rem; color:var(--text-soft); line-height:1.7; }
+
+    /* ── MARRIAGE TRADITIONS ─────────────────────────────────── */
+    .marriage-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr)); gap:1.1rem; }
+    .marriage-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); }
+    .marriage-card:hover { border-color:var(--border); }
+    .marriage-top { padding:1.5rem; border-bottom:1px solid var(--border-dim); background:linear-gradient(135deg,rgba(0,135,81,.1),transparent); }
+    .marriage-type { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.35rem; }
+    .marriage-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.05rem; color:var(--cream); margin-bottom:.25rem; }
+    .marriage-group { font-size:.75rem; color:var(--text-muted); }
+    .marriage-body { padding:1.25rem 1.5rem; }
+    .marriage-steps { display:flex; flex-direction:column; gap:.6rem; }
+    .marriage-step { display:flex; align-items:flex-start; gap:.7rem; }
+    .step-n { width:22px; height:22px; border-radius:6px; background:rgba(0,135,81,.12); border:1px solid rgba(0,135,81,.3); display:grid; place-items:center; font-family:'DM Mono',monospace; font-size:.62rem; color:var(--ng-green); flex-shrink:0; margin-top:.1rem; }
+    .step-text { font-size:.8rem; color:var(--text-muted); line-height:1.6; }
+
+    /* ── BELIEFS ─────────────────────────────────────────────── */
+    .beliefs-layout { display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+    .belief-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); }
+    .belief-card:hover { border-color:var(--border); }
+    .belief-card.wide { grid-column:span 2; }
+    .belief-header { padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-dim); display:flex; align-items:center; gap:.85rem; background:linear-gradient(135deg,var(--bh-bg,rgba(200,149,42,.08)),transparent); }
+    .belief-icon { width:44px; height:44px; border-radius:10px; background:var(--bh-bg,rgba(200,149,42,.12)); display:grid; place-items:center; font-size:1.25rem; flex-shrink:0; }
+    .belief-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); }
+    .belief-sub { font-size:.72rem; color:var(--text-muted); margin-top:.1rem; }
+    .belief-body { padding:1.25rem 1.5rem; }
+    .belief-text { font-size:.85rem; color:var(--text-soft); line-height:1.75; margin-bottom:1rem; }
+    .deity-list { display:flex; flex-direction:column; gap:.5rem; }
+    .deity-item { display:flex; align-items:flex-start; gap:.65rem; padding:.65rem .85rem; background:var(--bg-raise); border:1px solid var(--border-dim); border-radius:var(--radius-md); }
+    .deity-emoji { font-size:1rem; flex-shrink:0; margin-top:.05rem; }
+    .deity-name  { font-weight:600; font-size:.82rem; color:var(--cream); }
+    .deity-role  { font-size:.74rem; color:var(--text-muted); margin-top:.1rem; line-height:1.5; }
+
+    /* ── FESTIVALS ───────────────────────────────────────────── */
+    .festivals-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr)); gap:1.1rem; }
+    .festival-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); cursor:pointer; }
+    .festival-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.4); }
+    .festival-top { padding:1.5rem; border-bottom:1px solid var(--border-dim); background:linear-gradient(135deg,rgba(0,135,81,.1),rgba(200,149,42,.06)); display:flex; gap:1rem; align-items:flex-start; }
+    .festival-emoji { font-size:2rem; flex-shrink:0; line-height:1; }
+    .festival-when { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.25rem; }
+    .festival-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); margin-bottom:.2rem; line-height:1.3; }
+    .festival-group { font-size:.72rem; color:var(--text-muted); }
+    .festival-body { padding:1.25rem; }
+    .festival-desc { font-size:.82rem; color:var(--text-soft); line-height:1.7; margin-bottom:.85rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .festival-highlights { display:flex; flex-direction:column; gap:.35rem; }
+    .festival-hl { display:flex; align-items:flex-start; gap:.5rem; font-size:.75rem; color:var(--text-muted); }
+    .festival-hl::before { content:'✦'; color:var(--ng-green); flex-shrink:0; font-size:.6rem; margin-top:.2rem; }
+    .festival-badge { display:inline-block; margin-top:.85rem; padding:.25rem .65rem; border-radius:var(--radius-sm); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; background:rgba(0,135,81,.12); color:#4dcf8f; border:1px solid rgba(0,135,81,.25); }
+
+    /* ── MUSIC ───────────────────────────────────────────────── */
+    .music-toggle { display:flex; background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:.3rem; gap:.2rem; width:fit-content; margin-bottom:1.5rem; }
+    .music-toggle-btn { padding:.45rem 1.25rem; border-radius:var(--radius-md); font-size:.82rem; font-weight:600; color:var(--text-muted); transition:var(--t); }
+    .music-toggle-btn.active { background:var(--ng-green); color:#fff; }
+
+    .genre-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr)); gap:1rem; }
+    .genre-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.5rem; transition:var(--t); }
+    .genre-card:hover { border-color:var(--border); background:var(--bg-raise); }
+    .genre-icon { font-size:1.75rem; display:block; margin-bottom:.75rem; }
+    .genre-origin { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.3rem; }
+    .genre-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); margin-bottom:.4rem; }
+    .genre-desc { font-size:.78rem; color:var(--text-muted); line-height:1.65; }
+
+    .artists-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr)); gap:.85rem; }
+    .artist-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-md); padding:1.25rem; transition:var(--t); }
+    .artist-card:hover { border-color:var(--border); background:var(--bg-raise); }
+    .artist-avatar { width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,var(--av1,var(--ng-green)),var(--av2,var(--gold))); display:grid; place-items:center; font-size:1.3rem; margin-bottom:.75rem; }
+    .artist-name { font-family:'Playfair Display',serif; font-weight:700; font-size:.92rem; color:var(--cream); margin-bottom:.15rem; }
+    .artist-genre { font-size:.7rem; color:var(--ng-green); font-family:'DM Mono',monospace; letter-spacing:.06em; margin-bottom:.4rem; }
+    .artist-note { font-size:.74rem; color:var(--text-muted); line-height:1.55; padding-top:.5rem; border-top:1px solid var(--border-dim); margin-top:.5rem; }
+
+    /* ── ADMINISTRATIVE DIVISIONS ────────────────────────────── */
+    .zones-grid { display:flex; flex-direction:column; gap:1.5rem; }
+    .zone-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; }
+    .zone-header { padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-dim); display:flex; align-items:center; gap:.85rem; background:linear-gradient(135deg,rgba(0,135,81,.1),transparent); }
+    .zone-dot { width:10px; height:10px; border-radius:50%; background:var(--zc,var(--ng-green)); flex-shrink:0; }
+    .zone-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1rem; color:var(--cream); }
+    .zone-groups { font-size:.72rem; color:var(--text-muted); }
+    .zone-note { font-size:.72rem; color:var(--text-soft); line-height:1.55; padding:.85rem 1.5rem; border-bottom:1px solid var(--border-dim); background:var(--bg-raise); }
+    .states-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:.5rem; padding:1.25rem 1.5rem; }
+    .state-chip { background:var(--bg-raise); border:1px solid var(--border-dim); border-radius:var(--radius-md); padding:.6rem .85rem; transition:var(--t); }
+    .state-chip:hover { border-color:rgba(0,135,81,.3); background:rgba(0,135,81,.06); }
+    .state-name { font-size:.82rem; color:var(--cream); font-weight:600; }
+    .state-capital { font-size:.68rem; color:var(--text-muted); margin-top:.1rem; }
+
+    /* ── PROVERBS ─────────────────────────────────────────────── */
+    .proverbs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr)); gap:1rem; }
+    .proverb-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.75rem; transition:var(--t); position:relative; overflow:hidden; }
+    .proverb-card::before { content:'"'; position:absolute; top:-1rem; left:.75rem; font-family:'Playfair Display',serif; font-size:8rem; color:rgba(0,135,81,.06); line-height:1; pointer-events:none; }
+    .proverb-card:hover { border-color:var(--border); transform:translateY(-2px); }
+    .proverb-lang { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.6rem; }
+    .proverb-text { font-family:'Playfair Display',serif; font-style:italic; font-size:1rem; color:var(--cream); line-height:1.55; margin-bottom:.85rem; }
+    .proverb-meaning { font-size:.8rem; color:var(--text-soft); line-height:1.65; padding-top:.75rem; border-top:1px solid var(--border-dim); }
+    .proverb-lesson { margin-top:.5rem; font-size:.75rem; color:var(--text-muted); display:flex; align-items:flex-start; gap:.4rem; line-height:1.55; }
+    .proverb-lesson::before { content:'💡'; flex-shrink:0; }
+
+    /* ── TRAVEL ───────────────────────────────────────────────── */
+    .travel-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr)); gap:1.1rem; }
+    .travel-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; transition:var(--t); cursor:pointer; }
+    .travel-card:hover { border-color:var(--border); transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.4); }
+    .travel-card.featured { grid-column:span 2; display:grid; grid-template-columns:1fr 1fr; }
+    .travel-visual { padding:1.75rem; background:linear-gradient(135deg,rgba(0,135,81,.15),rgba(200,149,42,.08)); border-bottom:1px solid var(--border-dim); }
+    .travel-card.featured .travel-visual { border-bottom:none; border-right:1px solid var(--border-dim); }
+    .travel-emoji { font-size:2.5rem; display:block; margin-bottom:.75rem; }
+    .travel-type { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.3rem; }
+    .travel-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.1rem; color:var(--cream); margin-bottom:.25rem; }
+    .travel-region { font-size:.72rem; color:var(--text-muted); }
+    .travel-body { padding:1.25rem; }
+    .travel-desc { font-size:.82rem; color:var(--text-soft); line-height:1.7; margin-bottom:.85rem; }
+    .travel-tips { display:flex; flex-direction:column; gap:.35rem; }
+    .travel-tip { font-size:.75rem; color:var(--text-muted); display:flex; align-items:flex-start; gap:.4rem; }
+    .travel-tip::before { content:'→'; color:var(--ng-green); flex-shrink:0; }
+
+    /* Budget & safety tip rows */
+    .tips-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem; }
+    .tips-card { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); padding:1.5rem; }
+    .tips-card-title { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
+    .tips-list { display:flex; flex-direction:column; gap:.6rem; }
+    .tips-item { font-size:.82rem; color:var(--text-soft); display:flex; align-items:flex-start; gap:.5rem; line-height:1.6; }
+    .tips-item::before { content:'💡'; flex-shrink:0; }
+
+    /* ── SIDEBAR ─────────────────────────────────────────────── */
+    .sidebar { display:flex; flex-direction:column; gap:1.1rem; position:sticky; top:calc(var(--nav-h) + 58px); }
+
+    .side-block { background:var(--bg-card); border:1px solid var(--border-dim); border-radius:var(--radius-lg); overflow:hidden; }
+    .side-block-title { padding:.9rem 1.25rem; font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ng-green); border-bottom:1px solid var(--border-dim); }
+
+    /* Quick facts */
+    .quick-facts { padding:.75rem 1.25rem; }
+    .qf-row { display:flex; justify-content:space-between; align-items:flex-start; padding:.55rem 0; border-bottom:1px solid var(--border-dim); gap:.5rem; }
+    .qf-row:last-child { border-bottom:none; }
+    .qf-key { font-size:.74rem; color:var(--text-muted); flex-shrink:0; }
+    .qf-val { font-size:.78rem; color:var(--cream); font-weight:500; text-align:right; }
+
+    /* Section jump links */
+    .jump-links { padding:.75rem; display:flex; flex-direction:column; gap:.3rem; }
+    .jump-link { padding:.5rem .75rem; border-radius:var(--radius-sm); font-size:.8rem; font-weight:500; color:var(--text-muted); transition:var(--t); display:flex; align-items:center; gap:.5rem; }
+    .jump-link:hover { color:var(--cream); background:var(--border-dim); }
+    .jump-link.active-link { color:var(--ng-green); background:rgba(0,135,81,.08); }
+
+    /* Related countries */
+    .related-list { padding:.75rem 1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+    .related-item { display:flex; align-items:center; gap:.6rem; padding:.5rem .65rem; border-radius:var(--radius-sm); background:var(--bg-raise); border:1px solid var(--border-dim); font-size:.82rem; color:var(--text-soft); transition:var(--t); }
+    .related-item:hover { border-color:var(--border); color:var(--cream); }
+
+    /* ── MODAL ────────────────────────────────────────────────── */
+    .modal-overlay { position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,.87); backdrop-filter:blur(12px); display:none; align-items:center; justify-content:center; padding:1.5rem; }
+    .modal-overlay.open { display:flex; }
+    .modal { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); width:100%; max-width:680px; max-height:88vh; overflow-y:auto; animation:modalIn .25s ease; position:relative; }
+    @keyframes modalIn { from{opacity:0;transform:scale(.95) translateY(-10px)} to{opacity:1;transform:scale(1) translateY(0)} }
+    .modal-close { position:absolute; top:1.25rem; right:1.25rem; width:32px; height:32px; border-radius:8px; background:var(--bg-raise); border:1px solid var(--border-dim); color:var(--text-muted); display:grid; place-items:center; font-size:.85rem; cursor:pointer; transition:var(--t); z-index:1; }
+    .modal-close:hover { color:var(--cream); background:var(--border); }
+    .modal-body { padding:2rem; }
+    .modal-tag { font-family:'DM Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.6rem; }
+    .modal-title { font-family:'Playfair Display',serif; font-weight:700; font-size:1.6rem; color:var(--cream); margin-bottom:.4rem; line-height:1.2; }
+    .modal-sub { font-size:.82rem; color:var(--text-muted); margin-bottom:1.25rem; }
+    .modal-divider { height:1px; background:var(--border-dim); margin:1.1rem 0; }
+    .modal-sec-title { font-family:'DM Mono',monospace; font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ng-green); margin-bottom:.65rem; }
+    .modal-text { font-size:.9rem; color:var(--text-soft); line-height:1.8; }
+    .modal-list { display:flex; flex-direction:column; gap:.5rem; }
+    .modal-list-item { display:flex; align-items:flex-start; gap:.6rem; font-size:.875rem; color:var(--text-soft); line-height:1.6; }
+    .modal-list-item::before { content:'→'; color:var(--ng-green); flex-shrink:0; }
+
+    /* ── BACK TOP + FOOTER ───────────────────────────────────── */
+    .back-top { position:fixed; bottom:2rem; right:2rem; width:44px; height:44px; background:var(--ng-green); color:#fff; border-radius:10px; display:grid; place-items:center; cursor:pointer; opacity:0; transform:translateY(10px); transition:opacity var(--t),transform var(--t),background var(--t); z-index:500; box-shadow:0 4px 20px rgba(0,135,81,.35); }
+    .back-top.show { opacity:1; transform:translateY(0); }
+    .back-top:hover { background:#00a362; }
+    .footer { background:var(--bg-card); border-top:1px solid var(--border-dim); padding:2.5rem clamp(1.25rem,4vw,3rem); }
+    .footer-inner { max-width:1400px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; font-size:.82rem; color:var(--text-muted); }
+    .footer-links { display:flex; gap:1.5rem; }
+    .footer-links a { color:var(--text-muted); transition:color var(--t); }
+    .footer-links a:hover { color:var(--gold-light); }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width:1100px) { .main-layout { grid-template-columns:1fr; } .sidebar { position:static; display:grid; grid-template-columns:1fr 1fr; } .hero-content { grid-template-columns:1fr; } }
+    @media (max-width:768px) { .nav-links { display:none; } .hamburger { display:flex; } .ethnic-hero-top { grid-template-columns:1fr; } .beliefs-layout { grid-template-columns:1fr; } .belief-card.wide { grid-column:span 1; } .food-card.featured { grid-column:span 1; display:flex; flex-direction:column; } .travel-card.featured { grid-column:span 1; display:flex; flex-direction:column; } .travel-card.featured .travel-visual { border-right:none; border-bottom:1px solid var(--border-dim); } .tips-row { grid-template-columns:1fr; } .sidebar { grid-template-columns:1fr; } }
+    @media (max-width:520px) { .hero-content { grid-template-columns:1fr; } .states-grid { grid-template-columns:1fr 1fr; } .proverbs-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="../../index.html" class="logo">
+        <div class="logo-mark">F</div>
+        <span class="logo-text">Fr<span>i</span>ca</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../countries.html" class="active">Countries</a></li>
+        <li><a href="../../culture.html">Culture</a></li>
+        <li><a href="../../learn.html">Learn</a></li>
+        <li><a href="../../discover.html">Discover</a></li>
+        <li><a href="../../explore.html">Explore</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="bookmark-btn" id="bookmarkBtn">📌 Save Nigeria</button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../../index.html">🏠 Home</a>
+    <a href="../../countries.html">🌍 Countries</a>
+    <a href="../../culture.html">🎭 Culture</a>
+    <a href="../../learn.html">📖 Learn</a>
+    <a href="../../discover.html">🧭 Discover</a>
+    <a href="../../explore.html">✨ Explore</a>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../../index.html">Frica</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="../../countries.html">Countries</a>
+    <span class="breadcrumb-sep">/</span>
+    <span style="color:var(--cream)">Nigeria</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="country-hero">
+    <div class="hero-bg-strip">
+      <div class="hero-flag-accent">
+        <div class="flag-stripe green"></div>
+        <div class="flag-stripe white"></div>
+        <div class="flag-stripe green"></div>
+      </div>
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="ng-flag-badge"><div class="g"></div><div class="w"></div><div class="g"></div></div>
+        <span class="country-flag-big">🇳🇬</span>
+        <h1 class="country-name">Nigeria</h1>
+        <div class="country-official">Federal Republic of Nigeria</div>
+        <div class="country-tagline">Giant of Africa</div>
+        <p class="country-desc">Africa's most populous nation and largest economy — Nigeria is the beating heart of Afrobeats music, Nollywood cinema, and the ancient civilizations of the Yoruba, Igbo, and Hausa-Fulani peoples. Home to 220 million people across 250+ ethnic groups, speaking 520+ languages — Nigeria is not just a country. It is a continent within a continent.</p>
+        <div class="known-for">
+          <span class="known-tag">🎵 Afrobeats</span>
+          <span class="known-tag">🎬 Nollywood</span>
+          <span class="known-tag">🍛 Jollof Rice</span>
+          <span class="known-tag">🏺 Benin Bronzes</span>
+          <span class="known-tag">🥁 Yoruba Culture</span>
+          <span class="known-tag">📿 Igbo Traditions</span>
+          <span class="known-tag">🕌 Hausa-Fulani Heritage</span>
+        </div>
+      </div>
+
+      <div class="hero-stats-card">
+        <div class="stat-row"><span class="stat-key">🌍 Region</span><span class="stat-val">West Africa</span></div>
+        <div class="stat-row"><span class="stat-key">🏛 Capital</span><span class="stat-val">Abuja</span></div>
+        <div class="stat-row"><span class="stat-key">🏙 Largest City</span><span class="stat-val">Lagos</span></div>
+        <div class="stat-row"><span class="stat-key">👥 Population</span><span class="stat-val">~220 million</span></div>
+        <div class="stat-row"><span class="stat-key">📐 Area</span><span class="stat-val">923,768 km²</span></div>
+        <div class="stat-row"><span class="stat-key">🗣 Official Language</span><span class="stat-val">English</span></div>
+        <div class="stat-row"><span class="stat-key">🗣 Major Languages</span><span class="stat-val">Hausa, Yoruba, Igbo, Pidgin</span></div>
+        <div class="stat-row"><span class="stat-key">💰 Currency</span><span class="stat-val">Nigerian Naira (₦)</span></div>
+        <div class="stat-row"><span class="stat-key">📅 Independence</span><span class="stat-val">October 1, 1960</span></div>
+        <div class="stat-row"><span class="stat-key">🏛 Government</span><span class="stat-val">Federal Presidential Republic</span></div>
+        <div class="stat-row"><span class="stat-key">🌐 Internet TLD</span><span class="stat-val">.ng</span></div>
+        <div class="stat-row"><span class="stat-key">📞 Calling Code</span><span class="stat-val">+234</span></div>
+        <div class="stat-row"><span class="stat-key">💹 GDP (Africa rank)</span><span class="stat-val">#1 — Largest in Africa</span></div>
+        <div class="stat-row"><span class="stat-key">🗣 Total Languages</span><span class="stat-val">520+</span></div>
+        <div class="stat-row"><span class="stat-key">🏳️ States</span><span class="stat-val">36 States + FCT Abuja</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION NAV -->
+  <div class="section-nav">
+    <div class="section-nav-inner" id="sectionNav">
+      <button class="sec-btn active" data-sec="overview">🗺 Overview</button>
+      <button class="sec-btn" data-sec="ethnic-groups">👥 Ethnic Groups</button>
+      <button class="sec-btn" data-sec="languages">🗣 Languages</button>
+      <button class="sec-btn" data-sec="food">🍛 Food</button>
+      <button class="sec-btn" data-sec="dressing">👘 Dressing</button>
+      <button class="sec-btn" data-sec="marriage">💍 Marriage</button>
+      <button class="sec-btn" data-sec="beliefs">🌿 Beliefs</button>
+      <button class="sec-btn" data-sec="festivals">🎊 Festivals</button>
+      <button class="sec-btn" data-sec="music">🎵 Music</button>
+      <button class="sec-btn" data-sec="history">📜 History</button>
+      <button class="sec-btn" data-sec="states">🗺 States</button>
+      <button class="sec-btn" data-sec="proverbs">✨ Proverbs</button>
+      <button class="sec-btn" data-sec="travel">🧭 Travel</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-layout">
+
+    <div class="sections">
+
+      <!-- ═══════════════ OVERVIEW ═══════════════ -->
+      <section class="country-section" id="sec-overview">
+        <div class="sec-header">
+          <div class="sec-label">The big picture</div>
+          <h2 class="sec-title">Overview of <em>Nigeria</em></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem" id="overviewGrid"></div>
+      </section>
+
+      <!-- ═══════════════ ETHNIC GROUPS ═══════════════ -->
+      <section class="country-section" id="sec-ethnic-groups">
+        <div class="sec-header">
+          <div class="sec-label">250+ groups · One nation</div>
+          <h2 class="sec-title">Ethnic <em>Groups</em></h2>
+          <p class="sec-desc">Nigeria has over 250 ethnic groups speaking 520+ languages. The three largest — Hausa-Fulani, Yoruba, and Igbo — account for approximately 60–70% of the population. Each has its own civilization, history, language, and cultural world.</p>
+        </div>
+        <div class="ethnic-tabs" id="ethnicTabs"></div>
+        <div id="ethnicPanels"></div>
+      </section>
+
+      <!-- ═══════════════ LANGUAGES ═══════════════ -->
+      <section class="country-section" id="sec-languages">
+        <div class="sec-header">
+          <div class="sec-label">Most linguistically diverse in Africa</div>
+          <h2 class="sec-title">Languages of <em>Nigeria</em></h2>
+          <p class="sec-desc">Nigeria has over 520 living indigenous languages — the most of any country in Africa. English is the official language, but Nigerian Pidgin (Naija) is the de facto national tongue spoken by 75+ million.</p>
+        </div>
+        <div id="languagesGrid"></div>
+      </section>
+
+      <!-- ═══════════════ FOOD ═══════════════ -->
+      <section class="country-section" id="sec-food">
+        <div class="sec-header">
+          <div class="sec-label">Bold, aromatic, communal</div>
+          <h2 class="sec-title">Food &amp; <em>Cuisine</em></h2>
+          <p class="sec-desc">Nigerian cuisine is one of Africa's richest — built on palm oil, crayfish, fermented locust beans, and an enormous variety of leafy vegetables. Every ethnic group has its own distinct culinary tradition.</p>
+        </div>
+        <div class="food-grid" id="foodGrid"></div>
+      </section>
+
+      <!-- ═══════════════ DRESSING ═══════════════ -->
+      <section class="country-section" id="sec-dressing">
+        <div class="sec-header">
+          <div class="sec-label">Coded communication in cloth</div>
+          <h2 class="sec-title">Dressing &amp; <em>Fashion</em></h2>
+          <p class="sec-desc">Nigerian fashion is one of the most vibrant and globally influential in Africa. From hand-woven Aso-Oke to bold Ankara prints, from the flowing Agbada to the regal Isiagu — Nigerian traditional attire carries deep cultural meaning.</p>
+        </div>
+        <div id="dressingContent"></div>
+      </section>
+
+      <!-- ═══════════════ MARRIAGE ═══════════════ -->
+      <section class="country-section" id="sec-marriage">
+        <div class="sec-header">
+          <div class="sec-label">Family · Community · Ceremony</div>
+          <h2 class="sec-title">Marriage <em>Traditions</em></h2>
+          <p class="sec-desc">Marriage in Nigeria is fundamentally a union of two families, not just two individuals. The traditional ceremony is the most culturally significant. Bride price is universal — a token of respect and appreciation, not a purchase.</p>
+        </div>
+        <div class="marriage-grid" id="marriageGrid"></div>
+      </section>
+
+      <!-- ═══════════════ BELIEFS ═══════════════ -->
+      <section class="country-section" id="sec-beliefs">
+        <div class="sec-header">
+          <div class="sec-label">Spiritual richness</div>
+          <h2 class="sec-title">Beliefs &amp; <em>Spirituality</em></h2>
+          <p class="sec-desc">Nigeria is roughly equally divided between Christianity (~50%) and Islam (~50%), with indigenous traditional beliefs remaining vital — often practiced alongside both major religions.</p>
+        </div>
+        <div class="beliefs-layout" id="beliefsGrid"></div>
+      </section>
+
+      <!-- ═══════════════ FESTIVALS ═══════════════ -->
+      <section class="country-section" id="sec-festivals">
+        <div class="sec-header">
+          <div class="sec-label">Sacred · Royal · Communal</div>
+          <h2 class="sec-title">Festivals &amp; <em>Celebrations</em></h2>
+          <p class="sec-desc">Nigeria's festivals are among Africa's most extraordinary — from the Durbar's cavalry splendour to the sacred depth of Osun-Osogbo. Every one is a world of its own.</p>
+        </div>
+        <div class="festivals-grid" id="festivalsGrid"></div>
+      </section>
+
+      <!-- ═══════════════ MUSIC ═══════════════ -->
+      <section class="country-section" id="sec-music">
+        <div class="sec-header">
+          <div class="sec-label">The beat of Africa</div>
+          <h2 class="sec-title">Music &amp; <em>Pop Culture</em></h2>
+          <p class="sec-desc">Nigeria is the undisputed music capital of Africa. Afrobeats — the global genre born from Lagos — has conquered the world's major music charts and brought African music to billions of listeners.</p>
+        </div>
+        <div id="musicContent"></div>
+      </section>
+
+      <!-- ═══════════════ HISTORY ═══════════════ -->
+      <section class="country-section" id="sec-history">
+        <div class="sec-header">
+          <div class="sec-label">500 BCE to present</div>
+          <h2 class="sec-title">History of <em>Nigeria</em></h2>
+          <p class="sec-desc">Nigeria's history stretches back thousands of years — from the Nok terracotta culture to the empires of Oyo and Benin, the Sokoto Caliphate, British colonization, independence, and the 4th Republic.</p>
+        </div>
+        <div class="timeline" id="historyTimeline"></div>
+      </section>
+
+      <!-- ═══════════════ STATES ═══════════════ -->
+      <section class="country-section" id="sec-states">
+        <div class="sec-header">
+          <div class="sec-label">36 States + FCT</div>
+          <h2 class="sec-title">Administrative <em>Divisions</em></h2>
+          <p class="sec-desc">Nigeria is organized into 36 states and the Federal Capital Territory (Abuja), grouped into 6 geopolitical zones.</p>
+        </div>
+        <div class="zones-grid" id="zonesGrid"></div>
+      </section>
+
+      <!-- ═══════════════ PROVERBS ═══════════════ -->
+      <section class="country-section" id="sec-proverbs">
+        <div class="sec-header">
+          <div class="sec-label">Wisdom of the ancestors</div>
+          <h2 class="sec-title">Proverbs &amp; <em>Wisdom</em></h2>
+          <p class="sec-desc">Nigerian proverbs are not just sayings — they are compressed philosophy, passed down through generations as the highest form of cultural teaching.</p>
+        </div>
+        <div class="proverbs-grid" id="proverbsGrid"></div>
+      </section>
+
+      <!-- ═══════════════ TRAVEL ═══════════════ -->
+      <section class="country-section" id="sec-travel">
+        <div class="sec-header">
+          <div class="sec-label">Beyond the postcards</div>
+          <h2 class="sec-title">Travel &amp; <em>Places</em></h2>
+          <p class="sec-desc">Nigeria has some of West Africa's most compelling destinations — from ancient kingdoms to modern megacities, rainforests, savannas, and a stunning coastline.</p>
+        </div>
+        <div class="travel-grid" id="travelGrid"></div>
+        <div class="tips-row" id="tipRows"></div>
+      </section>
+
+    </div><!-- /sections -->
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="side-block">
+        <div class="side-block-title">⚡ Quick Facts</div>
+        <div class="quick-facts" id="quickFacts"></div>
+      </div>
+      <div class="side-block">
+        <div class="side-block-title">📍 Jump to Section</div>
+        <div class="jump-links" id="jumpLinks"></div>
+      </div>
+      <div class="side-block">
+        <div class="side-block-title">🌍 Nearby Countries</div>
+        <div class="related-list" id="relatedList"></div>
+      </div>
+    </aside>
+
+  </div><!-- /main-layout -->
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <button class="back-top" id="backTop"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <span>🇳🇬</span>
+        <span>Nigeria · Giant of Africa</span>
+      </div>
+      <div class="footer-links">
+        <a href="../../index.html">Home</a>
+        <a href="../../countries.html">All Countries</a>
+        <a href="ghana.html">Ghana →</a>
+      </div>
+      <div>© 2025 <span style="color:var(--gold)">Frica</span></div>
+    </div>
+  </footer>
+
+  <script>
+  'use strict';
+
+  /* ═══════════════════════════════════════════════════════════════
+     DATA — Nigeria.json (inline for single-file loading)
+     In production this would be: fetch('../../data/nigeria.json')
+  ═══════════════════════════════════════════════════════════════ */
+
+  const NG = {
+    overview_cards: [
+      { icon:'👥', title:'Most Populous Nation in Africa', desc:'With ~220 million people, Nigeria is home to approximately 1 in 6 Africans. Lagos alone has a population exceeding 15 million — Africa\'s largest city.' },
+      { icon:'💹', title:'Largest Economy in Africa', desc:'Nigeria\'s GDP (nominal) is Africa\'s largest. A major oil producer, but increasingly known for its tech sector (Lagos "Silicon Lagoon"), Nollywood, and music industry.' },
+      { icon:'🗣', title:'520+ Languages Spoken', desc:'Nigeria is the most linguistically diverse country in Africa. The three major lingua francas are Hausa (North), Yoruba (Southwest), and Igbo (Southeast) — plus English and Nigerian Pidgin.' },
+      { icon:'🎵', title:'Global Cultural Export', desc:'Nigeria exports Afrobeats, Nollywood, fashion, cuisine, and philosophy to the entire world. Burna Boy, Wizkid, Davido, and Tems are among the most-streamed artists on Earth.' },
+    ],
+
+    ethnic_groups: [
+      {
+        id:'hausa', name:'Hausa-Fulani', lang:'Hausa', pct:'~29%', region:'Northern Nigeria',
+        religion:'Islam (predominantly)', struct:'Hierarchical — organized under Emirs. Strongly patrilineal.',
+        origin:'Hausa formed city-states over 1,000 years ago. Fulani merged through the 1804 Usman dan Fodio jihad.',
+        facts:['Kano is one of Africa\'s oldest continuously inhabited cities (900+ years)','The Sokoto Caliphate (1804) was the largest empire in Africa at its founding','Hausa is spoken by 50+ million people across West Africa as a lingua franca','Known for leather craft, textile dyeing (indigo), and trans-Saharan trade'],
+        food:'Tuwo Shinkafa, Suya, Kilishi, Miyan Kuka, Masa, Fura da Nono, Dan Wake, Kunu',
+        dressing:'Babban Riga (grand embroidered robe), Jalabiya kaftan, Fula cap, Lalle (henna) for women',
+        marriage:'Fatihah (Nikkah) Islamic contract · Kamu (bridal unveiling) · Sadaki (bride price to bride directly) · Walima (post-wedding feast) · Lalle night (henna ceremony)',
+        beliefs:'Islam (Sunni, Maliki school) · Bori spirit possession tradition · Qadiriyya & Tijaniyya Sufi orders · Sheikh Usman dan Fodio revered as great reformer'
+      },
+      {
+        id:'yoruba', name:'Yoruba', lang:'Yoruba', pct:'~21%', region:'Southwestern Nigeria',
+        religion:'Mixed — Christian, Muslim, traditional Ifa/Orisha',
+        struct:'City-state based, each ruled by an Oba. Strong emphasis on lineage and age-grade associations. Most urbanized precolonial Africans.',
+        origin:'Trace origin to Ile-Ife, where Oduduwa descended from heaven. Oyo Empire was one of West Africa\'s greatest states.',
+        facts:['Ile-Ife is considered the spiritual birthplace of the Yoruba — and where the earth was created','Yoruba religion spread to Brazil (Candomblé), Cuba (Santería), and the Caribbean through the slave trade','The Oyo Empire (13th–19th century) was one of West Africa\'s most powerful','Ifa divination system is a UNESCO Intangible Cultural Heritage'],
+        food:'Amala, Ewedu, Gbegiri, Efo Riro, Ofada Rice with Ayamase, Moin Moin, Akara, Pounded Yam, Obe Ata, Boli, Adalu',
+        dressing:'Agbada (grand flowing robe) · Iro + Buba + Gele (women) · Aso-Oke fabric · Adire (indigo tie-dye) · Ipele (shoulder shawl)',
+        marriage:'Palm wine ceremony (bride searches for groom in crowd) · Prostration (Idobale) by groom\'s family · Eru Iyawo (bride price list) · Aso-Ebi (matching fabric) · Gele-tying ceremony',
+        beliefs:'Ifa divination (UNESCO heritage) · 401 Orisha — Shango (thunder), Ogun (iron), Yemoja (water), Osun (river), Obatala (creation) · Egungun ancestral masquerades · Belief in Ori (personal destiny)'
+      },
+      {
+        id:'igbo', name:'Igbo', lang:'Igbo', pct:'~18%', region:'Southeastern Nigeria',
+        religion:'Predominantly Christian, with traditional Odinani beliefs',
+        struct:'Traditionally republican — no kings. Power distributed through village councils of elders (Umunna). Title-taking (Ozo, Nze) is the path to prestige.',
+        origin:'Nri Kingdom (c. 900 CE) is one of Nigeria\'s oldest kingdoms. Igbo-Ukwu bronze artifacts (9th century) prove advanced metallurgy centuries before European contact.',
+        facts:['The Nri Kingdom is considered the oldest kingdom in Nigeria (c. 900 CE)','Igbo-Ukwu bronze artifacts prove advanced metallurgy 600 years before the Benin Bronzes','Chinua Achebe\'s Things Fall Apart is the most widely read African novel (20M+ copies)','The Biafran War (1967–70) remains one of the defining traumas of Nigerian history'],
+        food:'Ofe Onugbu (bitter leaf soup), Ofe Oha, Ofe Nsala (white soup), Egusi soup, Abacha (African salad), Nkwobi, Okpa, Ugba, Ofe Akwu',
+        dressing:'Isiagu shirt (lion-head print) · George fabric wrapper · Okpu Agu (red cap for titled men only) · Coral beads (Mgba) · Waist beads (Jigida) · Akwete cloth',
+        marriage:'Igba Nkwu wine-carrying ceremony (bride searches for groom) · Iku Aka (formal knocking) · Kola nut ritual at every stage · Bride price list negotiation · Mmanwu masquerades',
+        beliefs:'Chukwu/Chineke (Supreme God) · Chi (personal guardian spirit) · Ala (earth goddess — most important deity) · Odinani traditional religion · Mmanwu (ancestral masquerades) · Ikenga (personal achievement deity)'
+      },
+      {
+        id:'ijaw', name:'Ijaw (Izon)', lang:'Ijaw/Izon', pct:'~10%', region:'Niger Delta',
+        religion:'Christianity predominantly, with water spirit traditions',
+        struct:'Organized around fishing communities and powerful trading city-states. Historically middlemen in the slave and palm oil trade.',
+        origin:'One of the oldest indigenous groups in Nigeria — inhabiting the Niger Delta for over 7,000 years. Kalabari and Nembe city-states were major Atlantic trading powers.',
+        facts:['One of Nigeria\'s oldest peoples — in the Delta for millennia','Kalabari and Nembe were powerful 18th-19th century trading city-states','President Goodluck Jonathan (2010–2015) was Ijaw — first Ijaw president','The Niger Delta oil conflict involves Ijaw communities seeking resource control'],
+        food:'Banga soup (palm nut), Fresh fish pepper soup, Starch, Amiedi, Seafood stews (periwinkle, crab, shrimp)',
+        dressing:'Wrapper tied at waist · Coral and glass bead jewelry · Elaborate headties for women',
+        marriage:'Water-side ceremonies · Juju (traditional medicine) remains important · Community-led celebrations',
+        beliefs:'Owu (water spirit masquerades) · Egbesu (deity of war and justice) · Water spirits (Oru Engemi) inhabiting rivers · Ancestral shrines'
+      },
+    ],
+
+    languages: [
+      { name:'Nigerian Pidgin (Naija)', speakers:'75+ million', note:'De facto national lingua franca. Not officially recognized but most widely spoken daily language.', flag:'🇳🇬' },
+      { name:'Hausa', speakers:'67 million (Nigeria) + 50M+ West Africa', note:'One of the most spoken languages in Africa. Script: Latin (official) + Ajami (traditional Arabic script).', flag:'🇳🇬' },
+      { name:'Yoruba', speakers:'47 million', note:'Also spoken in Benin Republic and Togo. Tonal — 3 tones. Over 20 dialects.', flag:'🇳🇬' },
+      { name:'Igbo', speakers:'25 million', note:'Over 20 recognized dialects. Tonal — 2 tones. Home of Chinua Achebe and Wole Soyinka.', flag:'🇳🇬' },
+      { name:'Fulfulde (Fula)', speakers:'~13 million in Nigeria', note:'Spoken by Fulani pastoralists across northern Nigeria and the Sahel.', flag:'🇳🇬' },
+      { name:'Kanuri', speakers:'~4 million', note:'Language of the ancient Kanem-Bornu Empire. Centered in Borno State.', flag:'🇳🇬' },
+      { name:'Ibibio', speakers:'~3.5 million', note:'Closely related to Efik. Centered in Akwa Ibom State.', flag:'🇳🇬' },
+      { name:'English (Official)', speakers:'All educated Nigerians', note:'Used in government, education, media. Nigerians have developed a unique Nigerian English with distinctive vocabulary and accent.', flag:'🇬🇧' },
+    ],
+
+    foods: [
+      { emoji:'🍛', name:'Jollof Rice', origin:'National / West African', tag:'National Dish', desc:'Nigeria\'s most famous dish. Rice slow-cooked in a rich tomato-pepper base. The subject of the legendary Ghana vs Nigeria Jollof War. Party Jollof — cooked over firewood — is the gold standard.', featured:true },
+      { emoji:'🫕', name:'Pounded Yam', origin:'National / Yoruba', tag:'Swallow', desc:'Yam boiled then pounded until smooth and stretchy. The king of Nigerian swallows — served with any soup. Achieving the right stretchy consistency is a point of pride.' },
+      { emoji:'🫕', name:'Egusi Soup', origin:'National', tag:'Soup', desc:'Thick, hearty soup made from ground melon seeds, palm oil, assorted meats, crayfish, and leafy vegetables. One of Nigeria\'s most beloved soups.' },
+      { emoji:'🥩', name:'Suya', origin:'Hausa-Fulani', tag:'Street Food', desc:'Nigeria\'s iconic street food. Thin beef skewers coated in spiced groundnut powder (yaji), grilled over charcoal. Suya spots come alive after dark in every Nigerian city.' },
+      { emoji:'🥗', name:'Abacha (African Salad)', origin:'Igbo', tag:'Salad', desc:'Shredded dried cassava dressed with palm oil, ugba, potash, crayfish, utazi leaves, and fish. A beloved Igbo street food served cold at celebrations.' },
+      { emoji:'🥘', name:'Amala, Ewedu & Gbegiri', origin:'Yoruba (Oyo)', tag:'Yoruba Holy Trinity', desc:'The holy trinity of Yoruba cuisine. Amala (yam flour), Ewedu (jute soup), and Gbegiri (bean soup) combined in one bowl — the famous "Abula". Best in Ibadan.' },
+      { emoji:'🍲', name:'Banga Soup', origin:'Niger Delta / Ijaw', tag:'Delta Delicacy', desc:'Rich soup made by extracting juice from fresh palm nuts. Distinctively seasoned with atama leaves and other Delta-specific spices. Served with starch.' },
+      { emoji:'🥘', name:'Ofe Onugbu (Bitter Leaf Soup)', origin:'Igbo', tag:'Igbo Classic', desc:'Rich, dark Igbo soup made from fresh bitter leaves, cocoyam (thickener), assorted meat, stockfish, dried fish, and palm oil. A staple at Igbo celebrations.' },
+      { emoji:'🫓', name:'Moin Moin', origin:'Yoruba / National', tag:'Protein Pudding', desc:'Steamed bean pudding made from blended black-eyed peas, peppers, and crayfish. Enriched with egg, fish, or meat. Beloved across all Nigerian ethnic groups.' },
+      { emoji:'🍳', name:'Akara', origin:'Yoruba / National', tag:'Breakfast', desc:'Deep-fried balls of blended black-eyed peas and peppers. Classic Nigerian breakfast street food — also found in Brazil as UNESCO-recognized acarajé.' },
+      { emoji:'🫙', name:'Nkwobi', origin:'Igbo', tag:'Bar Food', desc:'Spiced cow foot in a rich sauce of palm oil, utazi leaves, and calabash nutmeg. Served in a traditional wooden bowl. A popular restaurant delicacy and bar snack.' },
+      { emoji:'🍚', name:'Ofada Rice with Ayamase', origin:'Yoruba (Ogun)', tag:'Local Rice', desc:'Locally grown Nigerian rice with a nutty flavor, served with Ayamase — a fiery green pepper stew with locust beans. Traditionally wrapped in banana leaves.' },
+    ],
+
+    dressing_fabrics: [
+      { name:'Aso-Oke', origin:'Yoruba', desc:'Hand-woven prestige fabric — the most prestigious traditional textile in Nigeria. Three types: etu (deep blue-black), sanyan (beige/ivory), and alaari (rich magenta). Worn at weddings and coronations.' },
+      { name:'Ankara (Wax Print)', origin:'Pan-Nigerian', desc:'Bold, brightly patterned wax-resist fabric. The most widely used fabric in modern Nigerian fashion — used by all ethnic groups for everything from casual to formal wear.' },
+      { name:'George Fabric', origin:'Igbo / Niger Delta', desc:'Heavy, luxurious fabric with a distinctive sheen. Used by Igbo and Niger Delta women for traditional weddings and formal ceremonies. Originally from India — made iconic by Igbo culture.' },
+      { name:'Adire', origin:'Yoruba', desc:'Traditional Yoruba tie-dye fabric in indigo blue. Made using starch resist (eleko) or tying techniques (oniko). Experiencing a major global fashion revival.' },
+      { name:'Akwete Cloth', origin:'Igbo (Akwete, Abia)', desc:'Traditional handwoven cloth from Akwete village with bold geometric patterns. Used in ceremonies and increasingly in modern fashion.' },
+      { name:'Isiagu Fabric', origin:'Igbo', desc:'Lion-head print fabric worn as shirts by Igbo men during formal traditional events. One of the most recognizable Igbo cultural garments.' },
+    ],
+
+    marriage_traditions: [
+      {
+        type:'Yoruba Marriage', name:'Prostration & Palm Wine Ceremony', group:'Yoruba, Southwest Nigeria',
+        steps:['Introduction meeting — groom\'s family visits with schnapps and kola nut to state intent', 'Eru Iyawo (bride price list) fulfilled — gifts including schnapps, honey, fabric, bitter kola, and cash', 'Prostration (Idobale) — groom and ALL his men lie face-down before bride\'s family. Non-negotiable.', 'Palm wine ceremony — bride searches the crowd and kneels before groom to offer the cup', 'Aso-Ebi — both families in matching fabrics, clearly identifying their side', 'Gele-tying ceremony — elaborate headwrap tied on bride as crown of the day']
+      },
+      {
+        type:'Igbo Marriage', name:'Igba Nkwu (Wine Carrying)', group:'Igbo, Southeast Nigeria',
+        steps:['Iku Aka — formal knocking and first announcement of intent by groom\'s family', 'Bride price list (Ime Ego) negotiated and presented — yams, palm wine, drinks, and money', 'Kola nut (Obi) breaking and sharing precedes all discussions — highest Igbo hospitality', 'Igba Nkwu — the bride searches the crowd with palm wine and kneels before her groom', 'She offers the cup — he drinks, publicly confirming acceptance', 'She returns to pour for her father, who passes the cup to the groom to complete the union']
+      },
+      {
+        type:'Hausa-Fulani Marriage', name:'Fatihah & Kamu Ceremony', group:'Hausa-Fulani, Northern Nigeria',
+        steps:['Sadaki paid — Islamic bride price given directly to the bride (not her family) per Quranic law', 'Fatihah / Nikkah — Islamic marriage contract at the mosque, officiated by a Malam (scholar)', 'Bride represented by her Wali (guardian — usually father) at the Nikkah', 'Lalle night — women gather to apply intricate henna on the bride over many hours', 'Kamu ceremony — bride unveiled to groom\'s family with traditional singing and gift-giving', 'Walima — post-wedding feast hosted by groom\'s family (obligatory in Islamic tradition)']
+      },
+    ],
+
+    beliefs: [
+      {
+        icon:'🌿', title:'Ifa / Orisha System (Yoruba)', sub:'UNESCO Intangible Heritage', bg:'rgba(46,125,94,.15)', wide:false,
+        text:'The Yoruba Ifa divination system — recognized by UNESCO as Intangible Cultural Heritage — involves 256 odus (chapters) containing the complete knowledge of the universe. The babalawo (priest) accesses this knowledge using palm nuts or a divining chain. The Yoruba have 401 Orisha (deities).',
+        deities:[
+          { emoji:'⚡', name:'Shango', role:'Deity of thunder and lightning; deified 4th Alaafin of Oyo; patron of justice' },
+          { emoji:'⚔️', name:'Ogun', role:'Deity of iron, war, and labor; patron of all who work with metal' },
+          { emoji:'🌊', name:'Yemoja', role:'Mother of all waters; protector of women and children' },
+          { emoji:'💛', name:'Osun', role:'Deity of the river, love, and fertility; one of the most powerful Orisha' },
+          { emoji:'🤍', name:'Obatala', role:'Creator deity; sculptor of human bodies; deity of purity and wisdom' },
+          { emoji:'🔀', name:'Esu / Elegba', role:'Trickster; messenger between humans and gods; keeper of the crossroads' },
+        ]
+      },
+      {
+        icon:'🪴', title:'Igbo Odinani', sub:'Traditional Igbo Religion', bg:'rgba(200,149,42,.12)', wide:false,
+        text:'Odinani is the traditional Igbo religious system. The Supreme God is Chukwu (the Great God). Each person has a Chi — a personal guardian spirit assigned at birth. Ala, the earth goddess, is the most important deity — keeper of morality, law, and the dead.',
+        deities:[
+          { emoji:'🌍', name:'Ala / Ana', role:'Earth goddess — most important Igbo deity; keeper of morality and the dead' },
+          { emoji:'✨', name:'Chi', role:'Personal guardian spirit — your individual divine spark from God' },
+          { emoji:'⚡', name:'Amadioha', role:'Deity of thunder, lightning, and justice — equivalent to Yoruba Shango' },
+          { emoji:'💼', name:'Ikenga', role:'Personal deity of achievement; carved wooden shrine kept by men' },
+        ]
+      },
+      {
+        icon:'☪️', title:'Islam in Nigeria', sub:'~50% of population · 700+ years in the North', bg:'rgba(26,110,168,.12)', wide:false,
+        text:'Islam arrived in Hausaland from the 10th–11th century through trans-Saharan trade routes. The Sokoto Caliphate (1804) was the largest African Islamic state. Today, 12 northern states practice Sharia criminal law (adopted 1999–2000). Major Sufi orders include the Qadiriyya and Tijaniyya.',
+        deities:[
+          { emoji:'🕌', name:'Sokoto Caliphate Legacy', role:'Founded 1804 by Usman dan Fodio — still the most influential Islamic institution in northern Nigeria' },
+          { emoji:'📿', name:'Qadiriyya Brotherhood', role:'The oldest and most widespread Sufi order in northern Nigeria' },
+          { emoji:'📖', name:'Tijaniyya Brotherhood', role:'Highly influential Sufi order, particularly in northwest Nigeria' },
+        ]
+      },
+      {
+        icon:'✝️', title:'Christianity in Nigeria', sub:'~50% of population · Major Pentecostal hub', bg:'rgba(192,57,43,.1)', wide:true,
+        text:'Nigeria is home to some of the world\'s largest Pentecostal churches. The Redeemed Christian Church of God (RCCG) has over 5 million members in Nigeria and branches in 190+ countries. Winners\' Chapel (Living Faith Church) regularly hosts gatherings of 500,000+. The annual RCCG Holy Ghost Congress at the Redemption Camp on the Lagos-Ibadan expressway is one of the world\'s largest religious gatherings.',
+        deities:[
+          { emoji:'⛪', name:'Redeemed Christian Church of God (RCCG)', role:'One of the world\'s largest churches; headquartered on the Lagos-Ibadan Expressway' },
+          { emoji:'🙏', name:'Winners\' Chapel (Living Faith Church)', role:'Founded by Bishop David Oyedepo; one of the world\'s largest church auditoriums (50,000 seats)' },
+          { emoji:'✝️', name:'Catholic Church', role:'Strongly rooted in the Southeast (Igbo) and parts of the Southwest' },
+          { emoji:'🌟', name:'Pentecostal Movement', role:'The dominant form of Nigerian Christianity since the 1980s, blending charismatic worship with healing and prophecy' },
+        ]
+      },
+    ],
+
+    festivals: [
+      { emoji:'🌊', name:'Osun-Osogbo Festival', when:'August', group:'Yoruba · Osun State', badge:'UNESCO Heritage Grove',
+        desc:'Sacred two-week festival honouring Osun, the Yoruba river goddess of fertility and love. Held at the 700-year-old sacred grove along the Osun River. The Arugba — a virgin of royal blood — carries offerings on her head to the river shrine. Thousands of worshippers attend from Nigeria, Brazil, Cuba, and the USA.',
+        highlights:['Arugba procession — virgin of royal blood carries sacred calabash to the river', 'Lighting of the 500-year-old 16-point lamp (Ina Olojumerindinlogun)', 'Iwopopo — ritual cleansing of the city', 'International Yoruba diaspora participation — Brazil, Cuba, USA']
+      },
+      { emoji:'🏇', name:'Durbar Festival', when:'Eid al-Fitr & Eid al-Adha', group:'Hausa-Fulani · Kano, Katsina, Zaria', badge:'Royal Cavalry',
+        desc:'One of Nigeria\'s most visually spectacular events. The Emir and thousands of horsemen in historic medieval armour, robes, and headdresses parade through the city. Kakaki trumpets (6-foot bronze royal trumpets) sound only for royalty. Originally a military review — now the grandest expression of northern Nigerian culture.',
+        highlights:['Thousands of turbaned horsemen in medieval armour', 'Kakaki royal trumpets — heard only during Durbar', 'Emir\'s grand procession to the palace', 'Full-gallop equestrian demonstrations before the Emir']
+      },
+      { emoji:'🍠', name:'New Yam Festival (Iri Ji)', when:'August–October', group:'Igbo · Southeast Nigeria', badge:'Most Sacred Igbo Festival',
+        desc:'The most important festival in Igbo culture. No one may eat the new yam before it is formally presented to the gods and ancestors. Yam is sacred to the Igbo. The traditional ruler ceremonially eats the first yam of the season, unlocking the harvest for the entire community.',
+        highlights:['Ceremonial first eating of new yam by the Eze / Obi', 'Mmanwu (ancestral masquerades) emerge', 'Traditional wrestling (Mgba) competitions', 'Community feasting and title-taking ceremonies']
+      },
+      { emoji:'🎭', name:'Eyo Festival', when:'Variable (often May)', group:'Ga (Lagos Indigenes)', badge:'Lagos Heritage',
+        desc:'Thousands of Eyo masquerades in flowing white robes and tall hats parade through Lagos Island\'s historic streets. Held to ease a notable person\'s transition to the spirit world. No hats may be worn by spectators. Widely believed to be a forerunner of the Brazilian Carnival through the Yoruba diaspora.',
+        highlights:['Thousands of white-robed Eyo masquerades', 'Grand procession from Carter Bridge to the Iga Idunganran Palace', 'No spectator hats allowed — a sacred rule', 'Multiple conclaves representing different Lagos quarters']
+      },
+      { emoji:'🎪', name:'Calabar Carnival', when:'December (month-long)', group:'Efik · Cross River State', badge:"Africa's Biggest Street Party",
+        desc:'Billed as Africa\'s Biggest Street Party. A month-long carnival where competing bands parade through Calabar in extravagant costumes. Draws hundreds of thousands of tourists annually. Has transformed Calabar into Nigeria\'s tourism capital with a month of music, dance, and cultural celebrations.',
+        highlights:['Competing carnival bands in spectacular costumes', 'Live performances from Nigeria\'s top artists', 'Cultural masquerades and traditional dances', 'Month-long festival culminating December 26–28']
+      },
+      { emoji:'🏹', name:'Argungu Fishing Festival', when:'February/March', group:'Hausa (Kebbi Kingdom)', badge:'1934 — One of Nigeria\'s Oldest',
+        desc:'Thousands of fishermen simultaneously plunge into the Sokoto-Kebbi River using only traditional hand nets, competing to catch the largest fish within 45 minutes. Celebrating the end of historic enmity between the Sokoto Caliphate and Kebbi Kingdom. Fish weighing over 40kg have been caught at this festival.',
+        highlights:['Mass simultaneous fishing — thousands enter the river at once', 'The winner with the largest catch is celebrated', 'Traditional boat races and canoe competitions', 'Traditional music and cultural displays']
+      },
+    ],
+
+    music_genres: [
+      { icon:'🎵', name:'Afrobeats', origin:'Lagos, Nigeria · 21st century', desc:'The global genre that conquered the world — blending Yoruba rhythms, R&B, hip-hop, and electronic music. Born in Lagos, now the world\'s fastest-growing music genre. Pioneered by Fela Kuti\'s Afrobeat and evolved by a new generation of Lagos artists.' },
+      { icon:'🎶', name:'Highlife', origin:'Nigeria / Ghana · Early 20th century', desc:'One of the oldest West African popular genres — blending traditional rhythms with Western brass bands. The grandfather of modern Afrobeats. Oliver De Coque, Cardinal Rex Lawson, and Chief Stephen Osita Osadebe are legends.' },
+      { icon:'🥁', name:'Jùjú Music', origin:'Yoruba, Lagos · 1920s', desc:'Guitar-based Yoruba popular music with talking drums and Yoruba vocals. Made famous internationally by King Sunny Ade. Characterized by complex polyrhythmic drumming.' },
+      { icon:'🎙️', name:'Fuji Music', origin:'Yoruba (Muslim) · 1960s', desc:'Fast-paced percussive Yoruba Muslim music born from Ajisari (pre-dawn Ramadan wake-up calls). Legends: Sikiru Ayinde Barrister (founder), Wasiu Ayinde Marshal (K1 de Ultimate).' },
+      { icon:'🎤', name:'Naija Hip-Hop', origin:'Nigeria · 1990s–present', desc:'Nigerian hip-hop blending American rap with Pidgin English, Yoruba, Igbo, and Hausa. M.I Abaga, Olamide, Vector, Falz, and Phyno are its defining voices.' },
+      { icon:'🌟', name:'Afropop / Street-pop', origin:'Nigeria · 2010s–present', desc:'The dominant commercial sound — lighter, melodic afropop fusing African rhythms with contemporary production. Davido, Asake, Zinoleesky, and Fireboy DML define this era.' },
+    ],
+
+    current_artists: [
+      { emoji:'🦍', name:'Burna Boy', genre:'Afrobeats / Afrofusion', av1:'#2e7d5e', av2:'#c8952a', note:'Grammy winner (2021 — Twice as Tall). Self-styled "African Giant." Most globally successful Nigerian artist ever. From Port Harcourt.' },
+      { emoji:'⭐', name:'Wizkid', genre:'Afrobeats', av1:'#1a3a6e', av2:'#c8952a', note:'Grammy winner (2021 — Brown Skin Girl with Beyoncé). "Starboy." First African to fill London\'s O2 Arena solo.' },
+      { emoji:'💎', name:'Tems', genre:'Afrofusion / R&B / Soul', av1:'#8b3a9e', av2:'#2e7d5e', note:'Grammy winner (2023). First Nigerian female Grammy winner. Collaborated with Drake, Future, and Beyoncé.' },
+      { emoji:'🔥', name:'Davido', genre:'Afrobeats', av1:'#d4622a', av2:'#8b3a1a', note:'One of Afrobeats\' most consistent global superstars. Known for "Fall", "IF", "Assurance". Raised ₦250M for Nigerian hospitals during COVID-19.' },
+      { emoji:'🌊', name:'Asake', genre:'Street-pop / Afrobeats', av1:'#c8952a', av2:'#d4622a', note:'Fastest-rising Nigerian artist of the 2020s. Blends Fuji music rhythms with contemporary Afrobeats. Signed to YBNL Nation (Olamide).' },
+      { emoji:'🎵', name:'Rema', genre:'Afrobeats', av1:'#2e7d5e', av2:'#d4622a', note:'"Calm Down" remix with Selena Gomez reached #1 in multiple countries. From Benin City. One of Afrobeats\' most distinctive voices.' },
+      { emoji:'🌸', name:'Ayra Starr', genre:'Afropop / R&B', av1:'#8b3a9e', av2:'#1a6ea8', note:'Leading voice of the new generation of Nigerian female artists. Signed to Mavin Records.' },
+      { emoji:'🎤', name:'Olamide', genre:'Naija Hip-Hop / Street-pop', av1:'#c8952a', av2:'#2a4a2e', note:'King of the Nigerian streets. Built YBNL Nation label. Discovered Fireboy DML, Asake, and many others.' },
+    ],
+
+    history: [
+      { period:'500 BCE – 200 CE', event:'Nok Culture', desc:'One of the earliest known cultures in sub-Saharan Africa. The Nok people created sophisticated terracotta sculptures — the oldest sub-Saharan terracotta figures ever found. Discovered in Kaduna State. Proof of advanced artistic civilization 2,500 years ago.' },
+      { period:'9th – 19th century', event:'Kanem-Bornu Empire', desc:'One of the longest-lasting states in African history — nearly 1,000 years. Centered around Lake Chad. A powerful Islamic empire and major trans-Saharan trade hub that spanned what is today northeastern Nigeria, Chad, and Niger.' },
+      { period:'11th – 19th century', event:'Hausa City-States', desc:'The Hausa established powerful, independent city-states including Kano, Katsina, Daura, Zaria (Zazzau), and Gobir — sophisticated urban centers of trade, Islamic scholarship, and commercial power, famous across North Africa and Arabia.' },
+      { period:'13th – 19th century', event:'Oyo Empire', desc:'One of the most powerful states in West African history. The Yoruba Oyo Empire controlled much of present-day southwest Nigeria, Benin Republic, and Togo. Known for its powerful cavalry, complex bureaucracy, and the sacred Alaafin kingship at its capital Oyo-Ile.' },
+      { period:'13th – 19th century', event:'Benin Kingdom', desc:'One of Africa\'s greatest kingdoms, centered in modern-day Edo State. The Benin Kingdom was renowned for its extraordinary bronze, brass, and ivory artworks — the Benin Bronzes — and a sophisticated royal court under the Oba (king). British forces looted 3,000+ artworks in 1897. Repatriation is now underway.' },
+      { period:'1804 – 1808', event:'Sokoto Jihad & Caliphate', desc:'Usman dan Fodio led a jihad against the Hausa city-states, establishing the Sokoto Caliphate — the largest empire in Africa at the time. It transformed the political and religious landscape of northern Nigeria and remains deeply influential today.' },
+      { period:'1861 – 1914', event:'British Colonization & Amalgamation', desc:'Britain annexed Lagos in 1861, and gradually colonized the rest of Nigeria. In 1914, Lord Lugard amalgamated the Northern and Southern Protectorates into one entity — \'Nigeria\' — a name coined by journalist Flora Shaw. This arbitrary unification of very different peoples remains a source of ongoing tension.' },
+      { period:'October 1, 1960', event:'Independence', desc:'Nigeria gained independence from Britain on October 1, 1960 — a date still celebrated as National Day. Sir Abubakar Tafawa Balewa served as first Prime Minister; Nnamdi Azikiwe became the first President (1963). Independence celebrations at Tafawa Balewa Square in Lagos drew crowds of millions.' },
+      { period:'1967 – 1970', event:'Nigerian Civil War (Biafran War)', desc:'The Igbo-dominated southeast declared independence as the Republic of Biafra. The resulting war resulted in over 1 million deaths, largely from starvation. Federal forces defeated Biafra in January 1970. The war remains one of the most traumatic events in Nigerian history — its wounds still unhealed.' },
+      { period:'1970s – 1998', event:'Oil Boom & Military Rule', desc:'Oil discovered in the Niger Delta transformed Nigeria into a petro-state. A succession of military governments ruled Nigeria, punctuated by coups and counter-coups. General Sani Abacha\'s brutal regime (1993–1998) was the darkest chapter — executing activist Ken Saro-Wiwa and imprisoning Moshood Abiola.' },
+      { period:'1999 – present', event:'Return to Democracy (4th Republic)', desc:'Nigeria returned to civilian democratic rule in 1999 under Olusegun Obasanjo. The 4th Republic has seen successive peaceful transfers of power. Despite challenges of corruption, insecurity, and economic inequality, Nigeria remains Africa\'s most important democracy — 220 million people making choices that affect the entire continent.' },
+    ],
+
+    zones: [
+      { name:'North West', color:'#1a6ea8', groups:'Hausa-Fulani (dominant)', note:'Commercial capital: Kano. Seat of the Sokoto Caliphate. Primarily Muslim. Major centers of Islamic scholarship and trans-Saharan trade heritage.',
+        states:[{n:'Jigawa',c:'Dutse'},{n:'Kaduna',c:'Kaduna'},{n:'Kano',c:'Kano'},{n:'Katsina',c:'Katsina'},{n:'Kebbi',c:'Birnin Kebbi'},{n:'Sokoto',c:'Sokoto'},{n:'Zamfara',c:'Gusau'}]
+      },
+      { name:'North East', color:'#8b3a9e', groups:'Kanuri (Borno), Fulani, Hausa, 40+ smaller groups', note:'Borno State was the seat of the Kanem-Bornu Empire — one of Africa\'s longest-lasting kingdoms (over 900 years). Maiduguri is the cultural capital.',
+        states:[{n:'Adamawa',c:'Yola'},{n:'Bauchi',c:'Bauchi'},{n:'Borno',c:'Maiduguri'},{n:'Gombe',c:'Gombe'},{n:'Taraba',c:'Jalingo'},{n:'Yobe',c:'Damaturu'}]
+      },
+      { name:'North Central (Middle Belt)', color:'#3d6b43', groups:'Tiv (Benue), Igala (Kogi), Nupe (Niger), Gbagyi, many others', note:'Nigeria\'s most diverse zone — a meeting point of North and South. Lokoja (Kogi) is where the Niger and Benue Rivers meet — was Nigeria\'s first capital.',
+        states:[{n:'Benue',c:'Makurdi'},{n:'Kogi',c:'Lokoja'},{n:'Kwara',c:'Ilorin'},{n:'Nasarawa',c:'Lafia'},{n:'Niger',c:'Minna'},{n:'Plateau',c:'Jos'},{n:'FCT',c:'Abuja'}]
+      },
+      { name:'South West', color:'#c8952a', groups:'Yoruba (dominant)', note:'Home of Lagos — Africa\'s most populous city. Ile-Ife (Osun) is the spiritual homeland of the Yoruba. Nigeria\'s cultural, entertainment, and financial powerhouse.',
+        states:[{n:'Ekiti',c:'Ado-Ekiti'},{n:'Lagos',c:'Ikeja'},{n:'Ogun',c:'Abeokuta'},{n:'Ondo',c:'Akure'},{n:'Osun',c:'Osogbo'},{n:'Oyo',c:'Ibadan'}]
+      },
+      { name:'South East', color:'#d4622a', groups:'Igbo (dominant)', note:'Anambra is Nigeria\'s leading commercial state after Lagos. Nnewi is Nigeria\'s industrial hub. Owerri is a major entertainment city. Enugu was capital of the Republic of Biafra (1967–70).',
+        states:[{n:'Abia',c:'Umuahia'},{n:'Anambra',c:'Awka'},{n:'Ebonyi',c:'Abakaliki'},{n:'Enugu',c:'Enugu'},{n:'Imo',c:'Owerri'}]
+      },
+      { name:'South South (Niger Delta)', color:'#2e7d5e', groups:'Ijaw, Ibibio, Efik, Edo (Bini), Urhobo, Isoko, Itsekiri, Ogoni', note:'Produces the bulk of Nigeria\'s oil wealth. Port Harcourt is the oil capital. Benin City is home to the ancient Benin Kingdom. Calabar is Nigeria\'s tourism capital.',
+        states:[{n:'Akwa Ibom',c:'Uyo'},{n:'Bayelsa',c:'Yenagoa'},{n:'Cross River',c:'Calabar'},{n:'Delta',c:'Asaba'},{n:'Edo',c:'Benin City'},{n:'Rivers',c:'Port Harcourt'}]
+      },
+    ],
+
+    proverbs: [
+      { lang:'Yoruba 🇳🇬', text:'"Bi a bá mọ ibí tí ojo ń bọ, a máa ń yára bọ ilé."', meaning:'If we know where rain is coming from, we take shelter in time.', lesson:'Wisdom and foresight prevent problems. Knowledge of history helps us prepare for the future.' },
+      { lang:'Igbo 🇳🇬', text:'"Onye wetara oji wetara ndụ."', meaning:'He who brings kola nut brings life.', lesson:'Hospitality and respect are the foundation of life. Sharing food is a life-giving act in Igbo culture.' },
+      { lang:'Hausa 🇳🇬', text:'"Mutum ya fi duniya girma, amma duniya ba ta fi shi ba."', meaning:'A man may think himself greater than the world, but the world is not smaller than him.', lesson:'No matter how great a person becomes, humility is essential — the world is always greater.' },
+      { lang:'Igbo 🇳🇬', text:'"Agwa bụ mma."', meaning:'Character is beauty.', lesson:'True beauty lies not in appearance but in a person\'s character, conduct, and inner virtues.' },
+      { lang:'Yoruba 🇳🇬', text:'"Iwa pele."', meaning:'Gentle character (is the greatest virtue).', lesson:'In Yoruba culture, iwa pele — gentle, good character — is the highest virtue a person can possess, above wealth, power, or beauty.' },
+      { lang:'Igbo 🇳🇬', text:'"Igwe bụ ike."', meaning:'Unity is strength.', lesson:'There is power in numbers and community solidarity — the foundation of Igbo communal governance.' },
+      { lang:'Hausa 🇳🇬', text:'"Ina wuta a kan ransa."', meaning:'Fire burns on its own fuel.', lesson:'Anger and conflict consume those who start them. The hateful person is destroyed by their own hatred.' },
+      { lang:'Yoruba 🇳🇬', text:'"Until the lion learns to write, every story will glorify the hunter."', meaning:'Whoever controls the narrative controls the truth.', lesson:'African peoples must tell their own stories — in their own words, from their own perspective.' },
+    ],
+
+    travel_places: [
+      { emoji:'🏛️', name:'Osun-Osogbo Sacred Grove', region:'Osun State', type:'UNESCO Heritage Site', desc:'A 700-year-old sacred forest along the Osun River — the spiritual heart of Yoruba culture. Home to shrines, sculptures, and the annual Osun-Osogbo Festival. A UNESCO World Heritage Site and deeply sacred place. No visit to Yorubaland is complete without it.', tips:['Visit during the August festival for the most extraordinary experience', 'Hire an official guide from the Grove entrance', 'Photography is permitted but respect the sacred shrines'], featured:true },
+      { emoji:'🌆', name:'Lagos', region:'Lagos State', type:'Megacity / Cultural Hub', desc:'Africa\'s most populous city and its undisputed pop culture capital. Afrobeats, Nollywood, incredible street food, Victoria Island nightlife, Lekki Conservation Centre, Nike Art Gallery, and the emerging Eko Atlantic city built into the ocean.', tips:['Use Bolt/InDriver — never hail yellow taxis without agreeing price', 'Badagry (slave history and beaches) is a hidden gem', 'Food at a buka in Mushin is worth every minute'] },
+      { emoji:'🏺', name:'Benin City & Benin Kingdom', region:'Edo State', type:'Ancient Kingdom / Heritage', desc:'One of Africa\'s greatest precolonial cities. The seat of the Benin Kingdom, famed for the Benin Bronzes being repatriated from world museums. The Oba\'s Palace and National Museum Benin are unmissable. The ancient city walls — once longer than China\'s Great Wall — are still partially visible.', tips:['The National Museum Benin has original pieces still in Nigeria', 'The Oba\'s Palace is open for ceremonial visits during Igue Festival', 'Benin food (egusi, banga soup) is outstanding'] },
+      { emoji:'🦁', name:'Yankari National Park', region:'Bauchi State', type:'Wildlife / Nature', desc:'Nigeria\'s premier game reserve — one of the finest in West Africa. Home to elephants, lions, baboons, warthogs, buffalo, and over 350 bird species. The Wikki Warm Springs (natural crystal-clear thermal pools) are one of Nigeria\'s most beautiful natural features.', tips:['Wikki Warm Springs are best visited early morning', 'Elephant sightings are almost guaranteed at dawn at the waterhole', 'Stay at Wikki Camp for the full experience'] },
+      { emoji:'🏙️', name:'Abuja (FCT)', region:'Federal Capital Territory', type:'Capital City', desc:'Nigeria\'s purpose-built capital, opened in 1991. Home to the iconic Aso Rock granite monolith, the National Mosque, National Christian Centre, Zuma Rock, Millennium Park, and the Transcorp Hilton. Widely considered Nigeria\'s cleanest and most organized city.', tips:['Zuma Rock (nicknamed gateway to Abuja) is best photographed at sunrise', 'Millennium Park is peaceful and free', 'Wuse Market has the best authentic Northern food in the capital'] },
+      { emoji:'⛰️', name:'Obudu Mountain Resort', region:'Cross River State', type:'Nature / Tourism', desc:'One of Nigeria\'s most beautiful natural destinations — on the Obudu Plateau near the Cameroon border at 1,576m elevation. Cool highland temperatures, lush vegetation, a cable car ride, and stunning waterfalls. Often called "Nigeria\'s Switzerland."', tips:['The cable car ride is the highlight — book in advance', 'Best visited November–February (harmattan season — cool and clear)', 'Combine with Calabar (4 hours away) and Cross River National Park'] },
+    ],
+
+    budget_tips: ['Eat at buka (local canteens) — full plate of amala + ewedu for ₦800–₦2,000', 'Use Bolt or InDriver for ride-hailing — never haggle taxis without agreeing price first', 'Lagos to Abuja by ABC/GUO bus (₦6,000–₦10,000) is cheaper than flying but takes 8–10 hours', 'The best suya is always from roadside spots after dark — not restaurants', 'Shop at Balogun Market (Lagos) or Wuse Market (Abuja) for authentic prices'],
+
+    safety_tips: ['Abuja GRA and Port Harcourt GRA are generally the safest areas for visitors', 'Use only licensed ride-hailing apps (Bolt, InDriver) in major cities', 'Keep vigilant in markets and crowded areas — pickpocketing is common in busy Lagos spots', 'Avoid driving at night on unfamiliar interstate routes', 'Always respect local customs — dress modestly when visiting mosques or traditional palaces', 'The Nigerian people are extraordinarily warm and hospitable — lean into this'],
+  };
+
+  /* ═══════════════════════════════════════════════════════════════
+     RENDER
+  ═══════════════════════════════════════════════════════════════ */
+
+  // Overview cards
+  function renderOverview() {
+    document.getElementById('overviewGrid').innerHTML = NG.overview_cards.map(c => `
+      <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-lg);padding:1.5rem;transition:var(--t)" onmouseover="this.style.borderColor='var(--border)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+        <div style="font-size:1.75rem;margin-bottom:.75rem">${c.icon}</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--cream);margin-bottom:.4rem">${c.title}</div>
+        <div style="font-size:.82rem;color:var(--text-soft);line-height:1.65">${c.desc}</div>
+      </div>
+    `).join('');
+  }
+
+  // Ethnic groups
+  function renderEthnicGroups() {
+    const tabs = document.getElementById('ethnicTabs');
+    const panels = document.getElementById('ethnicPanels');
+
+    tabs.innerHTML = NG.ethnic_groups.map((g, i) => `
+      <button class="eth-tab ${i===0?'active':''}" data-eth="${i}">${g.name}</button>
+    `).join('');
+
+    panels.innerHTML = NG.ethnic_groups.map((g, i) => `
+      <div class="ethnic-panel ${i===0?'active':''}" id="eth-panel-${i}">
+        <div class="ethnic-hero">
+          <div class="ethnic-hero-top">
+            <div>
+              <div class="ethnic-lang">${g.lang} Language · ${g.region}</div>
+              <div class="ethnic-name">${g.name}</div>
+              <div class="ethnic-pop">Population: ${g.pct} of Nigeria · ${g.religion}</div>
+              <div class="ethnic-desc">${g.struct}</div>
+              <div style="margin-top:.75rem;font-size:.82rem;color:var(--text-muted);line-height:1.65">${g.origin}</div>
+            </div>
+            <div class="ethnic-facts">
+              ${g.facts.map(f => `<div class="ethnic-fact">${f}</div>`).join('')}
+            </div>
+          </div>
+          <div class="ethnic-hero-body">
+            <div class="ethnic-detail">
+              <div class="ethnic-detail-label">🍛 Traditional Food</div>
+              <div class="ethnic-detail-content">${g.food}</div>
+            </div>
+            <div class="ethnic-detail">
+              <div class="ethnic-detail-label">👘 Traditional Dressing</div>
+              <div class="ethnic-detail-content">${g.dressing}</div>
+            </div>
+            <div class="ethnic-detail">
+              <div class="ethnic-detail-label">💍 Marriage Traditions</div>
+              <div class="ethnic-detail-content">${g.marriage}</div>
+            </div>
+            <div class="ethnic-detail">
+              <div class="ethnic-detail-label">🌿 Beliefs</div>
+              <div class="ethnic-detail-content">${g.beliefs}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    tabs.addEventListener('click', e => {
+      const btn = e.target.closest('.eth-tab'); if (!btn) return;
+      document.querySelectorAll('.eth-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.ethnic-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(`eth-panel-${btn.dataset.eth}`).classList.add('active');
+    });
+  }
+
+  // Languages
+  function renderLanguages() {
+    document.getElementById('languagesGrid').innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:.85rem">
+        ${NG.languages.map(l => `
+          <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-md);padding:1.25rem;transition:var(--t)" onmouseover="this.style.borderColor='var(--border)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem">
+              <span style="font-size:1.25rem">${l.flag}</span>
+              <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:.98rem;color:var(--cream)">${l.name}</div>
+            </div>
+            <div style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ng-green);margin-bottom:.3rem">${l.speakers}</div>
+            <div style="font-size:.8rem;color:var(--text-muted);line-height:1.6">${l.note}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div style="margin-top:1.5rem;background:linear-gradient(135deg,rgba(0,135,81,.1),rgba(200,149,42,.06));border:1px solid rgba(0,135,81,.2);border-radius:var(--radius-lg);padding:1.5rem">
+        <div style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ng-green);margin-bottom:.6rem">💡 Did You Know?</div>
+        <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75">Nigeria is the most linguistically diverse country in Africa with 520+ living languages. Nigerian Pidgin (Naija) — a creole language blending English, Yoruba, Igbo, Hausa, and Portuguese — is the most widely spoken daily language and a unique cultural creation that belongs to all Nigerians regardless of ethnicity.</p>
+      </div>
+    `;
+  }
+
+  // Food
+  function renderFood() {
+    document.getElementById('foodGrid').innerHTML = NG.foods.map((f, i) => `
+      <div class="food-card ${f.featured && i===0 ? 'featured' : ''}" onclick="openFoodModal(${i})">
+        <span class="food-emoji">${f.emoji}</span>
+        <div class="food-body">
+          <div class="food-origin">${f.origin}</div>
+          <div class="food-name">${f.name}</div>
+          <div class="food-desc">${f.desc}</div>
+          <span class="food-tag">${f.tag}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openFoodModal(i) {
+    const f = NG.foods[i];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Food & Cuisine · ${f.origin}</div>
+      <div class="modal-title">${f.emoji} ${f.name}</div>
+      <div class="modal-sub">${f.tag}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">About this dish</div>
+      <p class="modal-text">${f.desc}</p>
+    `;
+    openModal();
+  }
+
+  // Dressing
+  function renderDressing() {
+    document.getElementById('dressingContent').innerHTML = `
+      <div class="sub-rule">Sacred Fabrics of Nigeria</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:.85rem;margin-bottom:2rem">
+        ${NG.dressing_fabrics.map(f => `
+          <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-md);padding:1.35rem;transition:var(--t)" onmouseover="this.style.borderColor='var(--border)'" onmouseout="this.style.borderColor='var(--border-dim)'">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:.98rem;color:var(--cream);margin-bottom:.2rem">${f.name}</div>
+            <div style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ng-green);margin-bottom:.5rem">${f.origin}</div>
+            <div style="font-size:.8rem;color:var(--text-muted);line-height:1.65">${f.desc}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="sub-rule">Wedding Fashion</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:.85rem">
+        ${[
+          { group:'Yoruba Bride', desc:'Aso-Oke fabric in buba + iro + elaborate Gele headwrap; coral beads and gold jewelry. The Gele — an art form in itself — can take 30+ minutes to perfect.' },
+          { group:'Igbo Bride', desc:'Rich George fabric wrapper and blouse; beaded crown (Ogodo); layers of coral necklaces, bracelets, and Jigida waist beads. Coral bead sets are family heirlooms worth millions.' },
+          { group:'Hausa Bride', desc:'Elaborate lace or silk gown; Kamu ceremony headdress; intricate lalle (henna) applied over many hours; colorful veils and gold jewelry.' },
+          { group:'Aso-Ebi Culture', desc:'Both families wear matching fabrics to identify their side. Aso-Ebi has become a pan-Nigerian and diaspora fashion phenomenon — a cultural export to the world.' },
+        ].map(w => `
+          <div style="background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-md);padding:1.35rem">
+            <div style="font-weight:700;font-size:.9rem;color:var(--cream);margin-bottom:.4rem">${w.group}</div>
+            <div style="font-size:.8rem;color:var(--text-muted);line-height:1.65">${w.desc}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  // Marriage
+  function renderMarriage() {
+    document.getElementById('marriageGrid').innerHTML = NG.marriage_traditions.map(m => `
+      <div class="marriage-card">
+        <div class="marriage-top">
+          <div class="marriage-type">${m.type}</div>
+          <div class="marriage-name">${m.name}</div>
+          <div class="marriage-group">👥 ${m.group}</div>
+        </div>
+        <div class="marriage-body">
+          <div class="marriage-steps">
+            ${m.steps.map((s, i) => `
+              <div class="marriage-step">
+                <div class="step-n">${i+1}</div>
+                <div class="step-text">${s}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Beliefs
+  function renderBeliefs() {
+    document.getElementById('beliefsGrid').innerHTML = NG.beliefs.map(b => `
+      <div class="belief-card ${b.wide ? 'wide' : ''}">
+        <div class="belief-header" style="--bh-bg:${b.bg}">
+          <div class="belief-icon" style="background:${b.bg}">${b.icon}</div>
+          <div>
+            <div class="belief-title">${b.title}</div>
+            <div class="belief-sub">${b.sub}</div>
+          </div>
+        </div>
+        <div class="belief-body">
+          <p class="belief-text">${b.text}</p>
+          <div class="deity-list">
+            ${b.deities.map(d => `
+              <div class="deity-item">
+                <span class="deity-emoji">${d.emoji}</span>
+                <div>
+                  <div class="deity-name">${d.name}</div>
+                  <div class="deity-role">${d.role}</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Festivals
+  function renderFestivals() {
+    document.getElementById('festivalsGrid').innerHTML = NG.festivals.map((f, i) => `
+      <div class="festival-card" onclick="openFestModal(${i})">
+        <div class="festival-top">
+          <span class="festival-emoji">${f.emoji}</span>
+          <div>
+            <div class="festival-when">${f.when}</div>
+            <div class="festival-name">${f.name}</div>
+            <div class="festival-group">${f.group}</div>
+          </div>
+        </div>
+        <div class="festival-body">
+          <p class="festival-desc">${f.desc}</p>
+          <div class="festival-highlights">
+            ${f.highlights.slice(0,3).map(h => `<div class="festival-hl">${h}</div>`).join('')}
+          </div>
+          <div class="festival-badge">${f.badge}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openFestModal(i) {
+    const f = NG.festivals[i];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Festival · ${f.group}</div>
+      <div class="modal-title">${f.emoji} ${f.name}</div>
+      <div class="modal-sub">📅 ${f.when}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">About this festival</div>
+      <p class="modal-text">${f.desc}</p>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">Highlights</div>
+      <div class="modal-list">${f.highlights.map(h => `<div class="modal-list-item">${h}</div>`).join('')}</div>
+    `;
+    openModal();
+  }
+
+  // Music
+  function renderMusic() {
+    let showType = 'current';
+    const el = document.getElementById('musicContent');
+
+    function build() {
+      el.innerHTML = `
+        <div class="sub-rule">Genres</div>
+        <div class="genre-grid">
+          ${NG.music_genres.map(g => `
+            <div class="genre-card">
+              <span class="genre-icon">${g.icon}</span>
+              <div class="genre-origin">${g.origin}</div>
+              <div class="genre-name">${g.name}</div>
+              <div class="genre-desc">${g.desc}</div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="sub-rule" style="margin-top:2.5rem">Artists</div>
+        <div class="music-toggle">
+          <button class="music-toggle-btn ${showType==='current'?'active':''}" id="btn-cur">Current Stars</button>
+          <button class="music-toggle-btn ${showType==='legends'?'active':''}" id="btn-leg">Legends</button>
+        </div>
+        <div class="artists-grid" id="artistsGrid"></div>
+
+        <div style="margin-top:2rem;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:var(--radius-lg);padding:1.5rem">
+          <div style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ng-green);margin-bottom:.85rem">🎬 Nollywood</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--cream);margin-bottom:.4rem">World's 2nd Largest Film Industry</div>
+              <p style="font-size:.82rem;color:var(--text-soft);line-height:1.7">Nollywood produces ~2,500 films per year — surpassed only by Bollywood. It began in 1992 with "Living in Bondage" and now streams globally on Netflix. Nigerian films, directors, and actors are winning international awards and redefining African cinema.</p>
+            </div>
+            <div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-bottom:.6rem;font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase">Legends</div>
+              <div style="display:flex;flex-direction:column;gap:.35rem">
+                ${['Pete Edochie', 'Genevieve Nnaji', 'Omotola Jalade-Ekeinde', 'Richard Mofe-Damijo (RMD)', 'Patience Ozokwor', 'Ramsey Nouah'].map(n => `<div style="font-size:.8rem;color:var(--text-soft)">${n}</div>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      renderArtists(showType);
+
+      document.getElementById('btn-cur')?.addEventListener('click', () => { showType='current'; build(); });
+      document.getElementById('btn-leg')?.addEventListener('click', () => { showType='legends'; build(); });
+    }
+
+    build();
+  }
+
+  const LEGEND_ARTISTS = [
+    { emoji:'👑', name:'Fela Kuti',         genre:'Afrobeat (original)', av1:'#d4622a', av2:'#2a4a2e', note:'Nigeria\'s greatest musician. Created Afrobeat as political weapon. Arrested 200+ times. Founded the Kalakuta Republic. His music changed the world.' },
+    { emoji:'🎸', name:'King Sunny Ade',    genre:'Jùjú Music',          av1:'#c8952a', av2:'#2a4a2e', note:'"Minister of Enjoyment." Grammy-nominated. Brought Jùjú music to global audiences in the 1980s.' },
+    { emoji:'🥁', name:'Babatunde Olatunji',genre:'African Drumming',     av1:'#d4622a', av2:'#c8952a', note:'Brought African percussion to America (1959). Influenced Carlos Santana and the entire 1960s world music movement.' },
+    { emoji:'✍️', name:'Femi Kuti',         genre:'Afrobeat',             av1:'#d4622a', av2:'#3d6b43', note:'Fela\'s son. Continues the Afrobeat tradition at the New Afrika Shrine in Lagos. Multiple Grammy nominations.' },
+    { emoji:'🎤', name:'Onyeka Onwenu',      genre:'Afro-pop / Soul',      av1:'#8b3a9e', av2:'#c8952a', note:'"Elegant Stallion." Nigeria\'s greatest female voice of the 1980s. Actress, activist, and cultural icon.' },
+    { emoji:'🎵', name:'Onyeka & King Sunny', genre:'Jùjú/Afropop fusion', av1:'#c8952a', av2:'#8b3a9e', note:'Their 1983 collaboration album was one of Nigeria\'s greatest musical projects.' },
+  ];
+
+  function renderArtists(type) {
+    const data = type === 'current' ? NG.current_artists : LEGEND_ARTISTS;
+    document.getElementById('artistsGrid').innerHTML = data.map(a => `
+      <div class="artist-card">
+        <div class="artist-avatar" style="--av1:${a.av1};--av2:${a.av2}">${a.emoji}</div>
+        <div class="artist-name">${a.name}</div>
+        <div class="artist-genre">${a.genre}</div>
+        <div class="artist-note">${a.note}</div>
+      </div>
+    `).join('');
+  }
+
+  // History
+  function renderHistory() {
+    document.getElementById('historyTimeline').innerHTML = NG.history.map(h => `
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">${h.period}</div>
+        <div class="timeline-event">${h.event}</div>
+        <div class="timeline-desc">${h.desc}</div>
+      </div>
+    `).join('');
+  }
+
+  // Zones
+  function renderZones() {
+    document.getElementById('zonesGrid').innerHTML = NG.zones.map(z => `
+      <div class="zone-card">
+        <div class="zone-header">
+          <div class="zone-dot" style="--zc:${z.color}"></div>
+          <div>
+            <div class="zone-name">${z.name}</div>
+            <div class="zone-groups">${z.groups}</div>
+          </div>
+        </div>
+        <div class="zone-note">${z.note}</div>
+        <div class="states-grid">
+          ${z.states.map(s => `
+            <div class="state-chip">
+              <div class="state-name">${s.n}</div>
+              <div class="state-capital">${s.c}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Proverbs
+  function renderProverbs() {
+    document.getElementById('proverbsGrid').innerHTML = NG.proverbs.map(p => `
+      <div class="proverb-card">
+        <div class="proverb-lang">${p.lang}</div>
+        <div class="proverb-text">${p.text}</div>
+        <div class="proverb-meaning"><strong style="color:var(--gold-light)">Meaning:</strong> ${p.meaning}</div>
+        <div class="proverb-lesson">${p.lesson}</div>
+      </div>
+    `).join('');
+  }
+
+  // Travel
+  function renderTravel() {
+    document.getElementById('travelGrid').innerHTML = NG.travel_places.map((p, i) => `
+      <div class="travel-card ${p.featured && i===0 ? 'featured' : ''}" onclick="openTravelModal(${i})">
+        <div class="travel-visual">
+          <span class="travel-emoji">${p.emoji}</span>
+          <div class="travel-type">${p.type}</div>
+          <div class="travel-name">${p.name}</div>
+          <div class="travel-region">📍 ${p.region}</div>
+        </div>
+        <div class="travel-body">
+          <div class="travel-desc">${p.desc.slice(0,200)}${p.desc.length>200?'...':''}</div>
+          <div class="travel-tips">
+            ${p.tips.slice(0,2).map(t => `<div class="travel-tip">${t}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('tipRows').innerHTML = `
+      <div class="tips-card">
+        <div class="tips-card-title">💰 Budget Tips</div>
+        <div class="tips-list">${NG.budget_tips.map(t => `<div class="tips-item">${t}</div>`).join('')}</div>
+      </div>
+      <div class="tips-card">
+        <div class="tips-card-title">🛡️ Safety Tips</div>
+        <div class="tips-list">${NG.safety_tips.map(t => `<div class="tips-item">${t}</div>`).join('')}</div>
+      </div>
+    `;
+  }
+
+  function openTravelModal(i) {
+    const p = NG.travel_places[i];
+    document.getElementById('modalBody').innerHTML = `
+      <div class="modal-tag">Travel & Places · ${p.type}</div>
+      <div class="modal-title">${p.emoji} ${p.name}</div>
+      <div class="modal-sub">📍 ${p.region}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">About this place</div>
+      <p class="modal-text">${p.desc}</p>
+      <div class="modal-divider"></div>
+      <div class="modal-sec-title">Insider Tips</div>
+      <div class="modal-list">${p.tips.map(t => `<div class="modal-list-item">${t}</div>`).join('')}</div>
+    `;
+    openModal();
+  }
+
+  // Sidebar
+  function renderSidebar() {
+    document.getElementById('quickFacts').innerHTML = [
+      { k:'🌍 Population', v:'~220 million' },
+      { k:'🏛 Capital', v:'Abuja' },
+      { k:'🏙 Largest City', v:'Lagos' },
+      { k:'📅 Independence', v:'Oct 1, 1960' },
+      { k:'💰 Currency', v:'Naira (₦)' },
+      { k:'📞 Dialling Code', v:'+234' },
+      { k:'🗣 Languages', v:'520+' },
+      { k:'🏳️ States', v:'36 + FCT' },
+      { k:'🌐 GDP Rank', v:'#1 in Africa' },
+      { k:'🎵 Known For', v:'Afrobeats, Nollywood' },
+    ].map(r => `
+      <div class="qf-row">
+        <div class="qf-key">${r.k}</div>
+        <div class="qf-val">${r.v}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('jumpLinks').innerHTML = [
+      { sec:'overview',       label:'🗺 Overview' },
+      { sec:'ethnic-groups',  label:'👥 Ethnic Groups' },
+      { sec:'languages',      label:'🗣 Languages' },
+      { sec:'food',           label:'🍛 Food' },
+      { sec:'dressing',       label:'👘 Dressing' },
+      { sec:'marriage',       label:'💍 Marriage' },
+      { sec:'beliefs',        label:'🌿 Beliefs' },
+      { sec:'festivals',      label:'🎊 Festivals' },
+      { sec:'music',          label:'🎵 Music' },
+      { sec:'history',        label:'📜 History' },
+      { sec:'states',         label:'🗺 States' },
+      { sec:'proverbs',       label:'✨ Proverbs' },
+      { sec:'travel',         label:'🧭 Travel' },
+    ].map(l => `
+      <a href="#sec-${l.sec}" class="jump-link">${l.label}</a>
+    `).join('');
+
+    document.getElementById('relatedList').innerHTML = [
+      { flag:'🇬🇭', name:'Ghana', slug:'ghana' },
+      { flag:'🇧🇯', name:'Benin', slug:'benin' },
+      { flag:'🇳🇪', name:'Niger', slug:'niger' },
+      { flag:'🇨🇲', name:'Cameroon', slug:'cameroon' },
+      { flag:'🇨🇮', name:"Côte d'Ivoire", slug:'cote-divoire' },
+    ].map(c => `
+      <a href="${c.slug}.html" class="related-item">
+        <span style="font-size:1.2rem">${c.flag}</span>
+        <span>${c.name}</span>
+        <span style="margin-left:auto;font-size:.72rem;color:var(--text-muted)">→</span>
+      </a>
+    `).join('');
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     SECTION NAV — Sticky active state
+  ═══════════════════════════════════════════════════════════════ */
+  const SECTIONS = ['overview','ethnic-groups','languages','food','dressing','marriage','beliefs','festivals','music','history','states','proverbs','travel'];
+
+  document.getElementById('sectionNav').addEventListener('click', e => {
+    const btn = e.target.closest('.sec-btn'); if (!btn) return;
+    const target = document.getElementById(`sec-${btn.dataset.sec}`);
+    if (target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+
+  // Active section observer
+  const secObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id.replace('sec-','');
+        document.querySelectorAll('.sec-btn').forEach(b => b.classList.toggle('active', b.dataset.sec === id));
+        document.querySelectorAll('.jump-link').forEach(l => l.classList.toggle('active-link', l.getAttribute('href') === `#sec-${id}`));
+      }
+    });
+  }, { threshold:0.15, rootMargin:'-68px 0px -60% 0px' });
+
+  SECTIONS.forEach(s => { const el = document.getElementById(`sec-${s}`); if (el) secObserver.observe(el); });
+
+  /* ═══════════════════════════════════════════════════════════════
+     MODAL
+  ═══════════════════════════════════════════════════════════════ */
+  function openModal()  { document.getElementById('modalOverlay').classList.add('open'); }
+  function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalOverlay').addEventListener('click', e => { if (e.target === document.getElementById('modalOverlay')) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* ═══════════════════════════════════════════════════════════════
+     BOOKMARK
+  ═══════════════════════════════════════════════════════════════ */
+  const bookmarkBtn = document.getElementById('bookmarkBtn');
+  let bm = JSON.parse(localStorage.getItem('frica_bookmarks') || '[]');
+
+  function updateBMBtn() {
+    const saved = bm.includes('nigeria');
+    bookmarkBtn.textContent = saved ? '📌 Saved!' : '📌 Save Nigeria';
+    bookmarkBtn.classList.toggle('saved', saved);
+  }
+
+  bookmarkBtn.addEventListener('click', () => {
+    if (bm.includes('nigeria')) bm = bm.filter(b => b !== 'nigeria');
+    else bm.push('nigeria');
+    localStorage.setItem('frica_bookmarks', JSON.stringify(bm));
+    updateBMBtn();
+  });
+
+  updateBMBtn();
+
+  /* ═══════════════════════════════════════════════════════════════
+     MISC
+  ═══════════════════════════════════════════════════════════════ */
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+  }, { passive:true });
+
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+  /* ═══════════════════════════════════════════════════════════════
+     INIT
+  ═══════════════════════════════════════════════════════════════ */
+  renderOverview();
+  renderEthnicGroups();
+  renderLanguages();
+  renderFood();
+  renderDressing();
+  renderMarriage();
+  renderBeliefs();
+  renderFestivals();
+  renderMusic();
+  renderHistory();
+  renderZones();
+  renderProverbs();
+  renderTravel();
+  renderSidebar();
+  </script>
+  
+<script src="assets/js/bookmark.js"></script>
+</body>
+</html>
